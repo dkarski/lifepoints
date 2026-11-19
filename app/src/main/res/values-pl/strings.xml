@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="soon">Wkrótce</string>
+
+    <string name="tab_game">Gra</string>
+    <string name="tab_history">Historia</string>
+    <string name="tab_settings">Ustawienia</string>
+
+    <string name="home_unit_life">życie</string>
+    <string name="home_custom">Własne</string>
+    <string name="home_custom_edit">Wpisz życie na start</string>
+    <string name="home_unit_players">graczy</string>
+    <string name="home_start_game">Rozpocznij grę</string>
+
+    <string name="player_name">Gracz %1$d</string>
+    <string name="counter_increase">Zwiększ życie: %1$s</string>
+    <string name="counter_decrease">Zmniejsz życie: %1$s</string>
+    <string name="counter_open_menu">Menu gry</string>
+
+    <string name="menu_in_progress">Gra w toku</string>
+    <string name="menu_continue">Kontynuuj grę</string>
+    <string name="menu_new_game">Nowa gra</string>
+
+    <string name="settings_theme">Motyw</string>
+    <string name="settings_theme_light">Jasny</string>
+    <string name="settings_theme_dark">Ciemny</string>
+
+    <string name="coming_soon_title">Wkrótce</string>
+    <string name="coming_soon_body">Ta funkcja jest w przygotowaniu.</string>
+    <string name="coming_soon_feedback_prompt">Masz pomysł lub uwagi? Chętnie je poznamy.</string>
+    <string name="coming_soon_contact">Napisz do nas</string>
+    <string name="coming_soon_no_email_app">Brak aplikacji pocztowej. Napisz na adres:</string>
+    <string name="coming_soon_copy">Kopiuj e-mail</string>
+    <string name="coming_soon_copied">E-mail skopiowany</string>
+    <string name="feedback_body">Cześć! Moja opinia:\n\n</string>
+</resources>

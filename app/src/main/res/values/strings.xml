@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lifepoints</string>
+    <string name="soon">Soon</string>
+
+    <string name="tab_game">Game</string>
+    <string name="tab_history">History</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="home_unit_life">life</string>
+    <string name="home_custom">Custom</string>
+    <string name="home_custom_edit">Enter starting life</string>
+    <string name="home_unit_players">players</string>
+    <string name="home_start_game">Start Game</string>
+
+    <string name="player_name">Player %1$d</string>
+    <string name="counter_increase">Increase life of %1$s</string>
+    <string name="counter_decrease">Decrease life of %1$s</string>
+    <string name="counter_open_menu">Game menu</string>
+
+    <string name="menu_in_progress">Game in progress</string>
+    <string name="menu_continue">Continue Game</string>
+    <string name="menu_new_game">New Game</string>
+
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+
+    <string name="coming_soon_title">Coming soon</string>
+    <string name="coming_soon_body">This feature is in development.</string>
+    <string name="coming_soon_feedback_prompt">Have an idea or feedback? We\'d love to hear from you.</string>
+    <string name="coming_soon_contact">Contact us</string>
+    <string name="coming_soon_no_email_app">No email app found. Write to us at:</string>
+    <string name="coming_soon_copy">Copy email</string>
+    <string name="coming_soon_copied">Email copied</string>
+    <string name="feedback_body">Hi! My feedback:\n\n</string>
+</resources>
