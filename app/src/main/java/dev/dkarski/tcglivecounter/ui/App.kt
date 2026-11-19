@@ -14,6 +14,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import dev.dkarski.tcglivecounter.AppConfig
+import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.data.GameState
 import dev.dkarski.tcglivecounter.ui.components.MainLayout
 import dev.dkarski.tcglivecounter.ui.components.Tab
@@ -58,6 +59,17 @@ fun App(
     var comingSoonReturn by rememberSaveable { mutableStateOf(Screen.Home) }
     val feedbackEnabled = AppConfig.DEVELOPER_EMAIL.isNotBlank()
     var feedback by rememberSaveable { mutableStateOf(FeedbackState.Ready) }
+    // Settings > About. Version comes from the installed package (versionName in app/build.gradle.kts).
+    val about = remember {
+        AboutInfo(
+            appName = context.getString(R.string.app_name),
+            version = context.packageManager.getPackageInfo(context.packageName, 0).versionName.orEmpty(),
+            developer = AppConfig.DEVELOPER_NAME,
+        )
+    }
+    var emailAppAvailable by remember { mutableStateOf(hasEmailApp(context)) }
+    var contactCopied by rememberSaveable { mutableStateOf(false) }
+
     fun openComingSoon(f: Feature) {
         if (screen != Screen.ComingSoon) comingSoonReturn = screen
         feature = f
@@ -76,7 +88,10 @@ fun App(
         when (tab) {
             Tab.Game -> screen = Screen.Home
             Tab.History -> openComingSoon(Feature.History)
-            Tab.Settings -> screen = Screen.Settings
+            Tab.Settings -> {
+                contactCopied = false
+                screen = Screen.Settings
+            }
         }
     }
 
@@ -110,7 +125,32 @@ fun App(
                 selectedTab = Tab.Settings,
                 onTabSelected = onTabSelected,
             ) { padding ->
-                SettingsScreen(themeMode = themeMode, onThemeModeChange = onThemeModeChange, contentPadding = padding)
+                SettingsScreen(
+                    themeMode = themeMode,
+                    onThemeModeChange = { mode ->
+                        contactCopied = false // "Email copied" confirms the last action only; any other change resets it
+                        onThemeModeChange(mode)
+                    },
+                    about = about,
+                    contact = if (feedbackEnabled) {
+                        ContactState(
+                            email = AppConfig.DEVELOPER_EMAIL,
+                            canOpenEmailApp = emailAppAvailable,
+                            copied = contactCopied,
+                        )
+                    } else {
+                        null
+                    },
+                    onContact = {
+                        // The check above can be stale (e-mail app removed meanwhile): fall back to copying.
+                        if (!openContactEmail(context, AppConfig.CONTACT_SUBJECT)) emailAppAvailable = false
+                    },
+                    onCopyEmail = {
+                        copyDeveloperEmail(context)
+                        contactCopied = true
+                    },
+                    contentPadding = padding,
+                )
             }
 
             Screen.ComingSoon -> MainLayout(
@@ -124,7 +164,7 @@ fun App(
                         if (!openFeedbackEmail(context, feature)) feedback = FeedbackState.NoEmailApp
                     },
                     onCopyEmail = {
-                        copyFeedbackEmail(context)
+                        copyDeveloperEmail(context)
                         feedback = FeedbackState.Copied
                     },
                     contentPadding = padding,

@@ -221,11 +221,6 @@ private fun CustomLifeField(
     }
 }
 
-@Composable
-internal fun SectionLabel(text: String) {
-    TextMMD(text = text, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-}
-
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun HomeScreenPreview() {

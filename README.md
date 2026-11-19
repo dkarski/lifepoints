@@ -9,6 +9,7 @@ Jetpack Compose and Mudita Mindful Design (MMD).
 - Saved game and Light/Dark themes.
 - English and Polish interfaces.
 - Offline operation with no requested permissions.
+- Developer contact from Settings.
 
 Three- and four-player games and game history are currently unavailable.
 

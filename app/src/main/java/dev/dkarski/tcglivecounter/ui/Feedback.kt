@@ -9,13 +9,20 @@ import android.net.Uri
 import dev.dkarski.tcglivecounter.AppConfig
 import dev.dkarski.tcglivecounter.R
 
+/** True when some app can send e-mail (needs the mailto <queries> entry in the manifest on Android 11+). */
+fun hasEmailApp(context: Context): Boolean =
+    Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:")).resolveActivity(context.packageManager) != null
+
+/** Feedback about a Coming Soon feature: subject "Lifepoints — History" etc. */
+fun openFeedbackEmail(context: Context, feature: Feature): Boolean = openContactEmail(context, feature.subject)
+
 /**
- * Opens the user's e-mail app with recipient, subject and an editable body filled in.
+ * Opens the user's e-mail app with recipient, subject ("Lifepoints — [subjectSuffix]") and an editable body.
  * Nothing is sent automatically. Returns false when no app can handle e-mail.
  */
-fun openFeedbackEmail(context: Context, feature: Feature): Boolean {
+fun openContactEmail(context: Context, subjectSuffix: String): Boolean {
     val email = AppConfig.DEVELOPER_EMAIL
-    val subject = "${AppConfig.FEEDBACK_SUBJECT_PREFIX} — ${feature.subject}"
+    val subject = "${AppConfig.FEEDBACK_SUBJECT_PREFIX} — $subjectSuffix"
     val body = context.getString(R.string.feedback_body)
     val uri = Uri.parse("mailto:$email?subject=${Uri.encode(subject)}&body=${Uri.encode(body)}")
     val intent = Intent(Intent.ACTION_SENDTO, uri).apply {
@@ -32,7 +39,7 @@ fun openFeedbackEmail(context: Context, feature: Feature): Boolean {
 }
 
 /** Copies the developer address to the clipboard (no permission needed). */
-fun copyFeedbackEmail(context: Context) {
+fun copyDeveloperEmail(context: Context) {
     context.getSystemService(ClipboardManager::class.java)
         ?.setPrimaryClip(ClipData.newPlainText("email", AppConfig.DEVELOPER_EMAIL))
 }

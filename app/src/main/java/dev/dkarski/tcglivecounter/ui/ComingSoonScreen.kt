@@ -36,7 +36,7 @@ enum class Feature(val subject: String) {
 enum class FeedbackState {
     /** No developer e-mail configured: no contact action at all. */
     Hidden,
-    /** "Contact us" button. */
+    /** "Contact developer" button. */
     Ready,
     /** No e-mail app on the device: show the address with a copy action. */
     NoEmailApp,
@@ -81,7 +81,7 @@ fun ComingSoonScreen(
                 TextMMD(stringResource(R.string.coming_soon_contact), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             }
         }
-        // Fallback only after "Contact us" found no e-mail app, so both actions never compete for space up front.
+        // Fallback only after "Contact developer" found no e-mail app, so both actions never compete for space up front.
         if (feedback == FeedbackState.NoEmailApp || feedback == FeedbackState.Copied) {
             Spacer(Modifier.height(4.dp))
             TextMMD(

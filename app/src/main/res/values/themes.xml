@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Framework theme only (no AppCompat). White window = no flash of a different colour on E Ink at start. -->
-    <style name="Theme.KompaktPoc" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.Lifepoints" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:statusBarColor">@android:color/white</item>
         <item name="android:navigationBarColor">@android:color/white</item>

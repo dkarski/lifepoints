@@ -21,14 +21,21 @@
     <string name="menu_continue">Kontynuuj grę</string>
     <string name="menu_new_game">Nowa gra</string>
 
-    <string name="settings_theme">Motyw</string>
+    <string name="settings_appearance">Wygląd</string>
+    <string name="settings_about">O aplikacji</string>
+    <string name="settings_about_app">Aplikacja</string>
+    <string name="settings_about_version">Wersja</string>
+    <string name="settings_about_developer">Twórca</string>
+    <string name="settings_about_contact">Kontakt</string>
+    <string name="settings_contact_tap_email">Stuknij, aby napisać e-mail</string>
+    <string name="settings_contact_tap_copy">Stuknij, aby skopiować</string>
     <string name="settings_theme_light">Jasny</string>
     <string name="settings_theme_dark">Ciemny</string>
 
     <string name="coming_soon_title">Wkrótce</string>
     <string name="coming_soon_body">Ta funkcja jest w przygotowaniu.</string>
-    <string name="coming_soon_feedback_prompt">Masz pomysł lub uwagi? Chętnie je poznamy.</string>
-    <string name="coming_soon_contact">Napisz do nas</string>
+    <string name="coming_soon_feedback_prompt">Masz pomysł lub uwagi? Chętnie je poznam.</string>
+    <string name="coming_soon_contact">Napisz do twórcy</string>
     <string name="coming_soon_no_email_app">Brak aplikacji pocztowej. Napisz na adres:</string>
     <string name="coming_soon_copy">Kopiuj e-mail</string>
     <string name="coming_soon_copied">E-mail skopiowany</string>
