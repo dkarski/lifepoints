@@ -24,7 +24,7 @@ Three- and four-player games and game history are planned.
 
 Install Lifepoints from [InkApps](https://inkapps.mudita.com/) on your Kompakt, or download the APK from
 [GitHub Releases](https://github.com/dkarski/lifepoints/releases/latest). Both are signed with the same key, so you can
-update from either source without losing your game.
+update from either source without losing your game. To verify a download, see [SECURITY.md](SECURITY.md).
 
 Requires Android 12 or later.
 
