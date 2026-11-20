@@ -16,3 +16,4 @@ screenshots/
 *.key
 .env
 .env.*
+!store/screenshots/

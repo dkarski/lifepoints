@@ -17,7 +17,7 @@ It contains no analytics, advertising or tracking.
 
 ## Links that leave the app
 - Contact: opens your e-mail app with the developer's address, or copies the address. Nothing is sent by the app.
-- Tip jar: shows a QR code with a Ko-fi link to scan with another device. The app itself opens nothing. Tips are
+- Tip jar: shows a QR code and the Ko-fi address to open on another device. The app itself opens nothing. Tips are
   handled entirely by Ko-fi under its own privacy policy and are voluntary; they unlock nothing in the app.
 
 ## Children
