@@ -51,5 +51,7 @@ See [Privacy Policy](docs/PRIVACY_POLICY.md) and [Terms of Use](docs/TERMS_OF_US
 
 ## License
 
+Source code: https://github.com/dkarski/lifepoints
+
 Copyright 2026 Daniel Karski. Licensed under the [Apache License 2.0](LICENSE).
 Third-party license texts are included in `app/src/main/res/raw/` and available in the app.

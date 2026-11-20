@@ -1,5 +1,7 @@
 # Lifepoints - Terms of Use
 
+Effective date: 20 November 2026
+
 ## Free and without warranty
 
 Lifepoints is free and provided as is, without warranties. Tips are voluntary and unlock nothing.
@@ -16,7 +18,8 @@ publisher and contains no third-party trademarks.
 
 ## Source code license
 
-The source code is available under the Apache License 2.0. Third-party components retain their own licenses.
+The source code is available at https://github.com/dkarski/lifepoints under the Apache License 2.0.
+Third-party components retain their own licenses.
 
 ## Contact
 

@@ -18,7 +18,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.dkarski.tcglivecounter"
+        applicationId = "dev.dkarski.lifepoints"
         minSdk = 31 // Mudita Kompakt: MuditaOS K, AOSP 12 (API 31)
         targetSdk = 35
         versionCode = 1
