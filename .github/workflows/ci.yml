@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pr-title:
+    name: PR title
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: read
+    steps:
+      - name: Check Conventional Commits title
+        uses: amannn/action-semantic-pull-request@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            perf
+            refactor
+            docs
+            test
+            build
+            ci
+            chore
+
+  build:
+    name: Build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v6
+
+      - name: Check translations
+        if: hashFiles('scripts/i18n_check.py') != ''
+        run: python3 scripts/i18n_check.py --quiet
+
+      # The release build is unsigned here; it checks that R8 shrinking still works.
+      - name: Lint and build
+        run: ./gradlew :app:lintDebug :app:assembleDebug :app:assembleRelease
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: lifepoints-debug
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 7
