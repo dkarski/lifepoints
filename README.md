@@ -14,7 +14,7 @@ Lorcana, made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita
 - Life counter for two players, with starting life 20, 30, 40 or any custom value.
 - Your game is saved, so you can close the app and continue later.
 - Light and dark themes, designed for the E Ink screen.
-- English and Polish, following your phone's language.
+- 63 languages. The app follows your phone's language, or you can choose one in Settings > Language.
 - Works fully offline: no account, no ads, no tracking and no permissions.
 
 Games for three and four players and game history are planned.

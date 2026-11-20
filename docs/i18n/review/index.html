@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lifepoints 1.1.0 localization review</title>
+<style>
+:root{--bg:#f3f3f1;--card:#fff;--fg:#151515;--muted:#666;--line:#d9d9d6;--accent:#111;--warn:#8a5a00;--warnbg:#fff4dc}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--card:#1f1f1f;--fg:#ececec;--muted:#a3a3a3;--line:#343434;--accent:#f2f2f2;--warn:#f0c46b;--warnbg:#2b2416}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,system-ui,"Segoe UI",sans-serif}
+header{padding:18px 20px 6px}
+h1{margin:0 0 4px;font-size:21px}
+h2{font-size:16px;margin:22px 0 8px}
+p{margin:4px 0;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:6px;padding:8px 20px}
+.bar button{font:inherit;font-size:13px;padding:6px 10px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:7px;cursor:pointer}
+.bar button.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.label{font-size:12px;color:var(--muted);align-self:center;margin-right:4px;min-width:64px}
+main{padding:8px 20px 40px}
+.pair{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start}
+figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px}
+figure img{display:block;width:288px;height:480px;border:1px solid var(--line)}
+figcaption{font-size:13px;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.grid img{width:100%;height:auto}
+.grid figure{cursor:pointer}
+.note{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:8px 12px;margin:10px 0;font-size:13px}
+table{border-collapse:collapse;font-size:13px;background:var(--card)}
+td,th{border:1px solid var(--line);padding:5px 8px;text-align:left;vertical-align:top}
+kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Lifepoints 1.1.0 · localization review</h1>
+  <p>The 9 MuditaOS system languages, every screen with text. <b>Screenshots: Android emulator Kompakt_K1</b> (480×800, 213 dpi,
+     Android 12, no Google services), taken from the real debug build with <code>scripts/l10n_shots.sh</code>.
+     They are not E Ink captures: rendering on the Kompakt was verified separately (see <a href="../LANGUAGE_AUDIT.md">LANGUAGE_AUDIT.md</a>).</p>
+  <p>Keys: <kbd>←</kbd>/<kbd>→</kbd> screen, <kbd>↑</kbd>/<kbd>↓</kbd> language, <kbd>E</kbd> toggle English comparison, <kbd>G</kbd> grid of all screens.</p>
+</header>
+<div class="bar" id="langs"><span class="label">Language</span></div>
+<div class="bar" id="screens"><span class="label">Screen</span></div>
+<div class="bar"><span class="label">View</span>
+  <button id="cmp" class="on">Compare with English</button>
+  <button id="gridbtn">All screens of this language</button>
+</div>
+<main>
+  <div id="view"></div>
+
+  <h2>Copy changes made in the audit</h2>
+  <table id="changes"><tr><th>Lang</th><th>Text</th><th>Before</th><th>After</th><th>Why</th></tr></table>
+
+  <h2>Layout fixes found through the screenshots</h2>
+  <ul>
+    <li>Coming soon screen now scrolls: in Portuguese and French the “Copy e-mail” button was pushed under the bottom
+        bar after “Contact developer” found no e-mail app. Texts were shortened too, so these languages fit without scrolling.</li>
+    <li>Contact button wrapped to two lines inside the fixed-height button in Tamil, Catalan, Croatian and Georgian;
+        shortened (found by capturing Home, Coming soon, Settings and Game menu in all 54 other languages with
+        <code>L10N_QUICK=1 scripts/l10n_shots.sh</code>). Catalan and Galician “Custom” tiles now read Altre / Outro.</li>
+  </ul>
+
+  <h2>Open points</h2>
+  <ul>
+    <li>The keyboard line “Suggest contact names? Touch for info.” on the Custom life and search screens comes from the
+        emulator's keyboard, not from the app. On the Kompakt the MuditaOS keyboard is shown.</li>
+    <li>All translations were generated with AI. The 9 languages here were reviewed in UI context; a native speaker
+        review is still recommended before calling them final. The other 54 languages were checked only technically
+        (<code>scripts/i18n_check.py</code>: complete, placeholders, escaping).</li>
+    <li>Urdu renders in Naskh instead of the expected Nastaliq (no Nastaliq font on MuditaOS).</li>
+    <li>The legal texts (Privacy, Terms of use, Legal notes) are translations for convenience; the English text is the
+        reference.</li>
+  </ul>
+</main>
+<script>
+const LANGS=[["en","English"],["it","Italiano"],["pl","Polski"],["cs","Čeština"],["pt","Português"],["es","Español"],["de","Deutsch"],["fr","Français"],["nl","Nederlands"]];
+const SCREENS=[["01-home","Home / New game"],["02-custom-life","Custom life (editing)"],["03-players-coming-soon","3 players: coming soon"],["04-history-coming-soon","History: coming soon"],["05-contact-no-email-app","Contact: no e-mail app"],["06-settings","Settings"],["07-language","Language"],["08-language-search","Language search"],["09-about","About"],["10-tip-jar","Tip jar"],["11-counter","Game counter"],["12-game-menu","Game menu"],["13-about-privacy","About: Privacy"],["14-about-terms","About: Terms of use"],["15-about-licenses","About: Open source licenses"],["16-about-legal","About: Legal notes"],["17-custom-value","Custom life (value entered)"]];
+const CHANGES=[
+ ["it","Custom life tile","Personalizza","Altro","An option next to 20/30/40, not a command"],
+ ["pt","Custom life tile","Personalizar","Outro","Same"],
+ ["es","Custom life tile","Personalizar","Otro","Same"],
+ ["fr","Custom life tile","Personnaliser","Autre","Same"],
+ ["it","System default","Predefinita di sistema","Lingua di sistema","Shorter; same wording as DE/FR/NL/PL"],
+ ["pt","System default","Predefinição do sistema","Idioma do sistema","Same"],
+ ["es","System default","Predeterminado del sistema","Idioma del sistema","Same"],
+ ["cs","System default","Podle systému","Jazyk systému","Consistent with the other languages"],
+ ["pt","Coming soon text","Esta funcionalidade está em desenvolvimento.","Função em desenvolvimento.","One line; the Copy e-mail button was pushed under the bottom bar"],
+ ["fr","Coming soon text","Cette fonctionnalité est en cours de développement.","Fonction en développement.","Same"],
+ ["pt","No e-mail app text","Nenhuma app de email encontrada. Escreva para:","Sem app de email. Escreva para:","Same"],
+ ["fr","No e-mail app text","Aucune app de messagerie trouvée. Écrivez à :","Pas d'app de messagerie. Écrivez à :","Same"],
+ ["fr","Feedback prompt","Une idée ou une remarque ? J'aimerais beaucoup la connaître.","Une idée ou une remarque ? Écrivez-moi !","Shorter, leads to the button"],
+ ["es","Contact button","Contactar al desarrollador","Escribir al desarrollador","The button opens an e-mail: “write” is concrete"],
+ ["fr","Contact button","Contacter le développeur","Écrire au développeur","Same"],
+ ["nl","Contact button","Contact met de ontwikkelaar","Mail de ontwikkelaar","Natural, short"],
+ ["de","Feedback prompt","Hast du eine Idee oder Feedback? Ich freue mich darauf.","Hast du eine Idee oder Feedback? Schreib mir gern!","Natural"],
+ ["pt","Feedback prompt","… Gostaria muito de saber.","… Gostava muito de saber.","European Portuguese"],
+ ["pl","Custom life hint","Wpisz życie na start","Wpisz życie startowe","Natural"],
+ ["de","Life caption (tiles)","Leben","LP","Official MTG term is “Lebenspunkte” (used in the input hint); too long for the 20/30/40 tiles, so the common TCG abbreviation LP"],
+ ["fr","Life caption (tiles)","vies","PV","Official MTG term is “points de vie” (input hint); abbreviated PV on the tiles as on French TCG cards; “vies” read as video-game lives"],
+ ["it","Life caption (tiles)","vite","punti vita","Official MTG term"],
+ ["pt","Life caption (tiles)","vidas","PV","Official MTG term is “pontos de vida” (input hint); abbreviated PV on the tiles"],
+ ["pl","Life caption (tiles)","życie","życia","How players say it (“mam 20 życia”); fits any number. No official Polish MTG"],
+ ["pl","Custom tile (before a value)","Własne / życie","Inna / wartość","Label and caption are read together; “Własne życie” sounded like “one's own life”"],
+ ["cs","Custom tile (before a value)","Vlastní / životů","Vlastní / hodnota","Same pattern"],
+ ["de","Custom tile (before a value)","Eigene / Leben","Eigener / Wert","Same pattern"],
+ ["fr","Custom tile (before a value)","Autre / vies","Autre / valeur","Same pattern"],
+ ["it","Custom tile (before a value)","Altro / vite","Altro / valore","Same pattern"],
+ ["es","Custom tile (before a value)","Otro / vidas","Otro / valor","Same pattern"],
+ ["pt","Custom tile (before a value)","Outro / vidas","Outro / valor","Same pattern"],
+ ["nl","Custom tile (before a value)","Eigen / levens","Eigen / waarde","Same pattern"],
+];
+let lang="pl", screen=0, compare=true, grid=false;
+const $=id=>document.getElementById(id);
+const src=(l,s)=>`../screenshots/l10n/${l}/${SCREENS[s][0]}.png`;
+function fig(l,s,big=true){const n=LANGS.find(x=>x[0]===l)[1];return `<figure ${big?"":`data-s="${s}"`}><img src="${src(l,s)}" alt="${n} ${SCREENS[s][1]}" loading="lazy"><figcaption><b>${n}</b> · ${SCREENS[s][1]}</figcaption></figure>`}
+function render(){
+  document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));
+  document.querySelectorAll("#screens button").forEach(b=>b.classList.toggle("on",+b.dataset.s===screen));
+  $("cmp").classList.toggle("on",compare); $("gridbtn").classList.toggle("on",grid);
+  const notes=CHANGES.filter(c=>c[0]===lang);
+  if(grid){$("view").innerHTML=`<div class="grid">${SCREENS.map((_,i)=>fig(lang,i,false)).join("")}</div>`;
+    document.querySelectorAll(".grid figure").forEach(f=>f.onclick=()=>{screen=+f.dataset.s;grid=false;render()});}
+  else{$("view").innerHTML=`<div class="pair">${fig(lang,screen)}${compare&&lang!=="en"?fig("en",screen):""}</div>`+
+    (notes.length?`<div class="note">Changed in this language: ${notes.map(c=>`<b>${c[1]}</b> “${c[2]}” → “${c[3]}”`).join("; ")}</div>`:"");}
+  try{localStorage.setItem("l10n-review",JSON.stringify({lang,screen,compare}))}catch(e){}
+}
+LANGS.forEach(([l,n])=>{const b=document.createElement("button");b.textContent=n;b.dataset.l=l;b.onclick=()=>{lang=l;render()};$("langs").appendChild(b)});
+SCREENS.forEach(([_,n],i)=>{const b=document.createElement("button");b.textContent=n;b.dataset.s=i;b.onclick=()=>{screen=i;grid=false;render()};$("screens").appendChild(b)});
+$("cmp").onclick=()=>{compare=!compare;grid=false;render()};
+$("gridbtn").onclick=()=>{grid=!grid;render()};
+CHANGES.forEach(c=>{const tr=document.createElement("tr");tr.innerHTML=c.map(x=>`<td>${x}</td>`).join("");$("changes").appendChild(tr)});
+document.addEventListener("keydown",e=>{
+  const li=LANGS.findIndex(x=>x[0]===lang);
+  if(e.key==="ArrowRight"){screen=(screen+1)%SCREENS.length;grid=false}
+  else if(e.key==="ArrowLeft"){screen=(screen-1+SCREENS.length)%SCREENS.length;grid=false}
+  else if(e.key==="ArrowDown"){lang=LANGS[(li+1)%LANGS.length][0];e.preventDefault()}
+  else if(e.key==="ArrowUp"){lang=LANGS[(li-1+LANGS.length)%LANGS.length][0];e.preventDefault()}
+  else if(e.key==="e"||e.key==="E"){compare=!compare}
+  else if(e.key==="g"||e.key==="G"){grid=!grid}
+  else return;
+  render();
+});
+try{const s=JSON.parse(localStorage.getItem("l10n-review")||"null");if(s){lang=s.lang;screen=s.screen;compare=s.compare}}catch(e){}
+render();
+</script>
+</body>
+</html>

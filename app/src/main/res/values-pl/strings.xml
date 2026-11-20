@@ -6,9 +6,10 @@
     <string name="tab_history">Historia</string>
     <string name="tab_settings">Ustawienia</string>
 
-    <string name="home_unit_life">życie</string>
-    <string name="home_custom">Własne</string>
-    <string name="home_custom_edit">Wpisz życie na start</string>
+    <string name="home_unit_life">życia</string>
+    <string name="home_custom">Inna</string>
+    <string name="home_custom_caption">wartość</string>
+    <string name="home_custom_edit">Wpisz życie startowe</string>
     <string name="home_unit_players">graczy</string>
     <string name="home_start_game">Rozpocznij grę</string>
 
@@ -38,6 +39,13 @@
     <string name="settings_theme">Motyw</string>
     <string name="settings_about">O aplikacji</string>
     <string name="back">Wstecz</string>
+    <string name="settings_language">Język</string>
+    <string name="language_system_default">Język systemu</string>
+    <string name="language_more">Więcej języków</string>
+    <string name="language_search">Szukaj</string>
+    <string name="language_search_hint">Szukaj języka</string>
+    <string name="language_clear_search">Wyczyść wyszukiwanie</string>
+    <string name="language_no_results">Nie znaleziono języków</string>
     <string name="about_title">O aplikacji</string>
     <string name="about_version">Wersja %1$s</string>
     <string name="about_made_by">Twórca:</string>

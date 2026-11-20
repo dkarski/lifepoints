@@ -24,6 +24,11 @@ The app targets the Mudita Kompakt (MuditaOS K, Android 12 / API 31, 480×800 E 
 [Mudita Mindful Design](https://central.sonatype.com/artifact/com.mudita/MMD) components. Keep it light: no new
 libraries or permissions without discussion. The app icon artwork is `assets/lifepoints.svg`.
 
+## Translations
+
+English (`app/src/main/res/values/strings.xml`) is the source; the app ships in 63 languages. How languages work,
+how to add or change a text and how to check it: [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md).
+
 ## Version
 
 `version.txt` is the only place with the version. `versionName` is read from it and `versionCode` is derived from it

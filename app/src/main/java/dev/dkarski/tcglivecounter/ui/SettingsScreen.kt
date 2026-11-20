@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -33,6 +35,8 @@ import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 fun SettingsScreen(
     themeMode: ThemeMode,
     onThemeModeChange: (ThemeMode) -> Unit,
+    languageName: String,
+    onLanguage: () -> Unit,
     onAbout: () -> Unit,
     onTipJar: (() -> Unit)?,
     contentPadding: PaddingValues = PaddingValues(),
@@ -60,6 +64,8 @@ fun SettingsScreen(
         }
         Spacer(Modifier.height(24.dp))
         DottedDivider()
+        SettingsRow(stringResource(R.string.settings_language), onClick = onLanguage, value = languageName)
+        DottedDivider()
         SettingsRow(stringResource(R.string.settings_about), onClick = onAbout)
         DottedDivider()
         if (onTipJar != null) {
@@ -81,6 +87,7 @@ internal fun SettingsRow(
     label: String,
     onClick: () -> Unit,
     @DrawableRes chevron: Int = R.drawable.ic_chevron_right,
+    value: String? = null,
 ) {
     Row(
         modifier = Modifier
@@ -90,6 +97,16 @@ internal fun SettingsRow(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         TextMMD(label, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+        if (value != null) {
+            // Current value (e.g. the chosen language), like the system Settings rows.
+            TextMMD(
+                value,
+                style = MaterialTheme.typography.bodyLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(start = 12.dp, end = 4.dp).widthIn(max = 170.dp),
+            )
+        }
         Icon(painterResource(chevron), contentDescription = null, tint = MaterialTheme.colorScheme.onSurface)
     }
 }
@@ -97,5 +114,5 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(ThemeMode.Light, {}, {}, {}) }
+    AppTheme(ThemeMode.Light) { SettingsScreen(ThemeMode.Light, {}, "English", {}, {}, {}) }
 }
