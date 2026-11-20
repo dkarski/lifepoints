@@ -20,13 +20,6 @@
     <string name="menu_in_progress">Gra w toku</string>
     <string name="menu_continue">Kontynuuj grę</string>
     <string name="menu_new_game">Nowa gra</string>
-
-    <string name="settings_appearance">Wygląd</string>
-    <string name="settings_about">O aplikacji</string>
-    <string name="settings_about_app">Aplikacja</string>
-    <string name="settings_about_version">Wersja</string>
-    <string name="settings_about_developer">Twórca</string>
-    <string name="settings_about_contact">Kontakt</string>
     <string name="settings_contact_tap_email">Stuknij, aby napisać e-mail</string>
     <string name="settings_contact_tap_copy">Stuknij, aby skopiować</string>
     <string name="settings_theme_light">Jasny</string>
@@ -40,4 +33,36 @@
     <string name="coming_soon_copy">Kopiuj e-mail</string>
     <string name="coming_soon_copied">E-mail skopiowany</string>
     <string name="feedback_body">Cześć! Moja opinia:\n\n</string>
+
+    <!-- Ustawienia i O aplikacji -->
+    <string name="settings_theme">Motyw</string>
+    <string name="settings_about">O aplikacji</string>
+    <string name="back">Wstecz</string>
+    <string name="about_title">O aplikacji</string>
+    <string name="about_version">Wersja %1$s</string>
+    <string name="about_made_by">Twórca:</string>
+    <string name="about_privacy">Prywatność</string>
+    <string name="about_terms">Warunki korzystania</string>
+    <string name="about_licenses">Licencje open source</string>
+    <string name="about_legal">Informacje prawne</string>
+    <string name="about_tip_jar">Napiwek</string>
+
+    <string name="privacy_offline_title">Bez internetu</string>
+    <string name="privacy_offline">Lifepoints działa bez sieci. Aplikacja nie ma uprawnienia do internetu i nigdzie się nie łączy.</string>
+    <string name="privacy_data_title">Twoje dane</string>
+    <string name="privacy_data">Gra i ustawienia są zapisane tylko w tym telefonie i znikają po odinstalowaniu aplikacji. Nic nie jest zbierane, wysyłane ani udostępniane innym.</string>
+    <string name="privacy_permissions_title">Uprawnienia</string>
+    <string name="privacy_permissions">Aplikacja nie prosi o żadne uprawnienia.</string>
+    <string name="privacy_links_title">Linki</string>
+    <string name="privacy_links">Adres kontaktowy tylko otwiera Twoją aplikację pocztową albo kopiuje adres. Napiwek to wyłącznie kod do zeskanowania innym telefonem. To, co dzieje się dalej, jest poza tą aplikacją.</string>
+    <string name="terms_free_title">Za darmo i bez gwarancji</string>
+    <string name="terms_free">Lifepoints jest darmowa i udostępniana w obecnej postaci, bez gwarancji. Napiwki są dobrowolne i niczego nie odblokowują.</string>
+    <string name="terms_liability_title">Odpowiedzialność</string>
+    <string name="terms_liability">W zakresie dozwolonym przez prawo twórca (%1$s, %2$s) nie odpowiada za szkody wynikłe z korzystania z aplikacji. Nie ogranicza to Twoich ustawowych praw konsumenta.</string>
+    <string name="licenses_intro">Lifepoints korzysta z tych elementów open source:</string>
+    <string name="license_text">Tekst licencji: %1$s</string>
+    <string name="legal_notes">Lifepoints to niezależna aplikacja. Nie jest powiązana z żadnym wydawcą gier karcianych ani przez niego wspierana i nie zawiera cudzych znaków towarowych.</string>
+    <string name="tip_jar_text">Podoba Ci się Lifepoints? Zeskanuj kod innym telefonem, żeby zostawić napiwek na Ko-fi. Napiwki są dobrowolne i niczego nie odblokowują.</string>
+    <string name="feature_players_3">3 graczy</string>
+    <string name="feature_players_4">4 graczy</string>
 </resources>

@@ -10,6 +10,8 @@ Jetpack Compose and Mudita Mindful Design (MMD).
 - English and Polish interfaces.
 - Offline operation with no requested permissions.
 - Developer contact from Settings.
+- About, privacy information, terms and open source licenses.
+- Optional support through a QR code.
 
 Three- and four-player games and game history are currently unavailable.
 

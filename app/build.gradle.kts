@@ -22,7 +22,7 @@ android {
         minSdk = 31 // Mudita Kompakt: MuditaOS K, AOSP 12 (API 31)
         targetSdk = 35
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0.0"
     }
 
     signingConfigs {
@@ -48,6 +48,8 @@ android {
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             signingConfig = signingConfigs.findByName("release")
+            // Do not embed the Git commit hash (META-INF/version-control-info.textproto) in the published APK.
+            vcsInfo.include = false
         }
     }
 
@@ -70,6 +72,10 @@ android {
             "/META-INF/{AL2.0,LGPL2.1}",
             "DebugProbesKt.bin",
             "kotlin-tooling-metadata.json",
+            
+            "META-INF/*.version",
+            "META-INF/com/android/build/gradle/app-metadata.properties",
+            "kotlin/**.kotlin_builtins",
         )
     }
 }

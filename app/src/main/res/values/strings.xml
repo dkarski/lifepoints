@@ -21,13 +21,6 @@
     <string name="menu_in_progress">Game in progress</string>
     <string name="menu_continue">Continue Game</string>
     <string name="menu_new_game">New Game</string>
-
-    <string name="settings_appearance">Appearance</string>
-    <string name="settings_about">About</string>
-    <string name="settings_about_app">App</string>
-    <string name="settings_about_version">Version</string>
-    <string name="settings_about_developer">Developer</string>
-    <string name="settings_about_contact">Contact</string>
     <string name="settings_contact_tap_email">Tap to write an email</string>
     <string name="settings_contact_tap_copy">Tap to copy</string>
     <string name="settings_theme_light">Light</string>
@@ -41,4 +34,37 @@
     <string name="coming_soon_copy">Copy email</string>
     <string name="coming_soon_copied">Email copied</string>
     <string name="feedback_body">Hi! My feedback:\n\n</string>
+
+    <!-- Settings and About & Support -->
+    <string name="settings_theme">Theme</string>
+    <string name="settings_about">About</string>
+    <string name="back">Back</string>
+    <string name="about_title">About</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_made_by">Made by:</string>
+    <string name="about_privacy">Privacy</string>
+    <string name="about_terms">Terms of use</string>
+    <string name="about_licenses">Open source licenses</string>
+    <string name="about_legal">Legal notes</string>
+    <string name="about_tip_jar">Tip jar</string>
+
+    
+    <string name="privacy_offline_title">Offline use</string>
+    <string name="privacy_offline">Lifepoints works without a network. It has no internet permission and never connects to anything.</string>
+    <string name="privacy_data_title">Your data</string>
+    <string name="privacy_data">Your game and settings are stored only on this phone and are deleted when you uninstall the app. Nothing is collected, sent anywhere or shared with third parties.</string>
+    <string name="privacy_permissions_title">Permissions</string>
+    <string name="privacy_permissions">The app asks for no permissions.</string>
+    <string name="privacy_links_title">Links</string>
+    <string name="privacy_links">The contact address only opens your e-mail app or copies the address. The Tip jar only shows a code to scan with another phone. What happens there is outside this app.</string>
+    <string name="terms_free_title">Free and without warranty</string>
+    <string name="terms_free">Lifepoints is free and provided as is, without warranties. Tips are voluntary and unlock nothing.</string>
+    <string name="terms_liability_title">Liability</string>
+    <string name="terms_liability">To the extent permitted by law, the developer (%1$s, %2$s) is not liable for damage caused by using the app. Your statutory consumer rights are not affected.</string>
+    <string name="licenses_intro">Lifepoints is built with these open source parts:</string>
+    <string name="license_text">License text: %1$s</string>
+    <string name="legal_notes">Lifepoints is an independent app. It is not affiliated with or endorsed by any trading card game publisher and contains no third-party trademarks.</string>
+    <string name="tip_jar_text">Enjoying Lifepoints? Scan the code with another phone to leave a tip on Ko-fi. Tips are voluntary and unlock nothing.</string>
+    <string name="feature_players_3">3 players</string>
+    <string name="feature_players_4">4 players</string>
 </resources>

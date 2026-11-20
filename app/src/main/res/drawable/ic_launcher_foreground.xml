@@ -11,10 +11,10 @@
         android:scaleX="0.5625"
         android:scaleY="0.5625">
         <path
-            android:pathData="M36,8 H92 A28,28 0 0 1 120,36 V92 A28,28 0 0 1 92,120 H36 A28,28 0 0 1 8,92 V36 A28,28 0 0 1 36,8 Z"
+            android:pathData="M24.91,1.96 H103.1 A22.95,22.95 0 0 1 126.05,24.91 V103.1 A22.95,22.95 0 0 1 103.1,126.05 H24.91 A22.95,22.95 0 0 1 1.96,103.1 V24.91 A22.95,22.95 0 0 1 24.91,1.96 Z"
             android:fillColor="#FFFFFF"
             android:strokeColor="#000000"
-            android:strokeWidth="5.5" />
+            android:strokeWidth="3.91" />
         <path
             android:pathData="M58 31 L70 31"
             android:strokeColor="#000000"

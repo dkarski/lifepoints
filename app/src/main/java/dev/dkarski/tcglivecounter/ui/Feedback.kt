@@ -39,7 +39,9 @@ fun openContactEmail(context: Context, subjectSuffix: String): Boolean {
 }
 
 /** Copies the developer address to the clipboard (no permission needed). */
-fun copyDeveloperEmail(context: Context) {
-    context.getSystemService(ClipboardManager::class.java)
-        ?.setPrimaryClip(ClipData.newPlainText("email", AppConfig.DEVELOPER_EMAIL))
+fun copyDeveloperEmail(context: Context) = copyText(context, "email", AppConfig.DEVELOPER_EMAIL)
+
+/** Copies plain text to the clipboard (no permission needed). */
+fun copyText(context: Context, label: String, text: String) {
+    context.getSystemService(ClipboardManager::class.java)?.setPrimaryClip(ClipData.newPlainText(label, text))
 }
