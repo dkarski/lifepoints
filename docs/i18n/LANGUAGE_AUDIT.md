@@ -1,5 +1,8 @@
 # Language support audit for Lifepoints 1.1.0
 
+> Screenshots referenced below (`docs/i18n/screenshots/`) are kept locally, not in Git. Device screenshots come from
+> `scripts/shot.sh` with the debug script test screen; emulator screenshots from `scripts/l10n_shots.sh`.
+
 Date: 2026-11-20. Device: Mudita Kompakt, MuditaOS K 2.0.0, Android 12 (API 31), 480×800, 213 dpi.
 Scope: the 63 languages offered by the Mudita Developer Portal (InkApps). Rendering only; no translations yet.
 

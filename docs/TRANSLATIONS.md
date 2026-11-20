@@ -48,7 +48,8 @@ caption are read together; once a value is entered it uses the life caption like
 4. Run `scripts/i18n_check.py` again (must report 0 errors) and `./gradlew :app:lintDebug`
    (MissingTranslation and ExtraTranslation are errors).
 5. Check the UI: `scripts/l10n_shots.sh` captures every screen of the 9 system languages on the Kompakt_K1 emulator
-   into `docs/i18n/screenshots/l10n/`; open `docs/i18n/review/index.html` to compare them.
+   into `docs/i18n/screenshots/l10n/`; open `docs/i18n/review/index.html` to compare them. Screenshots stay local
+   (ignored by Git); generate them again when needed.
 6. For a new script or language, check rendering on the Kompakt itself (see `docs/i18n/LANGUAGE_AUDIT.md`).
 
 ## Quality status
