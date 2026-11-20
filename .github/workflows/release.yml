@@ -3,6 +3,13 @@ name: Release
 on:
   push:
     branches: [main]
+  # Recovery: build and attach the APK for an existing draft release (for example after a failed APK job).
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag of the draft release, for example v1.1.0
+        required: true
+        type: string
 
 concurrency:
   group: release
@@ -14,6 +21,7 @@ permissions:
 jobs:
   release-please:
     name: Release PR
+    if: github.event_name == 'push'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -34,19 +42,29 @@ jobs:
   apk:
     name: Signed APK
     needs: release-please
-    if: needs.release-please.outputs.release_created == 'true'
+    if: >-
+      !cancelled() && (needs.release-please.outputs.release_created == 'true'
+      || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
     runs-on: ubuntu-24.04
     environment: release
     permissions:
       contents: write
     env:
-      TAG: ${{ needs.release-please.outputs.tag_name }}
-      VERSION: ${{ needs.release-please.outputs.version }}
+      TAG: ${{ inputs.tag || needs.release-please.outputs.tag_name }}
       GH_TOKEN: ${{ github.token }}
     steps:
+      - name: Check the release
+        run: |
+          set -euo pipefail
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Invalid tag '$TAG'"; exit 1; }
+          DRAFT="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)"
+          # A published release is never rebuilt: its APK may already be installed or uploaded to InkApps.
+          [ "$DRAFT" = "true" ] || { echo "::error::$TAG is already published"; exit 1; }
+          echo "VERSION=${TAG#v}" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v7
         with:
-          ref: ${{ needs.release-please.outputs.sha }}
+          ref: ${{ needs.release-please.outputs.sha || inputs.tag }}
           persist-credentials: false
 
       - uses: actions/setup-java@v6
@@ -73,15 +91,20 @@ jobs:
           EXPECTED_CERT: ${{ vars.RELEASE_CERT_SHA256 }}
         run: |
           set -euo pipefail
-          BT="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)"
+          # Build-tools 35.0.0 (the compileSdk line) when installed, otherwise the newest one.
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          [ -x "$BT/apksigner" ] || BT="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)"
+          echo "build-tools: $BT"
           APK="app/build/outputs/apk/release/lifepoints-$VERSION-release.apk"
           test -f "$APK" || { echo "::error::$APK not found (unsigned or wrong version?)"; exit 1; }
-          CERT="$("$BT/apksigner" verify --print-certs "$APK" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')"
+          SIGN="$("$BT/apksigner" verify --print-certs "$APK" 2>&1)" || { echo "$SIGN"; echo "::error::apksigner verify failed"; exit 1; }
+          echo "$SIGN"
+          CERT="$(grep -m1 -oE 'certificate SHA-256 digest: [0-9a-f]{64}' <<< "$SIGN" | awk '{print $NF}' || true)"
           [ -n "$EXPECTED_CERT" ] && [ "$CERT" = "$EXPECTED_CERT" ] \
             || { echo "::error::Signing certificate $CERT does not match RELEASE_CERT_SHA256"; exit 1; }
           IFS=. read -r MA MI PA <<< "$VERSION"
           CODE=$((MA * 1000000 + MI * 1000 + PA))
-          BADGE="$("$BT/aapt2" dump badging "$APK" | head -1)"
+          BADGE="$("$BT/aapt2" dump badging "$APK" | sed -n 1p)"
           echo "$BADGE"
           grep -q "name='dev.dkarski.lifepoints' versionCode='$CODE' versionName='$VERSION'" <<< "$BADGE" \
             || { echo "::error::Expected dev.dkarski.lifepoints $VERSION ($CODE)"; exit 1; }
