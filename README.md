@@ -44,3 +44,12 @@ The SVG artwork is in `assets/lifepoints.svg`; Android launcher resources are in
 ## Contact
 
 Daniel Karski — daniel.karski5q@gmail.com
+
+## Privacy and terms
+
+See [Privacy Policy](docs/PRIVACY_POLICY.md) and [Terms of Use](docs/TERMS_OF_USE.md).
+
+## License
+
+Copyright 2026 Daniel Karski. Licensed under the [Apache License 2.0](LICENSE).
+Third-party license texts are included in `app/src/main/res/raw/` and available in the app.
