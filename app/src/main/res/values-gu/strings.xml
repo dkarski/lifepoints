@@ -7,6 +7,7 @@
     <string name="tab_settings">સેટિંગ્સ</string>
     <string name="home_unit_life">લાઇફ</string>
     <string name="home_custom">કસ્ટમ</string>
+    <string name="home_custom_caption">લાઇફ</string>
     <string name="home_custom_edit">શરૂઆતની લાઇફ દાખલ કરો</string>
     <string name="home_unit_players">ખેલાડી</string>
     <string name="home_start_game">રમત શરૂ કરો</string>

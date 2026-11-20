@@ -43,6 +43,13 @@ about_section() { # $1 lang, $2 y of the section row, $3 file name
 for L in "${LANGS[@]}"; do
   OUT="$OUT_ROOT/$L"; mkdir -p "$OUT"
   echo "== $L"
+  if [[ "${L10N_ONLY:-}" == "home" ]]; then
+    # Only the New game screen states (tile captions, custom value): 01, 02 and 17.
+    fresh "$L"; shot 01-home
+    tap 240 208; shot 02-custom-life
+    adb shell input text 25; back; tap 240 470; shot 17-custom-value
+    continue
+  fi
   if [[ -n "${L10N_QUICK:-}" ]]; then
     # Quick mode: only the screens with buttons and tiles, to catch overflow in many languages.
     GAME=80; SETTINGS=400
@@ -52,7 +59,8 @@ for L in "${LANGS[@]}"; do
     continue
   fi
   fresh "$L"; shot 01-home
-  tap 240 208; shot 02-custom-life; back; back
+  tap 240 208; shot 02-custom-life
+  adb shell input text 25; back; tap 240 470; shot 17-custom-value   # value entered: tile reads like the presets
   fresh "$L"
   tap 239 358; shot 03-players-coming-soon; back
   tap 239 762; shot 04-history-coming-soon

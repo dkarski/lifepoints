@@ -7,6 +7,7 @@
     <string name="tab_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="home_unit_life">ಲೈಫ್</string>
     <string name="home_custom">ಕಸ್ಟಮ್</string>
+    <string name="home_custom_caption">ಲೈಫ್</string>
     <string name="home_custom_edit">ಆರಂಭಿಕ ಲೈಫ್ ನಮೂದಿಸಿ</string>
     <string name="home_unit_players">ಆಟಗಾರರು</string>
     <string name="home_start_game">ಆಟ ಪ್ರಾರಂಭಿಸಿ</string>

@@ -7,6 +7,7 @@
     <string name="tab_settings">Configuració</string>
     <string name="home_unit_life">vides</string>
     <string name="home_custom">Altre</string>
+    <string name="home_custom_caption">vides</string>
     <string name="home_custom_edit">Introdueix les vides inicials</string>
     <string name="home_unit_players">jugadors</string>
     <string name="home_start_game">Comença la partida</string>

@@ -7,6 +7,7 @@
     <string name="tab_settings">Nastavení</string>
     <string name="home_unit_life">životů</string>
     <string name="home_custom">Vlastní</string>
+    <string name="home_custom_caption">hodnota</string>
     <string name="home_custom_edit">Zadejte počet životů</string>
     <string name="home_unit_players">hráči</string>
     <string name="home_start_game">Začít hru</string>

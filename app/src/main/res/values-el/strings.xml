@@ -7,6 +7,7 @@
     <string name="tab_settings">Ρυθμίσεις</string>
     <string name="home_unit_life">ζωές</string>
     <string name="home_custom">Προσαρμογή</string>
+    <string name="home_custom_caption">ζωές</string>
     <string name="home_custom_edit">Εισαγάγετε αρχικές ζωές</string>
     <string name="home_unit_players">παίκτες</string>
     <string name="home_start_game">Έναρξη παιχνιδιού</string>

@@ -7,6 +7,7 @@
     <string name="tab_settings">ترتیبات</string>
     <string name="home_unit_life">زندگی</string>
     <string name="home_custom">اپنی</string>
+    <string name="home_custom_caption">زندگی</string>
     <string name="home_custom_edit">ابتدائی زندگی درج کریں</string>
     <string name="home_unit_players">کھلاڑی</string>
     <string name="home_start_game">کھیل شروع کریں</string>

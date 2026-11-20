@@ -7,6 +7,7 @@
     <string name="tab_settings">การตั้งค่า</string>
     <string name="home_unit_life">ไลฟ์</string>
     <string name="home_custom">กำหนดเอง</string>
+    <string name="home_custom_caption">ไลฟ์</string>
     <string name="home_custom_edit">ป้อนไลฟ์เริ่มต้น</string>
     <string name="home_unit_players">ผู้เล่น</string>
     <string name="home_start_game">เริ่มเกม</string>

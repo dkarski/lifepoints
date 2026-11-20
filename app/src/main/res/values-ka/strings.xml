@@ -7,6 +7,7 @@
     <string name="tab_settings">პარამეტრები</string>
     <string name="home_unit_life">სიცოცხლე</string>
     <string name="home_custom">საკუთარი</string>
+    <string name="home_custom_caption">სიცოცხლე</string>
     <string name="home_custom_edit">შეიყვანეთ საწყისი სიცოცხლე</string>
     <string name="home_unit_players">მოთამაშე</string>
     <string name="home_start_game">თამაშის დაწყება</string>

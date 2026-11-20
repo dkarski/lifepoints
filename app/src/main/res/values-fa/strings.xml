@@ -7,6 +7,7 @@
     <string name="tab_settings">تنظیمات</string>
     <string name="home_unit_life">جان</string>
     <string name="home_custom">دلخواه</string>
+    <string name="home_custom_caption">جان</string>
     <string name="home_custom_edit">جان اولیه را وارد کنید</string>
     <string name="home_unit_players">بازیکن</string>
     <string name="home_start_game">شروع بازی</string>

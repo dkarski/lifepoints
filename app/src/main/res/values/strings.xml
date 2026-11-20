@@ -7,8 +7,11 @@
     <string name="tab_history">History</string>
     <string name="tab_settings">Settings</string>
 
+    <!-- Small caption under 20/30/40 and under an entered custom value ("20 life"). Life total as in MTG. -->
     <string name="home_unit_life">life</string>
+    <!-- Custom tile before a value is entered: big label + small caption read together ("Custom life"). -->
     <string name="home_custom">Custom</string>
+    <string name="home_custom_caption">life</string>
     <string name="home_custom_edit">Enter starting life</string>
     <string name="home_unit_players">players</string>
     <string name="home_start_game">Start Game</string>

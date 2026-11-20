@@ -7,6 +7,7 @@
     <string name="tab_settings">ക്രമീകരണം</string>
     <string name="home_unit_life">ലൈഫ്</string>
     <string name="home_custom">ഇഷ്ടാനുസൃതം</string>
+    <string name="home_custom_caption">ലൈഫ്</string>
     <string name="home_custom_edit">തുടക്ക ലൈഫ് നൽകുക</string>
     <string name="home_unit_players">കളിക്കാർ</string>
     <string name="home_start_game">കളി തുടങ്ങുക</string>

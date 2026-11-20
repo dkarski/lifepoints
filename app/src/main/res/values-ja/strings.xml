@@ -7,6 +7,7 @@
     <string name="tab_settings">設定</string>
     <string name="home_unit_life">ライフ</string>
     <string name="home_custom">カスタム</string>
+    <string name="home_custom_caption">ライフ</string>
     <string name="home_custom_edit">初期ライフを入力</string>
     <string name="home_unit_players">人</string>
     <string name="home_start_game">ゲーム開始</string>

@@ -7,6 +7,7 @@
     <string name="tab_settings">सेटिंग्ज</string>
     <string name="home_unit_life">लाइफ</string>
     <string name="home_custom">स्वतःचे</string>
+    <string name="home_custom_caption">लाइफ</string>
     <string name="home_custom_edit">सुरुवातीची लाइफ टाका</string>
     <string name="home_unit_players">खेळाडू</string>
     <string name="home_start_game">खेळ सुरू करा</string>

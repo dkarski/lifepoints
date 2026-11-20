@@ -7,6 +7,7 @@
     <string name="tab_settings">Postavke</string>
     <string name="home_unit_life">života</string>
     <string name="home_custom">Prilagođeno</string>
+    <string name="home_custom_caption">života</string>
     <string name="home_custom_edit">Unesi početne živote</string>
     <string name="home_unit_players">igrača</string>
     <string name="home_start_game">Započni igru</string>

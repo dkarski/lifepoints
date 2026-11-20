@@ -7,6 +7,7 @@
     <string name="tab_settings">Тохиргоо</string>
     <string name="home_unit_life">амь</string>
     <string name="home_custom">Өөрийн</string>
+    <string name="home_custom_caption">амь</string>
     <string name="home_custom_edit">Эхлэх амийг оруулна уу</string>
     <string name="home_unit_players">тоглогч</string>
     <string name="home_start_game">Тоглоом эхлүүлэх</string>

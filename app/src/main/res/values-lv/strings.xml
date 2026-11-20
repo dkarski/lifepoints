@@ -7,6 +7,7 @@
     <string name="tab_settings">Iestatījumi</string>
     <string name="home_unit_life">dzīvības</string>
     <string name="home_custom">Savs</string>
+    <string name="home_custom_caption">dzīvības</string>
     <string name="home_custom_edit">Ievadiet sākuma dzīvības</string>
     <string name="home_unit_players">spēlētāji</string>
     <string name="home_start_game">Sākt spēli</string>

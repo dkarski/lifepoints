@@ -7,6 +7,7 @@
     <string name="tab_settings">Beállítások</string>
     <string name="home_unit_life">élet</string>
     <string name="home_custom">Egyéni</string>
+    <string name="home_custom_caption">élet</string>
     <string name="home_custom_edit">Kezdő élet megadása</string>
     <string name="home_unit_players">játékos</string>
     <string name="home_start_game">Játék indítása</string>

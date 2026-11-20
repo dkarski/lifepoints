@@ -7,6 +7,7 @@
     <string name="tab_settings">Asetukset</string>
     <string name="home_unit_life">elämää</string>
     <string name="home_custom">Oma</string>
+    <string name="home_custom_caption">elämää</string>
     <string name="home_custom_edit">Anna aloituselämät</string>
     <string name="home_unit_players">pelaajaa</string>
     <string name="home_start_game">Aloita peli</string>

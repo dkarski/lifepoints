@@ -7,6 +7,7 @@
     <string name="tab_settings">සැකසීම්</string>
     <string name="home_unit_life">ජීවිත</string>
     <string name="home_custom">අභිරුචි</string>
+    <string name="home_custom_caption">ජීවිත</string>
     <string name="home_custom_edit">ආරම්භක ජීවිත ඇතුළත් කරන්න</string>
     <string name="home_unit_players">ක්‍රීඩකයන්</string>
     <string name="home_start_game">ක්‍රීඩාව අරඹන්න</string>

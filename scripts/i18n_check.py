@@ -25,7 +25,7 @@ LANG_FILE = ROOT / "app/src/main/java/dev/dkarski/tcglivecounter/data/AppLanguag
 SPECIAL = {"he": "iw", "id": "in", "zh-Hans": "b+zh+Hans", "zh-Hant": "b+zh+Hant", "fil": "b+fil"}
 # Short labels shown in tiles, tabs and buttons: warn when a translation is much longer than English.
 SHORT_LABELS = {
-    "soon", "tab_game", "tab_history", "tab_settings", "home_unit_life", "home_custom", "home_unit_players",
+    "soon", "home_custom_caption", "tab_game", "tab_history", "tab_settings", "home_unit_life", "home_custom", "home_unit_players",
     "home_start_game", "menu_continue", "menu_new_game", "settings_theme_light", "settings_theme_dark",
     "coming_soon_copy", "settings_language", "language_system_default", "settings_about", "about_tip_jar",
 }

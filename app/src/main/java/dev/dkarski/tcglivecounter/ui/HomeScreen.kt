@@ -104,7 +104,8 @@ fun HomeScreen(
             val customValid = lifePreset == null && canStart
             ChoiceTile(
                 label = if (customValid) customText else stringResource(R.string.home_custom),
-                caption = lifeUnit,
+                // Before a value is entered the tile reads "Custom value", after it reads like the presets ("25 life").
+                caption = if (customValid) lifeUnit else stringResource(R.string.home_custom_caption),
                 selected = lifePreset == null,
                 onClick = { onCustomSelect(); editingCustom = true },
                 modifier = Modifier.fillMaxWidth(),

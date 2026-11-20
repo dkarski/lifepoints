@@ -74,7 +74,7 @@ kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:
 </main>
 <script>
 const LANGS=[["en","English"],["it","Italiano"],["pl","Polski"],["cs","Čeština"],["pt","Português"],["es","Español"],["de","Deutsch"],["fr","Français"],["nl","Nederlands"]];
-const SCREENS=[["01-home","Home / New game"],["02-custom-life","Custom life (editing)"],["03-players-coming-soon","3 players: coming soon"],["04-history-coming-soon","History: coming soon"],["05-contact-no-email-app","Contact: no e-mail app"],["06-settings","Settings"],["07-language","Language"],["08-language-search","Language search"],["09-about","About"],["10-tip-jar","Tip jar"],["11-counter","Game counter"],["12-game-menu","Game menu"],["13-about-privacy","About: Privacy"],["14-about-terms","About: Terms of use"],["15-about-licenses","About: Open source licenses"],["16-about-legal","About: Legal notes"]];
+const SCREENS=[["01-home","Home / New game"],["02-custom-life","Custom life (editing)"],["03-players-coming-soon","3 players: coming soon"],["04-history-coming-soon","History: coming soon"],["05-contact-no-email-app","Contact: no e-mail app"],["06-settings","Settings"],["07-language","Language"],["08-language-search","Language search"],["09-about","About"],["10-tip-jar","Tip jar"],["11-counter","Game counter"],["12-game-menu","Game menu"],["13-about-privacy","About: Privacy"],["14-about-terms","About: Terms of use"],["15-about-licenses","About: Open source licenses"],["16-about-legal","About: Legal notes"],["17-custom-value","Custom life (value entered)"]];
 const CHANGES=[
  ["it","Custom life tile","Personalizza","Altro","An option next to 20/30/40, not a command"],
  ["pt","Custom life tile","Personalizar","Outro","Same"],
@@ -95,6 +95,19 @@ const CHANGES=[
  ["de","Feedback prompt","Hast du eine Idee oder Feedback? Ich freue mich darauf.","Hast du eine Idee oder Feedback? Schreib mir gern!","Natural"],
  ["pt","Feedback prompt","… Gostaria muito de saber.","… Gostava muito de saber.","European Portuguese"],
  ["pl","Custom life hint","Wpisz życie na start","Wpisz życie startowe","Natural"],
+ ["de","Life caption (tiles)","Leben","LP","Official MTG term is “Lebenspunkte” (used in the input hint); too long for the 20/30/40 tiles, so the common TCG abbreviation LP"],
+ ["fr","Life caption (tiles)","vies","PV","Official MTG term is “points de vie” (input hint); abbreviated PV on the tiles as on French TCG cards; “vies” read as video-game lives"],
+ ["it","Life caption (tiles)","vite","punti vita","Official MTG term"],
+ ["pt","Life caption (tiles)","vidas","PV","Official MTG term is “pontos de vida” (input hint); abbreviated PV on the tiles"],
+ ["pl","Life caption (tiles)","życie","życia","How players say it (“mam 20 życia”); fits any number. No official Polish MTG"],
+ ["pl","Custom tile (before a value)","Własne / życie","Inna / wartość","Label and caption are read together; “Własne życie” sounded like “one's own life”"],
+ ["cs","Custom tile (before a value)","Vlastní / životů","Vlastní / hodnota","Same pattern"],
+ ["de","Custom tile (before a value)","Eigene / Leben","Eigener / Wert","Same pattern"],
+ ["fr","Custom tile (before a value)","Autre / vies","Autre / valeur","Same pattern"],
+ ["it","Custom tile (before a value)","Altro / vite","Altro / valore","Same pattern"],
+ ["es","Custom tile (before a value)","Otro / vidas","Otro / valor","Same pattern"],
+ ["pt","Custom tile (before a value)","Outro / vidas","Outro / valor","Same pattern"],
+ ["nl","Custom tile (before a value)","Eigen / levens","Eigen / waarde","Same pattern"],
 ];
 let lang="pl", screen=0, compare=true, grid=false;
 const $=id=>document.getElementById(id);

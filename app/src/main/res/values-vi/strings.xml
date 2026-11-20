@@ -7,6 +7,7 @@
     <string name="tab_settings">Cài đặt</string>
     <string name="home_unit_life">máu</string>
     <string name="home_custom">Tùy chỉnh</string>
+    <string name="home_custom_caption">máu</string>
     <string name="home_custom_edit">Nhập máu khởi đầu</string>
     <string name="home_unit_players">người chơi</string>
     <string name="home_start_game">Bắt đầu</string>

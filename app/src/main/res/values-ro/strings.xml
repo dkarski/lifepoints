@@ -7,6 +7,7 @@
     <string name="tab_settings">Setări</string>
     <string name="home_unit_life">vieți</string>
     <string name="home_custom">Personalizat</string>
+    <string name="home_custom_caption">vieți</string>
     <string name="home_custom_edit">Introduceți viețile inițiale</string>
     <string name="home_unit_players">jucători</string>
     <string name="home_start_game">Începe jocul</string>

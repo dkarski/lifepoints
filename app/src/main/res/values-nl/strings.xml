@@ -7,6 +7,7 @@
     <string name="tab_settings">Instellingen</string>
     <string name="home_unit_life">levens</string>
     <string name="home_custom">Eigen</string>
+    <string name="home_custom_caption">waarde</string>
     <string name="home_custom_edit">Startlevens invoeren</string>
     <string name="home_unit_players">spelers</string>
     <string name="home_start_game">Spel starten</string>

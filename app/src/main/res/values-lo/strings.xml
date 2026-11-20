@@ -7,6 +7,7 @@
     <string name="tab_settings">ການຕັ້ງຄ່າ</string>
     <string name="home_unit_life">ຊີວິດ</string>
     <string name="home_custom">ກຳນົດເອງ</string>
+    <string name="home_custom_caption">ຊີວິດ</string>
     <string name="home_custom_edit">ປ້ອນຊີວິດເລີ່ມຕົ້ນ</string>
     <string name="home_unit_players">ຜູ້ຫຼິ້ນ</string>
     <string name="home_start_game">ເລີ່ມເກມ</string>

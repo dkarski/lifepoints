@@ -7,6 +7,7 @@
     <string name="tab_settings">Indstillinger</string>
     <string name="home_unit_life">liv</string>
     <string name="home_custom">Brugerdefineret</string>
+    <string name="home_custom_caption">liv</string>
     <string name="home_custom_edit">Indtast startliv</string>
     <string name="home_unit_players">spillere</string>
     <string name="home_start_game">Start spil</string>

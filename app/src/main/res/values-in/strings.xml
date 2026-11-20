@@ -7,6 +7,7 @@
     <string name="tab_settings">Setelan</string>
     <string name="home_unit_life">nyawa</string>
     <string name="home_custom">Kustom</string>
+    <string name="home_custom_caption">nyawa</string>
     <string name="home_custom_edit">Masukkan nyawa awal</string>
     <string name="home_unit_players">pemain</string>
     <string name="home_start_game">Mulai permainan</string>

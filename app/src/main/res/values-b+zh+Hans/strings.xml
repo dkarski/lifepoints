@@ -7,6 +7,7 @@
     <string name="tab_settings">设置</string>
     <string name="home_unit_life">生命值</string>
     <string name="home_custom">自定义</string>
+    <string name="home_custom_caption">生命值</string>
     <string name="home_custom_edit">输入初始生命值</string>
     <string name="home_unit_players">名玩家</string>
     <string name="home_start_game">开始游戏</string>

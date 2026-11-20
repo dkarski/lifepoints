@@ -29,6 +29,17 @@ APK and works offline; Android reads only the strings of the active language.
 `app/build.gradle.kts` limits the APK to these languages (`resourceConfigurations`), so AndroidX texts never appear in
 a language the app does not offer.
 
+## Terminology: life
+
+“Life” is the player's life total, as in Magic: The Gathering (the 20/30/40 presets are MTG formats). Where MTG is
+printed in the language, use its official term (checked on printed cards via Scryfall): DE Lebenspunkte, FR points de
+vie, IT punti vita, PT pontos de vida, ES vidas, RU жизни, JA ライフ, KO 생명. The small caption under 20/30/40 is
+narrow, so DE and FR/PT use the usual TCG abbreviations LP and PV there; the full term appears in the input hint.
+Polish has no official MTG edition: “życia”, as players say it (“mam 20 życia”), fits any number.
+
+The Custom tile has its own caption before a value is entered (“Custom life”, PL “Inna wartość”), because label and
+caption are read together; once a value is entered it uses the life caption like the presets (“25 życia”).
+
 ## Adding or changing a text
 
 1. Edit English in `values/strings.xml`. Add a `<!-- comment -->` with where the text appears and any length limit.

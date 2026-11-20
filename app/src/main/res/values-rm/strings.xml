@@ -7,6 +7,7 @@
     <string name="tab_settings">Parameters</string>
     <string name="home_unit_life">vitas</string>
     <string name="home_custom">Agen</string>
+    <string name="home_custom_caption">vitas</string>
     <string name="home_custom_edit">Endatar las vitas da partenza</string>
     <string name="home_unit_players">giugaders</string>
     <string name="home_start_game">Cumenzar il gieu</string>

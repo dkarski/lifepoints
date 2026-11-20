@@ -7,6 +7,7 @@
     <string name="tab_settings">Налаштування</string>
     <string name="home_unit_life">життя</string>
     <string name="home_custom">Своє</string>
+    <string name="home_custom_caption">життя</string>
     <string name="home_custom_edit">Введіть початкові життя</string>
     <string name="home_unit_players">гравці</string>
     <string name="home_start_game">Почати гру</string>

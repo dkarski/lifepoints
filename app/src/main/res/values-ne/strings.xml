@@ -7,6 +7,7 @@
     <string name="tab_settings">सेटिङहरू</string>
     <string name="home_unit_life">लाइफ</string>
     <string name="home_custom">आफ्नै</string>
+    <string name="home_custom_caption">लाइफ</string>
     <string name="home_custom_edit">सुरुको लाइफ हाल्नुहोस्</string>
     <string name="home_unit_players">खेलाडी</string>
     <string name="home_start_game">खेल सुरु गर्नुहोस्</string>

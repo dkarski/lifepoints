@@ -7,6 +7,7 @@
     <string name="tab_settings">Ayarlar</string>
     <string name="home_unit_life">can</string>
     <string name="home_custom">Özel</string>
+    <string name="home_custom_caption">can</string>
     <string name="home_custom_edit">Başlangıç canını girin</string>
     <string name="home_unit_players">oyuncu</string>
     <string name="home_start_game">Oyunu başlat</string>

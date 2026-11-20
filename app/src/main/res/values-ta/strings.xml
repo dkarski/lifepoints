@@ -7,6 +7,7 @@
     <string name="tab_settings">அமைப்புகள்</string>
     <string name="home_unit_life">உயிர்</string>
     <string name="home_custom">தனிப்பயன்</string>
+    <string name="home_custom_caption">உயிர்</string>
     <string name="home_custom_edit">தொடக்க உயிரை உள்ளிடுக</string>
     <string name="home_unit_players">வீரர்கள்</string>
     <string name="home_start_game">ஆட்டத்தைத் தொடங்கு</string>

@@ -7,6 +7,7 @@
     <string name="tab_settings">Seaded</string>
     <string name="home_unit_life">elu</string>
     <string name="home_custom">Oma</string>
+    <string name="home_custom_caption">elu</string>
     <string name="home_custom_edit">Sisesta algelud</string>
     <string name="home_unit_players">mängijat</string>
     <string name="home_start_game">Alusta mängu</string>

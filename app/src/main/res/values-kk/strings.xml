@@ -7,6 +7,7 @@
     <string name="tab_settings">Параметрлер</string>
     <string name="home_unit_life">өмір</string>
     <string name="home_custom">Өзім</string>
+    <string name="home_custom_caption">өмір</string>
     <string name="home_custom_edit">Бастапқы өмірді енгізіңіз</string>
     <string name="home_unit_players">ойыншы</string>
     <string name="home_start_game">Ойынды бастау</string>
