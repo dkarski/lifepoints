@@ -6,12 +6,26 @@ plugins {
     alias(libs.plugins.kotlin.compose)
 }
 
-// Release signing: the keystore lives outside the repo; paths/passwords come from local.properties.
+// Version: version.txt is the single source (updated by the release pull request).
+// versionCode is derived from it, so every release has a higher code: 1.2.3 -> 1002003.
+val appVersion: String = rootProject.file("version.txt").readText().trim()
+val appVersionCode: Int = run {
+    val parts = Regex("""(\d+)\.(\d+)\.(\d+)""").matchEntire(appVersion)?.destructured?.toList()
+        ?.map(String::toInt) ?: error("version.txt must contain X.Y.Z, found '$appVersion'")
+    require(parts[1] < 1000 && parts[2] < 1000) { "minor and patch must be below 1000" }
+    parts[0] * 1_000_000 + parts[1] * 1_000 + parts[2]
+}
+
+// Release signing: the keystore lives outside the repo. Values come from local.properties
+// (release.storeFile, ...) or, in CI, from the RELEASE_STORE_FILE, ... environment variables.
 val localProps = Properties().apply {
     val f = rootProject.file("local.properties")
     if (f.exists()) f.inputStream().use { load(it) }
 }
-val releaseStoreFile: String? = localProps.getProperty("release.storeFile")
+fun signingValue(key: String): String? =
+    localProps.getProperty("release.$key")
+        ?: System.getenv("RELEASE_" + key.replace(Regex("([A-Z])"), "_$1").uppercase())
+val releaseStoreFile: String? = signingValue("storeFile")
 
 android {
     namespace = "dev.dkarski.tcglivecounter"
@@ -21,8 +35,8 @@ android {
         applicationId = "dev.dkarski.lifepoints"
         minSdk = 31 // Mudita Kompakt: MuditaOS K, AOSP 12 (API 31)
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.1.0"
+        versionCode = appVersionCode
+        versionName = appVersion
         // Only the app's 63 languages (data/AppLanguage.kt): drops AndroidX translations for other languages,
         // so library texts never appear in a language the app does not offer. "zh" keeps the libraries' Chinese.
         resourceConfigurations += listOf(
@@ -43,9 +57,9 @@ android {
         if (releaseStoreFile != null) {
             create("release") {
                 storeFile = file(releaseStoreFile)
-                storePassword = localProps.getProperty("release.storePassword")
-                keyAlias = localProps.getProperty("release.keyAlias")
-                keyPassword = localProps.getProperty("release.keyPassword")
+                storePassword = signingValue("storePassword")
+                keyAlias = signingValue("keyAlias")
+                keyPassword = signingValue("keyPassword")
             }
         }
     }

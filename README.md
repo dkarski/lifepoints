@@ -1,63 +1,50 @@
 # Lifepoints
 
-An offline life counter for trading card games on Mudita Kompakt, built with Kotlin,
-Jetpack Compose and Mudita Mindful Design (MMD).
+A simple, offline life counter for trading card games such as Magic: The Gathering, Pokémon TCG or
+Lorcana, made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/) E Ink phone.
+
+<p>
+  <img src="store/screenshots/01-home.png" width="200" alt="New game: starting life and players">
+  <img src="store/screenshots/02-counter.png" width="200" alt="Two-player life counter">
+  <img src="store/screenshots/04-counter-dark.png" width="200" alt="Life counter in the dark theme">
+</p>
 
 ## Features
 
-- Two-player counter with starting life 20, 30, 40 or a custom value.
-- Saved game and Light/Dark themes.
-- 63 interface languages (follows the phone's language, or choose one in Settings > Language).
-- Offline operation with no requested permissions.
-- Developer contact from Settings.
-- About, privacy information, terms and open source licenses.
-- Optional support through a QR code.
+- Life counter for two players, with starting life 20, 30, 40 or any custom value.
+- Your game is saved, so you can close the app and continue later.
+- Light and dark themes, designed for the E Ink screen.
+- 63 languages. The app follows your phone's language, or you can choose one in Settings > Language.
+- Works fully offline: no account, no ads, no tracking and no permissions.
 
-Three- and four-player games and game history are currently unavailable.
+Games for three and four players and game history are planned.
 
-## Build
+## Get the app
 
-Requirements: JDK 17, Android SDK Platform 35 and Android SDK Build-Tools 35.
-Set `ANDROID_HOME` to your SDK directory, or set `sdk.dir` in your local `local.properties`.
+Lifepoints is distributed through **InkApps**, the app store on the Mudita Kompakt.
 
-```sh
-./gradlew :app:assembleDebug
-./gradlew :app:assembleRelease
-```
+You can also download the signed APK from the [latest release](https://github.com/dkarski/lifepoints/releases/latest)
+and install it yourself. Updates from InkApps and from GitHub releases are signed with the same key, so they install
+over each other without losing your game or settings.
 
-APKs are written to `app/build/outputs/apk/`. Debug builds use a separate `.debug` package.
-Release builds are unsigned unless the following local properties are configured:
+Lifepoints requires Android 12 (API 31) or later and is designed for the Kompakt's 480×800 E Ink screen.
 
-```properties
-release.storeFile=/absolute/path/to/signing-key.jks
-release.storePassword=YOUR_STORE_PASSWORD
-release.keyAlias=YOUR_KEY_ALIAS
-release.keyPassword=YOUR_KEY_PASSWORD
-```
+## Support
 
-Keep signing keys and `local.properties` outside version control.
+Lifepoints is free. If you enjoy it, you can leave a tip:
 
-## Languages
-
-See [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md) for how languages work and how to add texts,
-[docs/i18n/LANGUAGE_AUDIT.md](docs/i18n/LANGUAGE_AUDIT.md) for rendering on the Kompakt, and
-`docs/i18n/review/index.html` for screenshots of the 9 MuditaOS system languages.
-
-## App icon
-
-The SVG artwork is in `assets/lifepoints.svg`; Android launcher resources are in `app/src/main/res/`.
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/danielkarski)
 
 ## Contact
 
-Daniel Karski — daniel.karski5q@gmail.com
+Ideas, bugs or questions: open an [issue](https://github.com/dkarski/lifepoints/issues) or write to
+daniel.karski5q@gmail.com (the address is also in the app, in Settings).
 
-## Privacy and terms
+## Privacy and license
 
-See [Privacy Policy](docs/PRIVACY_POLICY.md) and [Terms of Use](docs/TERMS_OF_USE.md).
-
-## License
-
-Source code: https://github.com/dkarski/lifepoints
+Lifepoints collects no data. See the [Privacy Policy](docs/PRIVACY_POLICY.md) and the [Terms of Use](docs/TERMS_OF_USE.md).
 
 Copyright 2026 Daniel Karski. Licensed under the [Apache License 2.0](LICENSE).
-Third-party license texts are included in `app/src/main/res/raw/` and available in the app.
+Third-party licenses are listed in the app (Settings > About > Open source licenses).
+
+Building from source, contributing and releasing: see [CONTRIBUTING.md](CONTRIBUTING.md).
