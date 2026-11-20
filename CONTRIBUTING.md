@@ -95,7 +95,9 @@ release a new version.
 ### Signing
 
 The signing key is not in the repository. GitHub stores it in the `release` environment, which only `main` can
-use, so pull request builds cannot read it.
+use, so pull request builds cannot read it. The release APK is built without the key. A separate job, which runs
+no code from the repository, signs it with `apksigner` and only signs tags that are part of `main`. Workflow
+actions are pinned to commit SHAs and updated by Dependabot.
 
 | Name | Kind | Content |
 |---|---|---|

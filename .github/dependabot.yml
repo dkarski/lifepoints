@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Keeps the actions pinned to commit SHAs up to date.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
