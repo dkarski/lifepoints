@@ -49,6 +49,14 @@ changelog. Titles follow [Conventional Commits](https://www.conventionalcommits.
 A breaking change (`feat!:`) makes a major release. Write `feat` and `fix` titles for users, for example
 `feat: three-player games were added`, not `feat: add PlayerCount enum`.
 
+Choose the type from the point of view of someone using the **latest published release**:
+
+- `fix` only for a bug that exists in a published version. A changelog line under *Fixes* tells users that
+  something they have was broken.
+- Changes to something new in the same unreleased version (for example the wording of a new translation) are part
+  of that `feat`; they get no separate line.
+- Improving something that already works (clearer texts, a better layout) is `feat`, not `fix`.
+
 When one pull request brings several user-visible changes, list them at the end of its description; they become
 separate changelog lines:
 
@@ -73,6 +81,8 @@ Releases are made only by GitHub Actions, never from a local machine.
    - builds the release APK and signs it with the production key;
    - verifies the signing certificate (`RELEASE_CERT_SHA256`), the package name, `versionName` and `versionCode`;
    - attaches `lifepoints-X.Y.Z.apk` and its `.sha256`, and publishes the release.
+5. Optionally give the release a short name that says what users gain, and use the same name in InkApps:
+   `gh release edit vX.Y.Z --title "vX.Y.Z — Play in your language"`.
 
 If the APK job fails, the release stays a draft. Fix the cause (for example a secret) and use *Re-run failed jobs*.
 If code must change, delete the draft release and its tag, merge the fix and let the workflow release again.
