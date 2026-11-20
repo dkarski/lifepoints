@@ -37,7 +37,9 @@ jobs:
             ci
             chore
           # The subject becomes the changelog line: a sentence starting with a capital letter, no final period.
+          # Dependabot writes "ci: bump ..."; its pull requests never reach the changelog, so they are skipped.
           subjectPattern: '^[A-Z].*[^.]$'
+          ignoreLabels: dependencies
           subjectPatternError: >-
             The subject "{subject}" must start with a capital letter and have no final period,
             for example: feat: Three-player games were added
