@@ -21,8 +21,8 @@ android {
         applicationId = "dev.dkarski.lifepoints"
         minSdk = 31 // Mudita Kompakt: MuditaOS K, AOSP 12 (API 31)
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.1.0"
     }
 
     signingConfigs {

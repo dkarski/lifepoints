@@ -18,6 +18,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import dev.dkarski.tcglivecounter.AppConfig
 import dev.dkarski.tcglivecounter.R
+import dev.dkarski.tcglivecounter.data.AppLanguages
 import dev.dkarski.tcglivecounter.data.GameState
 import dev.dkarski.tcglivecounter.ui.components.MainLayout
 import dev.dkarski.tcglivecounter.ui.components.SecondaryLayout
@@ -26,16 +27,16 @@ import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
  * Main screens (bottom navigation, no back arrow): Home (Game tab), History, Settings.
- * Secondary screens (back arrow, no bottom navigation): ComingSoon (3/4 players, from Home), About and TipJar
- * (from Settings). Fullscreen: Counter, Menu.
+ * Secondary screens (back arrow, no bottom navigation): ComingSoon (3/4 players, from Home), Language, About and
+ * TipJar (from Settings). Fullscreen: Counter, Menu.
  */
-enum class Screen { Home, History, Settings, ComingSoon, About, TipJar, Counter, Menu }
+enum class Screen { Home, History, Settings, ComingSoon, Language, About, TipJar, Counter, Menu }
 
 /** Where Back goes from each screen; null = system Back (leaves the app; the game is already saved). */
 private fun Screen.parent(): Screen? = when (this) {
     Screen.Home, Screen.Menu -> null
     Screen.History, Screen.Settings, Screen.ComingSoon -> Screen.Home
-    Screen.About, Screen.TipJar -> Screen.Settings
+    Screen.Language, Screen.About, Screen.TipJar -> Screen.Settings
     Screen.Counter -> Screen.Menu
 }
 
@@ -49,6 +50,8 @@ fun App(
     onGameChange: (GameState) -> Unit,
     themeMode: ThemeMode,
     onThemeModeChange: (ThemeMode) -> Unit,
+    languageTag: String?,
+    onLanguageChange: (String?) -> Unit,
 ) {
     val context = LocalContext.current
     var game by remember { mutableStateOf(initialGame) }
@@ -155,6 +158,9 @@ fun App(
                     SettingsScreen(
                         themeMode = themeMode,
                         onThemeModeChange = onThemeModeChange,
+                        languageName = AppLanguages.find(languageTag)?.nativeName
+                            ?: stringResource(R.string.language_system_default),
+                        onLanguage = { screen = Screen.Language },
                         onAbout = {
                             contactCopied = false
                             screen = Screen.About
@@ -163,6 +169,16 @@ fun App(
                         contentPadding = padding,
                     )
                 }
+
+                Screen.Language -> LanguageScreen(
+                    selectedTag = languageTag,
+                    onSelect = { tag ->
+                        // Back to Settings first: the Activity is rebuilt in the new language and restores this screen.
+                        screen = Screen.Settings
+                        onLanguageChange(tag)
+                    },
+                    onBack = back,
+                )
 
                 Screen.About -> SecondaryLayout(title = stringResource(R.string.about_title), onBack = back) { padding ->
                     AboutScreen(

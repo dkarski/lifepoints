@@ -39,6 +39,20 @@
     <string name="settings_theme">Theme</string>
     <string name="settings_about">About</string>
     <string name="back">Back</string>
+
+    <!-- Settings > Language. Language names in the list are shown in their own language and are not translated. -->
+    <string name="settings_language">Language</string>
+    <!-- First option: the app follows the phone's language. -->
+    <string name="language_system_default">System default</string>
+    <!-- Heading above the languages that are not MuditaOS system languages. -->
+    <string name="language_more">More languages</string>
+    <!-- Content description of the search icon in the top bar. -->
+    <string name="language_search">Search</string>
+    <!-- Placeholder of the search field in the top bar. Keep short. -->
+    <string name="language_search_hint">Search languages</string>
+    <!-- Content description of the button that clears the search text. -->
+    <string name="language_clear_search">Clear search</string>
+    <string name="language_no_results">No languages found</string>
     <string name="about_title">About</string>
     <string name="about_version">Version %1$s</string>
     <string name="about_made_by">Made by:</string>

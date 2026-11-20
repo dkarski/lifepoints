@@ -1,5 +1,6 @@
 package dev.dkarski.tcglivecounter
 
+import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.WindowInsetsController
@@ -10,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.toArgb
+import dev.dkarski.tcglivecounter.data.AppLocale
 import dev.dkarski.tcglivecounter.data.GameStore
 import dev.dkarski.tcglivecounter.data.SettingsStore
 import dev.dkarski.tcglivecounter.ui.App
@@ -18,6 +20,11 @@ import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 import dev.dkarski.tcglivecounter.ui.theme.colors
 
 class MainActivity : ComponentActivity() {
+    /** Applies the app language chosen in Settings (or keeps the system language). */
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppLocale.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val gameStore = GameStore(this)
@@ -38,6 +45,15 @@ class MainActivity : ComponentActivity() {
                         themeMode = mode
                         settingsStore.themeMode = mode
                         applySystemBars(mode)
+                    },
+                    languageTag = settingsStore.languageTag,
+                    onLanguageChange = { tag ->
+                        if (tag != settingsStore.languageTag) {
+                            settingsStore.languageTag = tag
+                            // Rebuilds the screen with the new resources. The game is already saved and the
+                            // navigation state survives (rememberSaveable), so nothing is lost.
+                            recreate()
+                        }
                     },
                 )
             }
