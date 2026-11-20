@@ -17,3 +17,4 @@ screenshots/
 .env
 .env.*
 !store/screenshots/
+!docs/i18n/screenshots/
