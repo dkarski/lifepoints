@@ -84,8 +84,10 @@ Releases are made only by GitHub Actions, never from a local machine.
 5. Optionally give the release a short name that says what users gain, and use the same name in InkApps:
    `gh release edit vX.Y.Z --title "vX.Y.Z — Play in your language"`.
 
-If the APK job fails, the release stays a draft. Fix the cause (for example a secret) and use *Re-run failed jobs*.
-If code must change, delete the draft release and its tag, merge the fix and let the workflow release again.
+If the APK job fails, the release stays a draft and nothing is published. Fix the cause on `main` (a secret, or the
+workflow itself), then run *Actions → Release → Run workflow* with the tag (for example `v1.1.0`): it builds the
+tagged commit, verifies it and publishes the draft. A published release is never rebuilt. If the app code must
+change, delete the draft release and its tag and release a new version instead.
 
 ### Publishing in InkApps (manual)
 
