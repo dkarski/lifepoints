@@ -8,7 +8,7 @@
 
     <string name="home_unit_life">życie</string>
     <string name="home_custom">Własne</string>
-    <string name="home_custom_edit">Wpisz życie na start</string>
+    <string name="home_custom_edit">Wpisz życie startowe</string>
     <string name="home_unit_players">graczy</string>
     <string name="home_start_game">Rozpocznij grę</string>
 

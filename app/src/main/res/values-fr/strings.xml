@@ -6,7 +6,7 @@
     <string name="tab_history">Historique</string>
     <string name="tab_settings">Réglages</string>
     <string name="home_unit_life">vies</string>
-    <string name="home_custom">Personnaliser</string>
+    <string name="home_custom">Autre</string>
     <string name="home_custom_edit">Saisir les vies de départ</string>
     <string name="home_unit_players">joueurs</string>
     <string name="home_start_game">Commencer la partie</string>
@@ -22,10 +22,10 @@
     <string name="settings_theme_light">Clair</string>
     <string name="settings_theme_dark">Sombre</string>
     <string name="coming_soon_title">Bientôt disponible</string>
-    <string name="coming_soon_body">Cette fonctionnalité est en cours de développement.</string>
-    <string name="coming_soon_feedback_prompt">Une idée ou une remarque ? J\'aimerais beaucoup la connaître.</string>
-    <string name="coming_soon_contact">Contacter le développeur</string>
-    <string name="coming_soon_no_email_app">Aucune app de messagerie trouvée. Écrivez à :</string>
+    <string name="coming_soon_body">Fonction en développement.</string>
+    <string name="coming_soon_feedback_prompt">Une idée ou une remarque ? Écrivez-moi !</string>
+    <string name="coming_soon_contact">Écrire au développeur</string>
+    <string name="coming_soon_no_email_app">Pas d\'app de messagerie. Écrivez à :</string>
     <string name="coming_soon_copy">Copier l\'e-mail</string>
     <string name="coming_soon_copied">E-mail copié</string>
     <string name="feedback_body">Bonjour ! Mon avis :\n\n</string>

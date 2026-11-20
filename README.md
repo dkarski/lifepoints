@@ -7,7 +7,7 @@ Jetpack Compose and Mudita Mindful Design (MMD).
 
 - Two-player counter with starting life 20, 30, 40 or a custom value.
 - Saved game and Light/Dark themes.
-- English and Polish interfaces.
+- 63 interface languages (follows the phone's language, or choose one in Settings > Language).
 - Offline operation with no requested permissions.
 - Developer contact from Settings.
 - About, privacy information, terms and open source licenses.
@@ -36,6 +36,12 @@ release.keyPassword=YOUR_KEY_PASSWORD
 ```
 
 Keep signing keys and `local.properties` outside version control.
+
+## Languages
+
+See [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md) for how languages work and how to add texts,
+[docs/i18n/LANGUAGE_AUDIT.md](docs/i18n/LANGUAGE_AUDIT.md) for rendering on the Kompakt, and
+`docs/i18n/review/index.html` for screenshots of the 9 MuditaOS system languages.
 
 ## App icon
 

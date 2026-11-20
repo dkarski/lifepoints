@@ -6,7 +6,7 @@
     <string name="tab_history">Historial</string>
     <string name="tab_settings">Axustes</string>
     <string name="home_unit_life">vidas</string>
-    <string name="home_custom">Personalizar</string>
+    <string name="home_custom">Outro</string>
     <string name="home_custom_edit">Introduce as vidas iniciais</string>
     <string name="home_unit_players">xogadores</string>
     <string name="home_start_game">Comezar partida</string>

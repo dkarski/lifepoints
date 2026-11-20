@@ -149,3 +149,22 @@ otherwise the system font that draws the script. Screenshots are in `docs/i18n/s
 The test screen stays in the debug source set so the audit can be repeated on future MuditaOS versions:
 `adb shell am start -n dev.dkarski.lifepoints.debug/dev.dkarski.tcglivecounter.debugtools.ScriptTestActivity --es group <name>`
 (groups: latin-ok, latin-a…latin-e, cyr-a, cyr-b, rtl, indic-a, indic-b, sea, cjk; add `--ez dark true` for Dark).
+
+## Results with the implemented app (1.1.0, 2026-11-20)
+
+The finished app (debug build, language set through the app preference) was opened on the Kompakt in 21 languages
+covering every script group: Filipino, Hebrew, Persian, Urdu, Japanese, Chinese Simplified and Traditional, Korean,
+Thai, Hindi, Tamil, Malayalam, Russian, Greek, Georgian, Burmese, Khmer, German, Finnish (Home and Settings each),
+plus a Hebrew game counter and Persian in Dark. Screenshots: `docs/i18n/screenshots/device/`.
+
+- Every language rendered; no clipped labels in tiles, buttons or the bottom bar (long cases: Tamil, Malayalam,
+  Georgian, German, Finnish).
+- RTL (Hebrew, Persian, Urdu): the whole layout mirrors (tiles 40-30-20, bottom bar, row chevrons); life totals stay
+  in Latin digits on purpose.
+- Filipino resolves from `values-b+fil`.
+- The 9 system languages were captured on every screen with text (emulator, `docs/i18n/screenshots/l10n/`) and
+  reviewed in context; see `docs/i18n/review/index.html`.
+- Release build on the Kompakt, median of 9-10 cold starts: 1.0.0 = 647 ms, 1.1.0 = 650 ms. PSS: 36.6 MB vs 37.0 MB.
+  Installed APK: 2252 KB vs 2593 KB (+341 KB for 62 translations).
+
+Status in the table above is unchanged: 62 languages A, Urdu B (Naskh instead of Nastaliq).

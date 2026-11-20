@@ -24,7 +24,7 @@
     <string name="coming_soon_title">Uskoro</string>
     <string name="coming_soon_body">Ova je značajka u izradi.</string>
     <string name="coming_soon_feedback_prompt">Imaš ideju ili povratnu informaciju? Rado ću je čuti.</string>
-    <string name="coming_soon_contact">Kontaktiraj razvojnog programera</string>
+    <string name="coming_soon_contact">Piši programeru</string>
     <string name="coming_soon_no_email_app">Nije pronađena aplikacija za e-poštu. Piši na:</string>
     <string name="coming_soon_copy">Kopiraj e-poštu</string>
     <string name="coming_soon_copied">E-pošta kopirana</string>

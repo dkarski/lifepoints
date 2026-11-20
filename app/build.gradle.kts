@@ -23,6 +23,20 @@ android {
         targetSdk = 35
         versionCode = 2
         versionName = "1.1.0"
+        // Only the app's 63 languages (data/AppLanguage.kt): drops AndroidX translations for other languages,
+        // so library texts never appear in a language the app does not offer. "zh" keeps the libraries' Chinese.
+        resourceConfigurations += listOf(
+            "en", "it", "pl", "cs", "pt", "es", "de", "fr", "nl",
+            "in", "ms", "ca", "da", "et", "b+fil", "tl", "gl", "hr", "is", "sw", "lv", "lt", "hu", "nb", "ro", "rm",
+            "sk", "sl", "fi", "sv", "vi", "tr", "el", "be", "bg", "kk", "ky", "mk", "mn", "ru", "sr", "uk",
+            "ka", "iw", "ur", "fa", "ne", "mr", "hi", "pa", "gu", "ta", "te", "kn", "ml", "si",
+            "th", "lo", "my", "km", "zh", "b+zh+Hans", "b+zh+Hant", "ja", "ko",
+        )
+    }
+
+    lint {
+        // Every language must stay complete; scripts/i18n_check.py checks the same plus placeholders.
+        error += listOf("MissingTranslation", "ExtraTranslation")
     }
 
     signingConfigs {

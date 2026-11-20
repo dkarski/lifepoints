@@ -6,7 +6,7 @@
     <string name="tab_history">Historial</string>
     <string name="tab_settings">Ajustes</string>
     <string name="home_unit_life">vidas</string>
-    <string name="home_custom">Personalizar</string>
+    <string name="home_custom">Otro</string>
     <string name="home_custom_edit">Introduce las vidas iniciales</string>
     <string name="home_unit_players">jugadores</string>
     <string name="home_start_game">Empezar partida</string>
@@ -24,7 +24,7 @@
     <string name="coming_soon_title">Próximamente</string>
     <string name="coming_soon_body">Esta función está en desarrollo.</string>
     <string name="coming_soon_feedback_prompt">¿Tienes una idea o una sugerencia? Me encantaría conocerla.</string>
-    <string name="coming_soon_contact">Contactar al desarrollador</string>
+    <string name="coming_soon_contact">Escribir al desarrollador</string>
     <string name="coming_soon_no_email_app">No se encontró ninguna app de correo. Escribe a:</string>
     <string name="coming_soon_copy">Copiar correo</string>
     <string name="coming_soon_copied">Correo copiado</string>
@@ -33,7 +33,7 @@
     <string name="settings_about">Acerca de</string>
     <string name="back">Atrás</string>
     <string name="settings_language">Idioma</string>
-    <string name="language_system_default">Predeterminado del sistema</string>
+    <string name="language_system_default">Idioma del sistema</string>
     <string name="language_more">Más idiomas</string>
     <string name="language_search">Buscar</string>
     <string name="language_search_hint">Buscar idiomas</string>

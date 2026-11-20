@@ -23,7 +23,7 @@
     <string name="settings_theme_dark">Dunkel</string>
     <string name="coming_soon_title">Demnächst</string>
     <string name="coming_soon_body">Diese Funktion ist in Arbeit.</string>
-    <string name="coming_soon_feedback_prompt">Hast du eine Idee oder Feedback? Ich freue mich darauf.</string>
+    <string name="coming_soon_feedback_prompt">Hast du eine Idee oder Feedback? Schreib mir gern!</string>
     <string name="coming_soon_contact">Entwickler kontaktieren</string>
     <string name="coming_soon_no_email_app">Keine E-Mail-App gefunden. Schreib an:</string>
     <string name="coming_soon_copy">E-Mail kopieren</string>

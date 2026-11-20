@@ -1,6 +1,8 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -60,6 +62,8 @@ fun ComingSoonScreen(
         modifier = Modifier
             .fillMaxSize()
             .padding(contentPadding)
+            // Long translations plus the no-e-mail fallback can exceed the 480x800 screen: scroll instead of clipping.
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 24.dp, vertical = 48.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp),
