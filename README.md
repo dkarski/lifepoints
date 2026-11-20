@@ -1,50 +1,46 @@
 # Lifepoints
 
-A simple, offline life counter for trading card games such as Magic: The Gathering, Pokémon TCG or
-Lorcana, made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/) E Ink phone.
+An offline life counter for trading card games such as Magic: The Gathering, Pokémon TCG and Lorcana.
+Made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/) and its E Ink screen.
 
 <p>
-  <img src="store/screenshots/01-home.png" width="200" alt="New game: starting life and players">
-  <img src="store/screenshots/02-counter.png" width="200" alt="Two-player life counter">
-  <img src="store/screenshots/04-counter-dark.png" width="200" alt="Life counter in the dark theme">
+  <img src="store/screenshots/01-home.png" width="190" alt="New game screen with starting life and players">
+  <img src="store/screenshots/02-counter.png" width="190" alt="Two-player life counter">
+  <img src="store/screenshots/04-counter-dark.png" width="190" alt="Life counter in the dark theme">
+  <img src="store/screenshots/05-settings.png" width="190" alt="Settings with theme and language">
 </p>
 
 ## Features
 
-- Life counter for two players, with starting life 20, 30, 40 or any custom value.
-- Your game is saved, so you can close the app and continue later.
-- Light and dark themes, designed for the E Ink screen.
-- 63 languages. The app follows your phone's language, or you can choose one in Settings > Language.
-- Works fully offline: no account, no ads, no tracking and no permissions.
+- Two-player life counter. Start at 20, 30, 40 or any custom value.
+- The game is saved, so you can close the app and continue later.
+- Light and dark themes.
+- 63 languages. The app follows the phone's language, or you can choose one in Settings.
+- Fully offline. No account, ads, tracking or permissions.
 
-Games for three and four players and game history are planned.
+Three- and four-player games and game history are planned.
 
-## Get the app
+## Install
 
-Lifepoints is distributed through **InkApps**, the app store on the Mudita Kompakt.
+Install Lifepoints from [InkApps](https://inkapps.mudita.com/) on your Kompakt, or download the APK from
+[GitHub Releases](https://github.com/dkarski/lifepoints/releases/latest). Both are signed with the same key, so you can
+update from either source without losing your game.
 
-You can also download the signed APK from the [latest release](https://github.com/dkarski/lifepoints/releases/latest)
-and install it yourself. Updates from InkApps and from GitHub releases are signed with the same key, so they install
-over each other without losing your game or settings.
+Requires Android 12 or later.
 
-Lifepoints requires Android 12 (API 31) or later and is designed for the Kompakt's 480×800 E Ink screen.
-
-## Support
+## Support and contact
 
 Lifepoints is free. If you enjoy it, you can leave a tip:
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/danielkarski)
 
-## Contact
-
-Ideas, bugs or questions: open an [issue](https://github.com/dkarski/lifepoints/issues) or write to
-daniel.karski5q@gmail.com (the address is also in the app, in Settings).
+For bugs and ideas, open an [issue](https://github.com/dkarski/lifepoints/issues) or email
+daniel.karski5q@gmail.com.
 
 ## Privacy and license
 
-Lifepoints collects no data. See the [Privacy Policy](docs/PRIVACY_POLICY.md) and the [Terms of Use](docs/TERMS_OF_USE.md).
+Lifepoints collects no data. See the [Privacy Policy](docs/PRIVACY_POLICY.md) and [Terms of Use](docs/TERMS_OF_USE.md).
 
 Copyright 2026 Daniel Karski. Licensed under the [Apache License 2.0](LICENSE).
-Third-party licenses are listed in the app (Settings > About > Open source licenses).
 
-Building from source, contributing and releasing: see [CONTRIBUTING.md](CONTRIBUTING.md).
+To build the app or contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).

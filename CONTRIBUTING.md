@@ -1,118 +1,113 @@
 # Contributing
 
-Thanks for your interest in Lifepoints. Bug reports and ideas are welcome as
-[issues](https://github.com/dkarski/lifepoints/issues); for larger changes, please open an issue first.
+Bug reports and ideas are welcome as [issues](https://github.com/dkarski/lifepoints/issues). For larger changes,
+open an issue first.
 
 ## Build
 
-Requirements: JDK 17 and the Android SDK (Platform 35, Build-Tools 35). Set `ANDROID_HOME`, or `sdk.dir` in
+Requirements: JDK 17 and the Android SDK with Platform 35 and Build-Tools 35. Set `ANDROID_HOME`, or `sdk.dir` in
 `local.properties`.
 
 ```sh
-./gradlew :app:lintDebug :app:assembleDebug   # what CI checks on every pull request
-./gradlew :app:assembleRelease                # unsigned unless signing is configured (below)
-```
-
-APKs are written to `app/build/outputs/apk/`. The debug build uses the separate `dev.dkarski.lifepoints.debug`
-package, so it can be installed next to the store version:
-
-```sh
+./gradlew :app:assembleDebug
 adb install -r app/build/outputs/apk/debug/lifepoints-*-debug.apk
 ```
 
-The app targets the Mudita Kompakt (MuditaOS K, Android 12 / API 31, 480×800 E Ink) and uses the
+The debug build uses the package `dev.dkarski.lifepoints.debug`, so it installs next to the store version.
+
+Before opening a pull request, run the same checks as CI:
+
+```sh
+python3 scripts/i18n_check.py
+./gradlew :app:lintDebug :app:assembleDebug :app:assembleRelease
+```
+
+The app targets the Mudita Kompakt (Android 12, API 31, 480×800 E Ink) and uses the
 [Mudita Mindful Design](https://central.sonatype.com/artifact/com.mudita/MMD) components. Keep it light: no new
-libraries or permissions without discussion. The app icon artwork is `assets/lifepoints.svg`.
+libraries or permissions without discussion first.
 
-## Translations
+English in `app/src/main/res/values/strings.xml` is the source for all 63 languages. To add or change a text, see
+[docs/TRANSLATIONS.md](docs/TRANSLATIONS.md).
 
-English (`app/src/main/res/values/strings.xml`) is the source; the app ships in 63 languages. How languages work,
-how to add or change a text and how to check it: [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md).
+## Pull requests
 
-## Version
+Pull requests are squash-merged. The title becomes the commit on `main` and, for `feat` and `fix`, a line in the
+changelog. Titles follow [Conventional Commits](https://www.conventionalcommits.org/), checked by CI:
 
-`version.txt` is the only place with the version. `versionName` is read from it and `versionCode` is derived from it
-(`1.2.3` → `1002003`). Do not edit it by hand: the release pull request updates it.
-
-## Commits and pull requests
-
-Pull requests are merged with **squash**, so the pull request title becomes the commit on `main` and the line in the
-changelog. Titles follow [Conventional Commits](https://www.conventionalcommits.org/) and CI checks them:
-
-| Type | Use for | Release |
+| Type | Use for | Version |
 |---|---|---|
-| `feat` | something new for users | minor (1.1.0 → 1.2.0) |
-| `fix` | a bug fix users notice | patch (1.1.0 → 1.1.1) |
-| `perf` | faster or lighter | patch |
-| `docs`, `ci`, `build`, `chore`, `refactor`, `test` | everything else | none, hidden from the changelog |
+| `feat` | a new or improved feature | minor |
+| `fix` | a bug in a published version | patch |
+| `perf` | a speed or memory improvement | patch |
+| `docs`, `ci`, `build`, `chore`, `refactor`, `test` | everything else | none, not in the changelog |
 
-A breaking change (`feat!:`) makes a major release. Write `feat` and `fix` titles for users, for example
-`feat: three-player games were added`, not `feat: add PlayerCount enum`.
+`feat!:` marks a breaking change and makes a major release.
 
-Choose the type from the point of view of someone using the **latest published release**:
+Write the subject for users, as one sentence that starts with a capital letter and has no final period:
+`feat: Three-player games were added`, not `feat: add PlayerCount enum`.
+Judge them against the latest published release. Clearer texts are `feat`, not `fix`. A change to something that
+is new in the same unreleased version is part of that `feat` and gets no line of its own.
 
-- `fix` only for a bug that exists in a published version. A changelog line under *Fixes* tells users that
-  something they have was broken.
-- Changes to something new in the same unreleased version (for example the wording of a new translation) are part
-  of that `feat`; they get no separate line.
-- Improving something that already works (clearer texts, a better layout) is `feat`, not `fix`.
-
-When one pull request brings several user-visible changes, list them at the end of its description; they become
-separate changelog lines:
+If a pull request has several user-visible changes, list them at the end of its description. Each line becomes a
+changelog entry:
 
 ```text
 BEGIN_COMMIT_OVERRIDE
-feat: the app was translated into 63 languages
-feat: a language can be chosen in Settings > Language
-fix: long button labels no longer overflow
+feat: Three-player games were added
+fix: The counter no longer resets after a theme change
 END_COMMIT_OVERRIDE
 ```
 
 ## Releasing
 
-Releases are made only by GitHub Actions, never from a local machine.
+Releases are made by GitHub Actions only. The version lives in `version.txt`. `versionName` is read from it and
+`versionCode` is derived from it (`1.2.3` becomes `1002003`). Do not edit it by hand.
 
-1. **Merge pull requests into `main`.** The *Release* workflow keeps a pull request named `chore(release): vX.Y.Z`
-   up to date with the next version (from the commit types) and the new `CHANGELOG.md` section.
-2. **Review the release pull request.** Check the version and the changelog wording; it becomes the release notes.
-3. **Merge it** (squash). CI does not run on this pull request, so merge it with the administrator bypass.
-4. The *Release* workflow then:
-   - tags the commit (`vX.Y.Z`) and creates a draft GitHub Release with the changelog section;
-   - builds the release APK and signs it with the production key;
-   - verifies the signing certificate (`RELEASE_CERT_SHA256`), the package name, `versionName` and `versionCode`;
-   - attaches `lifepoints-X.Y.Z.apk` and its `.sha256`, and publishes the release.
-5. Optionally give the release a short name that says what users gain, and use the same name in InkApps:
-   `gh release edit vX.Y.Z --title "vX.Y.Z — Play in your language"`.
+1. After each merge to `main`, the Release workflow updates a pull request named `chore(release): vX.Y.Z` with
+   the next version and the new `CHANGELOG.md` section.
+2. Review the version and the changelog. The section becomes the release notes.
+3. Squash-merge the release pull request. CI does not run on it, so use the administrator bypass.
+4. The workflow tags the commit, creates a draft release, builds and signs the APK, and verifies the signing
+   certificate, package name, `versionName` and `versionCode`. It then attaches `lifepoints-X.Y.Z.apk` with its
+   `.sha256` file and publishes the release.
 
-If the APK job fails, the release stays a draft and nothing is published. Fix the cause on `main` (a secret, or the
-workflow itself), then run *Actions → Release → Run workflow* with the tag (for example `v1.1.0`): it builds the
-tagged commit, verifies it and publishes the draft. A published release is never rebuilt. If the app code must
-change, delete the draft release and its tag and release a new version instead.
+The release title is the tag, `vX.Y.Z`. The release notes are the changelog section without commit links, followed
+by a link to the full comparison. A release with a notable change can get a short name after a colon. Use the same
+name in InkApps:
 
-### Publishing in InkApps (manual)
+```sh
+gh release edit v1.1.0 --title "v1.1.0: Play in your language"
+```
+
+If the APK job fails, the release stays a draft. Fix the cause on `main`, then run *Actions > Release > Run
+workflow* with the tag, for example `v1.1.0`. It builds the tagged commit, verifies it and publishes the draft.
+A published release is never rebuilt. If the app code has to change, delete the draft release and its tag, and
+release a new version.
+
+### Publishing in InkApps
 
 1. Download `lifepoints-X.Y.Z.apk` from the [release](https://github.com/dkarski/lifepoints/releases/latest).
-   Optionally check it: `shasum -a 256 -c lifepoints-X.Y.Z.apk.sha256`.
-2. In the InkApps Developer Portal, open Lifepoints and add a new version: upload the APK (do not rebuild it).
-3. Paste the release notes, shortened if needed, as the changelog.
-4. Submit for review. After the status changes to *Accepted*, release the version.
+   To check it: `shasum -a 256 -c lifepoints-X.Y.Z.apk.sha256`.
+2. In the InkApps Developer Portal, add a new version of Lifepoints and upload this APK. Do not rebuild it.
+3. Use the release notes, shortened if needed, as the changelog.
+4. Submit it for review. When the status is *Accepted*, release the version.
 
 ### Signing
 
-The production key never enters the repository. In GitHub it is stored in the `release` environment, which only
-`main` can use, so pull request builds have no access to it:
+The signing key is not in the repository. GitHub stores it in the `release` environment, which only `main` can
+use, so pull request builds cannot read it.
 
 | Name | Kind | Content |
 |---|---|---|
 | `RELEASE_KEYSTORE_BASE64` | secret | the keystore file, base64-encoded |
 | `RELEASE_STORE_PASSWORD`, `RELEASE_KEY_ALIAS`, `RELEASE_KEY_PASSWORD` | secrets | keystore credentials |
-| `RELEASE_CERT_SHA256` | variable | expected SHA-256 of the signing certificate |
+| `RELEASE_CERT_SHA256` | variable | SHA-256 of the signing certificate |
 
-Every version must be signed with the same key: Android refuses an update signed with a different one, and users
-would have to uninstall the app and lose their data. Never generate a new production key. Keep an offline backup of
-the keystore and its passwords.
+Every version must be signed with the same key. Android rejects an update signed with another key, so users would
+have to uninstall the app and lose their data. Never generate a new release key, and keep an offline backup of the
+keystore and its passwords.
 
-To build a signed release locally, add to `local.properties` (not tracked by Git):
+To sign a release build locally, add these to `local.properties`, which Git ignores:
 
 ```properties
 release.storeFile=/absolute/path/to/keystore.jks

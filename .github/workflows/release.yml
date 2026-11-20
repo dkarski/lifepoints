@@ -112,7 +112,23 @@ jobs:
           cp "$APK" "out/lifepoints-$VERSION.apk"
           (cd out && sha256sum "lifepoints-$VERSION.apk" > "lifepoints-$VERSION.apk.sha256")
 
+      # Release notes for users: the CHANGELOG section without its version heading (the title has the version)
+      # and without commit links, followed by a link to the comparison with the previous release.
+      - name: Write release notes
+        run: |
+          set -euo pipefail
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > "$RUNNER_TEMP/changelog.md"
+          COMPARE="$(sed -nE 's/^## \[[^]]+\]\((https[^)]+)\).*/\1/p' "$RUNNER_TEMP/changelog.md" | sed -n 1p)"
+          sed -E -e '/^## \[?[0-9]+\.[0-9]+\.[0-9]+/d' -e 's/ \(\[[0-9a-f]{7,40}\]\([^)]*\)\)//' \
+            -e 's/&gt;/>/g; s/&lt;/</g; s/&amp;/\&/g' "$RUNNER_TEMP/changelog.md" \
+            | sed '/./,$!d' | cat -s > "$RUNNER_TEMP/notes.md"
+          if [ -n "$COMPARE" ]; then
+            printf '\nFull changelog: [%s](%s)\n' "${COMPARE##*/compare/}" "$COMPARE" >> "$RUNNER_TEMP/notes.md"
+          fi
+          cat "$RUNNER_TEMP/notes.md"
+
       - name: Attach APK and publish the release
         run: |
           gh release upload "$TAG" out/* --clobber --repo "$GITHUB_REPOSITORY"
-          gh release edit "$TAG" --draft=false --latest --repo "$GITHUB_REPOSITORY"
+          gh release edit "$TAG" --draft=false --latest --notes-file "$RUNNER_TEMP/notes.md" \
+            --repo "$GITHUB_REPOSITORY"
