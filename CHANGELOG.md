@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/dkarski/lifepoints/compare/v1.0.0...v1.1.0) (2026-11-20)
+
+
+### New
+
+* Lifepoints now speaks your language: it follows your phone's language, and any of 63 languages can be chosen in Settings &gt; Language, with search. ([b87dae3](https://github.com/dkarski/lifepoints/commit/b87dae32418ecb9a2631727b7fec6d0a983c5006))
+
 ## 1.0.0 (2026-11-20)
 
 First release.
