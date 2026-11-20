@@ -36,6 +36,11 @@ jobs:
             build
             ci
             chore
+          # The subject becomes the changelog line: a sentence starting with a capital letter, no final period.
+          subjectPattern: '^[A-Z].*[^.]$'
+          subjectPatternError: >-
+            The subject "{subject}" must start with a capital letter and have no final period,
+            for example: feat: Three-player games were added
 
   build:
     name: Build

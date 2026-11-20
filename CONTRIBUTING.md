@@ -43,7 +43,8 @@ changelog. Titles follow [Conventional Commits](https://www.conventionalcommits.
 
 `feat!:` marks a breaking change and makes a major release.
 
-Write `feat` and `fix` titles for users: `feat: three-player games were added`, not `feat: add PlayerCount enum`.
+Write the subject for users, as one sentence that starts with a capital letter and has no final period:
+`feat: Three-player games were added`, not `feat: add PlayerCount enum`.
 Judge them against the latest published release. Clearer texts are `feat`, not `fix`. A change to something that
 is new in the same unreleased version is part of that `feat` and gets no line of its own.
 
@@ -52,8 +53,8 @@ changelog entry:
 
 ```text
 BEGIN_COMMIT_OVERRIDE
-feat: three-player games were added
-fix: the counter no longer resets after a theme change
+feat: Three-player games were added
+fix: The counter no longer resets after a theme change
 END_COMMIT_OVERRIDE
 ```
 
@@ -69,8 +70,14 @@ Releases are made by GitHub Actions only. The version lives in `version.txt`. `v
 4. The workflow tags the commit, creates a draft release, builds and signs the APK, and verifies the signing
    certificate, package name, `versionName` and `versionCode`. It then attaches `lifepoints-X.Y.Z.apk` with its
    `.sha256` file and publishes the release.
-5. Optionally, name the release after what users gain, and use the same name in InkApps:
-   `gh release edit vX.Y.Z --title "vX.Y.Z — Play in your language"`.
+
+The release title is the tag, `vX.Y.Z`. The release notes are the changelog section without commit links, followed
+by a link to the full comparison. A release with a notable change can get a short name after a colon. Use the same
+name in InkApps:
+
+```sh
+gh release edit v1.1.0 --title "v1.1.0: Play in your language"
+```
 
 If the APK job fails, the release stays a draft. Fix the cause on `main`, then run *Actions > Release > Run
 workflow* with the tag, for example `v1.1.0`. It builds the tagged commit, verifies it and publishes the draft.
