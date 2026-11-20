@@ -8,7 +8,8 @@ Lifepoints is a life counter app for Mudita Kompakt, made by Daniel Karski (cont
 Lifepoints does not collect, send or share any personal data.
 
 ## What the app stores
-The current game (starting life, players, life totals) and your theme choice are stored only on your phone.
+The current game (starting life, players, life totals) and your settings (theme and language) are stored only on
+your phone.
 They are deleted when you uninstall the app. They are not included in phone backups.
 
 ## Network and permissions
