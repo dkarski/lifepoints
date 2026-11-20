@@ -34,69 +34,123 @@ jobs:
       sha: ${{ steps.release.outputs.sha }}
     steps:
       - id: release
-        uses: googleapis/release-please-action@v5
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-  apk:
-    name: Signed APK
+  # Builds the unsigned APK. This job runs the project's Gradle build and has no access to the signing key.
+  build:
+    name: Build APK
     needs: release-please
     if: >-
       !cancelled() && (needs.release-please.outputs.release_created == 'true'
       || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
     runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    env:
+      TAG: ${{ inputs.tag || needs.release-please.outputs.tag_name }}
+    outputs:
+      tag: ${{ steps.check.outputs.tag }}
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - name: Check the tag
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Invalid tag '$TAG'"; exit 1; }
+          # Only code that is part of main is released.
+          STATUS="$(gh api "repos/$GITHUB_REPOSITORY/compare/main...$TAG" --jq .status)"
+          [[ "$STATUS" == identical || "$STATUS" == behind ]] || { echo "::error::$TAG is not on main"; exit 1; }
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.release-please.outputs.sha || inputs.tag }}
+          persist-credentials: false
+
+      - uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880 # v6.3.0
+        with:
+          distribution: temurin
+          java-version: 17
+
+      # No Gradle cache: a release build neither reads nor writes the cache shared with other builds.
+      - uses: gradle/actions/setup-gradle@8da46b539cd8fe6ab27ca75128919a18d757604c # v6.4.1
+        with:
+          cache-disabled: true
+
+      - name: Build unsigned release APK
+        run: ./gradlew :app:assembleRelease
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: unsigned-apk
+          path: app/build/outputs/apk/release/lifepoints-${{ steps.check.outputs.version }}-release-unsigned.apk
+          if-no-files-found: error
+          retention-days: 1
+
+  # Signs, verifies and publishes. This job uses the key but runs no code from the repository:
+  # only the Android SDK tools of the runner and the GitHub CLI.
+  sign:
+    name: Sign and publish
+    needs: build
+    if: ${{ !cancelled() && needs.build.result == 'success' }}
+    runs-on: ubuntu-24.04
     environment: release
     permissions:
       contents: write
     env:
-      TAG: ${{ inputs.tag || needs.release-please.outputs.tag_name }}
+      TAG: ${{ needs.build.outputs.tag }}
+      VERSION: ${{ needs.build.outputs.version }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Check the release
         run: |
           set -euo pipefail
-          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Invalid tag '$TAG'"; exit 1; }
           DRAFT="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)"
           # A published release is never rebuilt: its APK may already be installed or uploaded to InkApps.
           [ "$DRAFT" = "true" ] || { echo "::error::$TAG is already published"; exit 1; }
-          echo "VERSION=${TAG#v}" >> "$GITHUB_ENV"
+          # Build-tools 35.0.0 (the compileSdk line) when installed, otherwise the newest one.
+          BT="$ANDROID_HOME/build-tools/35.0.0"
+          [ -x "$BT/apksigner" ] || BT="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)"
+          echo "BT=$BT" >> "$GITHUB_ENV"
 
-      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
-          ref: ${{ needs.release-please.outputs.sha || inputs.tag }}
-          persist-credentials: false
+          name: unsigned-apk
+          path: unsigned
 
-      - uses: actions/setup-java@v6
-        with:
-          distribution: temurin
-          java-version: 17
-
-      - uses: gradle/actions/setup-gradle@v6
-
-      - name: Build signed release APK
+      - name: Sign APK
         env:
           RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
           RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
           RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
           RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: |
-          export RELEASE_STORE_FILE="$RUNNER_TEMP/release.jks"
-          printf '%s' "$RELEASE_KEYSTORE_BASE64" | base64 --decode > "$RELEASE_STORE_FILE"
-          ./gradlew :app:assembleRelease
-          rm -f "$RELEASE_STORE_FILE"
+          set -euo pipefail
+          KS="$RUNNER_TEMP/release.jks"
+          trap 'rm -f "$KS"' EXIT
+          printf '%s' "$RELEASE_KEYSTORE_BASE64" | base64 --decode > "$KS"
+          "$BT/zipalign" -f -p 4 "unsigned/lifepoints-$VERSION-release-unsigned.apk" "$RUNNER_TEMP/aligned.apk"
+          mkdir -p out
+          # v2 as in earlier releases (what InkApps has accepted), v3 is the apksigner default for minSdk 31.
+          "$BT/apksigner" sign --v2-signing-enabled true --v3-signing-enabled true \
+            --ks "$KS" --ks-key-alias "$RELEASE_KEY_ALIAS" \
+            --ks-pass env:RELEASE_STORE_PASSWORD --key-pass env:RELEASE_KEY_PASSWORD \
+            --out "out/lifepoints-$VERSION.apk" "$RUNNER_TEMP/aligned.apk"
+          rm -f "out/lifepoints-$VERSION.apk.idsig"
 
       - name: Verify APK
         env:
           EXPECTED_CERT: ${{ vars.RELEASE_CERT_SHA256 }}
         run: |
           set -euo pipefail
-          # Build-tools 35.0.0 (the compileSdk line) when installed, otherwise the newest one.
-          BT="$ANDROID_HOME/build-tools/35.0.0"
-          [ -x "$BT/apksigner" ] || BT="$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)"
-          echo "build-tools: $BT"
-          APK="app/build/outputs/apk/release/lifepoints-$VERSION-release.apk"
-          test -f "$APK" || { echo "::error::$APK not found (unsigned or wrong version?)"; exit 1; }
+          APK="out/lifepoints-$VERSION.apk"
+          "$BT/zipalign" -c -p 4 "$APK" || { echo "::error::$APK is not aligned"; exit 1; }
           SIGN="$("$BT/apksigner" verify --print-certs "$APK" 2>&1)" || { echo "$SIGN"; echo "::error::apksigner verify failed"; exit 1; }
           echo "$SIGN"
           CERT="$(grep -m1 -oE 'certificate SHA-256 digest: [0-9a-f]{64}' <<< "$SIGN" | awk '{print $NF}' || true)"
@@ -108,8 +162,6 @@ jobs:
           echo "$BADGE"
           grep -q "name='dev.dkarski.lifepoints' versionCode='$CODE' versionName='$VERSION'" <<< "$BADGE" \
             || { echo "::error::Expected dev.dkarski.lifepoints $VERSION ($CODE)"; exit 1; }
-          mkdir -p out
-          cp "$APK" "out/lifepoints-$VERSION.apk"
           (cd out && sha256sum "lifepoints-$VERSION.apk" > "lifepoints-$VERSION.apk.sha256")
 
       # Release notes for users: the CHANGELOG section without its version heading (the title has the version)
