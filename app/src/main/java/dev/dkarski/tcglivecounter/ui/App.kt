@@ -1,10 +1,6 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.runtime.LaunchedEffect
-import kotlinx.coroutines.delay
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -23,16 +19,12 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.data.AppLanguages
 import dev.dkarski.tcglivecounter.data.GameState
 import dev.dkarski.tcglivecounter.ui.components.SecondaryLayout
-import dev.dkarski.tcglivecounter.ui.theme.ClearFrameColor
 
 /**
  * The counter is the main screen. Its center button opens the Menu (Back to game, Restart, Settings).
  * Settings has the table (starting life, players) and the app settings; Language, About, TipJar and
  * ComingSoon (3/4 players) open from it.
  */
-/** How long the black frame stays before the counter after the menu (long enough for a full E Ink update). */
-private const val CLEAN_RETURN_MS = 250L
-
 enum class Screen { Counter, Menu, Settings, ComingSoon, Language, About, TipJar }
 
 /** Where Back goes from each screen; null = system Back (leaves the app; the game is already saved). */
@@ -93,18 +85,9 @@ fun App(
     var emailAppAvailable by remember { mutableStateOf(hasEmailApp(context)) }
     var contactCopied by rememberSaveable { mutableStateOf(false) }
 
-    // Returning to the counter from the menu first shows one black frame (E Ink: it clears the menu's ghost image
-    // on the black half). Only on return: life changes on the counter stay fast partial updates.
-    var cleanReturn by remember { mutableStateOf(false) }
-    fun toCounter() {
-        cleanReturn = true
-        screen = Screen.Counter
-    }
-
     val back: () -> Unit = {
         when {
             screen == Screen.Menu && confirmingRestart -> confirmingRestart = false
-            screen == Screen.Menu -> toCounter()
             else -> screen.parent()?.let { parent ->
                 if (screen == Screen.Settings) pendingLife = null
                 screen = parent
@@ -116,20 +99,14 @@ fun App(
     fun restart() {
         setGame(game.restarted())
         confirmingRestart = false
-        toCounter()
+        screen = Screen.Counter
     }
 
     // Surface provides the theme's content colour (onBackground) to every screen, also the fullscreen ones.
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         screenStates.SaveableStateProvider(screen.name) {
             when (screen) {
-                Screen.Counter -> if (cleanReturn) {
-                    Box(Modifier.fillMaxSize().background(ClearFrameColor))
-                    LaunchedEffect(Unit) {
-                        delay(CLEAN_RETURN_MS)
-                        cleanReturn = false
-                    }
-                } else GameCounterScreen(
+                Screen.Counter -> GameCounterScreen(
                     lives = game.lives,
                     onLifeChange = { player, delta ->
                         // At a life limit nothing changes: nothing to save, no indicator step, no vibration.
@@ -144,7 +121,7 @@ fun App(
                 Screen.Menu -> GameMenuScreen(
                     confirmingRestart = confirmingRestart,
                     startingLife = game.startingLife,
-                    onResume = ::toCounter,
+                    onResume = { screen = Screen.Counter },
                     onRestart = { if (game.hasProgress) confirmingRestart = true else restart() },
                     onConfirmRestart = ::restart,
                     onCancelRestart = { confirmingRestart = false },
@@ -170,7 +147,7 @@ fun App(
                             {
                                 setGame(GameState.new(life, game.playerCount))
                                 pendingLife = null
-                                toCounter()
+                                screen = Screen.Counter
                             }
                         },
                         vibration = vibration,

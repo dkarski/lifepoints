@@ -35,10 +35,6 @@ val BottomPlayerColors = PlayerColors(background = black, content = white)
  */
 val MenuButtonColors = PlayerColors(background = white, content = black)
 
-/** Full-screen frame shown for a moment before the counter, when returning from the menu: driving every pixel to
- * black clears the menu's ghost image from the E Ink panel. */
-val ClearFrameColor: Color = black
-
 /** Alpha for "not available yet" content. The only place where grey appears (E Ink rule). */
 private const val MUTED_ALPHA = 0.6f
 
