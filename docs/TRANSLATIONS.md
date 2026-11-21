@@ -45,8 +45,9 @@ The caption under 20, 30 and 40 is narrow, so German uses LP and French and Port
 players do. The full term appears in the input hint. Polish has no official Magic edition and uses "życia", as
 players say it ("mam 20 życia").
 
-Before a value is entered, the Custom tile has its own caption ("Custom life", in Polish "Inna wartość"), because
-the label and caption are read together. After a value is entered, it uses the life caption like the presets.
+A custom starting life is set with the pencil tile next to 20, 30 and 40. The tile shows only the pencil, so its
+name exists for screen readers only (`custom_life`, `custom_life_value`). Once a value is set, the tile shows the
+number with the life caption, like the presets.
 
 ## Adding or changing a text
 
