@@ -47,7 +47,7 @@ fun TipJarScreen(url: String, contentPadding: PaddingValues = PaddingValues()) {
 }
 
 /**
- * Draws QR modules ("1" = dark) black on white with a 4-module quiet zone, also in Dark (inverted codes scan badly).
+ * Draws QR modules ("1" = dark) black on white with a 4-module quiet zone.
  * Module size and origin are whole pixels: fractional positions blur module edges into thin white seams.
  */
 @Composable
