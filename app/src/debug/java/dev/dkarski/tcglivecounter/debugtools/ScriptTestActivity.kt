@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
  * Debug-only screen for the language feasibility audit (Lifepoints 1.1.0).
@@ -38,9 +37,8 @@ class ScriptTestActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val group = intent.getStringExtra("group") ?: "latin-ok"
         val samples = GROUPS[group] ?: GROUPS.getValue("latin-ok")
-        val dark = intent.getBooleanExtra("dark", false)
         setContent {
-            AppTheme(if (dark) ThemeMode.Dark else ThemeMode.Light) {
+            AppTheme {
                 Surface(Modifier.fillMaxSize()) {
                     Column(
                         Modifier.fillMaxSize().padding(horizontal = 12.dp, vertical = 8.dp),

@@ -26,7 +26,7 @@ SPECIAL = {"he": "iw", "id": "in", "zh-Hans": "b+zh+Hans", "zh-Hant": "b+zh+Hant
 # Short labels shown in tiles, tabs and buttons: warn when a translation is much longer than English.
 SHORT_LABELS = {
     "soon", "settings_title", "home_unit_life", "home_unit_players", "menu_continue", "menu_restart", "cancel",
-    "settings_theme_light", "settings_theme_dark", "settings_section_table", "settings_section_app",
+    "settings_vibration", "settings_section_app",
     "coming_soon_copy", "settings_language", "language_system_default", "settings_about", "about_tip_jar",
 }
 PLACEHOLDER = re.compile(r"%(\d+\$)?[sd]")

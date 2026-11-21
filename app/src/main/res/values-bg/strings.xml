@@ -22,8 +22,6 @@
     <string name="cancel">Отказ</string>
     <string name="settings_contact_tap_email">Докоснете, за да напишете имейл</string>
     <string name="settings_contact_tap_copy">Докоснете, за да копирате</string>
-    <string name="settings_theme_light">Светла</string>
-    <string name="settings_theme_dark">Тъмна</string>
     <string name="settings_vibration">Вибрация</string>
     <string name="coming_soon_title">Очаквайте скоро</string>
     <string name="coming_soon_body">Тази функция е в процес на разработка.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Имейлът е копиран</string>
     <string name="feedback_body">Здравейте! Моят отзив:\n\n</string>
     <string name="settings_about">Информация</string>
-    <string name="settings_section_table">Маса</string>
     <string name="settings_section_app">Приложение</string>
     <string name="table_apply">Започни отначало с новите настройки</string>
     <string name="back">Назад</string>

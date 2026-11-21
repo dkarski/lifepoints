@@ -22,8 +22,6 @@
     <string name="cancel">Cancelar</string>
     <string name="settings_contact_tap_email">Toca para escribir un correo</string>
     <string name="settings_contact_tap_copy">Toca para copiar</string>
-    <string name="settings_theme_light">Claro</string>
-    <string name="settings_theme_dark">Oscuro</string>
     <string name="settings_vibration">Vibración</string>
     <string name="coming_soon_title">Próximamente</string>
     <string name="coming_soon_body">Esta función está en desarrollo.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Correo copiado</string>
     <string name="feedback_body">¡Hola! Mi opinión:\n\n</string>
     <string name="settings_about">Acerca de</string>
-    <string name="settings_section_table">Mesa</string>
     <string name="settings_section_app">Aplicación</string>
     <string name="table_apply">Reiniciar con los nuevos ajustes</string>
     <string name="back">Atrás</string>

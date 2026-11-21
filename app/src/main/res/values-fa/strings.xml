@@ -22,8 +22,6 @@
     <string name="cancel">لغو</string>
     <string name="settings_contact_tap_email">برای نوشتن ایمیل ضربه بزنید</string>
     <string name="settings_contact_tap_copy">برای کپی ضربه بزنید</string>
-    <string name="settings_theme_light">روشن</string>
-    <string name="settings_theme_dark">تیره</string>
     <string name="settings_vibration">لرزش</string>
     <string name="coming_soon_title">به‌زودی</string>
     <string name="coming_soon_body">این قابلیت در حال ساخت است.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ایمیل کپی شد</string>
     <string name="feedback_body">سلام! نظر من:\n\n</string>
     <string name="settings_about">درباره</string>
-    <string name="settings_section_table">میز</string>
     <string name="settings_section_app">برنامه</string>
     <string name="table_apply">شروع دوباره با تنظیمات جدید</string>
     <string name="back">بازگشت</string>

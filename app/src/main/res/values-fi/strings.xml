@@ -22,8 +22,6 @@
     <string name="cancel">Peruuta</string>
     <string name="settings_contact_tap_email">Kirjoita sähköposti napauttamalla</string>
     <string name="settings_contact_tap_copy">Kopioi napauttamalla</string>
-    <string name="settings_theme_light">Vaalea</string>
-    <string name="settings_theme_dark">Tumma</string>
     <string name="settings_vibration">Värinä</string>
     <string name="coming_soon_title">Tulossa pian</string>
     <string name="coming_soon_body">Tämä ominaisuus on kehitteillä.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Sähköposti kopioitu</string>
     <string name="feedback_body">Hei! Palautteeni:\n\n</string>
     <string name="settings_about">Tietoja</string>
-    <string name="settings_section_table">Pöytä</string>
     <string name="settings_section_app">Sovellus</string>
     <string name="table_apply">Aloita alusta uusilla asetuksilla</string>
     <string name="back">Takaisin</string>

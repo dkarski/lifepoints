@@ -54,7 +54,7 @@ changelog entry:
 ```text
 BEGIN_COMMIT_OVERRIDE
 feat: Three-player games were added
-fix: The counter no longer resets after a theme change
+fix: The counter no longer resets after a language change
 END_COMMIT_OVERRIDE
 ```
 

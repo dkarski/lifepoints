@@ -37,7 +37,6 @@ import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -197,7 +196,7 @@ private suspend fun readRaw(context: Context, rawRes: Int): String = withContext
 @Preview(widthDp = 360, heightDp = 640, showBackground = true)
 @Composable
 private fun AboutPreview() {
-    AppTheme(ThemeMode.Light) {
+    AppTheme {
         AboutScreen(
             about = AboutInfo("Lifepoints", "1.0.0", "Developer Name"),
             contact = ContactState("dev@example.com", canOpenEmailApp = false, copied = false),

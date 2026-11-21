@@ -19,7 +19,6 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.data.AppLanguages
 import dev.dkarski.tcglivecounter.data.GameState
 import dev.dkarski.tcglivecounter.ui.components.SecondaryLayout
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
  * The counter is the main screen. Its center button opens the Menu (Back to game, Restart, Settings).
@@ -44,8 +43,6 @@ private fun Screen.parent(): Screen? = when (this) {
 fun App(
     initialGame: GameState,
     onGameChange: (GameState) -> Unit,
-    themeMode: ThemeMode,
-    onThemeModeChange: (ThemeMode) -> Unit,
     languageTag: String?,
     onLanguageChange: (String?) -> Unit,
     vibration: Boolean,
@@ -153,8 +150,6 @@ fun App(
                                 screen = Screen.Counter
                             }
                         },
-                        themeMode = themeMode,
-                        onThemeModeChange = onThemeModeChange,
                         vibration = vibration,
                         onVibrationChange = onVibrationChange,
                         languageName = AppLanguages.find(languageTag)?.nativeName

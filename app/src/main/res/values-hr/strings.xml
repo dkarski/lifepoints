@@ -22,8 +22,6 @@
     <string name="cancel">Odustani</string>
     <string name="settings_contact_tap_email">Dodirni za pisanje e-pošte</string>
     <string name="settings_contact_tap_copy">Dodirni za kopiranje</string>
-    <string name="settings_theme_light">Svijetla</string>
-    <string name="settings_theme_dark">Tamna</string>
     <string name="settings_vibration">Vibracija</string>
     <string name="coming_soon_title">Uskoro</string>
     <string name="coming_soon_body">Ova je značajka u izradi.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">E-pošta kopirana</string>
     <string name="feedback_body">Bok! Moja povratna informacija:\n\n</string>
     <string name="settings_about">O aplikaciji</string>
-    <string name="settings_section_table">Stol</string>
     <string name="settings_section_app">Aplikacija</string>
     <string name="table_apply">Počni ispočetka s novim postavkama</string>
     <string name="back">Natrag</string>

@@ -22,8 +22,6 @@
     <string name="cancel">Batal</string>
     <string name="settings_contact_tap_email">Ketuk untuk menulis email</string>
     <string name="settings_contact_tap_copy">Ketuk untuk menyalin</string>
-    <string name="settings_theme_light">Terang</string>
-    <string name="settings_theme_dark">Gelap</string>
     <string name="settings_vibration">Getaran</string>
     <string name="coming_soon_title">Segera hadir</string>
     <string name="coming_soon_body">Fitur ini sedang dikembangkan.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Email disalin</string>
     <string name="feedback_body">Halo! Masukan saya:\n\n</string>
     <string name="settings_about">Tentang</string>
-    <string name="settings_section_table">Meja</string>
     <string name="settings_section_app">Aplikasi</string>
     <string name="table_apply">Mulai ulang dengan setelan baru</string>
     <string name="back">Kembali</string>

@@ -22,8 +22,6 @@
     <string name="cancel">Atcelt</string>
     <string name="settings_contact_tap_email">Pieskarieties, lai rakstītu e-pastu</string>
     <string name="settings_contact_tap_copy">Pieskarieties, lai kopētu</string>
-    <string name="settings_theme_light">Gaišs</string>
-    <string name="settings_theme_dark">Tumšs</string>
     <string name="settings_vibration">Vibrācija</string>
     <string name="coming_soon_title">Drīzumā</string>
     <string name="coming_soon_body">Šī funkcija tiek izstrādāta.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">E-pasts nokopēts</string>
     <string name="feedback_body">Sveiki! Mana atsauksme:\n\n</string>
     <string name="settings_about">Par lietotni</string>
-    <string name="settings_section_table">Galds</string>
     <string name="settings_section_app">Lietotne</string>
     <string name="table_apply">Sākt no jauna ar jaunajiem iestatījumiem</string>
     <string name="back">Atpakaļ</string>

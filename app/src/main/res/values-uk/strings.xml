@@ -22,8 +22,6 @@
     <string name="cancel">Скасувати</string>
     <string name="settings_contact_tap_email">Торкніться, щоб написати листа</string>
     <string name="settings_contact_tap_copy">Торкніться, щоб скопіювати</string>
-    <string name="settings_theme_light">Світла</string>
-    <string name="settings_theme_dark">Темна</string>
     <string name="settings_vibration">Вібрація</string>
     <string name="coming_soon_title">Незабаром</string>
     <string name="coming_soon_body">Ця функція в розробці.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Адресу скопійовано</string>
     <string name="feedback_body">Вітаю! Мій відгук:\n\n</string>
     <string name="settings_about">Про застосунок</string>
-    <string name="settings_section_table">Стіл</string>
     <string name="settings_section_app">Застосунок</string>
     <string name="table_apply">Почати знову з новими налаштуваннями</string>
     <string name="back">Назад</string>

@@ -17,8 +17,7 @@ import dev.dkarski.tcglivecounter.data.GameStore
 import dev.dkarski.tcglivecounter.data.SettingsStore
 import dev.dkarski.tcglivecounter.ui.App
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
-import dev.dkarski.tcglivecounter.ui.theme.colors
+import dev.dkarski.tcglivecounter.ui.theme.AppColors
 
 class MainActivity : ComponentActivity() {
     /** Applies the app language chosen in Settings (or keeps the system language). */
@@ -30,25 +29,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val gameStore = GameStore(this)
         val settingsStore = SettingsStore(this)
-        // Two tiny preference files, read once at start so the first frame already has the right theme and screen.
+        // Two tiny preference files, read once at start so the first frame already has the right screen.
         // The app opens on the table. First launch (or unreadable data): two players at the default starting life.
         val initialGame = gameStore.load() ?: GameState.new(GameState.DEFAULT_STARTING_LIFE).also(gameStore::save)
-        val initialTheme = settingsStore.themeMode
-        applySystemBars(initialTheme)
+        applySystemBars()
 
         setContent {
-            var themeMode by remember { mutableStateOf(initialTheme) }
             var vibration by remember { mutableStateOf(settingsStore.vibration) }
-            AppTheme(themeMode) {
+            AppTheme {
                 App(
                     initialGame = initialGame,
                     onGameChange = gameStore::save,
-                    themeMode = themeMode,
-                    onThemeModeChange = { mode ->
-                        themeMode = mode
-                        settingsStore.themeMode = mode
-                        applySystemBars(mode)
-                    },
                     languageTag = settingsStore.languageTag,
                     vibration = vibration,
                     onVibrationChange = { on ->
@@ -68,10 +59,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    /** Window background and system bars follow the app theme (no white flash in Dark mode). */
+    /** Window background and system bars in the app's colours: white with dark icons. */
     @Suppress("DEPRECATION") // statusBarColor/navigationBarColor are still the API on Android 12 (Kompakt).
-    private fun applySystemBars(mode: ThemeMode) {
-        val color = mode.colors().background.toArgb()
+    private fun applySystemBars() {
+        val color = AppColors.background.toArgb()
         window.setBackgroundDrawable(ColorDrawable(color))
         window.statusBarColor = color
         window.navigationBarColor = color
@@ -79,6 +70,6 @@ class MainActivity : ComponentActivity() {
             WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS
         // window.insetsController is null-unsafe before the decor view exists (NPE on Android 12);
         // decorView creates it on first access.
-        window.decorView.windowInsetsController?.setSystemBarsAppearance(if (mode == ThemeMode.Light) lightBars else 0, lightBars)
+        window.decorView.windowInsetsController?.setSystemBarsAppearance(lightBars, lightBars)
     }
 }

@@ -22,8 +22,6 @@
     <string name="cancel">Hætta við</string>
     <string name="settings_contact_tap_email">Ýttu til að skrifa tölvupóst</string>
     <string name="settings_contact_tap_copy">Ýttu til að afrita</string>
-    <string name="settings_theme_light">Ljóst</string>
-    <string name="settings_theme_dark">Dökkt</string>
     <string name="settings_vibration">Titringur</string>
     <string name="coming_soon_title">Væntanlegt</string>
     <string name="coming_soon_body">Þessi eiginleiki er í vinnslu.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Netfang afritað</string>
     <string name="feedback_body">Hæ! Ábendingin mín:\n\n</string>
     <string name="settings_about">Um forritið</string>
-    <string name="settings_section_table">Borð</string>
     <string name="settings_section_app">Forrit</string>
     <string name="table_apply">Byrja aftur með nýjum stillingum</string>
     <string name="back">Til baka</string>

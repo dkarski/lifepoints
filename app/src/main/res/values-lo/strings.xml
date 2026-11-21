@@ -22,8 +22,6 @@
     <string name="cancel">ຍົກເລີກ</string>
     <string name="settings_contact_tap_email">ແຕະເພື່ອຂຽນອີເມວ</string>
     <string name="settings_contact_tap_copy">ແຕະເພື່ອສຳເນົາ</string>
-    <string name="settings_theme_light">ແຈ້ງ</string>
-    <string name="settings_theme_dark">ມືດ</string>
     <string name="settings_vibration">ການສັ່ນ</string>
     <string name="coming_soon_title">ໄວໆນີ້</string>
     <string name="coming_soon_body">ຄຸນສົມບັດນີ້ກຳລັງພັດທະນາ.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ສຳເນົາອີເມວແລ້ວ</string>
     <string name="feedback_body">ສະບາຍດີ! ຄຳຕິຊົມຂອງຂ້ອຍ:\n\n</string>
     <string name="settings_about">ກ່ຽວກັບ</string>
-    <string name="settings_section_table">ໂຕະ</string>
     <string name="settings_section_app">ແອັບ</string>
     <string name="table_apply">ເລີ່ມໃໝ່ດ້ວຍການຕັ້ງຄ່າໃໝ່</string>
     <string name="back">ກັບຄືນ</string>

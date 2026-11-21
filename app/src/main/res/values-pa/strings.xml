@@ -22,8 +22,6 @@
     <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="settings_contact_tap_email">ਈਮੇਲ ਲਿਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="settings_contact_tap_copy">ਕਾਪੀ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
-    <string name="settings_theme_light">ਹਲਕਾ</string>
-    <string name="settings_theme_dark">ਗੂੜ੍ਹਾ</string>
     <string name="settings_vibration">ਵਾਈਬ੍ਰੇਸ਼ਨ</string>
     <string name="coming_soon_title">ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ</string>
     <string name="coming_soon_body">ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਤਿਆਰ ਹੋ ਰਹੀ ਹੈ।</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ਈਮੇਲ ਕਾਪੀ ਹੋ ਗਈ</string>
     <string name="feedback_body">ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੇਰਾ ਸੁਝਾਅ:\n\n</string>
     <string name="settings_about">ਐਪ ਬਾਰੇ</string>
-    <string name="settings_section_table">ਟੇਬਲ</string>
     <string name="settings_section_app">ਐਪ</string>
     <string name="table_apply">ਨਵੀਆਂ ਸੈਟਿੰਗਾਂ ਨਾਲ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="back">ਪਿੱਛੇ</string>

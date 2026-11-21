@@ -22,8 +22,6 @@
     <string name="cancel">Жокко чыгаруу</string>
     <string name="settings_contact_tap_email">Кат жазуу үчүн басыңыз</string>
     <string name="settings_contact_tap_copy">Көчүрүү үчүн басыңыз</string>
-    <string name="settings_theme_light">Жарык</string>
-    <string name="settings_theme_dark">Караңгы</string>
     <string name="settings_vibration">Титирөө</string>
     <string name="coming_soon_title">Жакында</string>
     <string name="coming_soon_body">Бул функция иштелип жатат.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Дарек көчүрүлдү</string>
     <string name="feedback_body">Саламатсызбы! Менин пикирим:\n\n</string>
     <string name="settings_about">Колдонмо жөнүндө</string>
-    <string name="settings_section_table">Стол</string>
     <string name="settings_section_app">Колдонмо</string>
     <string name="table_apply">Жаңы жөндөөлөр менен кайра баштоо</string>
     <string name="back">Артка</string>

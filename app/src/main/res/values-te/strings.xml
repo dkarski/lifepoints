@@ -22,8 +22,6 @@
     <string name="cancel">రద్దు చేయండి</string>
     <string name="settings_contact_tap_email">ఇమెయిల్ రాయడానికి నొక్కండి</string>
     <string name="settings_contact_tap_copy">కాపీ చేయడానికి నొక్కండి</string>
-    <string name="settings_theme_light">లేత</string>
-    <string name="settings_theme_dark">ముదురు</string>
     <string name="settings_vibration">వైబ్రేషన్</string>
     <string name="coming_soon_title">త్వరలో రాబోతోంది</string>
     <string name="coming_soon_body">ఈ ఫీచర్ తయారవుతోంది.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ఇమెయిల్ కాపీ అయింది</string>
     <string name="feedback_body">నమస్కారం! నా అభిప్రాయం:\n\n</string>
     <string name="settings_about">యాప్ గురించి</string>
-    <string name="settings_section_table">టేబుల్</string>
     <string name="settings_section_app">యాప్</string>
     <string name="table_apply">కొత్త సెట్టింగ్‌లతో మళ్లీ ప్రారంభించండి</string>
     <string name="back">వెనుకకు</string>

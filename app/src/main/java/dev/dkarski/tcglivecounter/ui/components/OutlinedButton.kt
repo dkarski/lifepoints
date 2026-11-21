@@ -8,7 +8,7 @@ import com.mudita.mmd.components.buttons.ButtonDefaultsMMD
 import com.mudita.mmd.components.buttons.OutlinedButtonMMD
 import dev.dkarski.tcglivecounter.ui.theme.outlineBorder
 
-/** [OutlinedButtonMMD] whose border follows the theme, so it stays visible in Dark mode. */
+/** [OutlinedButtonMMD] with the border from the app's colours (MMD's own border colour is hard-coded). */
 @Composable
 fun AppOutlinedButton(
     onClick: () -> Unit,

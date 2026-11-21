@@ -12,7 +12,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -36,14 +35,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.R
-import dev.dkarski.tcglivecounter.ui.components.ChoiceTile
 import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
- * Settings, one scrolling screen. Table (starting life, players) comes first, as it is used most;
- * the app settings follow. [onApplyTable] is set while a table change is waiting for confirmation
+ * Settings, one scrolling screen. The table (starting life, players) comes first, without a heading, as it is used
+ * most; the app settings follow under their heading. [onApplyTable] is set while a table change is waiting for confirmation
  * (the game has progress): the button stays at the bottom, outside the scrolling content.
  */
 @Composable
@@ -52,8 +49,6 @@ fun SettingsScreen(
     onTableLifeSelect: (Int) -> Unit,
     onComingSoonPlayers: (Feature) -> Unit,
     onApplyTable: (() -> Unit)?,
-    themeMode: ThemeMode,
-    onThemeModeChange: (ThemeMode) -> Unit,
     vibration: Boolean,
     onVibrationChange: (Boolean) -> Unit,
     languageName: String,
@@ -72,25 +67,10 @@ fun SettingsScreen(
                 .pointerInput(Unit) { detectTapGestures { focusManager.clearFocus() } }
                 .padding(horizontal = 16.dp, vertical = 16.dp),
         ) {
-            SettingsSection(stringResource(R.string.settings_section_table))
+            // The table needs no heading: the life and player tiles say what they are.
             TableSettings(life = tableLife, onLifeSelect = onTableLifeSelect, onComingSoonPlayers = onComingSoonPlayers)
             Spacer(Modifier.height(32.dp))
             SettingsSection(stringResource(R.string.settings_section_app))
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                ChoiceTile(
-                    label = stringResource(R.string.settings_theme_light),
-                    selected = themeMode == ThemeMode.Light,
-                    onClick = { onThemeModeChange(ThemeMode.Light) },
-                    modifier = Modifier.weight(1f),
-                )
-                ChoiceTile(
-                    label = stringResource(R.string.settings_theme_dark),
-                    selected = themeMode == ThemeMode.Dark,
-                    onClick = { onThemeModeChange(ThemeMode.Dark) },
-                    modifier = Modifier.weight(1f),
-                )
-            }
-            Spacer(Modifier.height(16.dp))
             DottedDivider()
             SettingsSwitchRow(stringResource(R.string.settings_vibration), checked = vibration, onCheckedChange = onVibrationChange)
             DottedDivider()
@@ -182,11 +162,11 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(20, {}, {}, null, ThemeMode.Light, {}, true, {}, "English", {}, {}, {}) }
+    AppTheme { SettingsScreen(20, {}, {}, null, true, {}, "English", {}, {}, {}) }
 }
 
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun SettingsPendingPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(25, {}, {}, {}, ThemeMode.Dark, {}, false, {}, "Polski", {}, {}, {}) }
+    AppTheme { SettingsScreen(25, {}, {}, {}, false, {}, "Polski", {}, {}, {}) }
 }

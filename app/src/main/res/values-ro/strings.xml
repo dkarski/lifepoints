@@ -22,8 +22,6 @@
     <string name="cancel">Anulează</string>
     <string name="settings_contact_tap_email">Atingeți pentru a scrie un e-mail</string>
     <string name="settings_contact_tap_copy">Atingeți pentru a copia</string>
-    <string name="settings_theme_light">Luminoasă</string>
-    <string name="settings_theme_dark">Întunecată</string>
     <string name="settings_vibration">Vibrații</string>
     <string name="coming_soon_title">În curând</string>
     <string name="coming_soon_body">Această funcție este în dezvoltare.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">E-mail copiat</string>
     <string name="feedback_body">Bună! Părerea mea:\n\n</string>
     <string name="settings_about">Despre</string>
-    <string name="settings_section_table">Masă</string>
     <string name="settings_section_app">Aplicație</string>
     <string name="table_apply">Reîncepe cu noile setări</string>
     <string name="back">Înapoi</string>

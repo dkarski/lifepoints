@@ -22,8 +22,6 @@
     <string name="cancel">Ακύρωση</string>
     <string name="settings_contact_tap_email">Πατήστε για να γράψετε email</string>
     <string name="settings_contact_tap_copy">Πατήστε για αντιγραφή</string>
-    <string name="settings_theme_light">Φωτεινό</string>
-    <string name="settings_theme_dark">Σκούρο</string>
     <string name="settings_vibration">Δόνηση</string>
     <string name="coming_soon_title">Έρχεται σύντομα</string>
     <string name="coming_soon_body">Αυτή η λειτουργία βρίσκεται υπό ανάπτυξη.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Το email αντιγράφηκε</string>
     <string name="feedback_body">Γεια! Τα σχόλιά μου:\n\n</string>
     <string name="settings_about">Πληροφορίες</string>
-    <string name="settings_section_table">Τραπέζι</string>
     <string name="settings_section_app">Εφαρμογή</string>
     <string name="table_apply">Επανεκκίνηση με τις νέες ρυθμίσεις</string>
     <string name="back">Πίσω</string>

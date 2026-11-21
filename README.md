@@ -6,8 +6,8 @@ Made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/
 <p>
   <img src="store/screenshots/01-home.png" width="190" alt="New game screen with starting life and players">
   <img src="store/screenshots/02-counter.png" width="190" alt="Two-player life counter">
-  <img src="store/screenshots/04-counter-dark.png" width="190" alt="Life counter in the dark theme">
-  <img src="store/screenshots/05-settings.png" width="190" alt="Settings with theme and language">
+  <img src="store/screenshots/04-counter-dark.png" width="190" alt="Life counter with a black and a white half">
+  <img src="store/screenshots/05-settings.png" width="190" alt="Settings with the table, vibration and language">
 </p>
 
 ## Features
@@ -17,7 +17,7 @@ Made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/
 - The total of your last changes is shown above the life, for example −7 after an attack.
 - A short vibration confirms each change. You can turn it off in Settings.
 - The game is saved, so you can close the app and continue later.
-- Light and dark themes.
+- Each half of the table has fixed colours: white at the top, black at the bottom.
 - 63 languages. The app follows the phone's language, or you can choose one in Settings.
 - Fully offline. No account, ads, tracking or permissions.
 

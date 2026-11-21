@@ -22,8 +22,6 @@
     <string name="cancel">取消</string>
     <string name="settings_contact_tap_email">点按即可写邮件</string>
     <string name="settings_contact_tap_copy">点按即可复制</string>
-    <string name="settings_theme_light">浅色</string>
-    <string name="settings_theme_dark">深色</string>
     <string name="settings_vibration">振动</string>
     <string name="coming_soon_title">即将推出</string>
     <string name="coming_soon_body">此功能正在开发中。</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">邮箱已复制</string>
     <string name="feedback_body">你好！我的反馈：\n\n</string>
     <string name="settings_about">关于</string>
-    <string name="settings_section_table">牌桌</string>
     <string name="settings_section_app">应用</string>
     <string name="table_apply">用新设置重新开始</string>
     <string name="back">返回</string>

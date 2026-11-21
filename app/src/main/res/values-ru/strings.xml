@@ -22,8 +22,6 @@
     <string name="cancel">Отмена</string>
     <string name="settings_contact_tap_email">Нажмите, чтобы написать письмо</string>
     <string name="settings_contact_tap_copy">Нажмите, чтобы скопировать</string>
-    <string name="settings_theme_light">Светлая</string>
-    <string name="settings_theme_dark">Тёмная</string>
     <string name="settings_vibration">Вибрация</string>
     <string name="coming_soon_title">Скоро</string>
     <string name="coming_soon_body">Эта функция в разработке.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">Адрес скопирован</string>
     <string name="feedback_body">Здравствуйте! Мой отзыв:\n\n</string>
     <string name="settings_about">О приложении</string>
-    <string name="settings_section_table">Стол</string>
     <string name="settings_section_app">Приложение</string>
     <string name="table_apply">Начать заново с новыми настройками</string>
     <string name="back">Назад</string>

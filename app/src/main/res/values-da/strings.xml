@@ -22,8 +22,6 @@
     <string name="cancel">Annuller</string>
     <string name="settings_contact_tap_email">Tryk for at skrive en e-mail</string>
     <string name="settings_contact_tap_copy">Tryk for at kopiere</string>
-    <string name="settings_theme_light">Lys</string>
-    <string name="settings_theme_dark">Mørk</string>
     <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Kommer snart</string>
     <string name="coming_soon_body">Denne funktion er under udvikling.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">E-mail kopieret</string>
     <string name="feedback_body">Hej! Min feedback:\n\n</string>
     <string name="settings_about">Om</string>
-    <string name="settings_section_table">Bord</string>
     <string name="settings_section_app">App</string>
     <string name="table_apply">Start forfra med nye indstillinger</string>
     <string name="back">Tilbage</string>

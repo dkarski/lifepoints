@@ -22,8 +22,6 @@
     <string name="cancel">ரத்துசெய்</string>
     <string name="settings_contact_tap_email">மின்னஞ்சல் எழுத தட்டவும்</string>
     <string name="settings_contact_tap_copy">நகலெடுக்க தட்டவும்</string>
-    <string name="settings_theme_light">வெளிர்</string>
-    <string name="settings_theme_dark">இருள்</string>
     <string name="settings_vibration">அதிர்வு</string>
     <string name="coming_soon_title">விரைவில் வருகிறது</string>
     <string name="coming_soon_body">இந்த அம்சம் உருவாக்கத்தில் உள்ளது.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">மின்னஞ்சல் நகலெடுக்கப்பட்டது</string>
     <string name="feedback_body">வணக்கம்! என் கருத்து:\n\n</string>
     <string name="settings_about">அறிமுகம்</string>
-    <string name="settings_section_table">மேசை</string>
     <string name="settings_section_app">ஆப்</string>
     <string name="table_apply">புதிய அமைப்புகளுடன் மீண்டும் தொடங்கு</string>
     <string name="back">பின்செல்</string>

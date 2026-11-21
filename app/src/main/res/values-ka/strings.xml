@@ -22,8 +22,6 @@
     <string name="cancel">გაუქმება</string>
     <string name="settings_contact_tap_email">შეეხეთ ელფოსტის დასაწერად</string>
     <string name="settings_contact_tap_copy">შეეხეთ დასაკოპირებლად</string>
-    <string name="settings_theme_light">ღია</string>
-    <string name="settings_theme_dark">მუქი</string>
     <string name="settings_vibration">ვიბრაცია</string>
     <string name="coming_soon_title">მალე</string>
     <string name="coming_soon_body">ეს ფუნქცია მზადდება.</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ელფოსტა დაკოპირდა</string>
     <string name="feedback_body">გამარჯობა! ჩემი გამოხმაურება:\n\n</string>
     <string name="settings_about">აპის შესახებ</string>
-    <string name="settings_section_table">მაგიდა</string>
     <string name="settings_section_app">აპი</string>
     <string name="table_apply">თავიდან დაწყება ახალი პარამეტრებით</string>
     <string name="back">უკან</string>

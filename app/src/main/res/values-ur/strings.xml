@@ -22,8 +22,6 @@
     <string name="cancel">منسوخ کریں</string>
     <string name="settings_contact_tap_email">ای میل لکھنے کے لیے تھپتھپائیں</string>
     <string name="settings_contact_tap_copy">کاپی کرنے کے لیے تھپتھپائیں</string>
-    <string name="settings_theme_light">ہلکا</string>
-    <string name="settings_theme_dark">گہرا</string>
     <string name="settings_vibration">وائبریشن</string>
     <string name="coming_soon_title">جلد آ رہا ہے</string>
     <string name="coming_soon_body">یہ فیچر تیار ہو رہا ہے۔</string>
@@ -34,7 +32,6 @@
     <string name="coming_soon_copied">ای میل کاپی ہو گئی</string>
     <string name="feedback_body">السلام علیکم! میری رائے:\n\n</string>
     <string name="settings_about">ایپ کے بارے میں</string>
-    <string name="settings_section_table">میز</string>
     <string name="settings_section_app">ایپ</string>
     <string name="table_apply">نئی ترتیبات کے ساتھ دوبارہ شروع کریں</string>
     <string name="back">واپس</string>

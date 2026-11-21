@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 import kotlin.math.floor
 
 @Composable
@@ -48,7 +47,7 @@ fun TipJarScreen(url: String, contentPadding: PaddingValues = PaddingValues()) {
 }
 
 /**
- * Draws QR modules ("1" = dark) black on white with a 4-module quiet zone, also in Dark (inverted codes scan badly).
+ * Draws QR modules ("1" = dark) black on white with a 4-module quiet zone.
  * Module size and origin are whole pixels: fractional positions blur module edges into thin white seams.
  */
 @Composable
@@ -72,7 +71,7 @@ private fun QrCode(rows: List<String>, modifier: Modifier) {
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun TipJarPreview() {
-    AppTheme(ThemeMode.Light) {
+    AppTheme {
         TipJarScreen("https://ko-fi.com/example")
     }
 }

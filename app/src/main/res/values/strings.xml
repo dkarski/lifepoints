@@ -34,8 +34,6 @@
     <string name="cancel">Cancel</string>
     <string name="settings_contact_tap_email">Tap to write an email</string>
     <string name="settings_contact_tap_copy">Tap to copy</string>
-    <string name="settings_theme_light">Light</string>
-    <string name="settings_theme_dark">Dark</string>
     <!-- Settings switch: vibration on life changes. -->
     <string name="settings_vibration">Vibration</string>
 
@@ -50,8 +48,7 @@
 
     <!-- Settings and About & Support -->
     <string name="settings_about">About</string>
-    <!-- Settings section headings. Table: the game set-up (starting life, players). App: theme, language, about. -->
-    <string name="settings_section_table">Table</string>
+    <!-- Settings section heading above vibration, language, about and tip jar. -->
     <string name="settings_section_app">App</string>
     <!-- Button at the bottom of Settings after the table was changed during a game. Starts a new game. -->
     <string name="table_apply">Restart with new settings</string>
