@@ -21,8 +21,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -139,8 +137,8 @@ private val IndicatorHeight = 44.dp
 private val ControlsHeight = 140.dp
 private val SideWidth = 76.dp
 
-/** −, + and the menu button share one size; −/+ are only a visual hint, the touch area is the whole half. */
-private val CircleSize = 56.dp
+/** −, + and the menu button share one size (52 dp); −/+ are only a visual hint, the touch area is the whole half. */
+private val CircleSize = 52.dp
 
 /** Numbers read left to right in every language (otherwise "−5" can show as "5−" in right-to-left languages). */
 private val NumberStyle = TextStyle(textDirection = TextDirection.Ltr)
@@ -366,10 +364,12 @@ private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
             .clickable(onClick = onClick, interactionSource = null, indication = null),
         contentAlignment = Alignment.Center,
     ) {
+        // "Soft weave": the game menu symbol. The drawable is a black mask; the colour comes from the tint.
         Icon(
-            imageVector = Icons.Filled.Menu,
+            painter = painterResource(R.drawable.ic_table_soft_weave),
             contentDescription = stringResource(R.string.counter_open_menu),
             tint = MenuButtonColors.content,
+            modifier = Modifier.size(28.dp),
         )
     }
 }
