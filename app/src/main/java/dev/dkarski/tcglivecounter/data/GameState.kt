@@ -12,6 +12,10 @@ data class GameState(
     fun withLifeChange(player: Int, delta: Int): GameState =
         copy(lives = lives.mapIndexed { i, life -> if (i == player) (life + delta).coerceIn(MIN_LIFE, MAX_LIFE) else life })
 
+    /** The change of [player]'s life that [withLifeChange] would apply: less than [delta] at a life limit. */
+    fun appliedChange(player: Int, delta: Int): Int =
+        (lives[player] + delta).coerceIn(MIN_LIFE, MAX_LIFE) - lives[player]
+
     /** True when a life total differs from the starting life, so restarting would lose something. */
     val hasProgress: Boolean get() = lives.any { it != startingLife }
 

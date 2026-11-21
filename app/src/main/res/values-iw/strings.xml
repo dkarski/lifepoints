@@ -11,6 +11,9 @@
     <string name="player_name">שחקן %1$d</string>
     <string name="counter_increase">הוסף חיים ל%1$s</string>
     <string name="counter_decrease">הורד חיים ל%1$s</string>
+    <string name="counter_increase_10">הוסף 10 חיים ל%1$s</string>
+    <string name="counter_decrease_10">הורד 10 חיים ל%1$s</string>
+    <string name="counter_series">שינוי: %1$s</string>
     <string name="counter_open_menu">תפריט משחק</string>
     <string name="menu_continue">המשך משחק</string>
     <string name="menu_restart">התחלה מחדש</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">הקש כדי להעתיק</string>
     <string name="settings_theme_light">בהיר</string>
     <string name="settings_theme_dark">כהה</string>
+    <string name="settings_vibration">רטט</string>
     <string name="coming_soon_title">בקרוב</string>
     <string name="coming_soon_body">התכונה הזו בפיתוח.</string>
     <string name="coming_soon_feedback_prompt">יש לך רעיון או משוב? אשמח לשמוע.</string>

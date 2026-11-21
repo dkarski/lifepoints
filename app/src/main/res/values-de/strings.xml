@@ -11,6 +11,9 @@
     <string name="player_name">Spieler %1$d</string>
     <string name="counter_increase">Lebenspunkte von %1$s erhöhen</string>
     <string name="counter_decrease">Lebenspunkte von %1$s verringern</string>
+    <string name="counter_increase_10">Lebenspunkte von %1$s um 10 erhöhen</string>
+    <string name="counter_decrease_10">Lebenspunkte von %1$s um 10 verringern</string>
+    <string name="counter_series">Änderung: %1$s</string>
     <string name="counter_open_menu">Spielmenü</string>
     <string name="menu_continue">Spiel fortsetzen</string>
     <string name="menu_restart">Neu starten</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Tippen zum Kopieren</string>
     <string name="settings_theme_light">Hell</string>
     <string name="settings_theme_dark">Dunkel</string>
+    <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Demnächst</string>
     <string name="coming_soon_body">Diese Funktion ist in Arbeit.</string>
     <string name="coming_soon_feedback_prompt">Hast du eine Idee oder Feedback? Schreib mir gern!</string>

@@ -11,6 +11,9 @@
     <string name="player_name">Joueur %1$d</string>
     <string name="counter_increase">Augmenter les points de vie de %1$s</string>
     <string name="counter_decrease">Diminuer les points de vie de %1$s</string>
+    <string name="counter_increase_10">Augmenter de 10 les points de vie de %1$s</string>
+    <string name="counter_decrease_10">Diminuer de 10 les points de vie de %1$s</string>
+    <string name="counter_series">Variation : %1$s</string>
     <string name="counter_open_menu">Menu de la partie</string>
     <string name="menu_continue">Reprendre la partie</string>
     <string name="menu_restart">Recommencer</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Touchez pour copier</string>
     <string name="settings_theme_light">Clair</string>
     <string name="settings_theme_dark">Sombre</string>
+    <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Bientôt disponible</string>
     <string name="coming_soon_body">Fonction en développement.</string>
     <string name="coming_soon_feedback_prompt">Une idée ou une remarque ? Écrivez-moi !</string>

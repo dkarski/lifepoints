@@ -11,6 +11,9 @@
     <string name="player_name">ผู้เล่น %1$d</string>
     <string name="counter_increase">เพิ่มไลฟ์ของ %1$s</string>
     <string name="counter_decrease">ลดไลฟ์ของ %1$s</string>
+    <string name="counter_increase_10">เพิ่มไลฟ์ของ %1$s 10</string>
+    <string name="counter_decrease_10">ลดไลฟ์ของ %1$s 10</string>
+    <string name="counter_series">การเปลี่ยนแปลง: %1$s</string>
     <string name="counter_open_menu">เมนูเกม</string>
     <string name="menu_continue">เล่นต่อ</string>
     <string name="menu_restart">เริ่มใหม่</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">แตะเพื่อคัดลอก</string>
     <string name="settings_theme_light">สว่าง</string>
     <string name="settings_theme_dark">มืด</string>
+    <string name="settings_vibration">การสั่น</string>
     <string name="coming_soon_title">เร็วๆ นี้</string>
     <string name="coming_soon_body">ฟีเจอร์นี้กำลังพัฒนา</string>
     <string name="coming_soon_feedback_prompt">มีไอเดียหรือความคิดเห็นไหม ยินดีรับฟังเสมอ</string>

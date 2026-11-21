@@ -11,6 +11,9 @@
     <string name="player_name">Giugader %1$d</string>
     <string name="counter_increase">Augmentar las vitas da %1$s</string>
     <string name="counter_decrease">Reducir las vitas da %1$s</string>
+    <string name="counter_increase_10">Augmentar las vitas da %1$s per 10</string>
+    <string name="counter_decrease_10">Reducir las vitas da %1$s per 10</string>
+    <string name="counter_series">Midada: %1$s</string>
     <string name="counter_open_menu">Menu dal gieu</string>
     <string name="menu_continue">Cuntinuar il gieu</string>
     <string name="menu_restart">Cumenzar da nov</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Tutgar per copiar</string>
     <string name="settings_theme_light">Cler</string>
     <string name="settings_theme_dark">Stgir</string>
+    <string name="settings_vibration">Vibraziun</string>
     <string name="coming_soon_title">Prest disponibel</string>
     <string name="coming_soon_body">Questa funcziun è en svilup.</string>
     <string name="coming_soon_feedback_prompt">Has ti ina idea u in resun? Jau fiss led da l\'udir.</string>

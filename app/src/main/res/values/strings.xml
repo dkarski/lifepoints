@@ -17,6 +17,11 @@
     <string name="player_name">Player %1$d</string>
     <string name="counter_increase">Increase life of %1$s</string>
     <string name="counter_decrease">Decrease life of %1$s</string>
+    <!-- Screen reader actions on the buttons: what holding a button does (10 per step). -->
+    <string name="counter_increase_10">Increase life of %1$s by 10</string>
+    <string name="counter_decrease_10">Decrease life of %1$s by 10</string>
+    <!-- Screen reader label of the indicator above the life total. %1$s: the change, for example +3 or −10. -->
+    <string name="counter_series">Change: %1$s</string>
     <string name="counter_open_menu">Game menu</string>
 
     <!-- Game menu (center button of the counter). menu_continue returns to the counter. -->
@@ -31,6 +36,8 @@
     <string name="settings_contact_tap_copy">Tap to copy</string>
     <string name="settings_theme_light">Light</string>
     <string name="settings_theme_dark">Dark</string>
+    <!-- Settings switch: vibration on life changes. -->
+    <string name="settings_vibration">Vibration</string>
 
     <string name="coming_soon_title">Coming soon</string>
     <string name="coming_soon_body">This feature is in development.</string>

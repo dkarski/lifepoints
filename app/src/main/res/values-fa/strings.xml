@@ -11,6 +11,9 @@
     <string name="player_name">بازیکن %1$d</string>
     <string name="counter_increase">افزایش جان %1$s</string>
     <string name="counter_decrease">کاهش جان %1$s</string>
+    <string name="counter_increase_10">افزایش ۱۰ جان %1$s</string>
+    <string name="counter_decrease_10">کاهش ۱۰ جان %1$s</string>
+    <string name="counter_series">تغییر: %1$s</string>
     <string name="counter_open_menu">منوی بازی</string>
     <string name="menu_continue">ادامه بازی</string>
     <string name="menu_restart">شروع دوباره</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">برای کپی ضربه بزنید</string>
     <string name="settings_theme_light">روشن</string>
     <string name="settings_theme_dark">تیره</string>
+    <string name="settings_vibration">لرزش</string>
     <string name="coming_soon_title">به‌زودی</string>
     <string name="coming_soon_body">این قابلیت در حال ساخت است.</string>
     <string name="coming_soon_feedback_prompt">ایده یا نظری دارید؟ خوشحال می‌شوم بشنوم.</string>

@@ -11,6 +11,9 @@
     <string name="player_name">Тоглогч %1$d</string>
     <string name="counter_increase">%1$s-ийн амийг нэмэх</string>
     <string name="counter_decrease">%1$s-ийн амийг хасах</string>
+    <string name="counter_increase_10">%1$s-ийн амийг 10-аар нэмэх</string>
+    <string name="counter_decrease_10">%1$s-ийн амийг 10-аар хасах</string>
+    <string name="counter_series">Өөрчлөлт: %1$s</string>
     <string name="counter_open_menu">Тоглоомын цэс</string>
     <string name="menu_continue">Тоглоомыг үргэлжлүүлэх</string>
     <string name="menu_restart">Дахин эхлэх</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Хуулахын тулд дарна уу</string>
     <string name="settings_theme_light">Цайвар</string>
     <string name="settings_theme_dark">Бараан</string>
+    <string name="settings_vibration">Чичиргээ</string>
     <string name="coming_soon_title">Удахгүй</string>
     <string name="coming_soon_body">Энэ функц хөгжүүлэгдэж байна.</string>
     <string name="coming_soon_feedback_prompt">Санаа эсвэл санал байна уу? Сонсоход баяртай байна.</string>

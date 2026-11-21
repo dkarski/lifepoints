@@ -11,6 +11,9 @@
     <string name="player_name">Pelaaja %1$d</string>
     <string name="counter_increase">Lisää elämää: %1$s</string>
     <string name="counter_decrease">Vähennä elämää: %1$s</string>
+    <string name="counter_increase_10">Lisää 10 elämää: %1$s</string>
+    <string name="counter_decrease_10">Vähennä 10 elämää: %1$s</string>
+    <string name="counter_series">Muutos: %1$s</string>
     <string name="counter_open_menu">Pelivalikko</string>
     <string name="menu_continue">Jatka peliä</string>
     <string name="menu_restart">Aloita alusta</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Kopioi napauttamalla</string>
     <string name="settings_theme_light">Vaalea</string>
     <string name="settings_theme_dark">Tumma</string>
+    <string name="settings_vibration">Värinä</string>
     <string name="coming_soon_title">Tulossa pian</string>
     <string name="coming_soon_body">Tämä ominaisuus on kehitteillä.</string>
     <string name="coming_soon_feedback_prompt">Onko sinulla idea tai palautetta? Kuulen sen mielelläni.</string>

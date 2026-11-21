@@ -11,6 +11,9 @@
     <string name="player_name">Παίκτης %1$d</string>
     <string name="counter_increase">Αύξηση ζωών: %1$s</string>
     <string name="counter_decrease">Μείωση ζωών: %1$s</string>
+    <string name="counter_increase_10">Αύξηση ζωών κατά 10: %1$s</string>
+    <string name="counter_decrease_10">Μείωση ζωών κατά 10: %1$s</string>
+    <string name="counter_series">Αλλαγή: %1$s</string>
     <string name="counter_open_menu">Μενού παιχνιδιού</string>
     <string name="menu_continue">Συνέχεια παιχνιδιού</string>
     <string name="menu_restart">Επανεκκίνηση</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Πατήστε για αντιγραφή</string>
     <string name="settings_theme_light">Φωτεινό</string>
     <string name="settings_theme_dark">Σκούρο</string>
+    <string name="settings_vibration">Δόνηση</string>
     <string name="coming_soon_title">Έρχεται σύντομα</string>
     <string name="coming_soon_body">Αυτή η λειτουργία βρίσκεται υπό ανάπτυξη.</string>
     <string name="coming_soon_feedback_prompt">Έχετε μια ιδέα ή σχόλιο; Θα χαρώ να το ακούσω.</string>

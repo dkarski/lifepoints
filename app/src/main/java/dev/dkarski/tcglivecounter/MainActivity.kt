@@ -38,6 +38,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             var themeMode by remember { mutableStateOf(initialTheme) }
+            var vibration by remember { mutableStateOf(settingsStore.vibration) }
             AppTheme(themeMode) {
                 App(
                     initialGame = initialGame,
@@ -49,6 +50,11 @@ class MainActivity : ComponentActivity() {
                         applySystemBars(mode)
                     },
                     languageTag = settingsStore.languageTag,
+                    vibration = vibration,
+                    onVibrationChange = { on ->
+                        vibration = on
+                        settingsStore.vibration = on
+                    },
                     onLanguageChange = { tag ->
                         if (tag != settingsStore.languageTag) {
                             settingsStore.languageTag = tag

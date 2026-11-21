@@ -11,6 +11,9 @@
     <string name="player_name">Pemain %1$d</string>
     <string name="counter_increase">Tambah nyawa %1$s</string>
     <string name="counter_decrease">Kurangkan nyawa %1$s</string>
+    <string name="counter_increase_10">Tambah 10 nyawa %1$s</string>
+    <string name="counter_decrease_10">Kurangkan 10 nyawa %1$s</string>
+    <string name="counter_series">Perubahan: %1$s</string>
     <string name="counter_open_menu">Menu permainan</string>
     <string name="menu_continue">Teruskan permainan</string>
     <string name="menu_restart">Mula semula</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Ketik untuk menyalin</string>
     <string name="settings_theme_light">Cerah</string>
     <string name="settings_theme_dark">Gelap</string>
+    <string name="settings_vibration">Getaran</string>
     <string name="coming_soon_title">Akan datang</string>
     <string name="coming_soon_body">Ciri ini sedang dibangunkan.</string>
     <string name="coming_soon_feedback_prompt">Ada idea atau maklum balas? Saya ingin mendengarnya.</string>

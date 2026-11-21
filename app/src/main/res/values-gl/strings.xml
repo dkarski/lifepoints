@@ -11,6 +11,9 @@
     <string name="player_name">Xogador %1$d</string>
     <string name="counter_increase">Aumentar as vidas de %1$s</string>
     <string name="counter_decrease">Reducir as vidas de %1$s</string>
+    <string name="counter_increase_10">Aumentar 10 vidas de %1$s</string>
+    <string name="counter_decrease_10">Reducir 10 vidas de %1$s</string>
+    <string name="counter_series">Cambio: %1$s</string>
     <string name="counter_open_menu">Menú da partida</string>
     <string name="menu_continue">Continuar partida</string>
     <string name="menu_restart">Comezar de novo</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Toca para copiar</string>
     <string name="settings_theme_light">Claro</string>
     <string name="settings_theme_dark">Escuro</string>
+    <string name="settings_vibration">Vibración</string>
     <string name="coming_soon_title">Proximamente</string>
     <string name="coming_soon_body">Esta función está en desenvolvemento.</string>
     <string name="coming_soon_feedback_prompt">Tes unha idea ou un comentario? Encantaríame coñecelo.</string>

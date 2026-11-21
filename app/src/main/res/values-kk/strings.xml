@@ -11,6 +11,9 @@
     <string name="player_name">%1$d-ойыншы</string>
     <string name="counter_increase">%1$s: өмірді көбейту</string>
     <string name="counter_decrease">%1$s: өмірді азайту</string>
+    <string name="counter_increase_10">%1$s: өмірді 10-ға көбейту</string>
+    <string name="counter_decrease_10">%1$s: өмірді 10-ға азайту</string>
+    <string name="counter_series">Өзгеріс: %1$s</string>
     <string name="counter_open_menu">Ойын мәзірі</string>
     <string name="menu_continue">Ойынды жалғастыру</string>
     <string name="menu_restart">Қайта бастау</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Көшіру үшін түртіңіз</string>
     <string name="settings_theme_light">Ашық</string>
     <string name="settings_theme_dark">Қараңғы</string>
+    <string name="settings_vibration">Діріл</string>
     <string name="coming_soon_title">Жақында</string>
     <string name="coming_soon_body">Бұл функция әзірленуде.</string>
     <string name="coming_soon_feedback_prompt">Идеяңыз не пікіріңіз бар ма? Естуге қуаныштымын.</string>

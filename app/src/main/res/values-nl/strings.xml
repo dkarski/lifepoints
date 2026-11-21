@@ -11,6 +11,9 @@
     <string name="player_name">Speler %1$d</string>
     <string name="counter_increase">Levens van %1$s verhogen</string>
     <string name="counter_decrease">Levens van %1$s verlagen</string>
+    <string name="counter_increase_10">Levens van %1$s met 10 verhogen</string>
+    <string name="counter_decrease_10">Levens van %1$s met 10 verlagen</string>
+    <string name="counter_series">Wijziging: %1$s</string>
     <string name="counter_open_menu">Spelmenu</string>
     <string name="menu_continue">Spel hervatten</string>
     <string name="menu_restart">Opnieuw beginnen</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Tik om te kopiëren</string>
     <string name="settings_theme_light">Licht</string>
     <string name="settings_theme_dark">Donker</string>
+    <string name="settings_vibration">Trillen</string>
     <string name="coming_soon_title">Binnenkort</string>
     <string name="coming_soon_body">Deze functie wordt nog ontwikkeld.</string>
     <string name="coming_soon_feedback_prompt">Heb je een idee of feedback? Ik hoor het graag.</string>

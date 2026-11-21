@@ -11,6 +11,9 @@
     <string name="player_name">کھلاڑی %1$d</string>
     <string name="counter_increase">%1$s کی زندگی بڑھائیں</string>
     <string name="counter_decrease">%1$s کی زندگی گھٹائیں</string>
+    <string name="counter_increase_10">%1$s کی زندگی 10 بڑھائیں</string>
+    <string name="counter_decrease_10">%1$s کی زندگی 10 گھٹائیں</string>
+    <string name="counter_series">تبدیلی: %1$s</string>
     <string name="counter_open_menu">کھیل کا مینو</string>
     <string name="menu_continue">کھیل جاری رکھیں</string>
     <string name="menu_restart">دوبارہ شروع کریں</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">کاپی کرنے کے لیے تھپتھپائیں</string>
     <string name="settings_theme_light">ہلکا</string>
     <string name="settings_theme_dark">گہرا</string>
+    <string name="settings_vibration">وائبریشن</string>
     <string name="coming_soon_title">جلد آ رہا ہے</string>
     <string name="coming_soon_body">یہ فیچر تیار ہو رہا ہے۔</string>
     <string name="coming_soon_feedback_prompt">کوئی خیال یا رائے ہے؟ مجھے سن کر خوشی ہوگی۔</string>

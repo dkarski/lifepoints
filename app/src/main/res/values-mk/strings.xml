@@ -11,6 +11,9 @@
     <string name="player_name">Играч %1$d</string>
     <string name="counter_increase">Додај живот: %1$s</string>
     <string name="counter_decrease">Одземи живот: %1$s</string>
+    <string name="counter_increase_10">Додај 10 животи: %1$s</string>
+    <string name="counter_decrease_10">Одземи 10 животи: %1$s</string>
+    <string name="counter_series">Промена: %1$s</string>
     <string name="counter_open_menu">Мени на играта</string>
     <string name="menu_continue">Продолжи ја играта</string>
     <string name="menu_restart">Почни одново</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Допрете за да копирате</string>
     <string name="settings_theme_light">Светла</string>
     <string name="settings_theme_dark">Темна</string>
+    <string name="settings_vibration">Вибрации</string>
     <string name="coming_soon_title">Наскоро</string>
     <string name="coming_soon_body">Оваа функција е во изработка.</string>
     <string name="coming_soon_feedback_prompt">Имате идеја или повратна информација? Со задоволство ќе ја слушнам.</string>

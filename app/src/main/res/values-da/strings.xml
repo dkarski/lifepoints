@@ -11,6 +11,9 @@
     <string name="player_name">Spiller %1$d</string>
     <string name="counter_increase">Øg liv for %1$s</string>
     <string name="counter_decrease">Mindsk liv for %1$s</string>
+    <string name="counter_increase_10">Øg liv for %1$s med 10</string>
+    <string name="counter_decrease_10">Mindsk liv for %1$s med 10</string>
+    <string name="counter_series">Ændring: %1$s</string>
     <string name="counter_open_menu">Spilmenu</string>
     <string name="menu_continue">Fortsæt spil</string>
     <string name="menu_restart">Start forfra</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Tryk for at kopiere</string>
     <string name="settings_theme_light">Lys</string>
     <string name="settings_theme_dark">Mørk</string>
+    <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Kommer snart</string>
     <string name="coming_soon_body">Denne funktion er under udvikling.</string>
     <string name="coming_soon_feedback_prompt">Har du en idé eller feedback? Jeg vil meget gerne høre den.</string>

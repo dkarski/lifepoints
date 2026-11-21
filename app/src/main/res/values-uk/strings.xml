@@ -11,6 +11,9 @@
     <string name="player_name">Гравець %1$d</string>
     <string name="counter_increase">Додати життя: %1$s</string>
     <string name="counter_decrease">Відняти життя: %1$s</string>
+    <string name="counter_increase_10">Додати 10 життів: %1$s</string>
+    <string name="counter_decrease_10">Відняти 10 життів: %1$s</string>
+    <string name="counter_series">Зміна: %1$s</string>
     <string name="counter_open_menu">Меню гри</string>
     <string name="menu_continue">Продовжити гру</string>
     <string name="menu_restart">Почати знову</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Торкніться, щоб скопіювати</string>
     <string name="settings_theme_light">Світла</string>
     <string name="settings_theme_dark">Темна</string>
+    <string name="settings_vibration">Вібрація</string>
     <string name="coming_soon_title">Незабаром</string>
     <string name="coming_soon_body">Ця функція в розробці.</string>
     <string name="coming_soon_feedback_prompt">Маєте ідею чи відгук? Буду радий почути.</string>

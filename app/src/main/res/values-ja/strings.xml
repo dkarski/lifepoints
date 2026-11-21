@@ -11,6 +11,9 @@
     <string name="player_name">プレイヤー%1$d</string>
     <string name="counter_increase">%1$sのライフを増やす</string>
     <string name="counter_decrease">%1$sのライフを減らす</string>
+    <string name="counter_increase_10">%1$sのライフを10増やす</string>
+    <string name="counter_decrease_10">%1$sのライフを10減らす</string>
+    <string name="counter_series">変化：%1$s</string>
     <string name="counter_open_menu">ゲームメニュー</string>
     <string name="menu_continue">ゲームを続ける</string>
     <string name="menu_restart">最初から</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">タップしてコピー</string>
     <string name="settings_theme_light">ライト</string>
     <string name="settings_theme_dark">ダーク</string>
+    <string name="settings_vibration">バイブレーション</string>
     <string name="coming_soon_title">近日公開</string>
     <string name="coming_soon_body">この機能は開発中です。</string>
     <string name="coming_soon_feedback_prompt">アイデアやご意見はありますか？ぜひお聞かせください。</string>

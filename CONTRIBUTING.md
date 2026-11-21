@@ -19,7 +19,7 @@ Before opening a pull request, run the same checks as CI:
 
 ```sh
 python3 scripts/i18n_check.py
-./gradlew :app:lintDebug :app:assembleDebug :app:assembleRelease
+./gradlew :app:lintDebug :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease
 ```
 
 The app targets the Mudita Kompakt (Android 12, API 31, 480×800 E Ink) and uses the

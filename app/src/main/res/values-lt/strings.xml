@@ -11,6 +11,9 @@
     <string name="player_name">Žaidėjas %1$d</string>
     <string name="counter_increase">Padidinti gyvybes: %1$s</string>
     <string name="counter_decrease">Sumažinti gyvybes: %1$s</string>
+    <string name="counter_increase_10">Padidinti gyvybes 10: %1$s</string>
+    <string name="counter_decrease_10">Sumažinti gyvybes 10: %1$s</string>
+    <string name="counter_series">Pokytis: %1$s</string>
     <string name="counter_open_menu">Žaidimo meniu</string>
     <string name="menu_continue">Tęsti žaidimą</string>
     <string name="menu_restart">Pradėti iš naujo</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Palieskite, kad nukopijuotumėte</string>
     <string name="settings_theme_light">Šviesi</string>
     <string name="settings_theme_dark">Tamsi</string>
+    <string name="settings_vibration">Vibracija</string>
     <string name="coming_soon_title">Netrukus</string>
     <string name="coming_soon_body">Ši funkcija kuriama.</string>
     <string name="coming_soon_feedback_prompt">Turite idėją ar atsiliepimą? Mielai išklausysiu.</string>

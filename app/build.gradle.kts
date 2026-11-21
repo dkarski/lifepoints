@@ -124,4 +124,8 @@ dependencies {
     implementation(libs.mudita.mmd)
     implementation(libs.androidx.profileinstaller)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // Unit tests of the counting logic (JVM only, not in the APK).
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
 }

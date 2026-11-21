@@ -11,6 +11,9 @@
     <string name="player_name">%1$d. játékos</string>
     <string name="counter_increase">%1$s életének növelése</string>
     <string name="counter_decrease">%1$s életének csökkentése</string>
+    <string name="counter_increase_10">%1$s életének növelése 10-zel</string>
+    <string name="counter_decrease_10">%1$s életének csökkentése 10-zel</string>
+    <string name="counter_series">Változás: %1$s</string>
     <string name="counter_open_menu">Játékmenü</string>
     <string name="menu_continue">Játék folytatása</string>
     <string name="menu_restart">Újrakezdés</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Koppints a másoláshoz</string>
     <string name="settings_theme_light">Világos</string>
     <string name="settings_theme_dark">Sötét</string>
+    <string name="settings_vibration">Rezgés</string>
     <string name="coming_soon_title">Hamarosan</string>
     <string name="coming_soon_body">Ez a funkció fejlesztés alatt áll.</string>
     <string name="coming_soon_feedback_prompt">Van ötleted vagy visszajelzésed? Szívesen meghallgatom.</string>

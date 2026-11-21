@@ -11,6 +11,9 @@
     <string name="player_name">អ្នកលេង %1$d</string>
     <string name="counter_increase">បង្កើនជីវិតរបស់ %1$s</string>
     <string name="counter_decrease">បន្ថយជីវិតរបស់ %1$s</string>
+    <string name="counter_increase_10">បង្កើនជីវិតរបស់ %1$s 10</string>
+    <string name="counter_decrease_10">បន្ថយជីវិតរបស់ %1$s 10</string>
+    <string name="counter_series">ការផ្លាស់ប្ដូរ៖ %1$s</string>
     <string name="counter_open_menu">ម៉ឺនុយហ្គេម</string>
     <string name="menu_continue">លេងបន្ត</string>
     <string name="menu_restart">ចាប់ផ្ដើមឡើងវិញ</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">ចុចដើម្បីចម្លង</string>
     <string name="settings_theme_light">ភ្លឺ</string>
     <string name="settings_theme_dark">ងងឹត</string>
+    <string name="settings_vibration">ការញ័រ</string>
     <string name="coming_soon_title">មកដល់ឆាប់ៗ</string>
     <string name="coming_soon_body">មុខងារនេះកំពុងរៀបចំ។</string>
     <string name="coming_soon_feedback_prompt">មានគំនិត ឬមតិយោបល់ទេ? ខ្ញុំសប្បាយចិត្តនឹងស្ដាប់។</string>

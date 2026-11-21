@@ -11,6 +11,9 @@
     <string name="player_name">வீரர் %1$d</string>
     <string name="counter_increase">%1$s உயிரைக் கூட்டு</string>
     <string name="counter_decrease">%1$s உயிரைக் குறை</string>
+    <string name="counter_increase_10">%1$s உயிரை 10 கூட்டு</string>
+    <string name="counter_decrease_10">%1$s உயிரை 10 குறை</string>
+    <string name="counter_series">மாற்றம்: %1$s</string>
     <string name="counter_open_menu">ஆட்ட மெனு</string>
     <string name="menu_continue">ஆட்டத்தைத் தொடர்</string>
     <string name="menu_restart">மீண்டும் தொடங்கு</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">நகலெடுக்க தட்டவும்</string>
     <string name="settings_theme_light">வெளிர்</string>
     <string name="settings_theme_dark">இருள்</string>
+    <string name="settings_vibration">அதிர்வு</string>
     <string name="coming_soon_title">விரைவில் வருகிறது</string>
     <string name="coming_soon_body">இந்த அம்சம் உருவாக்கத்தில் உள்ளது.</string>
     <string name="coming_soon_feedback_prompt">யோசனை அல்லது கருத்து உள்ளதா? கேட்க மகிழ்ச்சி.</string>
