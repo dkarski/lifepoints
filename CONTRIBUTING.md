@@ -3,6 +3,8 @@
 Bug reports and ideas are welcome as [issues](https://github.com/dkarski/lifepoints/issues). For larger changes,
 open an issue first.
 
+Please follow the [Code of conduct](CODE_OF_CONDUCT.md).
+
 ## Build
 
 Requirements: JDK 17 and the Android SDK with Platform 35 and Build-Tools 35. Set `ANDROID_HOME`, or `sdk.dir` in
