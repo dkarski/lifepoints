@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Удахгүй</string>
-    <string name="tab_game">Тоглоом</string>
-    <string name="tab_history">Түүх</string>
-    <string name="tab_settings">Тохиргоо</string>
+    <string name="settings_title">Тохиргоо</string>
     <string name="home_unit_life">амь</string>
-    <string name="home_custom">Өөрийн</string>
-    <string name="home_custom_caption">амь</string>
     <string name="home_custom_edit">Эхлэх амийг оруулна уу</string>
+    <string name="custom_life">Өөрийн эхлэх амь</string>
+    <string name="custom_life_value">Өөрийн эхлэх амь: %1$d</string>
     <string name="home_unit_players">тоглогч</string>
-    <string name="home_start_game">Тоглоом эхлүүлэх</string>
     <string name="player_name">Тоглогч %1$d</string>
     <string name="counter_increase">%1$s-ийн амийг нэмэх</string>
     <string name="counter_decrease">%1$s-ийн амийг хасах</string>
     <string name="counter_open_menu">Тоглоомын цэс</string>
-    <string name="menu_in_progress">Тоглоом үргэлжилж байна</string>
     <string name="menu_continue">Тоглоомыг үргэлжлүүлэх</string>
-    <string name="menu_new_game">Шинэ тоглоом</string>
+    <string name="menu_restart">Дахин эхлэх</string>
+    <string name="restart_question">Тоглоомыг дахин эхлүүлэх үү?</string>
+    <string name="restart_body">Амь %1$d руу буцна.</string>
+    <string name="cancel">Цуцлах</string>
     <string name="settings_contact_tap_email">Имэйл бичихийн тулд дарна уу</string>
     <string name="settings_contact_tap_copy">Хуулахын тулд дарна уу</string>
     <string name="settings_theme_light">Цайвар</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Хаягийг хуулах</string>
     <string name="coming_soon_copied">Хаяг хуулагдлаа</string>
     <string name="feedback_body">Сайн байна уу! Миний санал:\n\n</string>
-    <string name="settings_theme">Загвар</string>
     <string name="settings_about">Аппын тухай</string>
+    <string name="settings_section_table">Ширээ</string>
+    <string name="settings_section_app">Апп</string>
+    <string name="table_apply">Шинэ тохиргоогоор дахин эхлэх</string>
     <string name="back">Буцах</string>
     <string name="settings_language">Хэл</string>
     <string name="language_system_default">Системийн хэл</string>

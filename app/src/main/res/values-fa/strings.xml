@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">به‌زودی</string>
-    <string name="tab_game">بازی</string>
-    <string name="tab_history">تاریخچه</string>
-    <string name="tab_settings">تنظیمات</string>
+    <string name="settings_title">تنظیمات</string>
     <string name="home_unit_life">جان</string>
-    <string name="home_custom">دلخواه</string>
-    <string name="home_custom_caption">جان</string>
     <string name="home_custom_edit">جان اولیه را وارد کنید</string>
+    <string name="custom_life">جان اولیهٔ دلخواه</string>
+    <string name="custom_life_value">جان اولیهٔ دلخواه: %1$d</string>
     <string name="home_unit_players">بازیکن</string>
-    <string name="home_start_game">شروع بازی</string>
     <string name="player_name">بازیکن %1$d</string>
     <string name="counter_increase">افزایش جان %1$s</string>
     <string name="counter_decrease">کاهش جان %1$s</string>
     <string name="counter_open_menu">منوی بازی</string>
-    <string name="menu_in_progress">بازی در جریان است</string>
     <string name="menu_continue">ادامه بازی</string>
-    <string name="menu_new_game">بازی جدید</string>
+    <string name="menu_restart">شروع دوباره</string>
+    <string name="restart_question">بازی از نو شروع شود؟</string>
+    <string name="restart_body">جان‌ها به %1$d برمی‌گردند.</string>
+    <string name="cancel">لغو</string>
     <string name="settings_contact_tap_email">برای نوشتن ایمیل ضربه بزنید</string>
     <string name="settings_contact_tap_copy">برای کپی ضربه بزنید</string>
     <string name="settings_theme_light">روشن</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">کپی ایمیل</string>
     <string name="coming_soon_copied">ایمیل کپی شد</string>
     <string name="feedback_body">سلام! نظر من:\n\n</string>
-    <string name="settings_theme">پوسته</string>
     <string name="settings_about">درباره</string>
+    <string name="settings_section_table">میز</string>
+    <string name="settings_section_app">برنامه</string>
+    <string name="table_apply">شروع دوباره با تنظیمات جدید</string>
     <string name="back">بازگشت</string>
     <string name="settings_language">زبان</string>
     <string name="language_system_default">زبان سیستم</string>

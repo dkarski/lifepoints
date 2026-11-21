@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">即将推出</string>
-    <string name="tab_game">游戏</string>
-    <string name="tab_history">历史</string>
-    <string name="tab_settings">设置</string>
+    <string name="settings_title">设置</string>
     <string name="home_unit_life">生命值</string>
-    <string name="home_custom">自定义</string>
-    <string name="home_custom_caption">生命值</string>
     <string name="home_custom_edit">输入初始生命值</string>
+    <string name="custom_life">自定义初始生命值</string>
+    <string name="custom_life_value">自定义初始生命值：%1$d</string>
     <string name="home_unit_players">名玩家</string>
-    <string name="home_start_game">开始游戏</string>
     <string name="player_name">玩家 %1$d</string>
     <string name="counter_increase">增加%1$s的生命值</string>
     <string name="counter_decrease">减少%1$s的生命值</string>
     <string name="counter_open_menu">游戏菜单</string>
-    <string name="menu_in_progress">游戏进行中</string>
     <string name="menu_continue">继续游戏</string>
-    <string name="menu_new_game">新游戏</string>
+    <string name="menu_restart">重新开始</string>
+    <string name="restart_question">重新开始游戏？</string>
+    <string name="restart_body">生命值将恢复为 %1$d。</string>
+    <string name="cancel">取消</string>
     <string name="settings_contact_tap_email">点按即可写邮件</string>
     <string name="settings_contact_tap_copy">点按即可复制</string>
     <string name="settings_theme_light">浅色</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">复制邮箱</string>
     <string name="coming_soon_copied">邮箱已复制</string>
     <string name="feedback_body">你好！我的反馈：\n\n</string>
-    <string name="settings_theme">主题</string>
     <string name="settings_about">关于</string>
+    <string name="settings_section_table">牌桌</string>
+    <string name="settings_section_app">应用</string>
+    <string name="table_apply">用新设置重新开始</string>
     <string name="back">返回</string>
     <string name="settings_language">语言</string>
     <string name="language_system_default">跟随系统</string>

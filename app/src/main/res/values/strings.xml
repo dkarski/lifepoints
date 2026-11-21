@@ -3,27 +3,30 @@
     <string name="app_name" translatable="false">Lifepoints</string>
     <string name="soon">Soon</string>
 
-    <string name="tab_game">Game</string>
-    <string name="tab_history">History</string>
-    <string name="tab_settings">Settings</string>
+    <string name="settings_title">Settings</string>
 
-    <!-- Small caption under 20/30/40 and under an entered custom value ("20 life"). Life total as in MTG. -->
+    <!-- Small caption under 20/30/40 and under a custom value ("20 life"). Life total as in MTG. -->
     <string name="home_unit_life">life</string>
-    <!-- Custom tile before a value is entered: big label + small caption read together ("Custom life"). -->
-    <string name="home_custom">Custom</string>
-    <string name="home_custom_caption">life</string>
     <string name="home_custom_edit">Enter starting life</string>
+    <!-- Screen reader label of the pencil tile next to 20/30/40. -->
+    <string name="custom_life">Custom starting life</string>
+    <!-- Screen reader label of the pencil tile once a value is set. %1$d: the value. -->
+    <string name="custom_life_value">Custom starting life: %1$d</string>
     <string name="home_unit_players">players</string>
-    <string name="home_start_game">Start Game</string>
 
     <string name="player_name">Player %1$d</string>
     <string name="counter_increase">Increase life of %1$s</string>
     <string name="counter_decrease">Decrease life of %1$s</string>
     <string name="counter_open_menu">Game menu</string>
 
-    <string name="menu_in_progress">Game in progress</string>
+    <!-- Game menu (center button of the counter). menu_continue returns to the counter. -->
     <string name="menu_continue">Continue Game</string>
-    <string name="menu_new_game">New Game</string>
+    <string name="menu_restart">Restart</string>
+    <!-- Restart confirmation, shown in the menu when life totals have changed. -->
+    <string name="restart_question">Restart the game?</string>
+    <!-- %1$d: the starting life, for example 20. -->
+    <string name="restart_body">Life totals go back to %1$d.</string>
+    <string name="cancel">Cancel</string>
     <string name="settings_contact_tap_email">Tap to write an email</string>
     <string name="settings_contact_tap_copy">Tap to copy</string>
     <string name="settings_theme_light">Light</string>
@@ -39,8 +42,12 @@
     <string name="feedback_body">Hi! My feedback:\n\n</string>
 
     <!-- Settings and About & Support -->
-    <string name="settings_theme">Theme</string>
     <string name="settings_about">About</string>
+    <!-- Settings section headings. Table: the game set-up (starting life, players). App: theme, language, about. -->
+    <string name="settings_section_table">Table</string>
+    <string name="settings_section_app">App</string>
+    <!-- Button at the bottom of Settings after the table was changed during a game. Starts a new game. -->
+    <string name="table_apply">Restart with new settings</string>
     <string name="back">Back</string>
 
     <!-- Settings > Language. Language names in the list are shown in their own language and are not translated. -->

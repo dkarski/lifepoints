@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">မကြာမီ</string>
-    <string name="tab_game">ဂိမ်း</string>
-    <string name="tab_history">မှတ်တမ်း</string>
-    <string name="tab_settings">ဆက်တင်များ</string>
+    <string name="settings_title">ဆက်တင်များ</string>
     <string name="home_unit_life">အသက်</string>
-    <string name="home_custom">စိတ်ကြိုက်</string>
-    <string name="home_custom_caption">အသက်</string>
     <string name="home_custom_edit">စတင်အသက်ကို ထည့်ပါ</string>
+    <string name="custom_life">ကိုယ်ပိုင် စတင်အသက်</string>
+    <string name="custom_life_value">ကိုယ်ပိုင် စတင်အသက်: %1$d</string>
     <string name="home_unit_players">ကစားသူ</string>
-    <string name="home_start_game">ဂိမ်းစတင်ပါ</string>
     <string name="player_name">ကစားသူ %1$d</string>
     <string name="counter_increase">%1$s ၏ အသက်ကို တိုးပါ</string>
     <string name="counter_decrease">%1$s ၏ အသက်ကို လျှော့ပါ</string>
     <string name="counter_open_menu">ဂိမ်းမီနူး</string>
-    <string name="menu_in_progress">ဂိမ်း ဆက်လက်ကစားနေသည်</string>
     <string name="menu_continue">ဆက်ကစားပါ</string>
-    <string name="menu_new_game">ဂိမ်းအသစ်</string>
+    <string name="menu_restart">ပြန်စမည်</string>
+    <string name="restart_question">ဂိမ်းကို ပြန်စမလား။</string>
+    <string name="restart_body">အသက်သည် %1$d သို့ ပြန်ရောက်မည်။</string>
+    <string name="cancel">မလုပ်တော့ပါ</string>
     <string name="settings_contact_tap_email">အီးမေးလ်ရေးရန် တို့ပါ</string>
     <string name="settings_contact_tap_copy">ကူးယူရန် တို့ပါ</string>
     <string name="settings_theme_light">အလင်း</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">အီးမေးလ် ကူးယူပါ</string>
     <string name="coming_soon_copied">အီးမေးလ် ကူးယူပြီး</string>
     <string name="feedback_body">မင်္ဂလာပါ! ကျွန်ုပ်၏ တုံ့ပြန်ချက်-\n\n</string>
-    <string name="settings_theme">အပြင်အဆင်</string>
     <string name="settings_about">အကြောင်း</string>
+    <string name="settings_section_table">စားပွဲ</string>
+    <string name="settings_section_app">အက်ပ်</string>
+    <string name="table_apply">ဆက်တင်အသစ်ဖြင့် ပြန်စမည်</string>
     <string name="back">နောက်သို့</string>
     <string name="settings_language">ဘာသာစကား</string>
     <string name="language_system_default">စနစ်ဘာသာစကား</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Binnenkort</string>
-    <string name="tab_game">Spel</string>
-    <string name="tab_history">Geschiedenis</string>
-    <string name="tab_settings">Instellingen</string>
+    <string name="settings_title">Instellingen</string>
     <string name="home_unit_life">levens</string>
-    <string name="home_custom">Eigen</string>
-    <string name="home_custom_caption">waarde</string>
     <string name="home_custom_edit">Startlevens invoeren</string>
+    <string name="custom_life">Eigen startlevens</string>
+    <string name="custom_life_value">Eigen startlevens: %1$d</string>
     <string name="home_unit_players">spelers</string>
-    <string name="home_start_game">Spel starten</string>
     <string name="player_name">Speler %1$d</string>
     <string name="counter_increase">Levens van %1$s verhogen</string>
     <string name="counter_decrease">Levens van %1$s verlagen</string>
     <string name="counter_open_menu">Spelmenu</string>
-    <string name="menu_in_progress">Spel bezig</string>
     <string name="menu_continue">Spel hervatten</string>
-    <string name="menu_new_game">Nieuw spel</string>
+    <string name="menu_restart">Opnieuw beginnen</string>
+    <string name="restart_question">Spel opnieuw beginnen?</string>
+    <string name="restart_body">De levens gaan terug naar %1$d.</string>
+    <string name="cancel">Annuleren</string>
     <string name="settings_contact_tap_email">Tik om een e-mail te schrijven</string>
     <string name="settings_contact_tap_copy">Tik om te kopiëren</string>
     <string name="settings_theme_light">Licht</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">E-mail kopiëren</string>
     <string name="coming_soon_copied">E-mail gekopieerd</string>
     <string name="feedback_body">Hoi! Mijn feedback:\n\n</string>
-    <string name="settings_theme">Thema</string>
     <string name="settings_about">Over</string>
+    <string name="settings_section_table">Tafel</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">Opnieuw beginnen met deze instellingen</string>
     <string name="back">Terug</string>
     <string name="settings_language">Taal</string>
     <string name="language_system_default">Systeemtaal</string>

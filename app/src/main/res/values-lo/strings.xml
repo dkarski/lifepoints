@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">ໄວໆນີ້</string>
-    <string name="tab_game">ເກມ</string>
-    <string name="tab_history">ປະຫວັດ</string>
-    <string name="tab_settings">ການຕັ້ງຄ່າ</string>
+    <string name="settings_title">ການຕັ້ງຄ່າ</string>
     <string name="home_unit_life">ຊີວິດ</string>
-    <string name="home_custom">ກຳນົດເອງ</string>
-    <string name="home_custom_caption">ຊີວິດ</string>
     <string name="home_custom_edit">ປ້ອນຊີວິດເລີ່ມຕົ້ນ</string>
+    <string name="custom_life">ຊີວິດເລີ່ມຕົ້ນທີ່ກຳນົດເອງ</string>
+    <string name="custom_life_value">ຊີວິດເລີ່ມຕົ້ນທີ່ກຳນົດເອງ: %1$d</string>
     <string name="home_unit_players">ຜູ້ຫຼິ້ນ</string>
-    <string name="home_start_game">ເລີ່ມເກມ</string>
     <string name="player_name">ຜູ້ຫຼິ້ນ %1$d</string>
     <string name="counter_increase">ເພີ່ມຊີວິດຂອງ %1$s</string>
     <string name="counter_decrease">ຫຼຸດຊີວິດຂອງ %1$s</string>
     <string name="counter_open_menu">ເມນູເກມ</string>
-    <string name="menu_in_progress">ເກມກຳລັງດຳເນີນ</string>
     <string name="menu_continue">ຫຼິ້ນຕໍ່</string>
-    <string name="menu_new_game">ເກມໃໝ່</string>
+    <string name="menu_restart">ເລີ່ມໃໝ່</string>
+    <string name="restart_question">ເລີ່ມເກມໃໝ່ບໍ?</string>
+    <string name="restart_body">ຊີວິດຈະກັບໄປເປັນ %1$d.</string>
+    <string name="cancel">ຍົກເລີກ</string>
     <string name="settings_contact_tap_email">ແຕະເພື່ອຂຽນອີເມວ</string>
     <string name="settings_contact_tap_copy">ແຕະເພື່ອສຳເນົາ</string>
     <string name="settings_theme_light">ແຈ້ງ</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ສຳເນົາອີເມວ</string>
     <string name="coming_soon_copied">ສຳເນົາອີເມວແລ້ວ</string>
     <string name="feedback_body">ສະບາຍດີ! ຄຳຕິຊົມຂອງຂ້ອຍ:\n\n</string>
-    <string name="settings_theme">ຮູບແບບ</string>
     <string name="settings_about">ກ່ຽວກັບ</string>
+    <string name="settings_section_table">ໂຕະ</string>
+    <string name="settings_section_app">ແອັບ</string>
+    <string name="table_apply">ເລີ່ມໃໝ່ດ້ວຍການຕັ້ງຄ່າໃໝ່</string>
     <string name="back">ກັບຄືນ</string>
     <string name="settings_language">ພາສາ</string>
     <string name="language_system_default">ພາສາຂອງລະບົບ</string>

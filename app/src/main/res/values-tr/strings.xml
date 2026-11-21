@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Yakında</string>
-    <string name="tab_game">Oyun</string>
-    <string name="tab_history">Geçmiş</string>
-    <string name="tab_settings">Ayarlar</string>
+    <string name="settings_title">Ayarlar</string>
     <string name="home_unit_life">can</string>
-    <string name="home_custom">Özel</string>
-    <string name="home_custom_caption">can</string>
     <string name="home_custom_edit">Başlangıç canını girin</string>
+    <string name="custom_life">Özel başlangıç canı</string>
+    <string name="custom_life_value">Özel başlangıç canı: %1$d</string>
     <string name="home_unit_players">oyuncu</string>
-    <string name="home_start_game">Oyunu başlat</string>
     <string name="player_name">Oyuncu %1$d</string>
     <string name="counter_increase">%1$s canını artır</string>
     <string name="counter_decrease">%1$s canını azalt</string>
     <string name="counter_open_menu">Oyun menüsü</string>
-    <string name="menu_in_progress">Oyun devam ediyor</string>
     <string name="menu_continue">Oyuna devam et</string>
-    <string name="menu_new_game">Yeni oyun</string>
+    <string name="menu_restart">Yeniden başlat</string>
+    <string name="restart_question">Oyun yeniden başlatılsın mı?</string>
+    <string name="restart_body">Canlar %1$d değerine döner.</string>
+    <string name="cancel">İptal</string>
     <string name="settings_contact_tap_email">E-posta yazmak için dokunun</string>
     <string name="settings_contact_tap_copy">Kopyalamak için dokunun</string>
     <string name="settings_theme_light">Açık</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">E-postayı kopyala</string>
     <string name="coming_soon_copied">E-posta kopyalandı</string>
     <string name="feedback_body">Merhaba! Geri bildirimim:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Hakkında</string>
+    <string name="settings_section_table">Masa</string>
+    <string name="settings_section_app">Uygulama</string>
+    <string name="table_apply">Yeni ayarlarla yeniden başlat</string>
     <string name="back">Geri</string>
     <string name="settings_language">Dil</string>
     <string name="language_system_default">Sistem dili</string>

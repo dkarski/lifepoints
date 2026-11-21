@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Незабаром</string>
-    <string name="tab_game">Гра</string>
-    <string name="tab_history">Історія</string>
-    <string name="tab_settings">Налаштування</string>
+    <string name="settings_title">Налаштування</string>
     <string name="home_unit_life">життя</string>
-    <string name="home_custom">Своє</string>
-    <string name="home_custom_caption">життя</string>
     <string name="home_custom_edit">Введіть початкові життя</string>
+    <string name="custom_life">Власні початкові життя</string>
+    <string name="custom_life_value">Власні початкові життя: %1$d</string>
     <string name="home_unit_players">гравці</string>
-    <string name="home_start_game">Почати гру</string>
     <string name="player_name">Гравець %1$d</string>
     <string name="counter_increase">Додати життя: %1$s</string>
     <string name="counter_decrease">Відняти життя: %1$s</string>
     <string name="counter_open_menu">Меню гри</string>
-    <string name="menu_in_progress">Гра триває</string>
     <string name="menu_continue">Продовжити гру</string>
-    <string name="menu_new_game">Нова гра</string>
+    <string name="menu_restart">Почати знову</string>
+    <string name="restart_question">Почати гру знову?</string>
+    <string name="restart_body">Життя повернуться до %1$d.</string>
+    <string name="cancel">Скасувати</string>
     <string name="settings_contact_tap_email">Торкніться, щоб написати листа</string>
     <string name="settings_contact_tap_copy">Торкніться, щоб скопіювати</string>
     <string name="settings_theme_light">Світла</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Скопіювати адресу</string>
     <string name="coming_soon_copied">Адресу скопійовано</string>
     <string name="feedback_body">Вітаю! Мій відгук:\n\n</string>
-    <string name="settings_theme">Тема</string>
     <string name="settings_about">Про застосунок</string>
+    <string name="settings_section_table">Стіл</string>
+    <string name="settings_section_app">Застосунок</string>
+    <string name="table_apply">Почати знову з новими налаштуваннями</string>
     <string name="back">Назад</string>
     <string name="settings_language">Мова</string>
     <string name="language_system_default">Як у системі</string>

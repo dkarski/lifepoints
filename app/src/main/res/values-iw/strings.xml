@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">בקרוב</string>
-    <string name="tab_game">משחק</string>
-    <string name="tab_history">היסטוריה</string>
-    <string name="tab_settings">הגדרות</string>
+    <string name="settings_title">הגדרות</string>
     <string name="home_unit_life">חיים</string>
-    <string name="home_custom">מותאם</string>
-    <string name="home_custom_caption">חיים</string>
     <string name="home_custom_edit">הזן חיים התחלתיים</string>
+    <string name="custom_life">חיים התחלתיים מותאמים</string>
+    <string name="custom_life_value">חיים התחלתיים מותאמים: %1$d</string>
     <string name="home_unit_players">שחקנים</string>
-    <string name="home_start_game">התחל משחק</string>
     <string name="player_name">שחקן %1$d</string>
     <string name="counter_increase">הוסף חיים ל%1$s</string>
     <string name="counter_decrease">הורד חיים ל%1$s</string>
     <string name="counter_open_menu">תפריט משחק</string>
-    <string name="menu_in_progress">משחק בעיצומו</string>
     <string name="menu_continue">המשך משחק</string>
-    <string name="menu_new_game">משחק חדש</string>
+    <string name="menu_restart">התחלה מחדש</string>
+    <string name="restart_question">להתחיל את המשחק מחדש?</string>
+    <string name="restart_body">החיים יחזרו ל־%1$d.</string>
+    <string name="cancel">ביטול</string>
     <string name="settings_contact_tap_email">הקש כדי לכתוב אימייל</string>
     <string name="settings_contact_tap_copy">הקש כדי להעתיק</string>
     <string name="settings_theme_light">בהיר</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">העתק אימייל</string>
     <string name="coming_soon_copied">האימייל הועתק</string>
     <string name="feedback_body">שלום! המשוב שלי:\n\n</string>
-    <string name="settings_theme">ערכת נושא</string>
     <string name="settings_about">אודות</string>
+    <string name="settings_section_table">שולחן</string>
+    <string name="settings_section_app">אפליקציה</string>
+    <string name="table_apply">התחלה מחדש עם ההגדרות החדשות</string>
     <string name="back">חזרה</string>
     <string name="settings_language">שפה</string>
     <string name="language_system_default">שפת המערכת</string>

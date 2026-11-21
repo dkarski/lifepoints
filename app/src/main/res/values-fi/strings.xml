@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Pian</string>
-    <string name="tab_game">Peli</string>
-    <string name="tab_history">Historia</string>
-    <string name="tab_settings">Asetukset</string>
+    <string name="settings_title">Asetukset</string>
     <string name="home_unit_life">elämää</string>
-    <string name="home_custom">Oma</string>
-    <string name="home_custom_caption">elämää</string>
     <string name="home_custom_edit">Anna aloituselämät</string>
+    <string name="custom_life">Oma aloituselämä</string>
+    <string name="custom_life_value">Oma aloituselämä: %1$d</string>
     <string name="home_unit_players">pelaajaa</string>
-    <string name="home_start_game">Aloita peli</string>
     <string name="player_name">Pelaaja %1$d</string>
     <string name="counter_increase">Lisää elämää: %1$s</string>
     <string name="counter_decrease">Vähennä elämää: %1$s</string>
     <string name="counter_open_menu">Pelivalikko</string>
-    <string name="menu_in_progress">Peli kesken</string>
     <string name="menu_continue">Jatka peliä</string>
-    <string name="menu_new_game">Uusi peli</string>
+    <string name="menu_restart">Aloita alusta</string>
+    <string name="restart_question">Aloitetaanko peli alusta?</string>
+    <string name="restart_body">Elämät palaavat arvoon %1$d.</string>
+    <string name="cancel">Peruuta</string>
     <string name="settings_contact_tap_email">Kirjoita sähköposti napauttamalla</string>
     <string name="settings_contact_tap_copy">Kopioi napauttamalla</string>
     <string name="settings_theme_light">Vaalea</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopioi sähköposti</string>
     <string name="coming_soon_copied">Sähköposti kopioitu</string>
     <string name="feedback_body">Hei! Palautteeni:\n\n</string>
-    <string name="settings_theme">Teema</string>
     <string name="settings_about">Tietoja</string>
+    <string name="settings_section_table">Pöytä</string>
+    <string name="settings_section_app">Sovellus</string>
+    <string name="table_apply">Aloita alusta uusilla asetuksilla</string>
     <string name="back">Takaisin</string>
     <string name="settings_language">Kieli</string>
     <string name="language_system_default">Järjestelmän kieli</string>

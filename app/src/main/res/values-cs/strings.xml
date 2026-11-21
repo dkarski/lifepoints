@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Brzy</string>
-    <string name="tab_game">Hra</string>
-    <string name="tab_history">Historie</string>
-    <string name="tab_settings">Nastavení</string>
+    <string name="settings_title">Nastavení</string>
     <string name="home_unit_life">životů</string>
-    <string name="home_custom">Vlastní</string>
-    <string name="home_custom_caption">hodnota</string>
     <string name="home_custom_edit">Zadejte počet životů</string>
+    <string name="custom_life">Vlastní počet životů</string>
+    <string name="custom_life_value">Vlastní počet životů: %1$d</string>
     <string name="home_unit_players">hráči</string>
-    <string name="home_start_game">Začít hru</string>
     <string name="player_name">Hráč %1$d</string>
     <string name="counter_increase">Přidat život: %1$s</string>
     <string name="counter_decrease">Ubrat život: %1$s</string>
     <string name="counter_open_menu">Menu hry</string>
-    <string name="menu_in_progress">Hra probíhá</string>
     <string name="menu_continue">Pokračovat ve hře</string>
-    <string name="menu_new_game">Nová hra</string>
+    <string name="menu_restart">Začít znovu</string>
+    <string name="restart_question">Začít hru znovu?</string>
+    <string name="restart_body">Životy se vrátí na %1$d.</string>
+    <string name="cancel">Zrušit</string>
     <string name="settings_contact_tap_email">Klepnutím napíšete e-mail</string>
     <string name="settings_contact_tap_copy">Klepnutím zkopírujete</string>
     <string name="settings_theme_light">Světlý</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopírovat e-mail</string>
     <string name="coming_soon_copied">E-mail zkopírován</string>
     <string name="feedback_body">Dobrý den! Moje zpětná vazba:\n\n</string>
-    <string name="settings_theme">Motiv</string>
     <string name="settings_about">O aplikaci</string>
+    <string name="settings_section_table">Stůl</string>
+    <string name="settings_section_app">Aplikace</string>
+    <string name="table_apply">Začít znovu s novým nastavením</string>
     <string name="back">Zpět</string>
     <string name="settings_language">Jazyk</string>
     <string name="language_system_default">Jazyk systému</string>

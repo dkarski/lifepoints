@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Snart</string>
-    <string name="tab_game">Spel</string>
-    <string name="tab_history">Historik</string>
-    <string name="tab_settings">Inställningar</string>
+    <string name="settings_title">Inställningar</string>
     <string name="home_unit_life">liv</string>
-    <string name="home_custom">Eget</string>
-    <string name="home_custom_caption">liv</string>
     <string name="home_custom_edit">Ange startliv</string>
+    <string name="custom_life">Eget startliv</string>
+    <string name="custom_life_value">Eget startliv: %1$d</string>
     <string name="home_unit_players">spelare</string>
-    <string name="home_start_game">Starta spel</string>
     <string name="player_name">Spelare %1$d</string>
     <string name="counter_increase">Öka liv för %1$s</string>
     <string name="counter_decrease">Minska liv för %1$s</string>
     <string name="counter_open_menu">Spelmeny</string>
-    <string name="menu_in_progress">Spel pågår</string>
     <string name="menu_continue">Fortsätt spelet</string>
-    <string name="menu_new_game">Nytt spel</string>
+    <string name="menu_restart">Börja om</string>
+    <string name="restart_question">Börja om spelet?</string>
+    <string name="restart_body">Livet går tillbaka till %1$d.</string>
+    <string name="cancel">Avbryt</string>
     <string name="settings_contact_tap_email">Tryck för att skriva ett mejl</string>
     <string name="settings_contact_tap_copy">Tryck för att kopiera</string>
     <string name="settings_theme_light">Ljust</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopiera e-post</string>
     <string name="coming_soon_copied">E-post kopierad</string>
     <string name="feedback_body">Hej! Min feedback:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Om</string>
+    <string name="settings_section_table">Bord</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">Börja om med nya inställningar</string>
     <string name="back">Tillbaka</string>
     <string name="settings_language">Språk</string>
     <string name="language_system_default">Systemets språk</string>

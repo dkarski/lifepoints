@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Snart</string>
-    <string name="tab_game">Spill</string>
-    <string name="tab_history">Historikk</string>
-    <string name="tab_settings">Innstillinger</string>
+    <string name="settings_title">Innstillinger</string>
     <string name="home_unit_life">liv</string>
-    <string name="home_custom">Egendefinert</string>
-    <string name="home_custom_caption">liv</string>
     <string name="home_custom_edit">Skriv inn startliv</string>
+    <string name="custom_life">Eget startliv</string>
+    <string name="custom_life_value">Eget startliv: %1$d</string>
     <string name="home_unit_players">spillere</string>
-    <string name="home_start_game">Start spill</string>
     <string name="player_name">Spiller %1$d</string>
     <string name="counter_increase">Øk liv for %1$s</string>
     <string name="counter_decrease">Reduser liv for %1$s</string>
     <string name="counter_open_menu">Spillmeny</string>
-    <string name="menu_in_progress">Spill pågår</string>
     <string name="menu_continue">Fortsett spill</string>
-    <string name="menu_new_game">Nytt spill</string>
+    <string name="menu_restart">Start på nytt</string>
+    <string name="restart_question">Starte spillet på nytt?</string>
+    <string name="restart_body">Livet går tilbake til %1$d.</string>
+    <string name="cancel">Avbryt</string>
     <string name="settings_contact_tap_email">Trykk for å skrive en e-post</string>
     <string name="settings_contact_tap_copy">Trykk for å kopiere</string>
     <string name="settings_theme_light">Lys</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopier e-post</string>
     <string name="coming_soon_copied">E-post kopiert</string>
     <string name="feedback_body">Hei! Tilbakemeldingen min:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Om</string>
+    <string name="settings_section_table">Bord</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">Start på nytt med nye innstillinger</string>
     <string name="back">Tilbake</string>
     <string name="settings_language">Språk</string>
     <string name="language_system_default">Systemspråk</string>

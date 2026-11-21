@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Drīzumā</string>
-    <string name="tab_game">Spēle</string>
-    <string name="tab_history">Vēsture</string>
-    <string name="tab_settings">Iestatījumi</string>
+    <string name="settings_title">Iestatījumi</string>
     <string name="home_unit_life">dzīvības</string>
-    <string name="home_custom">Savs</string>
-    <string name="home_custom_caption">dzīvības</string>
     <string name="home_custom_edit">Ievadiet sākuma dzīvības</string>
+    <string name="custom_life">Savas sākuma dzīvības</string>
+    <string name="custom_life_value">Savas sākuma dzīvības: %1$d</string>
     <string name="home_unit_players">spēlētāji</string>
-    <string name="home_start_game">Sākt spēli</string>
     <string name="player_name">Spēlētājs %1$d</string>
     <string name="counter_increase">Palielināt dzīvības: %1$s</string>
     <string name="counter_decrease">Samazināt dzīvības: %1$s</string>
     <string name="counter_open_menu">Spēles izvēlne</string>
-    <string name="menu_in_progress">Spēle notiek</string>
     <string name="menu_continue">Turpināt spēli</string>
-    <string name="menu_new_game">Jauna spēle</string>
+    <string name="menu_restart">Sākt no jauna</string>
+    <string name="restart_question">Sākt spēli no jauna?</string>
+    <string name="restart_body">Dzīvības atgriezīsies uz %1$d.</string>
+    <string name="cancel">Atcelt</string>
     <string name="settings_contact_tap_email">Pieskarieties, lai rakstītu e-pastu</string>
     <string name="settings_contact_tap_copy">Pieskarieties, lai kopētu</string>
     <string name="settings_theme_light">Gaišs</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopēt e-pastu</string>
     <string name="coming_soon_copied">E-pasts nokopēts</string>
     <string name="feedback_body">Sveiki! Mana atsauksme:\n\n</string>
-    <string name="settings_theme">Motīvs</string>
     <string name="settings_about">Par lietotni</string>
+    <string name="settings_section_table">Galds</string>
+    <string name="settings_section_app">Lietotne</string>
+    <string name="table_apply">Sākt no jauna ar jaunajiem iestatījumiem</string>
     <string name="back">Atpakaļ</string>
     <string name="settings_language">Valoda</string>
     <string name="language_system_default">Sistēmas valoda</string>

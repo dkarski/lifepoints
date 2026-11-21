@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">ഉടൻ</string>
-    <string name="tab_game">കളി</string>
-    <string name="tab_history">ചരിത്രം</string>
-    <string name="tab_settings">ക്രമീകരണം</string>
+    <string name="settings_title">ക്രമീകരണം</string>
     <string name="home_unit_life">ലൈഫ്</string>
-    <string name="home_custom">ഇഷ്ടാനുസൃതം</string>
-    <string name="home_custom_caption">ലൈഫ്</string>
     <string name="home_custom_edit">തുടക്ക ലൈഫ് നൽകുക</string>
+    <string name="custom_life">സ്വന്തം തുടക്ക ലൈഫ്</string>
+    <string name="custom_life_value">സ്വന്തം തുടക്ക ലൈഫ്: %1$d</string>
     <string name="home_unit_players">കളിക്കാർ</string>
-    <string name="home_start_game">കളി തുടങ്ങുക</string>
     <string name="player_name">കളിക്കാരൻ %1$d</string>
     <string name="counter_increase">%1$s ലൈഫ് കൂട്ടുക</string>
     <string name="counter_decrease">%1$s ലൈഫ് കുറയ്ക്കുക</string>
     <string name="counter_open_menu">കളിയുടെ മെനു</string>
-    <string name="menu_in_progress">കളി നടക്കുന്നു</string>
     <string name="menu_continue">കളി തുടരുക</string>
-    <string name="menu_new_game">പുതിയ കളി</string>
+    <string name="menu_restart">വീണ്ടും തുടങ്ങുക</string>
+    <string name="restart_question">കളി വീണ്ടും തുടങ്ങണോ?</string>
+    <string name="restart_body">ലൈഫ് വീണ്ടും %1$d ആകും.</string>
+    <string name="cancel">റദ്ദാക്കുക</string>
     <string name="settings_contact_tap_email">ഇമെയിൽ എഴുതാൻ ടാപ്പ് ചെയ്യുക</string>
     <string name="settings_contact_tap_copy">പകർത്താൻ ടാപ്പ് ചെയ്യുക</string>
     <string name="settings_theme_light">ലൈറ്റ്</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ഇമെയിൽ പകർത്തുക</string>
     <string name="coming_soon_copied">ഇമെയിൽ പകർത്തി</string>
     <string name="feedback_body">നമസ്കാരം! എന്റെ അഭിപ്രായം:\n\n</string>
-    <string name="settings_theme">തീം</string>
     <string name="settings_about">ആപ്പിനെക്കുറിച്ച്</string>
+    <string name="settings_section_table">മേശ</string>
+    <string name="settings_section_app">ആപ്പ്</string>
+    <string name="table_apply">പുതിയ ക്രമീകരണങ്ങളോടെ വീണ്ടും തുടങ്ങുക</string>
     <string name="back">തിരികെ</string>
     <string name="settings_language">ഭാഷ</string>
     <string name="language_system_default">സിസ്റ്റം ഭാഷ</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Uskoro</string>
-    <string name="tab_game">Igra</string>
-    <string name="tab_history">Povijest</string>
-    <string name="tab_settings">Postavke</string>
+    <string name="settings_title">Postavke</string>
     <string name="home_unit_life">života</string>
-    <string name="home_custom">Prilagođeno</string>
-    <string name="home_custom_caption">života</string>
     <string name="home_custom_edit">Unesi početne živote</string>
+    <string name="custom_life">Vlastiti početni životi</string>
+    <string name="custom_life_value">Vlastiti početni životi: %1$d</string>
     <string name="home_unit_players">igrača</string>
-    <string name="home_start_game">Započni igru</string>
     <string name="player_name">Igrač %1$d</string>
     <string name="counter_increase">Povećaj živote: %1$s</string>
     <string name="counter_decrease">Smanji živote: %1$s</string>
     <string name="counter_open_menu">Izbornik igre</string>
-    <string name="menu_in_progress">Igra u tijeku</string>
     <string name="menu_continue">Nastavi igru</string>
-    <string name="menu_new_game">Nova igra</string>
+    <string name="menu_restart">Počni ispočetka</string>
+    <string name="restart_question">Početi igru ispočetka?</string>
+    <string name="restart_body">Životi se vraćaju na %1$d.</string>
+    <string name="cancel">Odustani</string>
     <string name="settings_contact_tap_email">Dodirni za pisanje e-pošte</string>
     <string name="settings_contact_tap_copy">Dodirni za kopiranje</string>
     <string name="settings_theme_light">Svijetla</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopiraj e-poštu</string>
     <string name="coming_soon_copied">E-pošta kopirana</string>
     <string name="feedback_body">Bok! Moja povratna informacija:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">O aplikaciji</string>
+    <string name="settings_section_table">Stol</string>
+    <string name="settings_section_app">Aplikacija</string>
+    <string name="table_apply">Počni ispočetka s novim postavkama</string>
     <string name="back">Natrag</string>
     <string name="settings_language">Jezik</string>
     <string name="language_system_default">Jezik sustava</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Sắp có</string>
-    <string name="tab_game">Trò chơi</string>
-    <string name="tab_history">Lịch sử</string>
-    <string name="tab_settings">Cài đặt</string>
+    <string name="settings_title">Cài đặt</string>
     <string name="home_unit_life">máu</string>
-    <string name="home_custom">Tùy chỉnh</string>
-    <string name="home_custom_caption">máu</string>
     <string name="home_custom_edit">Nhập máu khởi đầu</string>
+    <string name="custom_life">Máu khởi đầu tùy chỉnh</string>
+    <string name="custom_life_value">Máu khởi đầu tùy chỉnh: %1$d</string>
     <string name="home_unit_players">người chơi</string>
-    <string name="home_start_game">Bắt đầu</string>
     <string name="player_name">Người chơi %1$d</string>
     <string name="counter_increase">Tăng máu của %1$s</string>
     <string name="counter_decrease">Giảm máu của %1$s</string>
     <string name="counter_open_menu">Menu trò chơi</string>
-    <string name="menu_in_progress">Đang chơi</string>
     <string name="menu_continue">Tiếp tục</string>
-    <string name="menu_new_game">Trò chơi mới</string>
+    <string name="menu_restart">Chơi lại</string>
+    <string name="restart_question">Chơi lại ván này?</string>
+    <string name="restart_body">Máu sẽ trở về %1$d.</string>
+    <string name="cancel">Hủy</string>
     <string name="settings_contact_tap_email">Chạm để viết email</string>
     <string name="settings_contact_tap_copy">Chạm để sao chép</string>
     <string name="settings_theme_light">Sáng</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Sao chép email</string>
     <string name="coming_soon_copied">Đã sao chép email</string>
     <string name="feedback_body">Xin chào! Góp ý của tôi:\n\n</string>
-    <string name="settings_theme">Giao diện</string>
     <string name="settings_about">Giới thiệu</string>
+    <string name="settings_section_table">Bàn chơi</string>
+    <string name="settings_section_app">Ứng dụng</string>
+    <string name="table_apply">Chơi lại với cài đặt mới</string>
     <string name="back">Quay lại</string>
     <string name="settings_language">Ngôn ngữ</string>
     <string name="language_system_default">Mặc định hệ thống</string>

@@ -12,6 +12,12 @@ data class GameState(
     fun withLifeChange(player: Int, delta: Int): GameState =
         copy(lives = lives.mapIndexed { i, life -> if (i == player) (life + delta).coerceIn(MIN_LIFE, MAX_LIFE) else life })
 
+    /** True when a life total differs from the starting life, so restarting would lose something. */
+    val hasProgress: Boolean get() = lives.any { it != startingLife }
+
+    /** The same table (starting life, players) with every life back at the start. */
+    fun restarted(): GameState = new(startingLife, playerCount)
+
     companion object {
         /** Life may go below zero; the bounds only keep the number at four characters on screen. */
         const val MIN_LIFE = -999

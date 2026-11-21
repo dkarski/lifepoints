@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Жақында</string>
-    <string name="tab_game">Ойын</string>
-    <string name="tab_history">Тарих</string>
-    <string name="tab_settings">Параметрлер</string>
+    <string name="settings_title">Параметрлер</string>
     <string name="home_unit_life">өмір</string>
-    <string name="home_custom">Өзім</string>
-    <string name="home_custom_caption">өмір</string>
     <string name="home_custom_edit">Бастапқы өмірді енгізіңіз</string>
+    <string name="custom_life">Өз бастапқы өмірі</string>
+    <string name="custom_life_value">Өз бастапқы өмірі: %1$d</string>
     <string name="home_unit_players">ойыншы</string>
-    <string name="home_start_game">Ойынды бастау</string>
     <string name="player_name">%1$d-ойыншы</string>
     <string name="counter_increase">%1$s: өмірді көбейту</string>
     <string name="counter_decrease">%1$s: өмірді азайту</string>
     <string name="counter_open_menu">Ойын мәзірі</string>
-    <string name="menu_in_progress">Ойын жүріп жатыр</string>
     <string name="menu_continue">Ойынды жалғастыру</string>
-    <string name="menu_new_game">Жаңа ойын</string>
+    <string name="menu_restart">Қайта бастау</string>
+    <string name="restart_question">Ойынды қайта бастау керек пе?</string>
+    <string name="restart_body">Өмір %1$d мәніне оралады.</string>
+    <string name="cancel">Бас тарту</string>
     <string name="settings_contact_tap_email">Хат жазу үшін түртіңіз</string>
     <string name="settings_contact_tap_copy">Көшіру үшін түртіңіз</string>
     <string name="settings_theme_light">Ашық</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Мекенжайды көшіру</string>
     <string name="coming_soon_copied">Мекенжай көшірілді</string>
     <string name="feedback_body">Сәлеметсіз бе! Менің пікірім:\n\n</string>
-    <string name="settings_theme">Тақырып</string>
     <string name="settings_about">Қолданба туралы</string>
+    <string name="settings_section_table">Үстел</string>
+    <string name="settings_section_app">Қолданба</string>
+    <string name="table_apply">Жаңа параметрлермен қайта бастау</string>
     <string name="back">Артқа</string>
     <string name="settings_language">Тіл</string>
     <string name="language_system_default">Жүйе тілі</string>

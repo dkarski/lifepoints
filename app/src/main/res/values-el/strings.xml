@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Σύντομα</string>
-    <string name="tab_game">Παιχνίδι</string>
-    <string name="tab_history">Ιστορικό</string>
-    <string name="tab_settings">Ρυθμίσεις</string>
+    <string name="settings_title">Ρυθμίσεις</string>
     <string name="home_unit_life">ζωές</string>
-    <string name="home_custom">Προσαρμογή</string>
-    <string name="home_custom_caption">ζωές</string>
     <string name="home_custom_edit">Εισαγάγετε αρχικές ζωές</string>
+    <string name="custom_life">Προσαρμοσμένες αρχικές ζωές</string>
+    <string name="custom_life_value">Προσαρμοσμένες αρχικές ζωές: %1$d</string>
     <string name="home_unit_players">παίκτες</string>
-    <string name="home_start_game">Έναρξη παιχνιδιού</string>
     <string name="player_name">Παίκτης %1$d</string>
     <string name="counter_increase">Αύξηση ζωών: %1$s</string>
     <string name="counter_decrease">Μείωση ζωών: %1$s</string>
     <string name="counter_open_menu">Μενού παιχνιδιού</string>
-    <string name="menu_in_progress">Παιχνίδι σε εξέλιξη</string>
     <string name="menu_continue">Συνέχεια παιχνιδιού</string>
-    <string name="menu_new_game">Νέο παιχνίδι</string>
+    <string name="menu_restart">Επανεκκίνηση</string>
+    <string name="restart_question">Επανεκκίνηση του παιχνιδιού;</string>
+    <string name="restart_body">Οι ζωές επιστρέφουν στο %1$d.</string>
+    <string name="cancel">Ακύρωση</string>
     <string name="settings_contact_tap_email">Πατήστε για να γράψετε email</string>
     <string name="settings_contact_tap_copy">Πατήστε για αντιγραφή</string>
     <string name="settings_theme_light">Φωτεινό</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Αντιγραφή email</string>
     <string name="coming_soon_copied">Το email αντιγράφηκε</string>
     <string name="feedback_body">Γεια! Τα σχόλιά μου:\n\n</string>
-    <string name="settings_theme">Θέμα</string>
     <string name="settings_about">Πληροφορίες</string>
+    <string name="settings_section_table">Τραπέζι</string>
+    <string name="settings_section_app">Εφαρμογή</string>
+    <string name="table_apply">Επανεκκίνηση με τις νέες ρυθμίσεις</string>
     <string name="back">Πίσω</string>
     <string name="settings_language">Γλώσσα</string>
     <string name="language_system_default">Γλώσσα συστήματος</string>

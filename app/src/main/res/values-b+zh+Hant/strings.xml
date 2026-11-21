@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">即將推出</string>
-    <string name="tab_game">遊戲</string>
-    <string name="tab_history">歷史</string>
-    <string name="tab_settings">設定</string>
+    <string name="settings_title">設定</string>
     <string name="home_unit_life">生命值</string>
-    <string name="home_custom">自訂</string>
-    <string name="home_custom_caption">生命值</string>
     <string name="home_custom_edit">輸入起始生命值</string>
+    <string name="custom_life">自訂起始生命值</string>
+    <string name="custom_life_value">自訂起始生命值：%1$d</string>
     <string name="home_unit_players">位玩家</string>
-    <string name="home_start_game">開始遊戲</string>
     <string name="player_name">玩家 %1$d</string>
     <string name="counter_increase">增加%1$s的生命值</string>
     <string name="counter_decrease">減少%1$s的生命值</string>
     <string name="counter_open_menu">遊戲選單</string>
-    <string name="menu_in_progress">遊戲進行中</string>
     <string name="menu_continue">繼續遊戲</string>
-    <string name="menu_new_game">新遊戲</string>
+    <string name="menu_restart">重新開始</string>
+    <string name="restart_question">重新開始遊戲？</string>
+    <string name="restart_body">生命值將恢復為 %1$d。</string>
+    <string name="cancel">取消</string>
     <string name="settings_contact_tap_email">輕觸即可寫信</string>
     <string name="settings_contact_tap_copy">輕觸即可複製</string>
     <string name="settings_theme_light">淺色</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">複製電子郵件</string>
     <string name="coming_soon_copied">已複製電子郵件</string>
     <string name="feedback_body">你好！我的意見：\n\n</string>
-    <string name="settings_theme">主題</string>
     <string name="settings_about">關於</string>
+    <string name="settings_section_table">牌桌</string>
+    <string name="settings_section_app">應用程式</string>
+    <string name="table_apply">以新設定重新開始</string>
     <string name="back">返回</string>
     <string name="settings_language">語言</string>
     <string name="language_system_default">跟隨系統</string>

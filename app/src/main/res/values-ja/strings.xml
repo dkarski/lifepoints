@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">近日公開</string>
-    <string name="tab_game">ゲーム</string>
-    <string name="tab_history">履歴</string>
-    <string name="tab_settings">設定</string>
+    <string name="settings_title">設定</string>
     <string name="home_unit_life">ライフ</string>
-    <string name="home_custom">カスタム</string>
-    <string name="home_custom_caption">ライフ</string>
     <string name="home_custom_edit">初期ライフを入力</string>
+    <string name="custom_life">カスタム初期ライフ</string>
+    <string name="custom_life_value">カスタム初期ライフ：%1$d</string>
     <string name="home_unit_players">人</string>
-    <string name="home_start_game">ゲーム開始</string>
     <string name="player_name">プレイヤー%1$d</string>
     <string name="counter_increase">%1$sのライフを増やす</string>
     <string name="counter_decrease">%1$sのライフを減らす</string>
     <string name="counter_open_menu">ゲームメニュー</string>
-    <string name="menu_in_progress">ゲーム進行中</string>
     <string name="menu_continue">ゲームを続ける</string>
-    <string name="menu_new_game">新しいゲーム</string>
+    <string name="menu_restart">最初から</string>
+    <string name="restart_question">最初からやり直しますか？</string>
+    <string name="restart_body">ライフは %1$d に戻ります。</string>
+    <string name="cancel">キャンセル</string>
     <string name="settings_contact_tap_email">タップしてメールを書く</string>
     <string name="settings_contact_tap_copy">タップしてコピー</string>
     <string name="settings_theme_light">ライト</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">メールアドレスをコピー</string>
     <string name="coming_soon_copied">メールアドレスをコピーしました</string>
     <string name="feedback_body">こんにちは！ご意見：\n\n</string>
-    <string name="settings_theme">テーマ</string>
     <string name="settings_about">このアプリについて</string>
+    <string name="settings_section_table">テーブル</string>
+    <string name="settings_section_app">アプリ</string>
+    <string name="table_apply">新しい設定で最初から</string>
     <string name="back">戻る</string>
     <string name="settings_language">言語</string>
     <string name="language_system_default">システムのデフォルト</string>
