@@ -1,6 +1,12 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.annotation.StringRes
+import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -25,10 +31,19 @@ import dev.dkarski.tcglivecounter.ui.components.AppOutlinedButton
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 
 private val MenuButtonHeight = 64.dp
+private val ButtonGap = 16.dp
+
+/** Space above the buttons: the app icon at its top; the restart question grows upwards into the rest. */
+private val HeaderHeight = 112.dp
+
+/** Visible size of the app icon (the launcher artwork without its transparent margin). */
+private val IconSize = 80.dp
 
 /**
- * Fullscreen Game Menu, opened from the counter's center button: Back to game, Restart, Settings.
+ * Fullscreen Game Menu, opened from the counter's center button: Back to game, Restart, Settings, under the app icon.
  * While [confirmingRestart] the same screen asks to confirm (no dialog: one static redraw on E Ink).
+ * The icon and the buttons sit in fixed slots, so confirming never moves them: the confirming Restart is exactly
+ * where Restart was, Cancel takes the place of Settings, and the question takes the place of Back to game.
  */
 @Composable
 fun GameMenuScreen(
@@ -48,30 +63,58 @@ fun GameMenuScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
+        Box(Modifier.fillMaxWidth().height(HeaderHeight), contentAlignment = Alignment.TopCenter) {
+            // The launcher artwork: pure black and white, no background picture. Decorative for screen readers.
+            // Drawn larger than its box: the adaptive-icon margin (a third of the canvas) falls outside.
+            Box(Modifier.size(IconSize), contentAlignment = Alignment.Center) {
+                Image(
+                    painter = painterResource(R.drawable.ic_launcher_foreground),
+                    contentDescription = null,
+                    modifier = Modifier.requiredSize(IconSize * 108 / 72),
+                )
+            }
+        }
+        Spacer(Modifier.height(ButtonGap))
+        // Slot 1: Back to game, or the restart question aligned to its bottom and growing upwards.
+        Box(Modifier.fillMaxWidth().height(MenuButtonHeight), contentAlignment = Alignment.BottomCenter) {
+            if (confirmingRestart) {
+                Column(
+                    modifier = Modifier.wrapContentHeight(align = Alignment.Bottom, unbounded = true),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    TextMMD(
+                        stringResource(R.string.restart_question),
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    TextMMD(
+                        stringResource(R.string.restart_body, startingLife),
+                        style = MaterialTheme.typography.bodyLarge,
+                        textAlign = TextAlign.Center,
+                    )
+                }
+            } else {
+                MenuButton(R.string.menu_continue, filled = true, onClick = onResume)
+            }
+        }
+        Spacer(Modifier.height(ButtonGap))
+        // Slot 2: Restart, in the same place before and while confirming.
         if (confirmingRestart) {
-            TextMMD(
-                stringResource(R.string.restart_question),
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-            )
-            Spacer(Modifier.height(8.dp))
-            TextMMD(
-                stringResource(R.string.restart_body, startingLife),
-                style = MaterialTheme.typography.bodyLarge,
-                textAlign = TextAlign.Center,
-            )
-            Spacer(Modifier.height(24.dp))
             MenuButton(R.string.menu_restart, filled = true, onClick = onConfirmRestart)
-            Spacer(Modifier.height(16.dp))
+        } else {
+            MenuButton(R.string.menu_restart, filled = false, onClick = onRestart)
+        }
+        Spacer(Modifier.height(ButtonGap))
+        // Slot 3: Settings, or Cancel while confirming.
+        if (confirmingRestart) {
             MenuButton(R.string.cancel, filled = false, onClick = onCancelRestart)
         } else {
-            MenuButton(R.string.menu_continue, filled = true, onClick = onResume)
-            Spacer(Modifier.height(16.dp))
-            MenuButton(R.string.menu_restart, filled = false, onClick = onRestart)
-            Spacer(Modifier.height(16.dp))
             MenuButton(R.string.settings_title, filled = false, onClick = onSettings)
         }
+        // Balances the header, so the three buttons stay in the middle of the screen.
+        Spacer(Modifier.height(HeaderHeight + ButtonGap))
     }
 }
 
