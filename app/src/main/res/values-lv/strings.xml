@@ -11,6 +11,9 @@
     <string name="player_name">Spēlētājs %1$d</string>
     <string name="counter_increase">Palielināt dzīvības: %1$s</string>
     <string name="counter_decrease">Samazināt dzīvības: %1$s</string>
+    <string name="counter_increase_10">Palielināt dzīvības par 10: %1$s</string>
+    <string name="counter_decrease_10">Samazināt dzīvības par 10: %1$s</string>
+    <string name="counter_series">Izmaiņas: %1$s</string>
     <string name="counter_open_menu">Spēles izvēlne</string>
     <string name="menu_continue">Turpināt spēli</string>
     <string name="menu_restart">Sākt no jauna</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Pieskarieties, lai kopētu</string>
     <string name="settings_theme_light">Gaišs</string>
     <string name="settings_theme_dark">Tumšs</string>
+    <string name="settings_vibration">Vibrācija</string>
     <string name="coming_soon_title">Drīzumā</string>
     <string name="coming_soon_body">Šī funkcija tiek izstrādāta.</string>
     <string name="coming_soon_feedback_prompt">Ir ideja vai atsauksme? Labprāt to uzzināšu.</string>

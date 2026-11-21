@@ -11,6 +11,9 @@
     <string name="player_name">Oyuncu %1$d</string>
     <string name="counter_increase">%1$s canını artır</string>
     <string name="counter_decrease">%1$s canını azalt</string>
+    <string name="counter_increase_10">%1$s canını 10 artır</string>
+    <string name="counter_decrease_10">%1$s canını 10 azalt</string>
+    <string name="counter_series">Değişim: %1$s</string>
     <string name="counter_open_menu">Oyun menüsü</string>
     <string name="menu_continue">Oyuna devam et</string>
     <string name="menu_restart">Yeniden başlat</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Kopyalamak için dokunun</string>
     <string name="settings_theme_light">Açık</string>
     <string name="settings_theme_dark">Koyu</string>
+    <string name="settings_vibration">Titreşim</string>
     <string name="coming_soon_title">Yakında</string>
     <string name="coming_soon_body">Bu özellik geliştiriliyor.</string>
     <string name="coming_soon_feedback_prompt">Bir fikriniz veya geri bildiriminiz mi var? Duymaktan memnuniyet duyarım.</string>

@@ -11,6 +11,9 @@
     <string name="player_name">Игрок %1$d</string>
     <string name="counter_increase">Добавить жизнь: %1$s</string>
     <string name="counter_decrease">Убавить жизнь: %1$s</string>
+    <string name="counter_increase_10">Добавить 10 жизней: %1$s</string>
+    <string name="counter_decrease_10">Убавить 10 жизней: %1$s</string>
+    <string name="counter_series">Изменение: %1$s</string>
     <string name="counter_open_menu">Меню игры</string>
     <string name="menu_continue">Продолжить игру</string>
     <string name="menu_restart">Начать заново</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Нажмите, чтобы скопировать</string>
     <string name="settings_theme_light">Светлая</string>
     <string name="settings_theme_dark">Тёмная</string>
+    <string name="settings_vibration">Вибрация</string>
     <string name="coming_soon_title">Скоро</string>
     <string name="coming_soon_body">Эта функция в разработке.</string>
     <string name="coming_soon_feedback_prompt">Есть идея или отзыв? Буду рад услышать.</string>

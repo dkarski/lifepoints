@@ -11,6 +11,9 @@
     <string name="player_name">ખેલાડી %1$d</string>
     <string name="counter_increase">%1$sની લાઇફ વધારો</string>
     <string name="counter_decrease">%1$sની લાઇફ ઘટાડો</string>
+    <string name="counter_increase_10">%1$sની લાઇફ 10 વધારો</string>
+    <string name="counter_decrease_10">%1$sની લાઇફ 10 ઘટાડો</string>
+    <string name="counter_series">ફેરફાર: %1$s</string>
     <string name="counter_open_menu">રમતનું મેનૂ</string>
     <string name="menu_continue">રમત ચાલુ રાખો</string>
     <string name="menu_restart">ફરી શરૂ કરો</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">કૉપિ કરવા ટૅપ કરો</string>
     <string name="settings_theme_light">લાઇટ</string>
     <string name="settings_theme_dark">ડાર્ક</string>
+    <string name="settings_vibration">વાઇબ્રેશન</string>
     <string name="coming_soon_title">જલદી આવી રહ્યું છે</string>
     <string name="coming_soon_body">આ સુવિધા તૈયાર થઈ રહી છે.</string>
     <string name="coming_soon_feedback_prompt">કોઈ વિચાર કે પ્રતિસાદ છે? જાણીને આનંદ થશે.</string>

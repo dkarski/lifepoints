@@ -11,6 +11,9 @@
     <string name="player_name">Leikmaður %1$d</string>
     <string name="counter_increase">Auka líf: %1$s</string>
     <string name="counter_decrease">Minnka líf: %1$s</string>
+    <string name="counter_increase_10">Auka líf um 10: %1$s</string>
+    <string name="counter_decrease_10">Minnka líf um 10: %1$s</string>
+    <string name="counter_series">Breyting: %1$s</string>
     <string name="counter_open_menu">Leikjavalmynd</string>
     <string name="menu_continue">Halda leik áfram</string>
     <string name="menu_restart">Byrja aftur</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Ýttu til að afrita</string>
     <string name="settings_theme_light">Ljóst</string>
     <string name="settings_theme_dark">Dökkt</string>
+    <string name="settings_vibration">Titringur</string>
     <string name="coming_soon_title">Væntanlegt</string>
     <string name="coming_soon_body">Þessi eiginleiki er í vinnslu.</string>
     <string name="coming_soon_feedback_prompt">Ertu með hugmynd eða ábendingu? Ég myndi gjarnan vilja heyra hana.</string>

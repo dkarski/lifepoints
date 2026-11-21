@@ -11,6 +11,9 @@
     <string name="player_name">Jogador %1$d</string>
     <string name="counter_increase">Aumentar pontos de vida de %1$s</string>
     <string name="counter_decrease">Diminuir pontos de vida de %1$s</string>
+    <string name="counter_increase_10">Aumentar 10 pontos de vida de %1$s</string>
+    <string name="counter_decrease_10">Diminuir 10 pontos de vida de %1$s</string>
+    <string name="counter_series">Alteração: %1$s</string>
     <string name="counter_open_menu">Menu do jogo</string>
     <string name="menu_continue">Continuar jogo</string>
     <string name="menu_restart">Recomeçar</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Toque para copiar</string>
     <string name="settings_theme_light">Claro</string>
     <string name="settings_theme_dark">Escuro</string>
+    <string name="settings_vibration">Vibração</string>
     <string name="coming_soon_title">Em breve</string>
     <string name="coming_soon_body">Função em desenvolvimento.</string>
     <string name="coming_soon_feedback_prompt">Tem uma ideia ou sugestão? Gostava muito de saber.</string>

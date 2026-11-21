@@ -11,6 +11,9 @@
     <string name="player_name">Igrač %1$d</string>
     <string name="counter_increase">Povećaj živote: %1$s</string>
     <string name="counter_decrease">Smanji živote: %1$s</string>
+    <string name="counter_increase_10">Povećaj živote za 10: %1$s</string>
+    <string name="counter_decrease_10">Smanji živote za 10: %1$s</string>
+    <string name="counter_series">Promjena: %1$s</string>
     <string name="counter_open_menu">Izbornik igre</string>
     <string name="menu_continue">Nastavi igru</string>
     <string name="menu_restart">Počni ispočetka</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Dodirni za kopiranje</string>
     <string name="settings_theme_light">Svijetla</string>
     <string name="settings_theme_dark">Tamna</string>
+    <string name="settings_vibration">Vibracija</string>
     <string name="coming_soon_title">Uskoro</string>
     <string name="coming_soon_body">Ova je značajka u izradi.</string>
     <string name="coming_soon_feedback_prompt">Imaš ideju ili povratnu informaciju? Rado ću je čuti.</string>

@@ -11,6 +11,9 @@
     <string name="player_name">Spelare %1$d</string>
     <string name="counter_increase">Öka liv för %1$s</string>
     <string name="counter_decrease">Minska liv för %1$s</string>
+    <string name="counter_increase_10">Öka liv för %1$s med 10</string>
+    <string name="counter_decrease_10">Minska liv för %1$s med 10</string>
+    <string name="counter_series">Ändring: %1$s</string>
     <string name="counter_open_menu">Spelmeny</string>
     <string name="menu_continue">Fortsätt spelet</string>
     <string name="menu_restart">Börja om</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Tryck för att kopiera</string>
     <string name="settings_theme_light">Ljust</string>
     <string name="settings_theme_dark">Mörkt</string>
+    <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Kommer snart</string>
     <string name="coming_soon_body">Den här funktionen är under utveckling.</string>
     <string name="coming_soon_feedback_prompt">Har du en idé eller feedback? Jag hör gärna av dig.</string>

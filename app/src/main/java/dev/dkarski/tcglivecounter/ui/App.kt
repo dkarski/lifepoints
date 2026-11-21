@@ -48,6 +48,8 @@ fun App(
     onThemeModeChange: (ThemeMode) -> Unit,
     languageTag: String?,
     onLanguageChange: (String?) -> Unit,
+    vibration: Boolean,
+    onVibrationChange: (Boolean) -> Unit,
 ) {
     val context = LocalContext.current
     var game by remember { mutableStateOf(initialGame) }
@@ -109,8 +111,14 @@ fun App(
             when (screen) {
                 Screen.Counter -> GameCounterScreen(
                     lives = game.lives,
-                    onLifeChange = { player, delta -> setGame(game.withLifeChange(player, delta)) },
+                    onLifeChange = { player, delta ->
+                        // At a life limit nothing changes: nothing to save, no indicator step, no vibration.
+                        game.appliedChange(player, delta).also { applied ->
+                            if (applied != 0) setGame(game.withLifeChange(player, delta))
+                        }
+                    },
                     onMenu = { screen = Screen.Menu },
+                    vibration = vibration,
                 )
 
                 Screen.Menu -> GameMenuScreen(
@@ -147,6 +155,8 @@ fun App(
                         },
                         themeMode = themeMode,
                         onThemeModeChange = onThemeModeChange,
+                        vibration = vibration,
+                        onVibrationChange = onVibrationChange,
                         languageName = AppLanguages.find(languageTag)?.nativeName
                             ?: stringResource(R.string.language_system_default),
                         onLanguage = { screen = Screen.Language },

@@ -11,6 +11,9 @@
     <string name="player_name">ကစားသူ %1$d</string>
     <string name="counter_increase">%1$s ၏ အသက်ကို တိုးပါ</string>
     <string name="counter_decrease">%1$s ၏ အသက်ကို လျှော့ပါ</string>
+    <string name="counter_increase_10">%1$s ၏ အသက်ကို 10 တိုးပါ</string>
+    <string name="counter_decrease_10">%1$s ၏ အသက်ကို 10 လျှော့ပါ</string>
+    <string name="counter_series">အပြောင်းအလဲ- %1$s</string>
     <string name="counter_open_menu">ဂိမ်းမီနူး</string>
     <string name="menu_continue">ဆက်ကစားပါ</string>
     <string name="menu_restart">ပြန်စမည်</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">ကူးယူရန် တို့ပါ</string>
     <string name="settings_theme_light">အလင်း</string>
     <string name="settings_theme_dark">အမှောင်</string>
+    <string name="settings_vibration">တုန်ခါမှု</string>
     <string name="coming_soon_title">မကြာမီ လာမည်</string>
     <string name="coming_soon_body">ဤလုပ်ဆောင်ချက်ကို ပြင်ဆင်နေဆဲဖြစ်သည်။</string>
     <string name="coming_soon_feedback_prompt">အကြံဉာဏ် သို့မဟုတ် တုံ့ပြန်ချက် ရှိပါသလား။ ကြားရလျှင် ဝမ်းသာပါမည်။</string>

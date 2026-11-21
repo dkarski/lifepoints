@@ -11,6 +11,9 @@
     <string name="player_name">플레이어 %1$d</string>
     <string name="counter_increase">%1$s 생명 증가</string>
     <string name="counter_decrease">%1$s 생명 감소</string>
+    <string name="counter_increase_10">%1$s 생명 10 증가</string>
+    <string name="counter_decrease_10">%1$s 생명 10 감소</string>
+    <string name="counter_series">변화: %1$s</string>
     <string name="counter_open_menu">게임 메뉴</string>
     <string name="menu_continue">게임 계속하기</string>
     <string name="menu_restart">다시 시작</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">탭하여 복사</string>
     <string name="settings_theme_light">라이트</string>
     <string name="settings_theme_dark">다크</string>
+    <string name="settings_vibration">진동</string>
     <string name="coming_soon_title">곧 출시</string>
     <string name="coming_soon_body">이 기능은 개발 중입니다.</string>
     <string name="coming_soon_feedback_prompt">아이디어나 의견이 있나요? 기꺼이 듣겠습니다.</string>

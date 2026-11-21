@@ -11,6 +11,9 @@
     <string name="player_name">खेळाडू %1$d</string>
     <string name="counter_increase">%1$s ची लाइफ वाढवा</string>
     <string name="counter_decrease">%1$s ची लाइफ कमी करा</string>
+    <string name="counter_increase_10">%1$s ची लाइफ 10 ने वाढवा</string>
+    <string name="counter_decrease_10">%1$s ची लाइफ 10 ने कमी करा</string>
+    <string name="counter_series">बदल: %1$s</string>
     <string name="counter_open_menu">खेळाचा मेनू</string>
     <string name="menu_continue">खेळ पुढे सुरू ठेवा</string>
     <string name="menu_restart">पुन्हा सुरू करा</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">कॉपी करण्यासाठी टॅप करा</string>
     <string name="settings_theme_light">लाइट</string>
     <string name="settings_theme_dark">डार्क</string>
+    <string name="settings_vibration">व्हायब्रेशन</string>
     <string name="coming_soon_title">लवकरच येत आहे</string>
     <string name="coming_soon_body">हे वैशिष्ट्य तयार होत आहे.</string>
     <string name="coming_soon_feedback_prompt">काही कल्पना किंवा अभिप्राय आहे? ऐकायला आवडेल.</string>

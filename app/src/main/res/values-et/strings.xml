@@ -11,6 +11,9 @@
     <string name="player_name">Mängija %1$d</string>
     <string name="counter_increase">Suurenda elusid: %1$s</string>
     <string name="counter_decrease">Vähenda elusid: %1$s</string>
+    <string name="counter_increase_10">Suurenda elusid 10 võrra: %1$s</string>
+    <string name="counter_decrease_10">Vähenda elusid 10 võrra: %1$s</string>
+    <string name="counter_series">Muutus: %1$s</string>
     <string name="counter_open_menu">Mängumenüü</string>
     <string name="menu_continue">Jätka mängu</string>
     <string name="menu_restart">Alusta uuesti</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Puuduta kopeerimiseks</string>
     <string name="settings_theme_light">Hele</string>
     <string name="settings_theme_dark">Tume</string>
+    <string name="settings_vibration">Vibreerimine</string>
     <string name="coming_soon_title">Tulekul</string>
     <string name="coming_soon_body">See funktsioon on arendamisel.</string>
     <string name="coming_soon_feedback_prompt">On sul idee või tagasisidet? Kuulen hea meelega.</string>

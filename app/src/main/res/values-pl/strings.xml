@@ -13,6 +13,9 @@
     <string name="player_name">Gracz %1$d</string>
     <string name="counter_increase">Zwiększ życie: %1$s</string>
     <string name="counter_decrease">Zmniejsz życie: %1$s</string>
+    <string name="counter_increase_10">Zwiększ życie o 10: %1$s</string>
+    <string name="counter_decrease_10">Zmniejsz życie o 10: %1$s</string>
+    <string name="counter_series">Zmiana: %1$s</string>
     <string name="counter_open_menu">Menu gry</string>
 
     <string name="menu_continue">Kontynuuj grę</string>
@@ -24,6 +27,7 @@
     <string name="settings_contact_tap_copy">Stuknij, aby skopiować</string>
     <string name="settings_theme_light">Jasny</string>
     <string name="settings_theme_dark">Ciemny</string>
+    <string name="settings_vibration">Wibracje</string>
 
     <string name="coming_soon_title">Wkrótce</string>
     <string name="coming_soon_body">Ta funkcja jest w przygotowaniu.</string>

@@ -11,6 +11,9 @@
     <string name="player_name">ఆటగాడు %1$d</string>
     <string name="counter_increase">%1$s లైఫ్ పెంచండి</string>
     <string name="counter_decrease">%1$s లైఫ్ తగ్గించండి</string>
+    <string name="counter_increase_10">%1$s లైఫ్‌ను 10 పెంచండి</string>
+    <string name="counter_decrease_10">%1$s లైఫ్‌ను 10 తగ్గించండి</string>
+    <string name="counter_series">మార్పు: %1$s</string>
     <string name="counter_open_menu">ఆట మెనూ</string>
     <string name="menu_continue">ఆట కొనసాగించండి</string>
     <string name="menu_restart">మళ్లీ ప్రారంభించండి</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">కాపీ చేయడానికి నొక్కండి</string>
     <string name="settings_theme_light">లేత</string>
     <string name="settings_theme_dark">ముదురు</string>
+    <string name="settings_vibration">వైబ్రేషన్</string>
     <string name="coming_soon_title">త్వరలో రాబోతోంది</string>
     <string name="coming_soon_body">ఈ ఫీచర్ తయారవుతోంది.</string>
     <string name="coming_soon_feedback_prompt">ఏదైనా ఆలోచన లేదా అభిప్రాయం ఉందా? వినడానికి సంతోషిస్తాను.</string>

@@ -11,6 +11,9 @@
     <string name="player_name">Jucătorul %1$d</string>
     <string name="counter_increase">Crește viețile pentru %1$s</string>
     <string name="counter_decrease">Scade viețile pentru %1$s</string>
+    <string name="counter_increase_10">Crește viețile pentru %1$s cu 10</string>
+    <string name="counter_decrease_10">Scade viețile pentru %1$s cu 10</string>
+    <string name="counter_series">Schimbare: %1$s</string>
     <string name="counter_open_menu">Meniul jocului</string>
     <string name="menu_continue">Continuă jocul</string>
     <string name="menu_restart">Reîncepe</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Atingeți pentru a copia</string>
     <string name="settings_theme_light">Luminoasă</string>
     <string name="settings_theme_dark">Întunecată</string>
+    <string name="settings_vibration">Vibrații</string>
     <string name="coming_soon_title">În curând</string>
     <string name="coming_soon_body">Această funcție este în dezvoltare.</string>
     <string name="coming_soon_feedback_prompt">Aveți o idee sau o sugestie? Mi-ar plăcea să o aflu.</string>

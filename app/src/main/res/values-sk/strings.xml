@@ -11,6 +11,9 @@
     <string name="player_name">Hráč %1$d</string>
     <string name="counter_increase">Pridať život: %1$s</string>
     <string name="counter_decrease">Ubrať život: %1$s</string>
+    <string name="counter_increase_10">Pridať 10 životov: %1$s</string>
+    <string name="counter_decrease_10">Ubrať 10 životov: %1$s</string>
+    <string name="counter_series">Zmena: %1$s</string>
     <string name="counter_open_menu">Ponuka hry</string>
     <string name="menu_continue">Pokračovať v hre</string>
     <string name="menu_restart">Začať znova</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Ťuknutím skopírujete</string>
     <string name="settings_theme_light">Svetlý</string>
     <string name="settings_theme_dark">Tmavý</string>
+    <string name="settings_vibration">Vibrácie</string>
     <string name="coming_soon_title">Už čoskoro</string>
     <string name="coming_soon_body">Táto funkcia sa pripravuje.</string>
     <string name="coming_soon_feedback_prompt">Máte nápad alebo pripomienku? Rád si ju prečítam.</string>

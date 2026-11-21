@@ -11,6 +11,9 @@
     <string name="player_name">ಆಟಗಾರ %1$d</string>
     <string name="counter_increase">%1$s ಲೈಫ್ ಹೆಚ್ಚಿಸಿ</string>
     <string name="counter_decrease">%1$s ಲೈಫ್ ಕಡಿಮೆ ಮಾಡಿ</string>
+    <string name="counter_increase_10">%1$s ಲೈಫ್ 10 ಹೆಚ್ಚಿಸಿ</string>
+    <string name="counter_decrease_10">%1$s ಲೈಫ್ 10 ಕಡಿಮೆ ಮಾಡಿ</string>
+    <string name="counter_series">ಬದಲಾವಣೆ: %1$s</string>
     <string name="counter_open_menu">ಆಟದ ಮೆನು</string>
     <string name="menu_continue">ಆಟ ಮುಂದುವರಿಸಿ</string>
     <string name="menu_restart">ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಿ</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">ನಕಲಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="settings_theme_light">ತಿಳಿ</string>
     <string name="settings_theme_dark">ಗಾಢ</string>
+    <string name="settings_vibration">ಕಂಪನ</string>
     <string name="coming_soon_title">ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ</string>
     <string name="coming_soon_body">ಈ ವೈಶಿಷ್ಟ್ಯ ಸಿದ್ಧವಾಗುತ್ತಿದೆ.</string>
     <string name="coming_soon_feedback_prompt">ಏನಾದರೂ ಐಡಿಯಾ ಅಥವಾ ಅಭಿಪ್ರಾಯ ಇದೆಯೇ? ಕೇಳಲು ಸಂತೋಷ.</string>

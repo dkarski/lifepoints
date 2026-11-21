@@ -11,6 +11,9 @@
     <string name="player_name">Гулец %1$d</string>
     <string name="counter_increase">Дадаць жыццё: %1$s</string>
     <string name="counter_decrease">Адняць жыццё: %1$s</string>
+    <string name="counter_increase_10">Дадаць 10 жыццяў: %1$s</string>
+    <string name="counter_decrease_10">Адняць 10 жыццяў: %1$s</string>
+    <string name="counter_series">Змена: %1$s</string>
     <string name="counter_open_menu">Меню гульні</string>
     <string name="menu_continue">Працягнуць гульню</string>
     <string name="menu_restart">Пачаць нанова</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Націсніце, каб скапіяваць</string>
     <string name="settings_theme_light">Светлая</string>
     <string name="settings_theme_dark">Цёмная</string>
+    <string name="settings_vibration">Вібрацыя</string>
     <string name="coming_soon_title">Хутка</string>
     <string name="coming_soon_body">Гэтая функцыя ў распрацоўцы.</string>
     <string name="coming_soon_feedback_prompt">Ёсць ідэя ці водгук? Буду рады пачуць.</string>

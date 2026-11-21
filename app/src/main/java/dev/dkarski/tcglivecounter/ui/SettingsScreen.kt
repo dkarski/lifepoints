@@ -1,6 +1,8 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.annotation.DrawableRes
+import com.mudita.mmd.components.switcher.SwitchMMD
+import androidx.compose.foundation.selection.toggleable
 import dev.dkarski.tcglivecounter.ui.components.TileHeight
 import com.mudita.mmd.components.buttons.ButtonMMD
 import androidx.compose.ui.text.style.TextAlign
@@ -52,6 +54,8 @@ fun SettingsScreen(
     onApplyTable: (() -> Unit)?,
     themeMode: ThemeMode,
     onThemeModeChange: (ThemeMode) -> Unit,
+    vibration: Boolean,
+    onVibrationChange: (Boolean) -> Unit,
     languageName: String,
     onLanguage: () -> Unit,
     onAbout: () -> Unit,
@@ -88,6 +92,8 @@ fun SettingsScreen(
             }
             Spacer(Modifier.height(16.dp))
             DottedDivider()
+            SettingsSwitchRow(stringResource(R.string.settings_vibration), checked = vibration, onCheckedChange = onVibrationChange)
+            DottedDivider()
             SettingsRow(stringResource(R.string.settings_language), onClick = onLanguage, value = languageName)
             DottedDivider()
             SettingsRow(stringResource(R.string.settings_about), onClick = onAbout)
@@ -112,6 +118,28 @@ fun SettingsScreen(
                 )
             }
         }
+    }
+}
+
+/** A row with a switch; the whole row toggles it. */
+@Composable
+internal fun SettingsSwitchRow(label: String, checked: Boolean, onCheckedChange: (Boolean) -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .toggleable(
+                value = checked,
+                onValueChange = onCheckedChange,
+                role = Role.Switch,
+                interactionSource = null,
+                indication = null,
+            )
+            .padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        TextMMD(label, style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+        // The row handles the toggle (bigger touch area, one semantics node).
+        SwitchMMD(checked = checked, onCheckedChange = null)
     }
 }
 
@@ -154,11 +182,11 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(20, {}, {}, null, ThemeMode.Light, {}, "English", {}, {}, {}) }
+    AppTheme(ThemeMode.Light) { SettingsScreen(20, {}, {}, null, ThemeMode.Light, {}, true, {}, "English", {}, {}, {}) }
 }
 
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun SettingsPendingPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(25, {}, {}, {}, ThemeMode.Dark, {}, "Polski", {}, {}, {}) }
+    AppTheme(ThemeMode.Light) { SettingsScreen(25, {}, {}, {}, ThemeMode.Dark, {}, false, {}, "Polski", {}, {}, {}) }
 }

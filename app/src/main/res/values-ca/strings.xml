@@ -11,6 +11,9 @@
     <string name="player_name">Jugador %1$d</string>
     <string name="counter_increase">Augmenta les vides de %1$s</string>
     <string name="counter_decrease">Redueix les vides de %1$s</string>
+    <string name="counter_increase_10">Augmenta 10 vides de %1$s</string>
+    <string name="counter_decrease_10">Redueix 10 vides de %1$s</string>
+    <string name="counter_series">Canvi: %1$s</string>
     <string name="counter_open_menu">Menú de la partida</string>
     <string name="menu_continue">Continua la partida</string>
     <string name="menu_restart">Torna a començar</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Toca per copiar</string>
     <string name="settings_theme_light">Clar</string>
     <string name="settings_theme_dark">Fosc</string>
+    <string name="settings_vibration">Vibració</string>
     <string name="coming_soon_title">Properament</string>
     <string name="coming_soon_body">Aquesta funció està en desenvolupament.</string>
     <string name="coming_soon_feedback_prompt">Tens una idea o un comentari? M\'encantaria saber-ho.</string>

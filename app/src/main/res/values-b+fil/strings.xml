@@ -11,6 +11,9 @@
     <string name="player_name">Manlalaro %1$d</string>
     <string name="counter_increase">Dagdagan ang buhay ni %1$s</string>
     <string name="counter_decrease">Bawasan ang buhay ni %1$s</string>
+    <string name="counter_increase_10">Dagdagan nang 10 ang buhay ni %1$s</string>
+    <string name="counter_decrease_10">Bawasan nang 10 ang buhay ni %1$s</string>
+    <string name="counter_series">Pagbabago: %1$s</string>
     <string name="counter_open_menu">Menu ng laro</string>
     <string name="menu_continue">Ituloy ang laro</string>
     <string name="menu_restart">I-restart</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">I-tap para kopyahin</string>
     <string name="settings_theme_light">Maliwanag</string>
     <string name="settings_theme_dark">Madilim</string>
+    <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Malapit na</string>
     <string name="coming_soon_body">Ginagawa pa ang feature na ito.</string>
     <string name="coming_soon_feedback_prompt">May ideya o feedback ka ba? Gusto kong marinig.</string>

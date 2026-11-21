@@ -13,6 +13,9 @@ Made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/
 ## Features
 
 - Two-player life counter. Start at 20, 30, 40 or any custom value.
+- Tap − or + to change life by 1, or hold to change it by 10 at a time.
+- The total of your last changes is shown above the life, for example −7 after an attack.
+- A short vibration confirms each change. You can turn it off in Settings.
 - The game is saved, so you can close the app and continue later.
 - Light and dark themes.
 - 63 languages. The app follows the phone's language, or you can choose one in Settings.

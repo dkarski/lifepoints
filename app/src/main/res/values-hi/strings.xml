@@ -11,6 +11,9 @@
     <string name="player_name">खिलाड़ी %1$d</string>
     <string name="counter_increase">%1$s की लाइफ़ बढ़ाएँ</string>
     <string name="counter_decrease">%1$s की लाइफ़ घटाएँ</string>
+    <string name="counter_increase_10">%1$s की लाइफ़ 10 बढ़ाएँ</string>
+    <string name="counter_decrease_10">%1$s की लाइफ़ 10 घटाएँ</string>
+    <string name="counter_series">बदलाव: %1$s</string>
     <string name="counter_open_menu">गेम मेन्यू</string>
     <string name="menu_continue">गेम जारी रखें</string>
     <string name="menu_restart">फिर से शुरू करें</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">कॉपी करने के लिए टैप करें</string>
     <string name="settings_theme_light">लाइट</string>
     <string name="settings_theme_dark">डार्क</string>
+    <string name="settings_vibration">वाइब्रेशन</string>
     <string name="coming_soon_title">जल्द आ रहा है</string>
     <string name="coming_soon_body">यह सुविधा तैयार की जा रही है।</string>
     <string name="coming_soon_feedback_prompt">कोई आइडिया या सुझाव है? मुझे जानकर खुशी होगी।</string>

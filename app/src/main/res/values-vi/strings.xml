@@ -11,6 +11,9 @@
     <string name="player_name">Người chơi %1$d</string>
     <string name="counter_increase">Tăng máu của %1$s</string>
     <string name="counter_decrease">Giảm máu của %1$s</string>
+    <string name="counter_increase_10">Tăng 10 máu của %1$s</string>
+    <string name="counter_decrease_10">Giảm 10 máu của %1$s</string>
+    <string name="counter_series">Thay đổi: %1$s</string>
     <string name="counter_open_menu">Menu trò chơi</string>
     <string name="menu_continue">Tiếp tục</string>
     <string name="menu_restart">Chơi lại</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Chạm để sao chép</string>
     <string name="settings_theme_light">Sáng</string>
     <string name="settings_theme_dark">Tối</string>
+    <string name="settings_vibration">Rung</string>
     <string name="coming_soon_title">Sắp ra mắt</string>
     <string name="coming_soon_body">Tính năng này đang được phát triển.</string>
     <string name="coming_soon_feedback_prompt">Bạn có ý tưởng hay góp ý? Tôi rất muốn nghe.</string>

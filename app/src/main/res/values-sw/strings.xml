@@ -11,6 +11,9 @@
     <string name="player_name">Mchezaji %1$d</string>
     <string name="counter_increase">Ongeza maisha ya %1$s</string>
     <string name="counter_decrease">Punguza maisha ya %1$s</string>
+    <string name="counter_increase_10">Ongeza maisha ya %1$s kwa 10</string>
+    <string name="counter_decrease_10">Punguza maisha ya %1$s kwa 10</string>
+    <string name="counter_series">Badiliko: %1$s</string>
     <string name="counter_open_menu">Menyu ya mchezo</string>
     <string name="menu_continue">Endelea na mchezo</string>
     <string name="menu_restart">Anza upya</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">Gusa ili kunakili</string>
     <string name="settings_theme_light">Mwanga</string>
     <string name="settings_theme_dark">Giza</string>
+    <string name="settings_vibration">Mtetemo</string>
     <string name="coming_soon_title">Inakuja hivi karibuni</string>
     <string name="coming_soon_body">Kipengele hiki kinatengenezwa.</string>
     <string name="coming_soon_feedback_prompt">Una wazo au maoni? Ningependa kuyasikia.</string>

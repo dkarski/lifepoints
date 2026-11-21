@@ -11,6 +11,9 @@
     <string name="player_name">მოთამაშე %1$d</string>
     <string name="counter_increase">%1$s: სიცოცხლის გაზრდა</string>
     <string name="counter_decrease">%1$s: სიცოცხლის შემცირება</string>
+    <string name="counter_increase_10">%1$s: სიცოცხლის გაზრდა 10-ით</string>
+    <string name="counter_decrease_10">%1$s: სიცოცხლის შემცირება 10-ით</string>
+    <string name="counter_series">ცვლილება: %1$s</string>
     <string name="counter_open_menu">თამაშის მენიუ</string>
     <string name="menu_continue">თამაშის გაგრძელება</string>
     <string name="menu_restart">თავიდან დაწყება</string>
@@ -21,6 +24,7 @@
     <string name="settings_contact_tap_copy">შეეხეთ დასაკოპირებლად</string>
     <string name="settings_theme_light">ღია</string>
     <string name="settings_theme_dark">მუქი</string>
+    <string name="settings_vibration">ვიბრაცია</string>
     <string name="coming_soon_title">მალე</string>
     <string name="coming_soon_body">ეს ფუნქცია მზადდება.</string>
     <string name="coming_soon_feedback_prompt">გაქვთ იდეა ან გამოხმაურება? სიამოვნებით მოვისმენ.</string>
