@@ -22,8 +22,6 @@
     <string name="cancel">キャンセル</string>
     <string name="settings_contact_tap_email">タップしてメールを書く</string>
     <string name="settings_contact_tap_copy">タップしてコピー</string>
-    <string name="settings_theme_light">ライト</string>
-    <string name="settings_theme_dark">ダーク</string>
     <string name="settings_vibration">バイブレーション</string>
     <string name="coming_soon_title">近日公開</string>
     <string name="coming_soon_body">この機能は開発中です。</string>

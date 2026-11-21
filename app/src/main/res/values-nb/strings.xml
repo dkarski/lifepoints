@@ -22,8 +22,6 @@
     <string name="cancel">Avbryt</string>
     <string name="settings_contact_tap_email">Trykk for å skrive en e-post</string>
     <string name="settings_contact_tap_copy">Trykk for å kopiere</string>
-    <string name="settings_theme_light">Lys</string>
-    <string name="settings_theme_dark">Mørk</string>
     <string name="settings_vibration">Vibrering</string>
     <string name="coming_soon_title">Kommer snart</string>
     <string name="coming_soon_body">Denne funksjonen er under utvikling.</string>

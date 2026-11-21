@@ -22,8 +22,6 @@
     <string name="cancel">ยกเลิก</string>
     <string name="settings_contact_tap_email">แตะเพื่อเขียนอีเมล</string>
     <string name="settings_contact_tap_copy">แตะเพื่อคัดลอก</string>
-    <string name="settings_theme_light">สว่าง</string>
-    <string name="settings_theme_dark">มืด</string>
     <string name="settings_vibration">การสั่น</string>
     <string name="coming_soon_title">เร็วๆ นี้</string>
     <string name="coming_soon_body">ฟีเจอร์นี้กำลังพัฒนา</string>

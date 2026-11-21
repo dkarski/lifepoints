@@ -25,7 +25,6 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.components.AppOutlinedButton
 import dev.dkarski.tcglivecounter.ui.components.TileHeight
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /** Features announced but not built yet. [subject] is the (English, untranslated) feedback e-mail subject suffix. */
 enum class Feature(val subject: String) {
@@ -107,5 +106,5 @@ fun ComingSoonScreen(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun ComingSoonPreview() {
-    AppTheme(ThemeMode.Light) { ComingSoonScreen(FeedbackState.NoEmailApp, "dev@example.com", {}, {}) }
+    AppTheme { ComingSoonScreen(FeedbackState.NoEmailApp, "dev@example.com", {}, {}) }
 }

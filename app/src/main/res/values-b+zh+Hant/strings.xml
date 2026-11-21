@@ -22,8 +22,6 @@
     <string name="cancel">取消</string>
     <string name="settings_contact_tap_email">輕觸即可寫信</string>
     <string name="settings_contact_tap_copy">輕觸即可複製</string>
-    <string name="settings_theme_light">淺色</string>
-    <string name="settings_theme_dark">深色</string>
     <string name="settings_vibration">震動</string>
     <string name="coming_soon_title">即將推出</string>
     <string name="coming_soon_body">此功能正在開發中。</string>

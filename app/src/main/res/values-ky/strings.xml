@@ -22,8 +22,6 @@
     <string name="cancel">Жокко чыгаруу</string>
     <string name="settings_contact_tap_email">Кат жазуу үчүн басыңыз</string>
     <string name="settings_contact_tap_copy">Көчүрүү үчүн басыңыз</string>
-    <string name="settings_theme_light">Жарык</string>
-    <string name="settings_theme_dark">Караңгы</string>
     <string name="settings_vibration">Титирөө</string>
     <string name="coming_soon_title">Жакында</string>
     <string name="coming_soon_body">Бул функция иштелип жатат.</string>

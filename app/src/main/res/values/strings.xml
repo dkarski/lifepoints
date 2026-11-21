@@ -34,8 +34,6 @@
     <string name="cancel">Cancel</string>
     <string name="settings_contact_tap_email">Tap to write an email</string>
     <string name="settings_contact_tap_copy">Tap to copy</string>
-    <string name="settings_theme_light">Light</string>
-    <string name="settings_theme_dark">Dark</string>
     <!-- Settings switch: vibration on life changes. -->
     <string name="settings_vibration">Vibration</string>
 

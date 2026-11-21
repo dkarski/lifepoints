@@ -22,8 +22,6 @@
     <string name="cancel">අවලංගු කරන්න</string>
     <string name="settings_contact_tap_email">ඊමේල් ලිවීමට තට්ටු කරන්න</string>
     <string name="settings_contact_tap_copy">පිටපත් කිරීමට තට්ටු කරන්න</string>
-    <string name="settings_theme_light">ආලෝක</string>
-    <string name="settings_theme_dark">අඳුරු</string>
     <string name="settings_vibration">කම්පනය</string>
     <string name="coming_soon_title">ළඟදීම පැමිණේ</string>
     <string name="coming_soon_body">මෙම විශේෂාංගය සකස් වෙමින් පවතී.</string>

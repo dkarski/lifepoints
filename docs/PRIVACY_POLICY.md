@@ -1,6 +1,6 @@
 # Lifepoints - Privacy Policy
 
-Effective date: 20 November 2026
+Effective date: 21 November 2026
 
 Lifepoints is a life counter app for Mudita Kompakt, made by Daniel Karski (contact: daniel.karski5q@gmail.com).
 
@@ -8,7 +8,7 @@ Lifepoints is a life counter app for Mudita Kompakt, made by Daniel Karski (cont
 Lifepoints does not collect, send or share any personal data.
 
 ## What the app stores
-The current game (starting life, players, life totals) and your settings (theme and language) are stored only on
+The current game (starting life, players, life totals) and your settings (language and vibration) are stored only on
 your phone.
 They are deleted when you uninstall the app. They are not included in phone backups.
 

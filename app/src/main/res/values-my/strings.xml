@@ -22,8 +22,6 @@
     <string name="cancel">မလုပ်တော့ပါ</string>
     <string name="settings_contact_tap_email">အီးမေးလ်ရေးရန် တို့ပါ</string>
     <string name="settings_contact_tap_copy">ကူးယူရန် တို့ပါ</string>
-    <string name="settings_theme_light">အလင်း</string>
-    <string name="settings_theme_dark">အမှောင်</string>
     <string name="settings_vibration">တုန်ခါမှု</string>
     <string name="coming_soon_title">မကြာမီ လာမည်</string>
     <string name="coming_soon_body">ဤလုပ်ဆောင်ချက်ကို ပြင်ဆင်နေဆဲဖြစ်သည်။</string>

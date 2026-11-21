@@ -22,8 +22,6 @@
     <string name="cancel">Hủy</string>
     <string name="settings_contact_tap_email">Chạm để viết email</string>
     <string name="settings_contact_tap_copy">Chạm để sao chép</string>
-    <string name="settings_theme_light">Sáng</string>
-    <string name="settings_theme_dark">Tối</string>
     <string name="settings_vibration">Rung</string>
     <string name="coming_soon_title">Sắp ra mắt</string>
     <string name="coming_soon_body">Tính năng này đang được phát triển.</string>

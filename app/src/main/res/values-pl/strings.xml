@@ -25,8 +25,6 @@
     <string name="cancel">Anuluj</string>
     <string name="settings_contact_tap_email">Stuknij, aby napisać e-mail</string>
     <string name="settings_contact_tap_copy">Stuknij, aby skopiować</string>
-    <string name="settings_theme_light">Jasny</string>
-    <string name="settings_theme_dark">Ciemny</string>
     <string name="settings_vibration">Wibracje</string>
 
     <string name="coming_soon_title">Wkrótce</string>

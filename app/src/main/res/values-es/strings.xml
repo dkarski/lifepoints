@@ -22,8 +22,6 @@
     <string name="cancel">Cancelar</string>
     <string name="settings_contact_tap_email">Toca para escribir un correo</string>
     <string name="settings_contact_tap_copy">Toca para copiar</string>
-    <string name="settings_theme_light">Claro</string>
-    <string name="settings_theme_dark">Oscuro</string>
     <string name="settings_vibration">Vibración</string>
     <string name="coming_soon_title">Próximamente</string>
     <string name="coming_soon_body">Esta función está en desarrollo.</string>

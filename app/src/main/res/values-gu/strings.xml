@@ -22,8 +22,6 @@
     <string name="cancel">રદ કરો</string>
     <string name="settings_contact_tap_email">ઇમેઇલ લખવા ટૅપ કરો</string>
     <string name="settings_contact_tap_copy">કૉપિ કરવા ટૅપ કરો</string>
-    <string name="settings_theme_light">લાઇટ</string>
-    <string name="settings_theme_dark">ડાર્ક</string>
     <string name="settings_vibration">વાઇબ્રેશન</string>
     <string name="coming_soon_title">જલદી આવી રહ્યું છે</string>
     <string name="coming_soon_body">આ સુવિધા તૈયાર થઈ રહી છે.</string>

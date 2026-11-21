@@ -22,8 +22,6 @@
     <string name="cancel">បោះបង់</string>
     <string name="settings_contact_tap_email">ចុចដើម្បីសរសេរអ៊ីមែល</string>
     <string name="settings_contact_tap_copy">ចុចដើម្បីចម្លង</string>
-    <string name="settings_theme_light">ភ្លឺ</string>
-    <string name="settings_theme_dark">ងងឹត</string>
     <string name="settings_vibration">ការញ័រ</string>
     <string name="coming_soon_title">មកដល់ឆាប់ៗ</string>
     <string name="coming_soon_body">មុខងារនេះកំពុងរៀបចំ។</string>

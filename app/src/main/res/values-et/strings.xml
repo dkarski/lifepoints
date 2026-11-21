@@ -22,8 +22,6 @@
     <string name="cancel">Tühista</string>
     <string name="settings_contact_tap_email">Puuduta, et kirjutada e-kiri</string>
     <string name="settings_contact_tap_copy">Puuduta kopeerimiseks</string>
-    <string name="settings_theme_light">Hele</string>
-    <string name="settings_theme_dark">Tume</string>
     <string name="settings_vibration">Vibreerimine</string>
     <string name="coming_soon_title">Tulekul</string>
     <string name="coming_soon_body">See funktsioon on arendamisel.</string>

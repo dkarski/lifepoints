@@ -22,8 +22,6 @@
     <string name="cancel">Kanselahin</string>
     <string name="settings_contact_tap_email">I-tap para mag-email</string>
     <string name="settings_contact_tap_copy">I-tap para kopyahin</string>
-    <string name="settings_theme_light">Maliwanag</string>
-    <string name="settings_theme_dark">Madilim</string>
     <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Malapit na</string>
     <string name="coming_soon_body">Ginagawa pa ang feature na ito.</string>

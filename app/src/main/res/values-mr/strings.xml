@@ -22,8 +22,6 @@
     <string name="cancel">रद्द करा</string>
     <string name="settings_contact_tap_email">ईमेल लिहिण्यासाठी टॅप करा</string>
     <string name="settings_contact_tap_copy">कॉपी करण्यासाठी टॅप करा</string>
-    <string name="settings_theme_light">लाइट</string>
-    <string name="settings_theme_dark">डार्क</string>
     <string name="settings_vibration">व्हायब्रेशन</string>
     <string name="coming_soon_title">लवकरच येत आहे</string>
     <string name="coming_soon_body">हे वैशिष्ट्य तयार होत आहे.</string>

@@ -26,7 +26,6 @@ import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 import kotlin.math.floor
 
 @Composable
@@ -72,7 +71,7 @@ private fun QrCode(rows: List<String>, modifier: Modifier) {
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun TipJarPreview() {
-    AppTheme(ThemeMode.Light) {
+    AppTheme {
         TipJarScreen("https://ko-fi.com/example")
     }
 }

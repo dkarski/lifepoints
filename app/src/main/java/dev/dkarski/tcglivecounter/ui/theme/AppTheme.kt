@@ -13,44 +13,27 @@ import com.mudita.mmd.eInkColorScheme
 import com.mudita.mmd.white
 
 /**
- * Single source of the app's colours. Components read colours only from [MaterialTheme.colorScheme]
- * (plus the helpers below), never from hard-coded values.
+ * Single source of the app's colours. The app has one look: MMD's E Ink scheme, black on white. Components read
+ * colours from [MaterialTheme.colorScheme] (plus the helpers below), and the counter from [PlayerColors];
+ * never from hard-coded values. Only pure black and white are used (E Ink).
  */
-enum class ThemeMode { Light, Dark }
+val AppColors: ColorScheme = eInkColorScheme
 
-/** MMD's E Ink scheme: black on white. */
-val LightColors: ColorScheme = eInkColorScheme
+/** The colours of one player's half of the table: [background], and [content] for the life total, the change
+ * indicator, the −/+ symbols and outlines. A pressed button swaps them (filled with [content]). */
+data class PlayerColors(val background: Color, val content: Color)
 
-/** MMD has no dark scheme: the light one with black and white swapped (still pure 1-bit for E Ink). */
-val DarkColors: ColorScheme = eInkColorScheme.run {
-    copy(
-        primary = primary.inverted(), onPrimary = onPrimary.inverted(),
-        primaryContainer = primaryContainer.inverted(), onPrimaryContainer = onPrimaryContainer.inverted(),
-        inversePrimary = inversePrimary.inverted(),
-        secondary = secondary.inverted(), onSecondary = onSecondary.inverted(),
-        secondaryContainer = secondaryContainer.inverted(), onSecondaryContainer = onSecondaryContainer.inverted(),
-        tertiary = tertiary.inverted(), onTertiary = onTertiary.inverted(),
-        tertiaryContainer = tertiaryContainer.inverted(), onTertiaryContainer = onTertiaryContainer.inverted(),
-        background = background.inverted(), onBackground = onBackground.inverted(),
-        surface = surface.inverted(), onSurface = onSurface.inverted(),
-        surfaceVariant = surfaceVariant.inverted(), onSurfaceVariant = onSurfaceVariant.inverted(),
-        surfaceTint = surfaceTint.inverted(),
-        inverseSurface = inverseSurface.inverted(), inverseOnSurface = inverseOnSurface.inverted(),
-        error = error.inverted(), onError = onError.inverted(),
-        errorContainer = errorContainer.inverted(), onErrorContainer = onErrorContainer.inverted(),
-        outline = outline.inverted(), outlineVariant = outlineVariant.inverted(),
-        scrim = scrim.inverted(),
-        surfaceContainerLow = surfaceContainerLow.inverted(),
-    )
-}
+/** Top half of the screen (the player facing the top edge): white with black. */
+val TopPlayerColors = PlayerColors(background = white, content = black)
 
-private fun Color.inverted(): Color = when (this) {
-    black -> white
-    white -> black
-    else -> this
-}
+/** Bottom half of the screen: black with white. */
+val BottomPlayerColors = PlayerColors(background = black, content = white)
 
-fun ThemeMode.colors(): ColorScheme = if (this == ThemeMode.Dark) DarkColors else LightColors
+/**
+ * Menu button on the border between the two halves: white with a black outline and icon. The white disc stands
+ * out on the black half, the black outline on the white half.
+ */
+val MenuButtonColors = PlayerColors(background = white, content = black)
 
 /** Alpha for "not available yet" content. The only place where grey appears (E Ink rule). */
 private const val MUTED_ALPHA = 0.6f
@@ -61,13 +44,13 @@ val ColorScheme.muted: Color get() = onSurface.copy(alpha = MUTED_ALPHA)
 /** Border width shared by tiles, outlined buttons and counter controls. */
 val BorderWidth = 2.dp
 
-/** Theme-aware outline (MMD's OutlinedButton border is hard-coded black). */
+/** Outline in the scheme's colour (MMD's OutlinedButton border is hard-coded). */
 @Composable
 @ReadOnlyComposable
 fun outlineBorder(muted: Boolean = false): BorderStroke =
     BorderStroke(BorderWidth, if (muted) MaterialTheme.colorScheme.muted else MaterialTheme.colorScheme.outline)
 
 @Composable
-fun AppTheme(mode: ThemeMode, content: @Composable () -> Unit) {
-    ThemeMMD(colorScheme = mode.colors(), content = content)
+fun AppTheme(content: @Composable () -> Unit) {
+    ThemeMMD(colorScheme = AppColors, content = content)
 }

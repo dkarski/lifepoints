@@ -22,8 +22,6 @@
     <string name="cancel">ຍົກເລີກ</string>
     <string name="settings_contact_tap_email">ແຕະເພື່ອຂຽນອີເມວ</string>
     <string name="settings_contact_tap_copy">ແຕະເພື່ອສຳເນົາ</string>
-    <string name="settings_theme_light">ແຈ້ງ</string>
-    <string name="settings_theme_dark">ມືດ</string>
     <string name="settings_vibration">ການສັ່ນ</string>
     <string name="coming_soon_title">ໄວໆນີ້</string>
     <string name="coming_soon_body">ຄຸນສົມບັດນີ້ກຳລັງພັດທະນາ.</string>

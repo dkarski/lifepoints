@@ -23,7 +23,6 @@ import com.mudita.mmd.components.text.TextMMD
 import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.components.AppOutlinedButton
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 private val MenuButtonHeight = 64.dp
 
@@ -88,11 +87,11 @@ private fun MenuButton(@StringRes text: Int, filled: Boolean, onClick: () -> Uni
 @Preview(widthDp = 320, heightDp = 533)
 @Composable
 private fun GameMenuPreview() {
-    AppTheme(ThemeMode.Light) { GameMenuScreen(false, 20, {}, {}, {}, {}, {}) }
+    AppTheme { GameMenuScreen(false, 20, {}, {}, {}, {}, {}) }
 }
 
 @Preview(widthDp = 320, heightDp = 533)
 @Composable
-private fun GameMenuConfirmDarkPreview() {
-    AppTheme(ThemeMode.Dark) { GameMenuScreen(true, 20, {}, {}, {}, {}, {}) }
+private fun GameMenuConfirmPreview() {
+    AppTheme { GameMenuScreen(true, 20, {}, {}, {}, {}, {}) }
 }

@@ -22,8 +22,6 @@
     <string name="cancel">Annuleren</string>
     <string name="settings_contact_tap_email">Tik om een e-mail te schrijven</string>
     <string name="settings_contact_tap_copy">Tik om te kopiëren</string>
-    <string name="settings_theme_light">Licht</string>
-    <string name="settings_theme_dark">Donker</string>
     <string name="settings_vibration">Trillen</string>
     <string name="coming_soon_title">Binnenkort</string>
     <string name="coming_soon_body">Deze functie wordt nog ontwikkeld.</string>

@@ -22,8 +22,6 @@
     <string name="cancel">ביטול</string>
     <string name="settings_contact_tap_email">הקש כדי לכתוב אימייל</string>
     <string name="settings_contact_tap_copy">הקש כדי להעתיק</string>
-    <string name="settings_theme_light">בהיר</string>
-    <string name="settings_theme_dark">כהה</string>
     <string name="settings_vibration">רטט</string>
     <string name="coming_soon_title">בקרוב</string>
     <string name="coming_soon_body">התכונה הזו בפיתוח.</string>

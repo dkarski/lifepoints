@@ -22,8 +22,6 @@
     <string name="cancel">റദ്ദാക്കുക</string>
     <string name="settings_contact_tap_email">ഇമെയിൽ എഴുതാൻ ടാപ്പ് ചെയ്യുക</string>
     <string name="settings_contact_tap_copy">പകർത്താൻ ടാപ്പ് ചെയ്യുക</string>
-    <string name="settings_theme_light">ലൈറ്റ്</string>
-    <string name="settings_theme_dark">ഡാർക്ക്</string>
     <string name="settings_vibration">വൈബ്രേഷൻ</string>
     <string name="coming_soon_title">ഉടൻ വരുന്നു</string>
     <string name="coming_soon_body">ഈ ഫീച്ചർ തയ്യാറാകുന്നു.</string>

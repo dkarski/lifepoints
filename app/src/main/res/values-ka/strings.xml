@@ -22,8 +22,6 @@
     <string name="cancel">გაუქმება</string>
     <string name="settings_contact_tap_email">შეეხეთ ელფოსტის დასაწერად</string>
     <string name="settings_contact_tap_copy">შეეხეთ დასაკოპირებლად</string>
-    <string name="settings_theme_light">ღია</string>
-    <string name="settings_theme_dark">მუქი</string>
     <string name="settings_vibration">ვიბრაცია</string>
     <string name="coming_soon_title">მალე</string>
     <string name="coming_soon_body">ეს ფუნქცია მზადდება.</string>

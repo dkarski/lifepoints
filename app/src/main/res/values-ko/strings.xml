@@ -22,8 +22,6 @@
     <string name="cancel">취소</string>
     <string name="settings_contact_tap_email">탭하여 이메일 쓰기</string>
     <string name="settings_contact_tap_copy">탭하여 복사</string>
-    <string name="settings_theme_light">라이트</string>
-    <string name="settings_theme_dark">다크</string>
     <string name="settings_vibration">진동</string>
     <string name="coming_soon_title">곧 출시</string>
     <string name="coming_soon_body">이 기능은 개발 중입니다.</string>

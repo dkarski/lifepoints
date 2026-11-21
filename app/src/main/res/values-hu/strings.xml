@@ -22,8 +22,6 @@
     <string name="cancel">Mégse</string>
     <string name="settings_contact_tap_email">Koppints e-mail írásához</string>
     <string name="settings_contact_tap_copy">Koppints a másoláshoz</string>
-    <string name="settings_theme_light">Világos</string>
-    <string name="settings_theme_dark">Sötét</string>
     <string name="settings_vibration">Rezgés</string>
     <string name="coming_soon_title">Hamarosan</string>
     <string name="coming_soon_body">Ez a funkció fejlesztés alatt áll.</string>

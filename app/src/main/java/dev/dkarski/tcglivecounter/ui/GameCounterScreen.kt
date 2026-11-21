@@ -69,7 +69,10 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.data.LifeSeries
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 import dev.dkarski.tcglivecounter.ui.theme.BorderWidth
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
+import dev.dkarski.tcglivecounter.ui.theme.BottomPlayerColors
+import dev.dkarski.tcglivecounter.ui.theme.MenuButtonColors
+import dev.dkarski.tcglivecounter.ui.theme.PlayerColors
+import dev.dkarski.tcglivecounter.ui.theme.TopPlayerColors
 import kotlinx.coroutines.delay
 
 /**
@@ -111,6 +114,7 @@ fun GameCounterScreen(
         Column(Modifier.fillMaxSize()) {
             PlayerPanel(
                 player = 1,
+                colors = TopPlayerColors,
                 life = lives[1],
                 series = series[1],
                 onSeriesEnd = { series[1] = null },
@@ -119,6 +123,7 @@ fun GameCounterScreen(
             )
             PlayerPanel(
                 player = 0,
+                colors = BottomPlayerColors,
                 life = lives[0],
                 series = series[0],
                 onSeriesEnd = { series[0] = null },
@@ -138,10 +143,14 @@ private val CircleSize = 64.dp
 /** Numbers read left to right in every language (otherwise "−5" can show as "5−" in right-to-left languages). */
 private val NumberStyle = TextStyle(textDirection = TextDirection.Ltr)
 
-/** One player's half, from their own perspective: the series indicator, then − life +. */
+/**
+ * One player's half, from their own perspective: the series indicator, then − life +.
+ * [colors] is the half's fixed palette (by its position on the screen: white on top, black at the bottom).
+ */
 @Composable
 private fun PlayerPanel(
     player: Int,
+    colors: PlayerColors,
     life: Int,
     series: LifeSeries?,
     onSeriesEnd: () -> Unit,
@@ -160,6 +169,7 @@ private fun PlayerPanel(
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
         Column(
             modifier = modifier
+                .background(colors.background)
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -175,6 +185,7 @@ private fun PlayerPanel(
                         style = NumberStyle,
                         fontSize = 28.sp,
                         fontWeight = FontWeight.Bold,
+                        color = colors.content,
                         modifier = Modifier.semantics { contentDescription = description },
                     )
                 }
@@ -184,6 +195,7 @@ private fun PlayerPanel(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 StepButton(
+                    colors = colors,
                     icon = R.drawable.ic_minus,
                     description = stringResource(R.string.counter_decrease, name),
                     holdDescription = stringResource(R.string.counter_decrease_10, name),
@@ -199,6 +211,7 @@ private fun PlayerPanel(
                         // Four characters ("−999", "9999") need a smaller size to fit between the buttons.
                         fontSize = if (text.length >= 4) 72.sp else 96.sp,
                         fontWeight = FontWeight.Bold,
+                        color = colors.content,
                         textAlign = TextAlign.Center,
                         maxLines = 1,
                         softWrap = false,
@@ -206,6 +219,7 @@ private fun PlayerPanel(
                     )
                 }
                 StepButton(
+                    colors = colors,
                     icon = R.drawable.ic_plus,
                     description = stringResource(R.string.counter_increase, name),
                     holdDescription = stringResource(R.string.counter_increase_10, name),
@@ -232,11 +246,14 @@ internal fun formatLife(life: Int): String = if (life < 0) "−${-life}" else li
  * Round −/+ button. The whole side column is the touch area; only the circle shows the pressed state.
  * A tap runs [onTap], a hold runs [onStep] repeatedly (see [handlePress]). Each button has its own pointer input,
  * so both players can press at the same time. Leaving the counter cancels a running hold.
- * MMD has no pressed state, so the circle inverts its fill while pressed and for a short minimum time after a quick
- * tap: one static redraw of the circle only (no ripple, no animation), visible even when the E Ink panel lags.
+ * MMD has no pressed state, so the circle inverts within the player's [colors] while pressed (filled with the
+ * content colour, symbol in the background colour) and for a short minimum time after a quick tap: one static
+ * redraw of the circle only (no ripple, no animation), visible even when the E Ink panel lags. The life total and
+ * the half never invert.
  */
 @Composable
 private fun StepButton(
+    colors: PlayerColors,
     @DrawableRes icon: Int,
     description: String,
     holdDescription: String,
@@ -244,7 +261,6 @@ private fun StepButton(
     onStep: () -> Unit,
     modifier: Modifier,
 ) {
-    val colors = MaterialTheme.colorScheme
     val view = LocalView.current
     val holdMs = LocalViewConfiguration.current.longPressTimeoutMillis
     val currentOnTap by rememberUpdatedState(onTap)
@@ -296,14 +312,14 @@ private fun StepButton(
             modifier = Modifier
                 .size(CircleSize)
                 .clip(CircleShape)
-                .background(if (highlighted) colors.onSurface else colors.surface)
-                .border(BorderWidth, colors.outline, CircleShape),
+                .background(if (highlighted) colors.content else colors.background)
+                .border(BorderWidth, colors.content, CircleShape),
             contentAlignment = Alignment.Center,
         ) {
             Icon(
                 painterResource(icon),
                 contentDescription = null,
-                tint = if (highlighted) colors.surface else colors.onSurface,
+                tint = if (highlighted) colors.background else colors.content,
                 modifier = Modifier.size(32.dp),
             )
         }
@@ -330,15 +346,15 @@ private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
         modifier = modifier
             .size(52.dp)
             .clip(CircleShape)
-            .background(MaterialTheme.colorScheme.surface)
-            .border(BorderWidth, MaterialTheme.colorScheme.outline, CircleShape)
+            .background(MenuButtonColors.background)
+            .border(BorderWidth, MenuButtonColors.content, CircleShape)
             .clickable(onClick = onClick, interactionSource = null, indication = null),
         contentAlignment = Alignment.Center,
     ) {
         Icon(
             imageVector = Icons.Filled.Menu,
             contentDescription = stringResource(R.string.counter_open_menu),
-            tint = MaterialTheme.colorScheme.onSurface,
+            tint = MenuButtonColors.content,
         )
     }
 }
@@ -346,11 +362,11 @@ private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun GameCounterPreview() {
-    AppTheme(ThemeMode.Light) { GameCounterScreen(lives = listOf(20, 14), onLifeChange = { _, d -> d }, onMenu = {}) }
+    AppTheme { GameCounterScreen(lives = listOf(20, 14), onLifeChange = { _, d -> d }, onMenu = {}) }
 }
 
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
-private fun GameCounterDarkPreview() {
-    AppTheme(ThemeMode.Dark) { GameCounterScreen(lives = listOf(-999, 9999), onLifeChange = { _, d -> d }, onMenu = {}) }
+private fun GameCounterLimitsPreview() {
+    AppTheme { GameCounterScreen(lives = listOf(-999, 9999), onLifeChange = { _, d -> d }, onMenu = {}) }
 }

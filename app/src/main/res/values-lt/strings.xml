@@ -22,8 +22,6 @@
     <string name="cancel">Atšaukti</string>
     <string name="settings_contact_tap_email">Palieskite, kad parašytumėte el. laišką</string>
     <string name="settings_contact_tap_copy">Palieskite, kad nukopijuotumėte</string>
-    <string name="settings_theme_light">Šviesi</string>
-    <string name="settings_theme_dark">Tamsi</string>
     <string name="settings_vibration">Vibracija</string>
     <string name="coming_soon_title">Netrukus</string>
     <string name="coming_soon_body">Ši funkcija kuriama.</string>

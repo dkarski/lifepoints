@@ -22,8 +22,6 @@
     <string name="cancel">Prekliči</string>
     <string name="settings_contact_tap_email">Dotaknite se za pisanje e-pošte</string>
     <string name="settings_contact_tap_copy">Dotaknite se za kopiranje</string>
-    <string name="settings_theme_light">Svetla</string>
-    <string name="settings_theme_dark">Temna</string>
     <string name="settings_vibration">Vibriranje</string>
     <string name="coming_soon_title">Kmalu</string>
     <string name="coming_soon_body">Ta funkcija je v razvoju.</string>

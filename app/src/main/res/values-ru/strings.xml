@@ -22,8 +22,6 @@
     <string name="cancel">Отмена</string>
     <string name="settings_contact_tap_email">Нажмите, чтобы написать письмо</string>
     <string name="settings_contact_tap_copy">Нажмите, чтобы скопировать</string>
-    <string name="settings_theme_light">Светлая</string>
-    <string name="settings_theme_dark">Тёмная</string>
     <string name="settings_vibration">Вибрация</string>
     <string name="coming_soon_title">Скоро</string>
     <string name="coming_soon_body">Эта функция в разработке.</string>

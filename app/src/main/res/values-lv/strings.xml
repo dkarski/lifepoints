@@ -22,8 +22,6 @@
     <string name="cancel">Atcelt</string>
     <string name="settings_contact_tap_email">Pieskarieties, lai rakstītu e-pastu</string>
     <string name="settings_contact_tap_copy">Pieskarieties, lai kopētu</string>
-    <string name="settings_theme_light">Gaišs</string>
-    <string name="settings_theme_dark">Tumšs</string>
     <string name="settings_vibration">Vibrācija</string>
     <string name="coming_soon_title">Drīzumā</string>
     <string name="coming_soon_body">Šī funkcija tiek izstrādāta.</string>

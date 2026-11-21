@@ -22,8 +22,6 @@
     <string name="cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="settings_contact_tap_email">ಇಮೇಲ್ ಬರೆಯಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="settings_contact_tap_copy">ನಕಲಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
-    <string name="settings_theme_light">ತಿಳಿ</string>
-    <string name="settings_theme_dark">ಗಾಢ</string>
     <string name="settings_vibration">ಕಂಪನ</string>
     <string name="coming_soon_title">ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ</string>
     <string name="coming_soon_body">ಈ ವೈಶಿಷ್ಟ್ಯ ಸಿದ್ಧವಾಗುತ್ತಿದೆ.</string>

@@ -22,8 +22,6 @@
     <string name="cancel">Цуцлах</string>
     <string name="settings_contact_tap_email">Имэйл бичихийн тулд дарна уу</string>
     <string name="settings_contact_tap_copy">Хуулахын тулд дарна уу</string>
-    <string name="settings_theme_light">Цайвар</string>
-    <string name="settings_theme_dark">Бараан</string>
     <string name="settings_vibration">Чичиргээ</string>
     <string name="coming_soon_title">Удахгүй</string>
     <string name="coming_soon_body">Энэ функц хөгжүүлэгдэж байна.</string>

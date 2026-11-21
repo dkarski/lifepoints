@@ -22,8 +22,6 @@
     <string name="cancel">Abbrechen</string>
     <string name="settings_contact_tap_email">Tippen, um eine E-Mail zu schreiben</string>
     <string name="settings_contact_tap_copy">Tippen zum Kopieren</string>
-    <string name="settings_theme_light">Hell</string>
-    <string name="settings_theme_dark">Dunkel</string>
     <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Demnächst</string>
     <string name="coming_soon_body">Diese Funktion ist in Arbeit.</string>

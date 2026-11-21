@@ -22,8 +22,6 @@
     <string name="cancel">Бас тарту</string>
     <string name="settings_contact_tap_email">Хат жазу үшін түртіңіз</string>
     <string name="settings_contact_tap_copy">Көшіру үшін түртіңіз</string>
-    <string name="settings_theme_light">Ашық</string>
-    <string name="settings_theme_dark">Қараңғы</string>
     <string name="settings_vibration">Діріл</string>
     <string name="coming_soon_title">Жақында</string>
     <string name="coming_soon_body">Бұл функция әзірленуде.</string>

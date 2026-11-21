@@ -39,7 +39,6 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.components.ChoiceTile
 import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
  * Settings, one scrolling screen. Table (starting life, players) comes first, as it is used most;
@@ -52,8 +51,6 @@ fun SettingsScreen(
     onTableLifeSelect: (Int) -> Unit,
     onComingSoonPlayers: (Feature) -> Unit,
     onApplyTable: (() -> Unit)?,
-    themeMode: ThemeMode,
-    onThemeModeChange: (ThemeMode) -> Unit,
     vibration: Boolean,
     onVibrationChange: (Boolean) -> Unit,
     languageName: String,
@@ -76,21 +73,6 @@ fun SettingsScreen(
             TableSettings(life = tableLife, onLifeSelect = onTableLifeSelect, onComingSoonPlayers = onComingSoonPlayers)
             Spacer(Modifier.height(32.dp))
             SettingsSection(stringResource(R.string.settings_section_app))
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                ChoiceTile(
-                    label = stringResource(R.string.settings_theme_light),
-                    selected = themeMode == ThemeMode.Light,
-                    onClick = { onThemeModeChange(ThemeMode.Light) },
-                    modifier = Modifier.weight(1f),
-                )
-                ChoiceTile(
-                    label = stringResource(R.string.settings_theme_dark),
-                    selected = themeMode == ThemeMode.Dark,
-                    onClick = { onThemeModeChange(ThemeMode.Dark) },
-                    modifier = Modifier.weight(1f),
-                )
-            }
-            Spacer(Modifier.height(16.dp))
             DottedDivider()
             SettingsSwitchRow(stringResource(R.string.settings_vibration), checked = vibration, onCheckedChange = onVibrationChange)
             DottedDivider()
@@ -182,11 +164,11 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(20, {}, {}, null, ThemeMode.Light, {}, true, {}, "English", {}, {}, {}) }
+    AppTheme { SettingsScreen(20, {}, {}, null, true, {}, "English", {}, {}, {}) }
 }
 
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun SettingsPendingPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(25, {}, {}, {}, ThemeMode.Dark, {}, false, {}, "Polski", {}, {}, {}) }
+    AppTheme { SettingsScreen(25, {}, {}, {}, false, {}, "Polski", {}, {}, {}) }
 }

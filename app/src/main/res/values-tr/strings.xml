@@ -22,8 +22,6 @@
     <string name="cancel">İptal</string>
     <string name="settings_contact_tap_email">E-posta yazmak için dokunun</string>
     <string name="settings_contact_tap_copy">Kopyalamak için dokunun</string>
-    <string name="settings_theme_light">Açık</string>
-    <string name="settings_theme_dark">Koyu</string>
     <string name="settings_vibration">Titreşim</string>
     <string name="coming_soon_title">Yakında</string>
     <string name="coming_soon_body">Bu özellik geliştiriliyor.</string>

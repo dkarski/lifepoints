@@ -22,8 +22,6 @@
     <string name="cancel">Hætta við</string>
     <string name="settings_contact_tap_email">Ýttu til að skrifa tölvupóst</string>
     <string name="settings_contact_tap_copy">Ýttu til að afrita</string>
-    <string name="settings_theme_light">Ljóst</string>
-    <string name="settings_theme_dark">Dökkt</string>
     <string name="settings_vibration">Titringur</string>
     <string name="coming_soon_title">Væntanlegt</string>
     <string name="coming_soon_body">Þessi eiginleiki er í vinnslu.</string>

@@ -151,7 +151,7 @@ otherwise the system font that draws the script. Screenshots are in `docs/i18n/s
 
 The test screen stays in the debug source set so the audit can be repeated on future MuditaOS versions:
 `adb shell am start -n dev.dkarski.lifepoints.debug/dev.dkarski.tcglivecounter.debugtools.ScriptTestActivity --es group <name>`
-(groups: latin-ok, latin-a…latin-e, cyr-a, cyr-b, rtl, indic-a, indic-b, sea, cjk; add `--ez dark true` for Dark).
+(groups: latin-ok, latin-a…latin-e, cyr-a, cyr-b, rtl, indic-a, indic-b, sea, cjk).
 
 ## Results with the implemented app (1.1.0, 2026-11-20)
 

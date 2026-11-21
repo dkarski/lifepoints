@@ -22,8 +22,6 @@
     <string name="cancel">రద్దు చేయండి</string>
     <string name="settings_contact_tap_email">ఇమెయిల్ రాయడానికి నొక్కండి</string>
     <string name="settings_contact_tap_copy">కాపీ చేయడానికి నొక్కండి</string>
-    <string name="settings_theme_light">లేత</string>
-    <string name="settings_theme_dark">ముదురు</string>
     <string name="settings_vibration">వైబ్రేషన్</string>
     <string name="coming_soon_title">త్వరలో రాబోతోంది</string>
     <string name="coming_soon_body">ఈ ఫీచర్ తయారవుతోంది.</string>

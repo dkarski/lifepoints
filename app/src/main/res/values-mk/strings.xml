@@ -22,8 +22,6 @@
     <string name="cancel">Откажи</string>
     <string name="settings_contact_tap_email">Допрете за да напишете е-пошта</string>
     <string name="settings_contact_tap_copy">Допрете за да копирате</string>
-    <string name="settings_theme_light">Светла</string>
-    <string name="settings_theme_dark">Темна</string>
     <string name="settings_vibration">Вибрации</string>
     <string name="coming_soon_title">Наскоро</string>
     <string name="coming_soon_body">Оваа функција е во изработка.</string>

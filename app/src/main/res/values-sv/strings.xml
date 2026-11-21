@@ -22,8 +22,6 @@
     <string name="cancel">Avbryt</string>
     <string name="settings_contact_tap_email">Tryck för att skriva ett mejl</string>
     <string name="settings_contact_tap_copy">Tryck för att kopiera</string>
-    <string name="settings_theme_light">Ljust</string>
-    <string name="settings_theme_dark">Mörkt</string>
     <string name="settings_vibration">Vibration</string>
     <string name="coming_soon_title">Kommer snart</string>
     <string name="coming_soon_body">Den här funktionen är under utveckling.</string>

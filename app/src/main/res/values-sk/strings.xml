@@ -22,8 +22,6 @@
     <string name="cancel">Zrušiť</string>
     <string name="settings_contact_tap_email">Ťuknutím napíšete e-mail</string>
     <string name="settings_contact_tap_copy">Ťuknutím skopírujete</string>
-    <string name="settings_theme_light">Svetlý</string>
-    <string name="settings_theme_dark">Tmavý</string>
     <string name="settings_vibration">Vibrácie</string>
     <string name="coming_soon_title">Už čoskoro</string>
     <string name="coming_soon_body">Táto funkcia sa pripravuje.</string>

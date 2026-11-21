@@ -22,8 +22,6 @@
     <string name="cancel">Cancel·la</string>
     <string name="settings_contact_tap_email">Toca per escriure un correu</string>
     <string name="settings_contact_tap_copy">Toca per copiar</string>
-    <string name="settings_theme_light">Clar</string>
-    <string name="settings_theme_dark">Fosc</string>
     <string name="settings_vibration">Vibració</string>
     <string name="coming_soon_title">Properament</string>
     <string name="coming_soon_body">Aquesta funció està en desenvolupament.</string>

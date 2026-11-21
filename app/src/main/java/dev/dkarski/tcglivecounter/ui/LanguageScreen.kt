@@ -49,7 +49,6 @@ import dev.dkarski.tcglivecounter.data.AppLanguages
 import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.components.SecondaryLayout
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
-import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
 /**
  * Settings > Language, modelled on the system Settings > System Language screen: one line per language,
@@ -198,5 +197,5 @@ private const val SCROLL_STEP = 9
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun LanguageScreenPreview() {
-    AppTheme(ThemeMode.Light) { LanguageScreen(selectedTag = null, onSelect = {}, onBack = {}) }
+    AppTheme { LanguageScreen(selectedTag = null, onSelect = {}, onBack = {}) }
 }

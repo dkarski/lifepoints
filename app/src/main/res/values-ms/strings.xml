@@ -22,8 +22,6 @@
     <string name="cancel">Batal</string>
     <string name="settings_contact_tap_email">Ketik untuk menulis e-mel</string>
     <string name="settings_contact_tap_copy">Ketik untuk menyalin</string>
-    <string name="settings_theme_light">Cerah</string>
-    <string name="settings_theme_dark">Gelap</string>
     <string name="settings_vibration">Getaran</string>
     <string name="coming_soon_title">Akan datang</string>
     <string name="coming_soon_body">Ciri ini sedang dibangunkan.</string>
