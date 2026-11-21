@@ -137,15 +137,19 @@ fun GameCounterScreen(
 
 private val IndicatorHeight = 44.dp
 private val ControlsHeight = 140.dp
-private val SideWidth = 84.dp
-private val CircleSize = 64.dp
+private val SideWidth = 76.dp
+
+/** −, + and the menu button share one size; −/+ are only a visual hint, the touch area is the whole half. */
+private val CircleSize = 56.dp
 
 /** Numbers read left to right in every language (otherwise "−5" can show as "5−" in right-to-left languages). */
 private val NumberStyle = TextStyle(textDirection = TextDirection.Ltr)
 
 /**
  * One player's half, from their own perspective: the series indicator, then − life +.
- * [colors] is the half's fixed palette (by its position on the screen: white on top, black at the bottom).
+ * Touch: the whole left half lowers life and the whole right half raises it; the circles only show where and when
+ * (pressed state). [colors] is the half's fixed palette (by its position on the screen: white on top, black at the
+ * bottom).
  */
 @Composable
 private fun PlayerPanel(
@@ -165,70 +169,75 @@ private fun PlayerPanel(
             onSeriesEnd()
         }
     }
+    var minusPressed by remember { mutableStateOf(false) }
+    var plusPressed by remember { mutableStateOf(false) }
     // Minus stays on the left and plus on the right for every player, also in right-to-left languages.
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Ltr) {
-        Column(
-            modifier = modifier
-                .background(colors.background)
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-        ) {
-            // Fixed slot: the indicator appearing or disappearing never moves the number or the buttons.
-            Box(Modifier.fillMaxWidth().height(IndicatorHeight), contentAlignment = Alignment.Center) {
-                if (series != null) {
-                    val text = formatChange(series.total)
-                    val description = stringResource(R.string.counter_series, text)
-                    TextMMD(
-                        text = text,
-                        style = NumberStyle,
-                        fontSize = 28.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = colors.content,
-                        modifier = Modifier.semantics { contentDescription = description },
-                    )
-                }
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth().height(ControlsHeight),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                StepButton(
-                    colors = colors,
-                    icon = R.drawable.ic_minus,
+        Box(modifier.background(colors.background).fillMaxWidth()) {
+            // Touch layer: two halves of the player's field, each the full height.
+            Row(Modifier.fillMaxSize()) {
+                StepArea(
                     description = stringResource(R.string.counter_decrease, name),
                     holdDescription = stringResource(R.string.counter_decrease_10, name),
                     onTap = { onChange(-1, Haptic.Tap) },
                     onStep = { onChange(-10, Haptic.Step) },
-                    modifier = Modifier.width(SideWidth).fillMaxHeight(),
+                    onPressedChange = { minusPressed = it },
+                    modifier = Modifier.weight(1f).fillMaxHeight(),
                 )
-                Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
-                    val text = formatLife(life)
-                    TextMMD(
-                        text = text,
-                        style = NumberStyle,
-                        // Four characters ("−999", "9999") need a smaller size to fit between the buttons.
-                        fontSize = if (text.length >= 4) 72.sp else 96.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = colors.content,
-                        textAlign = TextAlign.Center,
-                        maxLines = 1,
-                        softWrap = false,
-                        modifier = Modifier.wrapContentHeight(unbounded = true),
-                    )
-                }
-                StepButton(
-                    colors = colors,
-                    icon = R.drawable.ic_plus,
+                StepArea(
                     description = stringResource(R.string.counter_increase, name),
                     holdDescription = stringResource(R.string.counter_increase_10, name),
                     onTap = { onChange(+1, Haptic.Tap) },
                     onStep = { onChange(+10, Haptic.Step) },
-                    modifier = Modifier.width(SideWidth).fillMaxHeight(),
+                    onPressedChange = { plusPressed = it },
+                    modifier = Modifier.weight(1f).fillMaxHeight(),
                 )
             }
-            Spacer(Modifier.height(IndicatorHeight)) // keeps the number in the middle of the half
+            // Drawing layer on top: no touch handling, so touches reach the halves underneath.
+            Column(
+                modifier = Modifier.fillMaxSize().padding(horizontal = 8.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+            ) {
+                // Fixed slot: the indicator appearing or disappearing never moves the number or the buttons.
+                Box(Modifier.fillMaxWidth().height(IndicatorHeight), contentAlignment = Alignment.Center) {
+                    if (series != null) {
+                        val text = formatChange(series.total)
+                        val description = stringResource(R.string.counter_series, text)
+                        TextMMD(
+                            text = text,
+                            style = NumberStyle,
+                            fontSize = 28.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colors.content,
+                            modifier = Modifier.semantics { contentDescription = description },
+                        )
+                    }
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth().height(ControlsHeight),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    StepCircle(colors, R.drawable.ic_minus, minusPressed, Modifier.width(SideWidth))
+                    Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
+                        val text = formatLife(life)
+                        TextMMD(
+                            text = text,
+                            style = NumberStyle,
+                            // Four characters ("−999", "9999") need a smaller size to fit between the circles.
+                            fontSize = if (text.length >= 4) 72.sp else 96.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = colors.content,
+                            textAlign = TextAlign.Center,
+                            maxLines = 1,
+                            softWrap = false,
+                            modifier = Modifier.wrapContentHeight(unbounded = true),
+                        )
+                    }
+                    StepCircle(colors, R.drawable.ic_plus, plusPressed, Modifier.width(SideWidth))
+                }
+                Spacer(Modifier.height(IndicatorHeight)) // keeps the number in the middle of the half
+            }
         }
     }
 }
@@ -236,52 +245,39 @@ private fun PlayerPanel(
 /** "+3", "−10", "0": the sign is always shown, with a real minus sign. */
 internal fun formatChange(total: Int): String = when {
     total > 0 -> "+$total"
-    total < 0 -> "−${-total}"
+    total < 0 -> "\u2212${-total}"
     else -> "0"
 }
 
-internal fun formatLife(life: Int): String = if (life < 0) "−${-life}" else life.toString()
+internal fun formatLife(life: Int): String = if (life < 0) "\u2212${-life}" else life.toString()
 
 /**
- * Round −/+ button. The whole side column is the touch area; only the circle shows the pressed state.
- * A tap runs [onTap], a hold runs [onStep] repeatedly (see [handlePress]). Each button has its own pointer input,
- * so both players can press at the same time. Leaving the counter cancels a running hold.
- * MMD has no pressed state, so the circle inverts within the player's [colors] while pressed (filled with the
- * content colour, symbol in the background colour) and for a short minimum time after a quick tap: one static
- * redraw of the circle only (no ripple, no animation), visible even when the E Ink panel lags. The life total and
- * the half never invert.
+ * Touch area of − or + (half of the player's field). A tap runs [onTap], a hold runs [onStep] repeatedly
+ * (see [handlePress]); [onPressedChange] drives the circle's pressed state. Each area has its own pointer input, so
+ * both players (and both halves) can be pressed at the same time. Sliding into the other half cancels the press.
+ * Leaving the counter cancels a running hold.
  */
 @Composable
-private fun StepButton(
-    colors: PlayerColors,
-    @DrawableRes icon: Int,
+private fun StepArea(
     description: String,
     holdDescription: String,
     onTap: () -> Unit,
     onStep: () -> Unit,
+    onPressedChange: (Boolean) -> Unit,
     modifier: Modifier,
 ) {
     val view = LocalView.current
     val holdMs = LocalViewConfiguration.current.longPressTimeoutMillis
     val currentOnTap by rememberUpdatedState(onTap)
     val currentOnStep by rememberUpdatedState(onStep)
-    var pressed by remember { mutableStateOf(false) }
-    var highlighted by remember { mutableStateOf(false) }
-    LaunchedEffect(pressed) {
-        if (pressed) {
-            highlighted = true
-        } else if (highlighted) {
-            delay(PRESS_FEEDBACK_MS)
-            highlighted = false
-        }
-    }
+    val currentOnPressedChange by rememberUpdatedState(onPressedChange)
     Box(
         modifier = modifier
             .pointerInput(Unit) {
                 awaitEachGesture {
                     val down = awaitFirstDown()
                     down.consume()
-                    pressed = true
+                    currentOnPressedChange(true)
                     try {
                         handlePress(
                             holdMs = holdMs,
@@ -295,7 +291,7 @@ private fun StepButton(
                             onStep = { currentOnStep() },
                         )
                     } finally {
-                        pressed = false
+                        currentOnPressedChange(false)
                     }
                 }
             }
@@ -306,8 +302,27 @@ private fun StepButton(
                 // A hold is hard to do with a screen reader: ±10 is offered as an action.
                 customActions = listOf(CustomAccessibilityAction(holdDescription) { currentOnStep(); true })
             },
-        contentAlignment = Alignment.Center,
-    ) {
+    )
+}
+
+/**
+ * The − or + circle. MMD has no pressed state, so the circle inverts within the player's [colors] while [pressed]
+ * (filled with the content colour, symbol in the background colour) and for a short minimum time after a quick tap:
+ * one static redraw of the circle only (no ripple, no animation), visible even when the E Ink panel lags. The life
+ * total and the half never invert.
+ */
+@Composable
+private fun StepCircle(colors: PlayerColors, @DrawableRes icon: Int, pressed: Boolean, modifier: Modifier) {
+    var highlighted by remember { mutableStateOf(false) }
+    LaunchedEffect(pressed) {
+        if (pressed) {
+            highlighted = true
+        } else if (highlighted) {
+            delay(PRESS_FEEDBACK_MS)
+            highlighted = false
+        }
+    }
+    Box(modifier, contentAlignment = Alignment.Center) {
         Box(
             modifier = Modifier
                 .size(CircleSize)
@@ -320,13 +335,13 @@ private fun StepButton(
                 painterResource(icon),
                 contentDescription = null,
                 tint = if (highlighted) colors.background else colors.content,
-                modifier = Modifier.size(32.dp),
+                modifier = Modifier.size(28.dp),
             )
         }
     }
 }
 
-/** Waits until the pointer [id] goes up (Released) or leaves the button or disappears (Cancelled). */
+/** Waits until the pointer [id] goes up (Released) or leaves the touch area or disappears (Cancelled). */
 private suspend fun AwaitPointerEventScope.awaitEnd(id: PointerId): PressEnd {
     while (true) {
         val event = awaitPointerEvent()
@@ -344,7 +359,7 @@ private const val PRESS_FEEDBACK_MS = 150L
 private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
-            .size(52.dp)
+            .size(CircleSize)
             .clip(CircleShape)
             .background(MenuButtonColors.background)
             .border(BorderWidth, MenuButtonColors.content, CircleShape)
