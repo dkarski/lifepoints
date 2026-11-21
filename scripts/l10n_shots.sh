@@ -54,10 +54,13 @@ tap_text() {
   adb shell uiautomator dump /sdcard/l10n.xml >/dev/null
   local xy
   xy="$(adb exec-out cat /sdcard/l10n.xml | python3 -I -c '
-import re, sys, xml.etree.ElementTree as ET
-want = sys.argv[1]
+import re, sys, unicodedata, xml.etree.ElementTree as ET
+# Android can format player numbers with local digits (for example Nepali १ instead of 1).
+def ascii_digits(text):
+    return "".join(str(unicodedata.decimal(c)) if c.isdecimal() else c for c in text)
+want = ascii_digits(sys.argv[1])
 for n in ET.fromstring(sys.stdin.read()).iter("node"):
-    if want in (n.get("text"), n.get("content-desc")):
+    if want in (ascii_digits(n.get("text", "")), ascii_digits(n.get("content-desc", ""))):
         x1, y1, x2, y2 = map(int, re.findall(r"\d+", n.get("bounds")))
         print((x1 + x2) // 2, (y1 + y2) // 2); break
 ' "$text")"
@@ -65,12 +68,12 @@ for n in ET.fromstring(sys.stdin.read()).iter("node"):
   adb shell input tap $xy; sleep "$WAIT"
 }
 
-# Fresh app with the given language (and Light theme): a new 20-20 game on the counter.
+# Fresh app with the given language: a new 20-20 game on the counter.
 fresh() {
   adb shell input keyevent KEYCODE_WAKEUP; adb shell wm dismiss-keyguard
   adb shell pm clear "$PKG" >/dev/null
   adb shell run-as "$PKG" mkdir -p shared_prefs
-  printf '<?xml version="1.0" encoding="utf-8" standalone="yes" ?>\n<map>\n    <string name="language">%s</string>\n    <string name="theme">Light</string>\n</map>\n' "$1" \
+  printf '<?xml version="1.0" encoding="utf-8" standalone="yes" ?>\n<map>\n    <string name="language">%s</string>\n</map>\n' "$1" \
     | adb shell run-as "$PKG" sh -c "'cat > shared_prefs/settings.xml'"
   adb shell am start -n "$ACT" >/dev/null
   sleep 2.5
@@ -110,7 +113,9 @@ for L in "${LANGS[@]}"; do
   tap_key "$L" counter_open_menu; shot 02-menu
   tap_key "$L" settings_title; shot 03-settings
   if [[ -n "${L10N_QUICK:-}" ]]; then
-    back; back; progress "$L"; tap_key "$L" counter_open_menu; tap_key "$L" menu_restart; shot 04-restart-confirm
+    back; back; progress "$L"; tap_key "$L" counter_open_menu; tap_key "$L" menu_restart; shot 06-restart-confirm
+    tap_key "$L" cancel; tap_key "$L" settings_title
+    tap_text "40 $(text_of "$L" home_unit_life)"; shot 07-settings-pending
     continue
   fi
   tap_key "$L" custom_life; shot 04-custom-edit

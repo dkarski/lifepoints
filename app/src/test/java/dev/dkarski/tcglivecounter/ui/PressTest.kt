@@ -8,6 +8,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /** [handlePress] on virtual time: a press that ends after [endAt] ms, as released or cancelled. */
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class PressTest {
     private val hold = 400L
 

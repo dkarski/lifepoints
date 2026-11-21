@@ -4,20 +4,22 @@ An offline life counter for trading card games such as Magic: The Gathering, Pok
 Made for the [Mudita Kompakt](https://mudita.com/products/phones/mudita-kompakt/) and its E Ink screen.
 
 <p>
-  <img src="store/screenshots/01-home.png" width="190" alt="New game screen with starting life and players">
-  <img src="store/screenshots/02-counter.png" width="190" alt="Two-player life counter">
-  <img src="store/screenshots/04-counter-dark.png" width="190" alt="Life counter with a black and a white half">
-  <img src="store/screenshots/05-settings.png" width="190" alt="Settings with the table, vibration and language">
+  <img src="store/screenshots/01-counter.png" width="190" alt="Two-player life counter with a white top half and a black bottom half">
+  <img src="store/screenshots/02-menu.png" width="190" alt="Game menu with Continue Game, Restart and Settings">
+  <img src="store/screenshots/03-settings.png" width="190" alt="Settings with a new starting life selected and Restart ready to apply it">
+  <img src="store/screenshots/04-menu-ja.png" width="190" alt="Game menu in Japanese">
 </p>
 
 ## Features
 
-- Two-player life counter. Start at 20, 30, 40 or any custom value.
-- Tap − or + to change life by 1, or hold to change it by 10 at a time.
+- Opens straight on the two-player table, ready to play.
+- Tap the left or right side of your field to lose or gain 1 life, or hold to change it by 10 at a time.
 - The total of your last changes is shown above the life, for example −7 after an attack.
 - A short vibration confirms each change. You can turn it off in Settings.
 - The game is saved, so you can close the app and continue later.
 - Each half of the table has fixed colours: white at the top, black at the bottom.
+- Open the menu from the middle of the table to restart or go to Settings. Choose starting life 20, 30, 40 or
+  use the pencil to enter any custom value. Changing it during a game asks you to confirm a restart.
 - 63 languages. The app follows the phone's language, or you can choose one in Settings.
 - Fully offline. No account, ads, tracking or permissions.
 
