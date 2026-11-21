@@ -33,7 +33,6 @@
     <string name="feedback_body">你好！我的反馈：\n\n</string>
     <string name="settings_about">关于</string>
     <string name="settings_section_app">应用</string>
-    <string name="table_apply">用新设置重新开始</string>
     <string name="back">返回</string>
     <string name="settings_language">语言</string>
     <string name="language_system_default">跟随系统</string>

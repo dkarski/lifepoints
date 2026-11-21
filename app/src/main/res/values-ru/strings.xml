@@ -33,7 +33,6 @@
     <string name="feedback_body">Здравствуйте! Мой отзыв:\n\n</string>
     <string name="settings_about">О приложении</string>
     <string name="settings_section_app">Приложение</string>
-    <string name="table_apply">Начать заново с новыми настройками</string>
     <string name="back">Назад</string>
     <string name="settings_language">Язык</string>
     <string name="language_system_default">Как в системе</string>

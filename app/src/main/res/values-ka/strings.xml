@@ -33,7 +33,6 @@
     <string name="feedback_body">გამარჯობა! ჩემი გამოხმაურება:\n\n</string>
     <string name="settings_about">აპის შესახებ</string>
     <string name="settings_section_app">აპი</string>
-    <string name="table_apply">თავიდან დაწყება ახალი პარამეტრებით</string>
     <string name="back">უკან</string>
     <string name="settings_language">ენა</string>
     <string name="language_system_default">სისტემის ენა</string>

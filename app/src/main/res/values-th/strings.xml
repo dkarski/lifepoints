@@ -33,7 +33,6 @@
     <string name="feedback_body">สวัสดี! ความคิดเห็นของฉัน:\n\n</string>
     <string name="settings_about">เกี่ยวกับ</string>
     <string name="settings_section_app">แอป</string>
-    <string name="table_apply">เริ่มใหม่ด้วยการตั้งค่าใหม่</string>
     <string name="back">ย้อนกลับ</string>
     <string name="settings_language">ภาษา</string>
     <string name="language_system_default">ภาษาของระบบ</string>

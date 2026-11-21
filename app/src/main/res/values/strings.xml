@@ -50,8 +50,6 @@
     <string name="settings_about">About</string>
     <!-- Settings section heading above vibration, language, about and tip jar. -->
     <string name="settings_section_app">App</string>
-    <!-- Button at the bottom of Settings after the table was changed during a game. Starts a new game. -->
-    <string name="table_apply">Restart with new settings</string>
     <string name="back">Back</string>
 
     <!-- Settings > Language. Language names in the list are shown in their own language and are not translated. -->

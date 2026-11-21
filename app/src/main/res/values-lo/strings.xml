@@ -33,7 +33,6 @@
     <string name="feedback_body">ສະບາຍດີ! ຄຳຕິຊົມຂອງຂ້ອຍ:\n\n</string>
     <string name="settings_about">ກ່ຽວກັບ</string>
     <string name="settings_section_app">ແອັບ</string>
-    <string name="table_apply">ເລີ່ມໃໝ່ດ້ວຍການຕັ້ງຄ່າໃໝ່</string>
     <string name="back">ກັບຄືນ</string>
     <string name="settings_language">ພາສາ</string>
     <string name="language_system_default">ພາສາຂອງລະບົບ</string>

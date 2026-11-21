@@ -33,7 +33,6 @@
     <string name="feedback_body">سلام! نظر من:\n\n</string>
     <string name="settings_about">درباره</string>
     <string name="settings_section_app">برنامه</string>
-    <string name="table_apply">شروع دوباره با تنظیمات جدید</string>
     <string name="back">بازگشت</string>
     <string name="settings_language">زبان</string>
     <string name="language_system_default">زبان سیستم</string>

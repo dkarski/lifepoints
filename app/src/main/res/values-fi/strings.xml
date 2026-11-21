@@ -33,7 +33,6 @@
     <string name="feedback_body">Hei! Palautteeni:\n\n</string>
     <string name="settings_about">Tietoja</string>
     <string name="settings_section_app">Sovellus</string>
-    <string name="table_apply">Aloita alusta uusilla asetuksilla</string>
     <string name="back">Takaisin</string>
     <string name="settings_language">Kieli</string>
     <string name="language_system_default">Järjestelmän kieli</string>

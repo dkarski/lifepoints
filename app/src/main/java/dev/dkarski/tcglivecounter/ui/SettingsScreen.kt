@@ -1,11 +1,10 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.annotation.DrawableRes
-import com.mudita.mmd.components.switcher.SwitchMMD
-import androidx.compose.foundation.selection.toggleable
 import dev.dkarski.tcglivecounter.ui.components.TileHeight
 import com.mudita.mmd.components.buttons.ButtonMMD
-import androidx.compose.ui.text.style.TextAlign
+import com.mudita.mmd.components.switcher.SwitchMMD
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.verticalScroll
@@ -40,15 +39,18 @@ import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 
 /**
  * Settings, one scrolling screen. The table (starting life, players) comes first, without a heading, as it is used
- * most; the app settings follow under their heading. [onApplyTable] is set while a table change is waiting for confirmation
- * (the game has progress): the button stays at the bottom, outside the scrolling content.
+ * most; the app settings follow under their heading.
+ * While a table change waits for confirmation (the game has progress), [pendingLife] is set and a Restart button,
+ * named like the menu's Restart, stays at the bottom outside the scrolling content and runs [onApplyTable], which
+ * opens the same restart confirmation as the menu. Leaving Settings (Back) drops the change.
  */
 @Composable
 fun SettingsScreen(
     tableLife: Int,
     onTableLifeSelect: (Int) -> Unit,
     onComingSoonPlayers: (Feature) -> Unit,
-    onApplyTable: (() -> Unit)?,
+    pendingLife: Int?,
+    onApplyTable: () -> Unit,
     vibration: Boolean,
     onVibrationChange: (Boolean) -> Unit,
     languageName: String,
@@ -83,19 +85,13 @@ fun SettingsScreen(
                 DottedDivider()
             }
         }
-        if (onApplyTable != null) {
+        if (pendingLife != null) {
             // Appears at once, without animation (each animation frame is an E Ink refresh).
             ButtonMMD(
                 onClick = { focusManager.clearFocus(); onApplyTable() },
                 modifier = Modifier.fillMaxWidth().padding(16.dp).height(TileHeight),
             ) {
-                TextMMD(
-                    stringResource(R.string.table_apply),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center,
-                    maxLines = 2,
-                )
+                TextMMD(stringResource(R.string.menu_restart), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             }
         }
     }
@@ -162,11 +158,11 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme { SettingsScreen(20, {}, {}, null, true, {}, "English", {}, {}, {}) }
+    AppTheme { SettingsScreen(20, {}, {}, null, {}, true, {}, "English", {}, {}, {}) }
 }
 
 @Preview(widthDp = 360, heightDp = 600, showBackground = true)
 @Composable
 private fun SettingsPendingPreview() {
-    AppTheme { SettingsScreen(25, {}, {}, {}, false, {}, "Polski", {}, {}, {}) }
+    AppTheme { SettingsScreen(25, {}, {}, 30, {}, false, {}, "Polski", {}, {}, {}) }
 }

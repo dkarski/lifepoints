@@ -33,7 +33,6 @@
     <string name="feedback_body">Merhaba! Geri bildirimim:\n\n</string>
     <string name="settings_about">Hakkında</string>
     <string name="settings_section_app">Uygulama</string>
-    <string name="table_apply">Yeni ayarlarla yeniden başlat</string>
     <string name="back">Geri</string>
     <string name="settings_language">Dil</string>
     <string name="language_system_default">Sistem dili</string>
