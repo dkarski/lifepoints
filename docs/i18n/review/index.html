@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lifepoints 1.1.0 localization review</title>
+<title>Lifepoints 1.2.0 localization review</title>
 <style>
 :root{--bg:#f3f3f1;--card:#fff;--fg:#151515;--muted:#666;--line:#d9d9d6;--accent:#111;--warn:#8a5a00;--warnbg:#fff4dc}
 @media (prefers-color-scheme:dark){:root{--bg:#141414;--card:#1f1f1f;--fg:#ececec;--muted:#a3a3a3;--line:#343434;--accent:#f2f2f2;--warn:#f0c46b;--warnbg:#2b2416}}
@@ -33,10 +33,11 @@ kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:
 </head>
 <body>
 <header>
-  <h1>Lifepoints 1.1.0 · localization review</h1>
-  <p>The 9 MuditaOS system languages, every screen with text. <b>Screenshots: Android emulator Kompakt_K1</b> (480×800, 213 dpi,
-     Android 12, no Google services), taken from the real debug build with <code>scripts/l10n_shots.sh</code>.
-     They are not E Ink captures: rendering on the Kompakt was verified separately (see <a href="../LANGUAGE_AUDIT.md">LANGUAGE_AUDIT.md</a>).</p>
+  <h1>Lifepoints 1.2.0 · localization review</h1>
+  <p>The 9 MuditaOS system languages, every screen with text. Generate local screenshots from the debug build with
+     <code>scripts/l10n_shots.sh</code> on Kompakt_K1 (480×800, 213 dpi, Android 12) or a Kompakt.
+     Screenshots are not included in the repository. Emulator captures do not show E Ink ghosting;
+     see the earlier device font audit in <a href="../LANGUAGE_AUDIT.md">LANGUAGE_AUDIT.md</a>.</p>
   <p>Keys: <kbd>←</kbd>/<kbd>→</kbd> screen, <kbd>↑</kbd>/<kbd>↓</kbd> language, <kbd>E</kbd> toggle English comparison, <kbd>G</kbd> grid of all screens.</p>
 </header>
 <div class="bar" id="langs"><span class="label">Language</span></div>
@@ -48,10 +49,10 @@ kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:
 <main>
   <div id="view"></div>
 
-  <h2>Copy changes made in the audit</h2>
+  <h2>Copy changes from the 1.1.0 audit</h2>
   <table id="changes"><tr><th>Lang</th><th>Text</th><th>Before</th><th>After</th><th>Why</th></tr></table>
 
-  <h2>Layout fixes found through the screenshots</h2>
+  <h2>Layout fixes from the 1.1.0 audit</h2>
   <ul>
     <li>Coming soon screen now scrolls: in Portuguese and French the “Copy e-mail” button was pushed under the bottom
         bar after “Contact developer” found no e-mail app. Texts were shortened too, so these languages fit without scrolling.</li>
@@ -74,7 +75,7 @@ kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:
 </main>
 <script>
 const LANGS=[["en","English"],["it","Italiano"],["pl","Polski"],["cs","Čeština"],["pt","Português"],["es","Español"],["de","Deutsch"],["fr","Français"],["nl","Nederlands"]];
-const SCREENS=[["01-home","Home / New game"],["02-custom-life","Custom life (editing)"],["03-players-coming-soon","3 players: coming soon"],["04-history-coming-soon","History: coming soon"],["05-contact-no-email-app","Contact: no e-mail app"],["06-settings","Settings"],["07-language","Language"],["08-language-search","Language search"],["09-about","About"],["10-tip-jar","Tip jar"],["11-counter","Game counter"],["12-game-menu","Game menu"],["13-about-privacy","About: Privacy"],["14-about-terms","About: Terms of use"],["15-about-licenses","About: Open source licenses"],["16-about-legal","About: Legal notes"],["17-custom-value","Custom life (value entered)"]];
+const SCREENS=[["01-counter","Game counter"],["02-menu","Game menu"],["03-settings","Settings"],["04-custom-edit","Custom life (editing)"],["05-custom-value","Custom life (value entered)"],["06-restart-confirm","Restart confirmation"],["07-settings-pending","Settings: pending table change"],["08-settings-app","Settings: app"],["09-language","Language"],["10-language-search","Language search"],["11-about","About"],["12-tip-jar","Tip jar"],["13-players-coming-soon","3 players: coming soon"],["14-contact-no-email-app","Contact: no e-mail app"],["15-about-privacy","About: Privacy"],["16-about-terms","About: Terms of use"],["17-about-licenses","About: Open source licenses"],["18-about-legal","About: Legal notes"]];
 const CHANGES=[
  ["it","Custom life tile","Personalizza","Altro","An option next to 20/30/40, not a command"],
  ["pt","Custom life tile","Personalizar","Outro","Same"],
