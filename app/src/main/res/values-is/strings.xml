@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Bráðum</string>
-    <string name="tab_game">Leikur</string>
-    <string name="tab_history">Saga</string>
-    <string name="tab_settings">Stillingar</string>
+    <string name="settings_title">Stillingar</string>
     <string name="home_unit_life">líf</string>
-    <string name="home_custom">Sérsniðið</string>
-    <string name="home_custom_caption">líf</string>
     <string name="home_custom_edit">Sláðu inn upphafslíf</string>
+    <string name="custom_life">Eigið upphafslíf</string>
+    <string name="custom_life_value">Eigið upphafslíf: %1$d</string>
     <string name="home_unit_players">leikmenn</string>
-    <string name="home_start_game">Hefja leik</string>
     <string name="player_name">Leikmaður %1$d</string>
     <string name="counter_increase">Auka líf: %1$s</string>
     <string name="counter_decrease">Minnka líf: %1$s</string>
     <string name="counter_open_menu">Leikjavalmynd</string>
-    <string name="menu_in_progress">Leikur í gangi</string>
     <string name="menu_continue">Halda leik áfram</string>
-    <string name="menu_new_game">Nýr leikur</string>
+    <string name="menu_restart">Byrja aftur</string>
+    <string name="restart_question">Byrja leikinn aftur?</string>
+    <string name="restart_body">Lífið fer aftur í %1$d.</string>
+    <string name="cancel">Hætta við</string>
     <string name="settings_contact_tap_email">Ýttu til að skrifa tölvupóst</string>
     <string name="settings_contact_tap_copy">Ýttu til að afrita</string>
     <string name="settings_theme_light">Ljóst</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Afrita netfang</string>
     <string name="coming_soon_copied">Netfang afritað</string>
     <string name="feedback_body">Hæ! Ábendingin mín:\n\n</string>
-    <string name="settings_theme">Þema</string>
     <string name="settings_about">Um forritið</string>
+    <string name="settings_section_table">Borð</string>
+    <string name="settings_section_app">Forrit</string>
+    <string name="table_apply">Byrja aftur með nýjum stillingum</string>
     <string name="back">Til baka</string>
     <string name="settings_language">Tungumál</string>
     <string name="language_system_default">Tungumál kerfis</string>

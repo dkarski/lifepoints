@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Peagi</string>
-    <string name="tab_game">Mäng</string>
-    <string name="tab_history">Ajalugu</string>
-    <string name="tab_settings">Seaded</string>
+    <string name="settings_title">Seaded</string>
     <string name="home_unit_life">elu</string>
-    <string name="home_custom">Oma</string>
-    <string name="home_custom_caption">elu</string>
     <string name="home_custom_edit">Sisesta algelud</string>
+    <string name="custom_life">Oma algelud</string>
+    <string name="custom_life_value">Oma algelud: %1$d</string>
     <string name="home_unit_players">mängijat</string>
-    <string name="home_start_game">Alusta mängu</string>
     <string name="player_name">Mängija %1$d</string>
     <string name="counter_increase">Suurenda elusid: %1$s</string>
     <string name="counter_decrease">Vähenda elusid: %1$s</string>
     <string name="counter_open_menu">Mängumenüü</string>
-    <string name="menu_in_progress">Mäng käib</string>
     <string name="menu_continue">Jätka mängu</string>
-    <string name="menu_new_game">Uus mäng</string>
+    <string name="menu_restart">Alusta uuesti</string>
+    <string name="restart_question">Alustada mängu uuesti?</string>
+    <string name="restart_body">Elud lähevad tagasi %1$d peale.</string>
+    <string name="cancel">Tühista</string>
     <string name="settings_contact_tap_email">Puuduta, et kirjutada e-kiri</string>
     <string name="settings_contact_tap_copy">Puuduta kopeerimiseks</string>
     <string name="settings_theme_light">Hele</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopeeri e-post</string>
     <string name="coming_soon_copied">E-post kopeeritud</string>
     <string name="feedback_body">Tere! Minu tagasiside:\n\n</string>
-    <string name="settings_theme">Teema</string>
     <string name="settings_about">Teave</string>
+    <string name="settings_section_table">Laud</string>
+    <string name="settings_section_app">Rakendus</string>
+    <string name="table_apply">Alusta uuesti uute seadetega</string>
     <string name="back">Tagasi</string>
     <string name="settings_language">Keel</string>
     <string name="language_system_default">Süsteemi keel</string>

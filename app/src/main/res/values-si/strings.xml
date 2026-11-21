@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">ළඟදීම</string>
-    <string name="tab_game">ක්‍රීඩාව</string>
-    <string name="tab_history">ඉතිහාසය</string>
-    <string name="tab_settings">සැකසීම්</string>
+    <string name="settings_title">සැකසීම්</string>
     <string name="home_unit_life">ජීවිත</string>
-    <string name="home_custom">අභිරුචි</string>
-    <string name="home_custom_caption">ජීවිත</string>
     <string name="home_custom_edit">ආරම්භක ජීවිත ඇතුළත් කරන්න</string>
+    <string name="custom_life">තමන්ගේ ආරම්භක ජීවිත</string>
+    <string name="custom_life_value">තමන්ගේ ආරම්භක ජීවිත: %1$d</string>
     <string name="home_unit_players">ක්‍රීඩකයන්</string>
-    <string name="home_start_game">ක්‍රීඩාව අරඹන්න</string>
     <string name="player_name">ක්‍රීඩකයා %1$d</string>
     <string name="counter_increase">%1$s ගේ ජීවිත වැඩි කරන්න</string>
     <string name="counter_decrease">%1$s ගේ ජීවිත අඩු කරන්න</string>
     <string name="counter_open_menu">ක්‍රීඩා මෙනුව</string>
-    <string name="menu_in_progress">ක්‍රීඩාව සිදු වෙමින්</string>
     <string name="menu_continue">ක්‍රීඩාව දිගටම</string>
-    <string name="menu_new_game">නව ක්‍රීඩාව</string>
+    <string name="menu_restart">නැවත අරඹන්න</string>
+    <string name="restart_question">ක්‍රීඩාව නැවත අරඹන්නද?</string>
+    <string name="restart_body">ජීවිත නැවත %1$d වෙයි.</string>
+    <string name="cancel">අවලංගු කරන්න</string>
     <string name="settings_contact_tap_email">ඊමේල් ලිවීමට තට්ටු කරන්න</string>
     <string name="settings_contact_tap_copy">පිටපත් කිරීමට තට්ටු කරන්න</string>
     <string name="settings_theme_light">ආලෝක</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ඊමේල් පිටපත් කරන්න</string>
     <string name="coming_soon_copied">ඊමේල් පිටපත් විය</string>
     <string name="feedback_body">ආයුබෝවන්! මගේ ප්‍රතිචාරය:\n\n</string>
-    <string name="settings_theme">තේමාව</string>
     <string name="settings_about">යෙදුම ගැන</string>
+    <string name="settings_section_table">මේසය</string>
+    <string name="settings_section_app">යෙදුම</string>
+    <string name="table_apply">නව සැකසීම් සමඟ නැවත අරඹන්න</string>
     <string name="back">ආපසු</string>
     <string name="settings_language">භාෂාව</string>
     <string name="language_system_default">පද්ධති භාෂාව</string>

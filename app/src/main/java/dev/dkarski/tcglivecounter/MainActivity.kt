@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.toArgb
 import dev.dkarski.tcglivecounter.data.AppLocale
+import dev.dkarski.tcglivecounter.data.GameState
 import dev.dkarski.tcglivecounter.data.GameStore
 import dev.dkarski.tcglivecounter.data.SettingsStore
 import dev.dkarski.tcglivecounter.ui.App
@@ -30,7 +31,8 @@ class MainActivity : ComponentActivity() {
         val gameStore = GameStore(this)
         val settingsStore = SettingsStore(this)
         // Two tiny preference files, read once at start so the first frame already has the right theme and screen.
-        val initialGame = gameStore.load()
+        // The app opens on the table. First launch (or unreadable data): two players at the default starting life.
+        val initialGame = gameStore.load() ?: GameState.new(GameState.DEFAULT_STARTING_LIFE).also(gameStore::save)
         val initialTheme = settingsStore.themeMode
         applySystemBars(initialTheme)
 

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Жакында</string>
-    <string name="tab_game">Оюн</string>
-    <string name="tab_history">Тарых</string>
-    <string name="tab_settings">Жөндөөлөр</string>
+    <string name="settings_title">Жөндөөлөр</string>
     <string name="home_unit_life">өмүр</string>
-    <string name="home_custom">Өзүм</string>
-    <string name="home_custom_caption">өмүр</string>
     <string name="home_custom_edit">Баштапкы өмүрдү киргизиңиз</string>
+    <string name="custom_life">Өз баштапкы өмүрү</string>
+    <string name="custom_life_value">Өз баштапкы өмүрү: %1$d</string>
     <string name="home_unit_players">оюнчу</string>
-    <string name="home_start_game">Оюнду баштоо</string>
     <string name="player_name">%1$d-оюнчу</string>
     <string name="counter_increase">%1$s: өмүрдү көбөйтүү</string>
     <string name="counter_decrease">%1$s: өмүрдү азайтуу</string>
     <string name="counter_open_menu">Оюн менюсу</string>
-    <string name="menu_in_progress">Оюн жүрүп жатат</string>
     <string name="menu_continue">Оюнду улантуу</string>
-    <string name="menu_new_game">Жаңы оюн</string>
+    <string name="menu_restart">Кайра баштоо</string>
+    <string name="restart_question">Оюнду кайра баштайсызбы?</string>
+    <string name="restart_body">Өмүр %1$d маанисине кайтат.</string>
+    <string name="cancel">Жокко чыгаруу</string>
     <string name="settings_contact_tap_email">Кат жазуу үчүн басыңыз</string>
     <string name="settings_contact_tap_copy">Көчүрүү үчүн басыңыз</string>
     <string name="settings_theme_light">Жарык</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Даректи көчүрүү</string>
     <string name="coming_soon_copied">Дарек көчүрүлдү</string>
     <string name="feedback_body">Саламатсызбы! Менин пикирим:\n\n</string>
-    <string name="settings_theme">Тема</string>
     <string name="settings_about">Колдонмо жөнүндө</string>
+    <string name="settings_section_table">Стол</string>
+    <string name="settings_section_app">Колдонмо</string>
+    <string name="table_apply">Жаңы жөндөөлөр менен кайра баштоо</string>
     <string name="back">Артка</string>
     <string name="settings_language">Тил</string>
     <string name="language_system_default">Тутумдун тили</string>

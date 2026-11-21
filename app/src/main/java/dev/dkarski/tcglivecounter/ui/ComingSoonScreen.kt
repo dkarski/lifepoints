@@ -31,7 +31,6 @@ import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 enum class Feature(val subject: String) {
     Players3("3 Players"),
     Players4("4 Players"),
-    History("History"),
 }
 
 /** What the contact section shows. */
@@ -47,7 +46,7 @@ enum class FeedbackState {
 }
 
 /**
- * Shared Coming Soon screen (content of the Main Layout), the same copy for every [Feature].
+ * Shared Coming Soon screen, the same copy for every [Feature].
  * No icon: MMD v1 ships no icon set and the generic Material icons read too technical here.
  */
 @Composable

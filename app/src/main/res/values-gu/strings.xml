@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">જલદી</string>
-    <string name="tab_game">રમત</string>
-    <string name="tab_history">ઇતિહાસ</string>
-    <string name="tab_settings">સેટિંગ્સ</string>
+    <string name="settings_title">સેટિંગ્સ</string>
     <string name="home_unit_life">લાઇફ</string>
-    <string name="home_custom">કસ્ટમ</string>
-    <string name="home_custom_caption">લાઇફ</string>
     <string name="home_custom_edit">શરૂઆતની લાઇફ દાખલ કરો</string>
+    <string name="custom_life">પોતાની શરૂઆતની લાઇફ</string>
+    <string name="custom_life_value">પોતાની શરૂઆતની લાઇફ: %1$d</string>
     <string name="home_unit_players">ખેલાડી</string>
-    <string name="home_start_game">રમત શરૂ કરો</string>
     <string name="player_name">ખેલાડી %1$d</string>
     <string name="counter_increase">%1$sની લાઇફ વધારો</string>
     <string name="counter_decrease">%1$sની લાઇફ ઘટાડો</string>
     <string name="counter_open_menu">રમતનું મેનૂ</string>
-    <string name="menu_in_progress">રમત ચાલુ છે</string>
     <string name="menu_continue">રમત ચાલુ રાખો</string>
-    <string name="menu_new_game">નવી રમત</string>
+    <string name="menu_restart">ફરી શરૂ કરો</string>
+    <string name="restart_question">રમત ફરી શરૂ કરવી છે?</string>
+    <string name="restart_body">લાઇફ પાછી %1$d થશે.</string>
+    <string name="cancel">રદ કરો</string>
     <string name="settings_contact_tap_email">ઇમેઇલ લખવા ટૅપ કરો</string>
     <string name="settings_contact_tap_copy">કૉપિ કરવા ટૅપ કરો</string>
     <string name="settings_theme_light">લાઇટ</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ઇમેઇલ કૉપિ કરો</string>
     <string name="coming_soon_copied">ઇમેઇલ કૉપિ થયો</string>
     <string name="feedback_body">નમસ્તે! મારો પ્રતિસાદ:\n\n</string>
-    <string name="settings_theme">થીમ</string>
     <string name="settings_about">ઍપ વિશે</string>
+    <string name="settings_section_table">ટેબલ</string>
+    <string name="settings_section_app">ઍપ</string>
+    <string name="table_apply">નવી સેટિંગ્સ સાથે ફરી શરૂ કરો</string>
     <string name="back">પાછળ</string>
     <string name="settings_language">ભાષા</string>
     <string name="language_system_default">સિસ્ટમની ભાષા</string>

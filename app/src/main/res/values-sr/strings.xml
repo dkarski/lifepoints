@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Ускоро</string>
-    <string name="tab_game">Игра</string>
-    <string name="tab_history">Историја</string>
-    <string name="tab_settings">Подешавања</string>
+    <string name="settings_title">Подешавања</string>
     <string name="home_unit_life">живота</string>
-    <string name="home_custom">Прилагођено</string>
-    <string name="home_custom_caption">живота</string>
     <string name="home_custom_edit">Унесите почетне животе</string>
+    <string name="custom_life">Сопствени почетни животи</string>
+    <string name="custom_life_value">Сопствени почетни животи: %1$d</string>
     <string name="home_unit_players">играча</string>
-    <string name="home_start_game">Започни игру</string>
     <string name="player_name">Играч %1$d</string>
     <string name="counter_increase">Додај живот: %1$s</string>
     <string name="counter_decrease">Одузми живот: %1$s</string>
     <string name="counter_open_menu">Мени игре</string>
-    <string name="menu_in_progress">Игра је у току</string>
     <string name="menu_continue">Настави игру</string>
-    <string name="menu_new_game">Нова игра</string>
+    <string name="menu_restart">Почни поново</string>
+    <string name="restart_question">Почети игру поново?</string>
+    <string name="restart_body">Животи се враћају на %1$d.</string>
+    <string name="cancel">Откажи</string>
     <string name="settings_contact_tap_email">Додирните да бисте написали имејл</string>
     <string name="settings_contact_tap_copy">Додирните да бисте копирали</string>
     <string name="settings_theme_light">Светла</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Копирај имејл</string>
     <string name="coming_soon_copied">Имејл је копиран</string>
     <string name="feedback_body">Здраво! Мој утисак:\n\n</string>
-    <string name="settings_theme">Тема</string>
     <string name="settings_about">О апликацији</string>
+    <string name="settings_section_table">Сто</string>
+    <string name="settings_section_app">Апликација</string>
+    <string name="table_apply">Почни поново са новим подешавањима</string>
     <string name="back">Назад</string>
     <string name="settings_language">Језик</string>
     <string name="language_system_default">Језик система</string>

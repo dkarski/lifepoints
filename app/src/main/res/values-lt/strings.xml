@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Netrukus</string>
-    <string name="tab_game">Žaidimas</string>
-    <string name="tab_history">Istorija</string>
-    <string name="tab_settings">Nustatymai</string>
+    <string name="settings_title">Nustatymai</string>
     <string name="home_unit_life">gyvybių</string>
-    <string name="home_custom">Savas</string>
-    <string name="home_custom_caption">gyvybių</string>
     <string name="home_custom_edit">Įveskite pradines gyvybes</string>
+    <string name="custom_life">Savos pradinės gyvybės</string>
+    <string name="custom_life_value">Savos pradinės gyvybės: %1$d</string>
     <string name="home_unit_players">žaidėjai</string>
-    <string name="home_start_game">Pradėti žaidimą</string>
     <string name="player_name">Žaidėjas %1$d</string>
     <string name="counter_increase">Padidinti gyvybes: %1$s</string>
     <string name="counter_decrease">Sumažinti gyvybes: %1$s</string>
     <string name="counter_open_menu">Žaidimo meniu</string>
-    <string name="menu_in_progress">Žaidimas vyksta</string>
     <string name="menu_continue">Tęsti žaidimą</string>
-    <string name="menu_new_game">Naujas žaidimas</string>
+    <string name="menu_restart">Pradėti iš naujo</string>
+    <string name="restart_question">Pradėti žaidimą iš naujo?</string>
+    <string name="restart_body">Gyvybės grįš į %1$d.</string>
+    <string name="cancel">Atšaukti</string>
     <string name="settings_contact_tap_email">Palieskite, kad parašytumėte el. laišką</string>
     <string name="settings_contact_tap_copy">Palieskite, kad nukopijuotumėte</string>
     <string name="settings_theme_light">Šviesi</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopijuoti el. paštą</string>
     <string name="coming_soon_copied">El. paštas nukopijuotas</string>
     <string name="feedback_body">Labas! Mano atsiliepimas:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Apie</string>
+    <string name="settings_section_table">Stalas</string>
+    <string name="settings_section_app">Programa</string>
+    <string name="table_apply">Pradėti iš naujo su naujais nustatymais</string>
     <string name="back">Atgal</string>
     <string name="settings_language">Kalba</string>
     <string name="language_system_default">Sistemos kalba</string>

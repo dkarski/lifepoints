@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">लवकरच</string>
-    <string name="tab_game">खेळ</string>
-    <string name="tab_history">इतिहास</string>
-    <string name="tab_settings">सेटिंग्ज</string>
+    <string name="settings_title">सेटिंग्ज</string>
     <string name="home_unit_life">लाइफ</string>
-    <string name="home_custom">स्वतःचे</string>
-    <string name="home_custom_caption">लाइफ</string>
     <string name="home_custom_edit">सुरुवातीची लाइफ टाका</string>
+    <string name="custom_life">स्वतःची सुरुवातीची लाइफ</string>
+    <string name="custom_life_value">स्वतःची सुरुवातीची लाइफ: %1$d</string>
     <string name="home_unit_players">खेळाडू</string>
-    <string name="home_start_game">खेळ सुरू करा</string>
     <string name="player_name">खेळाडू %1$d</string>
     <string name="counter_increase">%1$s ची लाइफ वाढवा</string>
     <string name="counter_decrease">%1$s ची लाइफ कमी करा</string>
     <string name="counter_open_menu">खेळाचा मेनू</string>
-    <string name="menu_in_progress">खेळ सुरू आहे</string>
     <string name="menu_continue">खेळ पुढे सुरू ठेवा</string>
-    <string name="menu_new_game">नवा खेळ</string>
+    <string name="menu_restart">पुन्हा सुरू करा</string>
+    <string name="restart_question">खेळ पुन्हा सुरू करायचा?</string>
+    <string name="restart_body">लाइफ पुन्हा %1$d होईल.</string>
+    <string name="cancel">रद्द करा</string>
     <string name="settings_contact_tap_email">ईमेल लिहिण्यासाठी टॅप करा</string>
     <string name="settings_contact_tap_copy">कॉपी करण्यासाठी टॅप करा</string>
     <string name="settings_theme_light">लाइट</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ईमेल कॉपी करा</string>
     <string name="coming_soon_copied">ईमेल कॉपी झाला</string>
     <string name="feedback_body">नमस्कार! माझा अभिप्राय:\n\n</string>
-    <string name="settings_theme">थीम</string>
     <string name="settings_about">ॲपबद्दल</string>
+    <string name="settings_section_table">टेबल</string>
+    <string name="settings_section_app">अ‍ॅप</string>
+    <string name="table_apply">नवीन सेटिंग्जसह पुन्हा सुरू करा</string>
     <string name="back">मागे</string>
     <string name="settings_language">भाषा</string>
     <string name="language_system_default">सिस्टमची भाषा</string>

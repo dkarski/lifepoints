@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Akan datang</string>
-    <string name="tab_game">Permainan</string>
-    <string name="tab_history">Sejarah</string>
-    <string name="tab_settings">Tetapan</string>
+    <string name="settings_title">Tetapan</string>
     <string name="home_unit_life">nyawa</string>
-    <string name="home_custom">Tersuai</string>
-    <string name="home_custom_caption">nyawa</string>
     <string name="home_custom_edit">Masukkan nyawa permulaan</string>
+    <string name="custom_life">Nyawa permulaan tersuai</string>
+    <string name="custom_life_value">Nyawa permulaan tersuai: %1$d</string>
     <string name="home_unit_players">pemain</string>
-    <string name="home_start_game">Mula permainan</string>
     <string name="player_name">Pemain %1$d</string>
     <string name="counter_increase">Tambah nyawa %1$s</string>
     <string name="counter_decrease">Kurangkan nyawa %1$s</string>
     <string name="counter_open_menu">Menu permainan</string>
-    <string name="menu_in_progress">Permainan sedang berlangsung</string>
     <string name="menu_continue">Teruskan permainan</string>
-    <string name="menu_new_game">Permainan baharu</string>
+    <string name="menu_restart">Mula semula</string>
+    <string name="restart_question">Mula semula permainan?</string>
+    <string name="restart_body">Nyawa kembali kepada %1$d.</string>
+    <string name="cancel">Batal</string>
     <string name="settings_contact_tap_email">Ketik untuk menulis e-mel</string>
     <string name="settings_contact_tap_copy">Ketik untuk menyalin</string>
     <string name="settings_theme_light">Cerah</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Salin e-mel</string>
     <string name="coming_soon_copied">E-mel disalin</string>
     <string name="feedback_body">Hai! Maklum balas saya:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Perihal</string>
+    <string name="settings_section_table">Meja</string>
+    <string name="settings_section_app">Aplikasi</string>
+    <string name="table_apply">Mula semula dengan tetapan baharu</string>
     <string name="back">Kembali</string>
     <string name="settings_language">Bahasa</string>
     <string name="language_system_default">Lalai sistem</string>

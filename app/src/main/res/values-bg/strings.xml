@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Скоро</string>
-    <string name="tab_game">Игра</string>
-    <string name="tab_history">История</string>
-    <string name="tab_settings">Настройки</string>
+    <string name="settings_title">Настройки</string>
     <string name="home_unit_life">живота</string>
-    <string name="home_custom">Собствено</string>
-    <string name="home_custom_caption">живота</string>
     <string name="home_custom_edit">Въведете начални животи</string>
+    <string name="custom_life">Собствени начални животи</string>
+    <string name="custom_life_value">Собствени начални животи: %1$d</string>
     <string name="home_unit_players">играчи</string>
-    <string name="home_start_game">Започни игра</string>
     <string name="player_name">Играч %1$d</string>
     <string name="counter_increase">Добави живот: %1$s</string>
     <string name="counter_decrease">Отнеми живот: %1$s</string>
     <string name="counter_open_menu">Меню на играта</string>
-    <string name="menu_in_progress">Играта е в ход</string>
     <string name="menu_continue">Продължи играта</string>
-    <string name="menu_new_game">Нова игра</string>
+    <string name="menu_restart">Започни отначало</string>
+    <string name="restart_question">Да започне ли играта отначало?</string>
+    <string name="restart_body">Животите се връщат на %1$d.</string>
+    <string name="cancel">Отказ</string>
     <string name="settings_contact_tap_email">Докоснете, за да напишете имейл</string>
     <string name="settings_contact_tap_copy">Докоснете, за да копирате</string>
     <string name="settings_theme_light">Светла</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Копирай имейла</string>
     <string name="coming_soon_copied">Имейлът е копиран</string>
     <string name="feedback_body">Здравейте! Моят отзив:\n\n</string>
-    <string name="settings_theme">Тема</string>
     <string name="settings_about">Информация</string>
+    <string name="settings_section_table">Маса</string>
+    <string name="settings_section_app">Приложение</string>
+    <string name="table_apply">Започни отначало с новите настройки</string>
     <string name="back">Назад</string>
     <string name="settings_language">Език</string>
     <string name="language_system_default">Езикът на системата</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">جلد</string>
-    <string name="tab_game">کھیل</string>
-    <string name="tab_history">تاریخ</string>
-    <string name="tab_settings">ترتیبات</string>
+    <string name="settings_title">ترتیبات</string>
     <string name="home_unit_life">زندگی</string>
-    <string name="home_custom">اپنی</string>
-    <string name="home_custom_caption">زندگی</string>
     <string name="home_custom_edit">ابتدائی زندگی درج کریں</string>
+    <string name="custom_life">اپنی ابتدائی زندگی</string>
+    <string name="custom_life_value">اپنی ابتدائی زندگی: %1$d</string>
     <string name="home_unit_players">کھلاڑی</string>
-    <string name="home_start_game">کھیل شروع کریں</string>
     <string name="player_name">کھلاڑی %1$d</string>
     <string name="counter_increase">%1$s کی زندگی بڑھائیں</string>
     <string name="counter_decrease">%1$s کی زندگی گھٹائیں</string>
     <string name="counter_open_menu">کھیل کا مینو</string>
-    <string name="menu_in_progress">کھیل جاری ہے</string>
     <string name="menu_continue">کھیل جاری رکھیں</string>
-    <string name="menu_new_game">نیا کھیل</string>
+    <string name="menu_restart">دوبارہ شروع کریں</string>
+    <string name="restart_question">کھیل دوبارہ شروع کریں؟</string>
+    <string name="restart_body">زندگی %1$d پر واپس آ جائے گی۔</string>
+    <string name="cancel">منسوخ کریں</string>
     <string name="settings_contact_tap_email">ای میل لکھنے کے لیے تھپتھپائیں</string>
     <string name="settings_contact_tap_copy">کاپی کرنے کے لیے تھپتھپائیں</string>
     <string name="settings_theme_light">ہلکا</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ای میل کاپی کریں</string>
     <string name="coming_soon_copied">ای میل کاپی ہو گئی</string>
     <string name="feedback_body">السلام علیکم! میری رائے:\n\n</string>
-    <string name="settings_theme">تھیم</string>
     <string name="settings_about">ایپ کے بارے میں</string>
+    <string name="settings_section_table">میز</string>
+    <string name="settings_section_app">ایپ</string>
+    <string name="table_apply">نئی ترتیبات کے ساتھ دوبارہ شروع کریں</string>
     <string name="back">واپس</string>
     <string name="settings_language">زبان</string>
     <string name="language_system_default">سسٹم کی زبان</string>

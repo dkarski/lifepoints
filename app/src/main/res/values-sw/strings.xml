@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Hivi karibuni</string>
-    <string name="tab_game">Mchezo</string>
-    <string name="tab_history">Historia</string>
-    <string name="tab_settings">Mipangilio</string>
+    <string name="settings_title">Mipangilio</string>
     <string name="home_unit_life">maisha</string>
-    <string name="home_custom">Maalum</string>
-    <string name="home_custom_caption">maisha</string>
     <string name="home_custom_edit">Weka maisha ya kuanzia</string>
+    <string name="custom_life">Maisha ya kuanzia maalum</string>
+    <string name="custom_life_value">Maisha ya kuanzia maalum: %1$d</string>
     <string name="home_unit_players">wachezaji</string>
-    <string name="home_start_game">Anza mchezo</string>
     <string name="player_name">Mchezaji %1$d</string>
     <string name="counter_increase">Ongeza maisha ya %1$s</string>
     <string name="counter_decrease">Punguza maisha ya %1$s</string>
     <string name="counter_open_menu">Menyu ya mchezo</string>
-    <string name="menu_in_progress">Mchezo unaendelea</string>
     <string name="menu_continue">Endelea na mchezo</string>
-    <string name="menu_new_game">Mchezo mpya</string>
+    <string name="menu_restart">Anza upya</string>
+    <string name="restart_question">Anza mchezo upya?</string>
+    <string name="restart_body">Maisha yanarudi kuwa %1$d.</string>
+    <string name="cancel">Ghairi</string>
     <string name="settings_contact_tap_email">Gusa ili kuandika barua pepe</string>
     <string name="settings_contact_tap_copy">Gusa ili kunakili</string>
     <string name="settings_theme_light">Mwanga</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Nakili barua pepe</string>
     <string name="coming_soon_copied">Barua pepe imenakiliwa</string>
     <string name="feedback_body">Habari! Maoni yangu:\n\n</string>
-    <string name="settings_theme">Mandhari</string>
     <string name="settings_about">Kuhusu</string>
+    <string name="settings_section_table">Meza</string>
+    <string name="settings_section_app">Programu</string>
+    <string name="table_apply">Anza upya kwa mipangilio mipya</string>
     <string name="back">Rudi</string>
     <string name="settings_language">Lugha</string>
     <string name="language_system_default">Lugha ya mfumo</string>

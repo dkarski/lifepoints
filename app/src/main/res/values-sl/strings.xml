@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Kmalu</string>
-    <string name="tab_game">Igra</string>
-    <string name="tab_history">Zgodovina</string>
-    <string name="tab_settings">Nastavitve</string>
+    <string name="settings_title">Nastavitve</string>
     <string name="home_unit_life">življenj</string>
-    <string name="home_custom">Po meri</string>
-    <string name="home_custom_caption">življenj</string>
     <string name="home_custom_edit">Vnesite začetna življenja</string>
+    <string name="custom_life">Lastna začetna življenja</string>
+    <string name="custom_life_value">Lastna začetna življenja: %1$d</string>
     <string name="home_unit_players">igralci</string>
-    <string name="home_start_game">Začni igro</string>
     <string name="player_name">Igralec %1$d</string>
     <string name="counter_increase">Povečaj življenja: %1$s</string>
     <string name="counter_decrease">Zmanjšaj življenja: %1$s</string>
     <string name="counter_open_menu">Meni igre</string>
-    <string name="menu_in_progress">Igra poteka</string>
     <string name="menu_continue">Nadaljuj igro</string>
-    <string name="menu_new_game">Nova igra</string>
+    <string name="menu_restart">Začni znova</string>
+    <string name="restart_question">Želite začeti igro znova?</string>
+    <string name="restart_body">Življenja se vrnejo na %1$d.</string>
+    <string name="cancel">Prekliči</string>
     <string name="settings_contact_tap_email">Dotaknite se za pisanje e-pošte</string>
     <string name="settings_contact_tap_copy">Dotaknite se za kopiranje</string>
     <string name="settings_theme_light">Svetla</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopiraj e-pošto</string>
     <string name="coming_soon_copied">E-pošta kopirana</string>
     <string name="feedback_body">Pozdravljeni! Moje mnenje:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">O aplikaciji</string>
+    <string name="settings_section_table">Miza</string>
+    <string name="settings_section_app">Aplikacija</string>
+    <string name="table_apply">Začni znova z novimi nastavitvami</string>
     <string name="back">Nazaj</string>
     <string name="settings_language">Jezik</string>
     <string name="language_system_default">Sistemski jezik</string>

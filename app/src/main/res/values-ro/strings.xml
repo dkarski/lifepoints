@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">În curând</string>
-    <string name="tab_game">Joc</string>
-    <string name="tab_history">Istoric</string>
-    <string name="tab_settings">Setări</string>
+    <string name="settings_title">Setări</string>
     <string name="home_unit_life">vieți</string>
-    <string name="home_custom">Personalizat</string>
-    <string name="home_custom_caption">vieți</string>
     <string name="home_custom_edit">Introduceți viețile inițiale</string>
+    <string name="custom_life">Vieți inițiale personalizate</string>
+    <string name="custom_life_value">Vieți inițiale personalizate: %1$d</string>
     <string name="home_unit_players">jucători</string>
-    <string name="home_start_game">Începe jocul</string>
     <string name="player_name">Jucătorul %1$d</string>
     <string name="counter_increase">Crește viețile pentru %1$s</string>
     <string name="counter_decrease">Scade viețile pentru %1$s</string>
     <string name="counter_open_menu">Meniul jocului</string>
-    <string name="menu_in_progress">Joc în desfășurare</string>
     <string name="menu_continue">Continuă jocul</string>
-    <string name="menu_new_game">Joc nou</string>
+    <string name="menu_restart">Reîncepe</string>
+    <string name="restart_question">Reîncepi jocul?</string>
+    <string name="restart_body">Viețile revin la %1$d.</string>
+    <string name="cancel">Anulează</string>
     <string name="settings_contact_tap_email">Atingeți pentru a scrie un e-mail</string>
     <string name="settings_contact_tap_copy">Atingeți pentru a copia</string>
     <string name="settings_theme_light">Luminoasă</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Copiați e-mailul</string>
     <string name="coming_soon_copied">E-mail copiat</string>
     <string name="feedback_body">Bună! Părerea mea:\n\n</string>
-    <string name="settings_theme">Temă</string>
     <string name="settings_about">Despre</string>
+    <string name="settings_section_table">Masă</string>
+    <string name="settings_section_app">Aplicație</string>
+    <string name="table_apply">Reîncepe cu noile setări</string>
     <string name="back">Înapoi</string>
     <string name="settings_language">Limbă</string>
     <string name="language_system_default">Limba sistemului</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Bald</string>
-    <string name="tab_game">Spiel</string>
-    <string name="tab_history">Verlauf</string>
-    <string name="tab_settings">Einstellungen</string>
+    <string name="settings_title">Einstellungen</string>
     <string name="home_unit_life">LP</string>
-    <string name="home_custom">Eigener</string>
-    <string name="home_custom_caption">Wert</string>
     <string name="home_custom_edit">Start-Lebenspunkte eingeben</string>
+    <string name="custom_life">Eigene Start-Lebenspunkte</string>
+    <string name="custom_life_value">Eigene Start-Lebenspunkte: %1$d</string>
     <string name="home_unit_players">Spieler</string>
-    <string name="home_start_game">Spiel starten</string>
     <string name="player_name">Spieler %1$d</string>
     <string name="counter_increase">Lebenspunkte von %1$s erhöhen</string>
     <string name="counter_decrease">Lebenspunkte von %1$s verringern</string>
     <string name="counter_open_menu">Spielmenü</string>
-    <string name="menu_in_progress">Spiel läuft</string>
     <string name="menu_continue">Spiel fortsetzen</string>
-    <string name="menu_new_game">Neues Spiel</string>
+    <string name="menu_restart">Neu starten</string>
+    <string name="restart_question">Spiel neu starten?</string>
+    <string name="restart_body">Die Lebenspunkte werden auf %1$d zurückgesetzt.</string>
+    <string name="cancel">Abbrechen</string>
     <string name="settings_contact_tap_email">Tippen, um eine E-Mail zu schreiben</string>
     <string name="settings_contact_tap_copy">Tippen zum Kopieren</string>
     <string name="settings_theme_light">Hell</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">E-Mail kopieren</string>
     <string name="coming_soon_copied">E-Mail kopiert</string>
     <string name="feedback_body">Hallo! Mein Feedback:\n\n</string>
-    <string name="settings_theme">Design</string>
     <string name="settings_about">Über</string>
+    <string name="settings_section_table">Spieltisch</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">Mit neuen Einstellungen neu starten</string>
     <string name="back">Zurück</string>
     <string name="settings_language">Sprache</string>
     <string name="language_system_default">Systemsprache</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Em breve</string>
-    <string name="tab_game">Jogo</string>
-    <string name="tab_history">Histórico</string>
-    <string name="tab_settings">Definições</string>
+    <string name="settings_title">Definições</string>
     <string name="home_unit_life">PV</string>
-    <string name="home_custom">Outro</string>
-    <string name="home_custom_caption">valor</string>
     <string name="home_custom_edit">Introduza os pontos de vida iniciais</string>
+    <string name="custom_life">Pontos de vida iniciais personalizados</string>
+    <string name="custom_life_value">Pontos de vida iniciais personalizados: %1$d</string>
     <string name="home_unit_players">jogadores</string>
-    <string name="home_start_game">Iniciar jogo</string>
     <string name="player_name">Jogador %1$d</string>
     <string name="counter_increase">Aumentar pontos de vida de %1$s</string>
     <string name="counter_decrease">Diminuir pontos de vida de %1$s</string>
     <string name="counter_open_menu">Menu do jogo</string>
-    <string name="menu_in_progress">Jogo em curso</string>
     <string name="menu_continue">Continuar jogo</string>
-    <string name="menu_new_game">Novo jogo</string>
+    <string name="menu_restart">Recomeçar</string>
+    <string name="restart_question">Recomeçar o jogo?</string>
+    <string name="restart_body">Os pontos de vida voltam a %1$d.</string>
+    <string name="cancel">Cancelar</string>
     <string name="settings_contact_tap_email">Toque para escrever um email</string>
     <string name="settings_contact_tap_copy">Toque para copiar</string>
     <string name="settings_theme_light">Claro</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Copiar email</string>
     <string name="coming_soon_copied">Email copiado</string>
     <string name="feedback_body">Olá! A minha opinião:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Acerca de</string>
+    <string name="settings_section_table">Mesa</string>
+    <string name="settings_section_app">Aplicação</string>
+    <string name="table_apply">Recomeçar com as novas definições</string>
     <string name="back">Voltar</string>
     <string name="settings_language">Idioma</string>
     <string name="language_system_default">Idioma do sistema</string>

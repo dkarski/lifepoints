@@ -1,6 +1,14 @@
 package dev.dkarski.tcglivecounter.ui
 
 import androidx.annotation.DrawableRes
+import dev.dkarski.tcglivecounter.ui.components.TileHeight
+import com.mudita.mmd.components.buttons.ButtonMMD
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -31,8 +39,17 @@ import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 import dev.dkarski.tcglivecounter.ui.theme.ThemeMode
 
+/**
+ * Settings, one scrolling screen. Table (starting life, players) comes first, as it is used most;
+ * the app settings follow. [onApplyTable] is set while a table change is waiting for confirmation
+ * (the game has progress): the button stays at the bottom, outside the scrolling content.
+ */
 @Composable
 fun SettingsScreen(
+    tableLife: Int,
+    onTableLifeSelect: (Int) -> Unit,
+    onComingSoonPlayers: (Feature) -> Unit,
+    onApplyTable: (() -> Unit)?,
     themeMode: ThemeMode,
     onThemeModeChange: (ThemeMode) -> Unit,
     languageName: String,
@@ -41,36 +58,59 @@ fun SettingsScreen(
     onTipJar: (() -> Unit)?,
     contentPadding: PaddingValues = PaddingValues(),
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(contentPadding)
-            .padding(horizontal = 16.dp, vertical = 16.dp),
-    ) {
-        SettingsSection(stringResource(R.string.settings_theme))
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            ChoiceTile(
-                label = stringResource(R.string.settings_theme_light),
-                selected = themeMode == ThemeMode.Light,
-                onClick = { onThemeModeChange(ThemeMode.Light) },
-                modifier = Modifier.weight(1f),
-            )
-            ChoiceTile(
-                label = stringResource(R.string.settings_theme_dark),
-                selected = themeMode == ThemeMode.Dark,
-                onClick = { onThemeModeChange(ThemeMode.Dark) },
-                modifier = Modifier.weight(1f),
-            )
-        }
-        Spacer(Modifier.height(24.dp))
-        DottedDivider()
-        SettingsRow(stringResource(R.string.settings_language), onClick = onLanguage, value = languageName)
-        DottedDivider()
-        SettingsRow(stringResource(R.string.settings_about), onClick = onAbout)
-        DottedDivider()
-        if (onTipJar != null) {
-            SettingsRow(stringResource(R.string.about_tip_jar), onClick = onTipJar)
+    val focusManager = LocalFocusManager.current
+    Column(Modifier.fillMaxSize().padding(contentPadding)) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .verticalScroll(rememberScrollState())
+                // Tapping empty space ends editing of the custom life.
+                .pointerInput(Unit) { detectTapGestures { focusManager.clearFocus() } }
+                .padding(horizontal = 16.dp, vertical = 16.dp),
+        ) {
+            SettingsSection(stringResource(R.string.settings_section_table))
+            TableSettings(life = tableLife, onLifeSelect = onTableLifeSelect, onComingSoonPlayers = onComingSoonPlayers)
+            Spacer(Modifier.height(32.dp))
+            SettingsSection(stringResource(R.string.settings_section_app))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ChoiceTile(
+                    label = stringResource(R.string.settings_theme_light),
+                    selected = themeMode == ThemeMode.Light,
+                    onClick = { onThemeModeChange(ThemeMode.Light) },
+                    modifier = Modifier.weight(1f),
+                )
+                ChoiceTile(
+                    label = stringResource(R.string.settings_theme_dark),
+                    selected = themeMode == ThemeMode.Dark,
+                    onClick = { onThemeModeChange(ThemeMode.Dark) },
+                    modifier = Modifier.weight(1f),
+                )
+            }
+            Spacer(Modifier.height(16.dp))
             DottedDivider()
+            SettingsRow(stringResource(R.string.settings_language), onClick = onLanguage, value = languageName)
+            DottedDivider()
+            SettingsRow(stringResource(R.string.settings_about), onClick = onAbout)
+            DottedDivider()
+            if (onTipJar != null) {
+                SettingsRow(stringResource(R.string.about_tip_jar), onClick = onTipJar)
+                DottedDivider()
+            }
+        }
+        if (onApplyTable != null) {
+            // Appears at once, without animation (each animation frame is an E Ink refresh).
+            ButtonMMD(
+                onClick = { focusManager.clearFocus(); onApplyTable() },
+                modifier = Modifier.fillMaxWidth().padding(16.dp).height(TileHeight),
+            ) {
+                TextMMD(
+                    stringResource(R.string.table_apply),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center,
+                    maxLines = 2,
+                )
+            }
         }
     }
 }
@@ -114,5 +154,11 @@ internal fun SettingsRow(
 @Preview(widthDp = 360, heightDp = 520, showBackground = true)
 @Composable
 private fun SettingsPreview() {
-    AppTheme(ThemeMode.Light) { SettingsScreen(ThemeMode.Light, {}, "English", {}, {}, {}) }
+    AppTheme(ThemeMode.Light) { SettingsScreen(20, {}, {}, null, ThemeMode.Light, {}, "English", {}, {}, {}) }
+}
+
+@Preview(widthDp = 360, heightDp = 600, showBackground = true)
+@Composable
+private fun SettingsPendingPreview() {
+    AppTheme(ThemeMode.Light) { SettingsScreen(25, {}, {}, {}, ThemeMode.Dark, {}, "Polski", {}, {}, {}) }
 }

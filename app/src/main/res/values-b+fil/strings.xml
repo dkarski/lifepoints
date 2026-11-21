@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Malapit na</string>
-    <string name="tab_game">Laro</string>
-    <string name="tab_history">Kasaysayan</string>
-    <string name="tab_settings">Mga Setting</string>
+    <string name="settings_title">Mga Setting</string>
     <string name="home_unit_life">buhay</string>
-    <string name="home_custom">Custom</string>
-    <string name="home_custom_caption">buhay</string>
     <string name="home_custom_edit">Ilagay ang panimulang buhay</string>
+    <string name="custom_life">Sariling panimulang buhay</string>
+    <string name="custom_life_value">Sariling panimulang buhay: %1$d</string>
     <string name="home_unit_players">manlalaro</string>
-    <string name="home_start_game">Simulan ang laro</string>
     <string name="player_name">Manlalaro %1$d</string>
     <string name="counter_increase">Dagdagan ang buhay ni %1$s</string>
     <string name="counter_decrease">Bawasan ang buhay ni %1$s</string>
     <string name="counter_open_menu">Menu ng laro</string>
-    <string name="menu_in_progress">Kasalukuyang laro</string>
     <string name="menu_continue">Ituloy ang laro</string>
-    <string name="menu_new_game">Bagong laro</string>
+    <string name="menu_restart">I-restart</string>
+    <string name="restart_question">I-restart ang laro?</string>
+    <string name="restart_body">Babalik ang buhay sa %1$d.</string>
+    <string name="cancel">Kanselahin</string>
     <string name="settings_contact_tap_email">I-tap para mag-email</string>
     <string name="settings_contact_tap_copy">I-tap para kopyahin</string>
     <string name="settings_theme_light">Maliwanag</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Kopyahin ang email</string>
     <string name="coming_soon_copied">Nakopya ang email</string>
     <string name="feedback_body">Kumusta! Ang aking feedback:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Tungkol</string>
+    <string name="settings_section_table">Mesa</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">I-restart gamit ang bagong setting</string>
     <string name="back">Bumalik</string>
     <string name="settings_language">Wika</string>
     <string name="language_system_default">Default ng system</string>

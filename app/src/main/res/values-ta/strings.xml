@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">விரைவில்</string>
-    <string name="tab_game">ஆட்டம்</string>
-    <string name="tab_history">வரலாறு</string>
-    <string name="tab_settings">அமைப்புகள்</string>
+    <string name="settings_title">அமைப்புகள்</string>
     <string name="home_unit_life">உயிர்</string>
-    <string name="home_custom">தனிப்பயன்</string>
-    <string name="home_custom_caption">உயிர்</string>
     <string name="home_custom_edit">தொடக்க உயிரை உள்ளிடுக</string>
+    <string name="custom_life">சொந்த தொடக்க உயிர்</string>
+    <string name="custom_life_value">சொந்த தொடக்க உயிர்: %1$d</string>
     <string name="home_unit_players">வீரர்கள்</string>
-    <string name="home_start_game">ஆட்டத்தைத் தொடங்கு</string>
     <string name="player_name">வீரர் %1$d</string>
     <string name="counter_increase">%1$s உயிரைக் கூட்டு</string>
     <string name="counter_decrease">%1$s உயிரைக் குறை</string>
     <string name="counter_open_menu">ஆட்ட மெனு</string>
-    <string name="menu_in_progress">ஆட்டம் நடக்கிறது</string>
     <string name="menu_continue">ஆட்டத்தைத் தொடர்</string>
-    <string name="menu_new_game">புதிய ஆட்டம்</string>
+    <string name="menu_restart">மீண்டும் தொடங்கு</string>
+    <string name="restart_question">ஆட்டத்தை மீண்டும் தொடங்கவா?</string>
+    <string name="restart_body">உயிர் மீண்டும் %1$d ஆகும்.</string>
+    <string name="cancel">ரத்துசெய்</string>
     <string name="settings_contact_tap_email">மின்னஞ்சல் எழுத தட்டவும்</string>
     <string name="settings_contact_tap_copy">நகலெடுக்க தட்டவும்</string>
     <string name="settings_theme_light">வெளிர்</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">மின்னஞ்சலை நகலெடு</string>
     <string name="coming_soon_copied">மின்னஞ்சல் நகலெடுக்கப்பட்டது</string>
     <string name="feedback_body">வணக்கம்! என் கருத்து:\n\n</string>
-    <string name="settings_theme">தீம்</string>
     <string name="settings_about">அறிமுகம்</string>
+    <string name="settings_section_table">மேசை</string>
+    <string name="settings_section_app">ஆப்</string>
+    <string name="table_apply">புதிய அமைப்புகளுடன் மீண்டும் தொடங்கு</string>
     <string name="back">பின்செல்</string>
     <string name="settings_language">மொழி</string>
     <string name="language_system_default">சிஸ்டம் மொழி</string>

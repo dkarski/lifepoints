@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">მალე</string>
-    <string name="tab_game">თამაში</string>
-    <string name="tab_history">ისტორია</string>
-    <string name="tab_settings">პარამეტრები</string>
+    <string name="settings_title">პარამეტრები</string>
     <string name="home_unit_life">სიცოცხლე</string>
-    <string name="home_custom">საკუთარი</string>
-    <string name="home_custom_caption">სიცოცხლე</string>
     <string name="home_custom_edit">შეიყვანეთ საწყისი სიცოცხლე</string>
+    <string name="custom_life">საკუთარი საწყისი სიცოცხლე</string>
+    <string name="custom_life_value">საკუთარი საწყისი სიცოცხლე: %1$d</string>
     <string name="home_unit_players">მოთამაშე</string>
-    <string name="home_start_game">თამაშის დაწყება</string>
     <string name="player_name">მოთამაშე %1$d</string>
     <string name="counter_increase">%1$s: სიცოცხლის გაზრდა</string>
     <string name="counter_decrease">%1$s: სიცოცხლის შემცირება</string>
     <string name="counter_open_menu">თამაშის მენიუ</string>
-    <string name="menu_in_progress">თამაში მიმდინარეობს</string>
     <string name="menu_continue">თამაშის გაგრძელება</string>
-    <string name="menu_new_game">ახალი თამაში</string>
+    <string name="menu_restart">თავიდან დაწყება</string>
+    <string name="restart_question">დავიწყოთ თამაში თავიდან?</string>
+    <string name="restart_body">სიცოცხლე დაბრუნდება %1$d-ზე.</string>
+    <string name="cancel">გაუქმება</string>
     <string name="settings_contact_tap_email">შეეხეთ ელფოსტის დასაწერად</string>
     <string name="settings_contact_tap_copy">შეეხეთ დასაკოპირებლად</string>
     <string name="settings_theme_light">ღია</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ელფოსტის კოპირება</string>
     <string name="coming_soon_copied">ელფოსტა დაკოპირდა</string>
     <string name="feedback_body">გამარჯობა! ჩემი გამოხმაურება:\n\n</string>
-    <string name="settings_theme">თემა</string>
     <string name="settings_about">აპის შესახებ</string>
+    <string name="settings_section_table">მაგიდა</string>
+    <string name="settings_section_app">აპი</string>
+    <string name="table_apply">თავიდან დაწყება ახალი პარამეტრებით</string>
     <string name="back">უკან</string>
     <string name="settings_language">ენა</string>
     <string name="language_system_default">სისტემის ენა</string>

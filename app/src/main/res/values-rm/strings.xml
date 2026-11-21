@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Prest</string>
-    <string name="tab_game">Gieu</string>
-    <string name="tab_history">Istorgia</string>
-    <string name="tab_settings">Parameters</string>
+    <string name="settings_title">Parameters</string>
     <string name="home_unit_life">vitas</string>
-    <string name="home_custom">Agen</string>
-    <string name="home_custom_caption">vitas</string>
     <string name="home_custom_edit">Endatar las vitas da partenza</string>
+    <string name="custom_life">Atgnas vitas da partenza</string>
+    <string name="custom_life_value">Atgnas vitas da partenza: %1$d</string>
     <string name="home_unit_players">giugaders</string>
-    <string name="home_start_game">Cumenzar il gieu</string>
     <string name="player_name">Giugader %1$d</string>
     <string name="counter_increase">Augmentar las vitas da %1$s</string>
     <string name="counter_decrease">Reducir las vitas da %1$s</string>
     <string name="counter_open_menu">Menu dal gieu</string>
-    <string name="menu_in_progress">Gieu en curs</string>
     <string name="menu_continue">Cuntinuar il gieu</string>
-    <string name="menu_new_game">Nov gieu</string>
+    <string name="menu_restart">Cumenzar da nov</string>
+    <string name="restart_question">Cumenzar il gieu da nov?</string>
+    <string name="restart_body">Las vitas turnan a %1$d.</string>
+    <string name="cancel">Interrumper</string>
     <string name="settings_contact_tap_email">Tutgar per scriver in e-mail</string>
     <string name="settings_contact_tap_copy">Tutgar per copiar</string>
     <string name="settings_theme_light">Cler</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Copiar l\'e-mail</string>
     <string name="coming_soon_copied">E-mail copià</string>
     <string name="feedback_body">Allegra! Mes resun:\n\n</string>
-    <string name="settings_theme">Tema</string>
     <string name="settings_about">Davart</string>
+    <string name="settings_section_table">Maisa</string>
+    <string name="settings_section_app">App</string>
+    <string name="table_apply">Cumenzar da nov cun ils novs parameters</string>
     <string name="back">Enavos</string>
     <string name="settings_language">Lingua</string>
     <string name="language_system_default">Lingua dal sistem</string>

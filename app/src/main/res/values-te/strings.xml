@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">త్వరలో</string>
-    <string name="tab_game">ఆట</string>
-    <string name="tab_history">చరిత్ర</string>
-    <string name="tab_settings">సెట్టింగ్‌లు</string>
+    <string name="settings_title">సెట్టింగ్‌లు</string>
     <string name="home_unit_life">లైఫ్</string>
-    <string name="home_custom">అనుకూలం</string>
-    <string name="home_custom_caption">లైఫ్</string>
     <string name="home_custom_edit">ప్రారంభ లైఫ్ నమోదు చేయండి</string>
+    <string name="custom_life">సొంత ప్రారంభ లైఫ్</string>
+    <string name="custom_life_value">సొంత ప్రారంభ లైఫ్: %1$d</string>
     <string name="home_unit_players">ఆటగాళ్లు</string>
-    <string name="home_start_game">ఆట ప్రారంభించండి</string>
     <string name="player_name">ఆటగాడు %1$d</string>
     <string name="counter_increase">%1$s లైఫ్ పెంచండి</string>
     <string name="counter_decrease">%1$s లైఫ్ తగ్గించండి</string>
     <string name="counter_open_menu">ఆట మెనూ</string>
-    <string name="menu_in_progress">ఆట జరుగుతోంది</string>
     <string name="menu_continue">ఆట కొనసాగించండి</string>
-    <string name="menu_new_game">కొత్త ఆట</string>
+    <string name="menu_restart">మళ్లీ ప్రారంభించండి</string>
+    <string name="restart_question">ఆటను మళ్లీ ప్రారంభించాలా?</string>
+    <string name="restart_body">లైఫ్ మళ్లీ %1$d అవుతుంది.</string>
+    <string name="cancel">రద్దు చేయండి</string>
     <string name="settings_contact_tap_email">ఇమెయిల్ రాయడానికి నొక్కండి</string>
     <string name="settings_contact_tap_copy">కాపీ చేయడానికి నొక్కండి</string>
     <string name="settings_theme_light">లేత</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ఇమెయిల్ కాపీ చేయండి</string>
     <string name="coming_soon_copied">ఇమెయిల్ కాపీ అయింది</string>
     <string name="feedback_body">నమస్కారం! నా అభిప్రాయం:\n\n</string>
-    <string name="settings_theme">థీమ్</string>
     <string name="settings_about">యాప్ గురించి</string>
+    <string name="settings_section_table">టేబుల్</string>
+    <string name="settings_section_app">యాప్</string>
+    <string name="table_apply">కొత్త సెట్టింగ్‌లతో మళ్లీ ప్రారంభించండి</string>
     <string name="back">వెనుకకు</string>
     <string name="settings_language">భాష</string>
     <string name="language_system_default">సిస్టమ్ భాష</string>

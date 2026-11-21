@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">Bientôt</string>
-    <string name="tab_game">Partie</string>
-    <string name="tab_history">Historique</string>
-    <string name="tab_settings">Réglages</string>
+    <string name="settings_title">Réglages</string>
     <string name="home_unit_life">PV</string>
-    <string name="home_custom">Autre</string>
-    <string name="home_custom_caption">valeur</string>
     <string name="home_custom_edit">Saisir les points de vie de départ</string>
+    <string name="custom_life">Points de vie de départ personnalisés</string>
+    <string name="custom_life_value">Points de vie de départ personnalisés : %1$d</string>
     <string name="home_unit_players">joueurs</string>
-    <string name="home_start_game">Commencer la partie</string>
     <string name="player_name">Joueur %1$d</string>
     <string name="counter_increase">Augmenter les points de vie de %1$s</string>
     <string name="counter_decrease">Diminuer les points de vie de %1$s</string>
     <string name="counter_open_menu">Menu de la partie</string>
-    <string name="menu_in_progress">Partie en cours</string>
     <string name="menu_continue">Reprendre la partie</string>
-    <string name="menu_new_game">Nouvelle partie</string>
+    <string name="menu_restart">Recommencer</string>
+    <string name="restart_question">Recommencer la partie ?</string>
+    <string name="restart_body">Les points de vie reviennent à %1$d.</string>
+    <string name="cancel">Annuler</string>
     <string name="settings_contact_tap_email">Touchez pour écrire un e-mail</string>
     <string name="settings_contact_tap_copy">Touchez pour copier</string>
     <string name="settings_theme_light">Clair</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">Copier l\'e-mail</string>
     <string name="coming_soon_copied">E-mail copié</string>
     <string name="feedback_body">Bonjour ! Mon avis :\n\n</string>
-    <string name="settings_theme">Thème</string>
     <string name="settings_about">À propos</string>
+    <string name="settings_section_table">Table</string>
+    <string name="settings_section_app">Application</string>
+    <string name="table_apply">Recommencer avec ces réglages</string>
     <string name="back">Retour</string>
     <string name="settings_language">Langue</string>
     <string name="language_system_default">Langue du système</string>

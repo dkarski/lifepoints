@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">ឆាប់ៗ</string>
-    <string name="tab_game">ហ្គេម</string>
-    <string name="tab_history">ប្រវត្តិ</string>
-    <string name="tab_settings">ការកំណត់</string>
+    <string name="settings_title">ការកំណត់</string>
     <string name="home_unit_life">ជីវិត</string>
-    <string name="home_custom">ផ្ទាល់ខ្លួន</string>
-    <string name="home_custom_caption">ជីវិត</string>
     <string name="home_custom_edit">បញ្ចូលជីវិតចាប់ផ្ដើម</string>
+    <string name="custom_life">ជីវិតចាប់ផ្ដើមផ្ទាល់ខ្លួន</string>
+    <string name="custom_life_value">ជីវិតចាប់ផ្ដើមផ្ទាល់ខ្លួន៖ %1$d</string>
     <string name="home_unit_players">អ្នកលេង</string>
-    <string name="home_start_game">ចាប់ផ្ដើមហ្គេម</string>
     <string name="player_name">អ្នកលេង %1$d</string>
     <string name="counter_increase">បង្កើនជីវិតរបស់ %1$s</string>
     <string name="counter_decrease">បន្ថយជីវិតរបស់ %1$s</string>
     <string name="counter_open_menu">ម៉ឺនុយហ្គេម</string>
-    <string name="menu_in_progress">ហ្គេមកំពុងដំណើរការ</string>
     <string name="menu_continue">លេងបន្ត</string>
-    <string name="menu_new_game">ហ្គេមថ្មី</string>
+    <string name="menu_restart">ចាប់ផ្ដើមឡើងវិញ</string>
+    <string name="restart_question">ចាប់ផ្ដើមហ្គេមឡើងវិញ?</string>
+    <string name="restart_body">ជីវិតនឹងត្រឡប់ទៅ %1$d វិញ។</string>
+    <string name="cancel">បោះបង់</string>
     <string name="settings_contact_tap_email">ចុចដើម្បីសរសេរអ៊ីមែល</string>
     <string name="settings_contact_tap_copy">ចុចដើម្បីចម្លង</string>
     <string name="settings_theme_light">ភ្លឺ</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">ចម្លងអ៊ីមែល</string>
     <string name="coming_soon_copied">បានចម្លងអ៊ីមែល</string>
     <string name="feedback_body">សួស្ដី! មតិយោបល់របស់ខ្ញុំ៖\n\n</string>
-    <string name="settings_theme">រចនាប័ទ្ម</string>
     <string name="settings_about">អំពី</string>
+    <string name="settings_section_table">តុ</string>
+    <string name="settings_section_app">កម្មវិធី</string>
+    <string name="table_apply">ចាប់ផ្ដើមឡើងវិញជាមួយការកំណត់ថ្មី</string>
     <string name="back">ថយក្រោយ</string>
     <string name="settings_language">ភាសា</string>
     <string name="language_system_default">ភាសាប្រព័ន្ធ</string>

@@ -2,22 +2,21 @@
 <!-- AI-generated translation, not yet reviewed by a native speaker. See docs/TRANSLATIONS.md. -->
 <resources>
     <string name="soon">เร็วๆ นี้</string>
-    <string name="tab_game">เกม</string>
-    <string name="tab_history">ประวัติ</string>
-    <string name="tab_settings">การตั้งค่า</string>
+    <string name="settings_title">การตั้งค่า</string>
     <string name="home_unit_life">ไลฟ์</string>
-    <string name="home_custom">กำหนดเอง</string>
-    <string name="home_custom_caption">ไลฟ์</string>
     <string name="home_custom_edit">ป้อนไลฟ์เริ่มต้น</string>
+    <string name="custom_life">ไลฟ์เริ่มต้นที่กำหนดเอง</string>
+    <string name="custom_life_value">ไลฟ์เริ่มต้นที่กำหนดเอง: %1$d</string>
     <string name="home_unit_players">ผู้เล่น</string>
-    <string name="home_start_game">เริ่มเกม</string>
     <string name="player_name">ผู้เล่น %1$d</string>
     <string name="counter_increase">เพิ่มไลฟ์ของ %1$s</string>
     <string name="counter_decrease">ลดไลฟ์ของ %1$s</string>
     <string name="counter_open_menu">เมนูเกม</string>
-    <string name="menu_in_progress">เกมกำลังดำเนินอยู่</string>
     <string name="menu_continue">เล่นต่อ</string>
-    <string name="menu_new_game">เกมใหม่</string>
+    <string name="menu_restart">เริ่มใหม่</string>
+    <string name="restart_question">เริ่มเกมใหม่ไหม</string>
+    <string name="restart_body">ไลฟ์จะกลับไปเป็น %1$d</string>
+    <string name="cancel">ยกเลิก</string>
     <string name="settings_contact_tap_email">แตะเพื่อเขียนอีเมล</string>
     <string name="settings_contact_tap_copy">แตะเพื่อคัดลอก</string>
     <string name="settings_theme_light">สว่าง</string>
@@ -30,8 +29,10 @@
     <string name="coming_soon_copy">คัดลอกอีเมล</string>
     <string name="coming_soon_copied">คัดลอกอีเมลแล้ว</string>
     <string name="feedback_body">สวัสดี! ความคิดเห็นของฉัน:\n\n</string>
-    <string name="settings_theme">ธีม</string>
     <string name="settings_about">เกี่ยวกับ</string>
+    <string name="settings_section_table">โต๊ะ</string>
+    <string name="settings_section_app">แอป</string>
+    <string name="table_apply">เริ่มใหม่ด้วยการตั้งค่าใหม่</string>
     <string name="back">ย้อนกลับ</string>
     <string name="settings_language">ภาษา</string>
     <string name="language_system_default">ภาษาของระบบ</string>
