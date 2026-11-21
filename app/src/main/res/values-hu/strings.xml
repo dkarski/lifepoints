@@ -33,7 +33,6 @@
     <string name="feedback_body">Szia! A visszajelzésem:\n\n</string>
     <string name="settings_about">Névjegy</string>
     <string name="settings_section_app">Alkalmazás</string>
-    <string name="table_apply">Újrakezdés az új beállításokkal</string>
     <string name="back">Vissza</string>
     <string name="settings_language">Nyelv</string>
     <string name="language_system_default">Rendszer nyelve</string>

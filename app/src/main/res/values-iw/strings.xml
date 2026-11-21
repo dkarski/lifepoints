@@ -33,7 +33,6 @@
     <string name="feedback_body">שלום! המשוב שלי:\n\n</string>
     <string name="settings_about">אודות</string>
     <string name="settings_section_app">אפליקציה</string>
-    <string name="table_apply">התחלה מחדש עם ההגדרות החדשות</string>
     <string name="back">חזרה</string>
     <string name="settings_language">שפה</string>
     <string name="language_system_default">שפת המערכת</string>

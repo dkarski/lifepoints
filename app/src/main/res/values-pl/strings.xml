@@ -39,7 +39,6 @@
     <!-- Ustawienia i O aplikacji -->
     <string name="settings_about">O aplikacji</string>
     <string name="settings_section_app">Aplikacja</string>
-    <string name="table_apply">Zacznij od nowa z nowymi ustawieniami</string>
     <string name="back">Wstecz</string>
     <string name="settings_language">Język</string>
     <string name="language_system_default">Język systemu</string>

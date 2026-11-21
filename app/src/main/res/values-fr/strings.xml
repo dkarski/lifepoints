@@ -33,7 +33,6 @@
     <string name="feedback_body">Bonjour ! Mon avis :\n\n</string>
     <string name="settings_about">À propos</string>
     <string name="settings_section_app">Application</string>
-    <string name="table_apply">Recommencer avec ces réglages</string>
     <string name="back">Retour</string>
     <string name="settings_language">Langue</string>
     <string name="language_system_default">Langue du système</string>

@@ -33,7 +33,6 @@
     <string name="feedback_body">Hola! La meva opinió:\n\n</string>
     <string name="settings_about">Quant a</string>
     <string name="settings_section_app">Aplicació</string>
-    <string name="table_apply">Torna a començar amb la nova configuració</string>
     <string name="back">Enrere</string>
     <string name="settings_language">Idioma</string>
     <string name="language_system_default">Idioma del sistema</string>

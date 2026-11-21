@@ -137,8 +137,13 @@ private val IndicatorHeight = 44.dp
 private val ControlsHeight = 140.dp
 private val SideWidth = 76.dp
 
-/** −, + and the menu button share one size (52 dp); −/+ are only a visual hint, the touch area is the whole half. */
-private val CircleSize = 52.dp
+/** − and + circles: only a visual hint, the touch area is the whole half. */
+private val StepCircleSize = 52.dp
+private val StepIconSize = 28.dp
+
+/** The menu button between the halves: a bit larger than −/+, as the only way to the menu. */
+private val MenuButtonSize = 60.dp
+private val MenuIconSize = 32.dp
 
 /** Numbers read left to right in every language (otherwise "−5" can show as "5−" in right-to-left languages). */
 private val NumberStyle = TextStyle(textDirection = TextDirection.Ltr)
@@ -323,7 +328,7 @@ private fun StepCircle(colors: PlayerColors, @DrawableRes icon: Int, pressed: Bo
     Box(modifier, contentAlignment = Alignment.Center) {
         Box(
             modifier = Modifier
-                .size(CircleSize)
+                .size(StepCircleSize)
                 .clip(CircleShape)
                 .background(if (highlighted) colors.content else colors.background)
                 .border(BorderWidth, colors.content, CircleShape),
@@ -333,7 +338,7 @@ private fun StepCircle(colors: PlayerColors, @DrawableRes icon: Int, pressed: Bo
                 painterResource(icon),
                 contentDescription = null,
                 tint = if (highlighted) colors.background else colors.content,
-                modifier = Modifier.size(28.dp),
+                modifier = Modifier.size(StepIconSize),
             )
         }
     }
@@ -357,7 +362,7 @@ private const val PRESS_FEEDBACK_MS = 150L
 private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
-            .size(CircleSize)
+            .size(MenuButtonSize)
             .clip(CircleShape)
             .background(MenuButtonColors.background)
             .border(BorderWidth, MenuButtonColors.content, CircleShape)
@@ -369,7 +374,7 @@ private fun MenuButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
             painter = painterResource(R.drawable.ic_table_soft_weave),
             contentDescription = stringResource(R.string.counter_open_menu),
             tint = MenuButtonColors.content,
-            modifier = Modifier.size(28.dp),
+            modifier = Modifier.size(MenuIconSize),
         )
     }
 }

@@ -61,6 +61,8 @@ fun App(
 
     // Restart asks first only when the game has progress (life totals differ from the start).
     var confirmingRestart by rememberSaveable { mutableStateOf(false) }
+    // The same confirmation, opened by Settings' Restart for a pending table change: Cancel returns to Settings.
+    var confirmingFromSettings by rememberSaveable { mutableStateOf(false) }
     // Table change waiting for confirmation (only while the game has progress); null = no pending change.
     // Dropped when Settings is left towards the Menu.
     var pendingLife by rememberSaveable { mutableStateOf<Int?>(null) }
@@ -85,9 +87,17 @@ fun App(
     var emailAppAvailable by remember { mutableStateOf(hasEmailApp(context)) }
     var contactCopied by rememberSaveable { mutableStateOf(false) }
 
+    fun cancelRestart() {
+        confirmingRestart = false
+        if (confirmingFromSettings) {
+            confirmingFromSettings = false
+            screen = Screen.Settings // the pending table change is kept
+        }
+    }
+
     val back: () -> Unit = {
         when {
-            screen == Screen.Menu && confirmingRestart -> confirmingRestart = false
+            screen == Screen.Menu && confirmingRestart -> cancelRestart()
             else -> screen.parent()?.let { parent ->
                 if (screen == Screen.Settings) pendingLife = null
                 screen = parent
@@ -96,9 +106,12 @@ fun App(
     }
     BackHandler(enabled = screen.parent() != null, onBack = back)
 
+    /** Restarts with the pending table, if Settings has one, otherwise with the same table. */
     fun restart() {
-        setGame(game.restarted())
+        setGame(pendingLife?.let { GameState.new(it, game.playerCount) } ?: game.restarted())
+        pendingLife = null
         confirmingRestart = false
+        confirmingFromSettings = false
         screen = Screen.Counter
     }
 
@@ -120,11 +133,11 @@ fun App(
 
                 Screen.Menu -> GameMenuScreen(
                     confirmingRestart = confirmingRestart,
-                    startingLife = game.startingLife,
+                    startingLife = (if (confirmingFromSettings) pendingLife else null) ?: game.startingLife,
                     onResume = { screen = Screen.Counter },
                     onRestart = { if (game.hasProgress) confirmingRestart = true else restart() },
                     onConfirmRestart = ::restart,
-                    onCancelRestart = { confirmingRestart = false },
+                    onCancelRestart = ::cancelRestart,
                     onSettings = { screen = Screen.Settings },
                 )
 
@@ -143,12 +156,12 @@ fun App(
                             }
                         },
                         onComingSoonPlayers = ::showComingSoon,
-                        onApplyTable = pendingLife?.let { life ->
-                            {
-                                setGame(GameState.new(life, game.playerCount))
-                                pendingLife = null
-                                screen = Screen.Counter
-                            }
+                        pendingLife = pendingLife,
+                        // Restart in Settings opens the same confirmation as the menu, with the new starting life.
+                        onApplyTable = {
+                            confirmingFromSettings = true
+                            confirmingRestart = true
+                            screen = Screen.Menu
                         },
                         vibration = vibration,
                         onVibrationChange = onVibrationChange,

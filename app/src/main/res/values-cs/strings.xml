@@ -33,7 +33,6 @@
     <string name="feedback_body">Dobrý den! Moje zpětná vazba:\n\n</string>
     <string name="settings_about">O aplikaci</string>
     <string name="settings_section_app">Aplikace</string>
-    <string name="table_apply">Začít znovu s novým nastavením</string>
     <string name="back">Zpět</string>
     <string name="settings_language">Jazyk</string>
     <string name="language_system_default">Jazyk systému</string>
