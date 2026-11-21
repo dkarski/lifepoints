@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">E-Mail kopiert</string>
     <string name="feedback_body">Hallo! Mein Feedback:\n\n</string>
     <string name="settings_about">Über</string>
-    <string name="settings_section_table">Spieltisch</string>
     <string name="settings_section_app">App</string>
     <string name="table_apply">Mit neuen Einstellungen neu starten</string>
     <string name="back">Zurück</string>

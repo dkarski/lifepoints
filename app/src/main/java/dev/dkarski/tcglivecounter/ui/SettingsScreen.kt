@@ -41,8 +41,8 @@ import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 
 /**
- * Settings, one scrolling screen. Table (starting life, players) comes first, as it is used most;
- * the app settings follow. [onApplyTable] is set while a table change is waiting for confirmation
+ * Settings, one scrolling screen. The table (starting life, players) comes first, without a heading, as it is used
+ * most; the app settings follow under their heading. [onApplyTable] is set while a table change is waiting for confirmation
  * (the game has progress): the button stays at the bottom, outside the scrolling content.
  */
 @Composable
@@ -69,7 +69,7 @@ fun SettingsScreen(
                 .pointerInput(Unit) { detectTapGestures { focusManager.clearFocus() } }
                 .padding(horizontal = 16.dp, vertical = 16.dp),
         ) {
-            SettingsSection(stringResource(R.string.settings_section_table))
+            // The table needs no heading: the life and player tiles say what they are.
             TableSettings(life = tableLife, onLifeSelect = onTableLifeSelect, onComingSoonPlayers = onComingSoonPlayers)
             Spacer(Modifier.height(32.dp))
             SettingsSection(stringResource(R.string.settings_section_app))

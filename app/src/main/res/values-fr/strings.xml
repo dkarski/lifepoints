@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">E-mail copié</string>
     <string name="feedback_body">Bonjour ! Mon avis :\n\n</string>
     <string name="settings_about">À propos</string>
-    <string name="settings_section_table">Table</string>
     <string name="settings_section_app">Application</string>
     <string name="table_apply">Recommencer avec ces réglages</string>
     <string name="back">Retour</string>

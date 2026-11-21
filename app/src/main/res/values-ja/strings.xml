@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">メールアドレスをコピーしました</string>
     <string name="feedback_body">こんにちは！ご意見：\n\n</string>
     <string name="settings_about">このアプリについて</string>
-    <string name="settings_section_table">テーブル</string>
     <string name="settings_section_app">アプリ</string>
     <string name="table_apply">新しい設定で最初から</string>
     <string name="back">戻る</string>

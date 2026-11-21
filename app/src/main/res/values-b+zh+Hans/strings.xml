@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">邮箱已复制</string>
     <string name="feedback_body">你好！我的反馈：\n\n</string>
     <string name="settings_about">关于</string>
-    <string name="settings_section_table">牌桌</string>
     <string name="settings_section_app">应用</string>
     <string name="table_apply">用新设置重新开始</string>
     <string name="back">返回</string>

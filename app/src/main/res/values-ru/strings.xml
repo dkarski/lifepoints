@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">Адрес скопирован</string>
     <string name="feedback_body">Здравствуйте! Мой отзыв:\n\n</string>
     <string name="settings_about">О приложении</string>
-    <string name="settings_section_table">Стол</string>
     <string name="settings_section_app">Приложение</string>
     <string name="table_apply">Начать заново с новыми настройками</string>
     <string name="back">Назад</string>

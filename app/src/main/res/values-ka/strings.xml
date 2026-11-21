@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">ელფოსტა დაკოპირდა</string>
     <string name="feedback_body">გამარჯობა! ჩემი გამოხმაურება:\n\n</string>
     <string name="settings_about">აპის შესახებ</string>
-    <string name="settings_section_table">მაგიდა</string>
     <string name="settings_section_app">აპი</string>
     <string name="table_apply">თავიდან დაწყება ახალი პარამეტრებით</string>
     <string name="back">უკან</string>

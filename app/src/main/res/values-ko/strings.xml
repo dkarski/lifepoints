@@ -32,7 +32,6 @@
     <string name="coming_soon_copied">이메일 복사됨</string>
     <string name="feedback_body">안녕하세요! 제 의견:\n\n</string>
     <string name="settings_about">정보</string>
-    <string name="settings_section_table">테이블</string>
     <string name="settings_section_app">앱</string>
     <string name="table_apply">새 설정으로 다시 시작</string>
     <string name="back">뒤로</string>
