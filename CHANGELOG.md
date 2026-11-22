@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/dkarski/lifepoints/compare/v1.2.0...v1.2.1) (2026-11-22)
+
+
+### Fixes
+
+* The e-mail address in About is copied with one tap, and Email copied is shown in its place ([0e20b13](https://github.com/dkarski/lifepoints/commit/0e20b13396596b0daf708d1fedbfb0066b24a19e))
+* The line under screen titles and the back arrow were matched to other Mudita apps ([0e20b13](https://github.com/dkarski/lifepoints/commit/0e20b13396596b0daf708d1fedbfb0066b24a19e))
+
 ## [1.2.0](https://github.com/dkarski/lifepoints/compare/v1.1.0...v1.2.0) (2026-11-21)
 
 ### New
