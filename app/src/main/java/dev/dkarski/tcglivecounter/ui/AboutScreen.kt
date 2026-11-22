@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -31,6 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.text.TextMMD
@@ -38,6 +40,7 @@ import dev.dkarski.tcglivecounter.R
 import dev.dkarski.tcglivecounter.ui.components.DottedDivider
 import dev.dkarski.tcglivecounter.ui.theme.AppTheme
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
 /** Static facts shown at the top of About & Support. */
@@ -71,7 +74,7 @@ fun AboutScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
         ) {
-            Header(about, contact, onClick = if (contact?.canOpenEmailApp == true) onContact else onCopyEmail)
+            Header(about, contact, onCopy = onCopyEmail, onWrite = onContact)
             DottedDivider()
             Section(stringResource(R.string.about_privacy)) {
                 Paragraph(R.string.privacy_offline_title, stringResource(R.string.privacy_offline))
@@ -81,7 +84,9 @@ fun AboutScreen(
             }
             Section(stringResource(R.string.about_terms)) {
                 Paragraph(R.string.terms_free_title, stringResource(R.string.terms_free))
-                Paragraph(R.string.terms_liability_title, stringResource(R.string.terms_liability, about.developer, contact?.email.orEmpty()))
+                if (about.developer.isNotBlank() && contact != null) {
+                    Paragraph(R.string.terms_liability_title, stringResource(R.string.terms_liability, about.developer, contact.email))
+                }
             }
             Section(stringResource(R.string.about_licenses)) { OpenSourceLicenses() }
             Section(stringResource(R.string.about_legal)) {
@@ -92,9 +97,17 @@ fun AboutScreen(
     }
 }
 
-/** App icon, name and version, then "Made by", the author and the tappable contact address. */
+/**
+ * App icon, name and version, then "Made by", the author and the contact address.
+ * Tapping the address always copies exactly the address (no label, no whitespace); the address then reads a bold
+ * "Email copied" for [COPIED_MESSAGE_MILLIS]. When an e-mail app exists, a separate "Tap to write an email" link
+ * opens it, so copying never disappears.
+ */
+/** How long the copied address reads "Email copied" before showing the address again. */
+private const val COPIED_MESSAGE_MILLIS = 3_000L
+
 @Composable
-private fun Header(about: AboutInfo, contact: ContactState?, onClick: () -> Unit) {
+private fun Header(about: AboutInfo, contact: ContactState?, onCopy: () -> Unit, onWrite: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -104,20 +117,41 @@ private fun Header(about: AboutInfo, contact: ContactState?, onClick: () -> Unit
         TextMMD(about.appName, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
         TextMMD(stringResource(R.string.about_version, about.version), style = MaterialTheme.typography.bodyMedium)
         Spacer(Modifier.height(12.dp))
-        TextMMD(stringResource(R.string.about_made_by), style = MaterialTheme.typography.bodyMedium)
-        TextMMD(about.developer, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        if (about.developer.isNotBlank()) {
+            TextMMD(stringResource(R.string.about_made_by), style = MaterialTheme.typography.bodyMedium)
+            TextMMD(about.developer, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        }
         if (contact != null) {
-            Column(
-                modifier = Modifier.clickable(onClick = onClick, role = Role.Button, interactionSource = null, indication = null),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                TextMMD(contact.email, style = MaterialTheme.typography.bodyMedium)
-                val hint = when {
-                    contact.canOpenEmailApp -> R.string.settings_contact_tap_email
-                    contact.copied -> R.string.coming_soon_copied
-                    else -> R.string.settings_contact_tap_copy
+            // No status line under the address (it made About scroll on entry): after a tap the address itself reads
+            // "Email copied" for a moment, in the same place, so nothing below moves.
+            var justCopied by remember { mutableStateOf(false) }
+            LaunchedEffect(justCopied) {
+                if (justCopied) {
+                    delay(COPIED_MESSAGE_MILLIS)
+                    justCopied = false
                 }
-                TextMMD(stringResource(hint), style = MaterialTheme.typography.labelMedium)
+            }
+            Box(
+                modifier = Modifier
+                    .clickable(onClick = { onCopy(); justCopied = true }, role = Role.Button, interactionSource = null, indication = null)
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                if (justCopied) {
+                    TextMMD(stringResource(R.string.coming_soon_copied), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+                } else {
+                    TextMMD(contact.email, style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+            if (contact.canOpenEmailApp) {
+                TextMMD(
+                    stringResource(R.string.settings_contact_tap_email),
+                    style = MaterialTheme.typography.labelMedium,
+                    textDecoration = TextDecoration.Underline,
+                    modifier = Modifier
+                        .clickable(onClick = onWrite, role = Role.Button, interactionSource = null, indication = null)
+                        .padding(horizontal = 12.dp, vertical = 10.dp),
+                )
             }
         }
     }
