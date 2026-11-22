@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import com.mudita.mmd.components.text.TextMMD
+import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import dev.dkarski.tcglivecounter.R
 
@@ -35,6 +36,8 @@ fun SecondaryLayout(
 ) {
     Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
         TopAppBarMMD(
+            // MMD 1.0.2 passes its 3 dp divider to width(), so it draws 1 px; native Mudita apps show 3 dp.
+            showDivider = false,
             title = titleContent ?: { TextMMD(title, fontWeight = FontWeight.Bold) },
             navigationIcon = {
                 IconButton(onClick = onBack) {
@@ -43,6 +46,7 @@ fun SecondaryLayout(
             },
             actions = actions,
         )
+        HorizontalDividerMMD()
         Box(Modifier.fillMaxWidth().weight(1f)) { content(PaddingValues()) }
     }
 }
